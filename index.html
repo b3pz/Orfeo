@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#12100e" />
+  <title>Giuseppe & Kiki — Il Segreto di Orfeo</title>
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+<body>
+  <div id="game-shell">
+    <header id="topbar">
+      <div class="brand">
+        <span class="eyebrow">UN'AVVENTURA GRAFICA ORIGINALE</span>
+        <h1>GIUSEPPE & KIKI</h1>
+        <div class="subtitle">IL SEGRETO DI ORFEO</div>
+      </div>
+      <div class="chapter"><span id="chapterLabel">CAPITOLO I</span><b id="locationLabel">FIRENZE · OTTOBRE 2026</b></div>
+    </header>
+
+    <main id="stage">
+      <div id="background"></div>
+      <div id="vignette"></div>
+      <button class="hotspot" id="deskHotspot" style="left:12%;top:57%;width:25%;height:26%" aria-label="Scrivania"></button>
+      <button class="hotspot" id="archiveHotspot" style="left:64%;top:21%;width:19%;height:44%" aria-label="Archivio"></button>
+      <button class="hotspot" id="doorHotspot" style="left:84%;top:28%;width:12%;height:49%" aria-label="Porta"></button>
+
+      <div id="character" class="character giuseppe">
+        <div class="head"></div><div class="body"></div>
+      </div>
+
+      <div id="interactionLabel"></div>
+
+      <section id="dialogue" class="hidden">
+        <div class="portrait" id="portrait"></div>
+        <div class="dialogue-content">
+          <div id="speaker"></div>
+          <div id="line"></div>
+          <div id="choices"></div>
+        </div>
+      </section>
+
+      <section id="journal" class="panel hidden">
+        <h2>Taccuino</h2>
+        <div id="journalContent"></div>
+        <button class="close-panel">Chiudi</button>
+      </section>
+
+      <section id="inventory" class="inventory">
+        <div class="inv-title">INVENTARIO</div>
+        <div id="inventorySlots"></div>
+      </section>
+
+      <nav id="verbbar">
+        <button data-verb="look">GUARDA</button>
+        <button data-verb="use" class="active">USA</button>
+        <button data-verb="talk">PARLA</button>
+        <button id="journalBtn">TACCUINO</button>
+      </nav>
+    </main>
+
+    <footer id="statusbar">
+      <span id="objective">Obiettivo: esamina il materiale recuperato dal cantiere.</span>
+      <span class="hint">Punta e clicca · ESC chiude i pannelli</span>
+    </footer>
+  </div>
+
+  <section id="title-screen">
+    <div class="title-card">
+      <div class="ornament">◆</div>
+      <div class="small">UNA STORIA DI MISTERO, VIAGGI E DESTINO</div>
+      <h2>GIUSEPPE<br><span>&</span> KIKI</h2>
+      <h3>IL SEGRETO DI ORFEO</h3>
+      <p>Firenze, 2026. Un archivio dimenticato. Una fotografia del 1944. Due sconosciuti destinati a incontrarsi.</p>
+      <button id="startBtn">INIZIA L'AVVENTURA</button>
+      <div class="version">Vertical Slice · v0.1</div>
+    </div>
+  </section>
+
+  <script src="src/game.js"></script>
+</body>
+</html>
