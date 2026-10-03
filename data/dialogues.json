@@ -930,6 +930,7 @@
     "@refresh",
     "narr: Dal salone arrivano voci. Passi pesanti. La voce di Don Ilario, altissima: «La biblioteca è chiusa, signori! CHIUSA!»",
     "kiki[scared]: Gli uomini del Notaio.",
+    "@cutscene:allarme_roma",
     "beps[worried]: La porta del salone è fuori discussione. C'è un cancello di servizio… chiuso dall'altra parte.",
     "kiki: E una grata, laggiù. Avvitata.",
     "@objective:o3_fuga"
@@ -2591,6 +2592,7 @@
     "narr: Beps richiude il cassetto O. Una sedia si sposta, alle sue spalle.",
     "kiki_npc: «Mi scusi… lei ha appena consultato il fascicolo Orfeo?»",
     "beps[surprised]: Mi voltai. Non avevo mai visto quella donna prima di allora.",
+    "@cutscene:incontro",
     "@show:kiki",
     "@flag:met_kiki",
     "@person:kiki",
@@ -2696,6 +2698,30 @@
     "@cutscene:c4_fine",
     "@chapter:5",
     "@goto:c5_galata"
+   ]
+  },
+  "custode": {
+   "npc": "custode",
+   "first": [
+    "custode: Il Cronista. Ruolo VII. Non ci siamo mai visti, ma vi conosco da quarant'anni di verbali.",
+    "kiki[surprised]: Lei scriveva i verbali di Orfeo?",
+    "custode: Li scrivevo. Qualcuno, nel '67, li ha riscritti al posto mio. Rimetteteli in ordine, e vedrete dove."
+   ],
+   "intro": [
+    "custode: Il tavolo è vostro. Io ho già letto tutto. Due volte."
+   ],
+   "topics": [
+    {
+     "id": "verbale",
+     "label": "Il verbale del 12 marzo",
+     "icon": "doc",
+     "do": [
+      "custode: Euridice «assente». L'ho scritto io «presente». Con la mia penna stilografica, inchiostro blu.",
+      "custode[sad]: La copia che vedete è a macchina. Io non ho mai usato una macchina da scrivere.",
+      "@stat:conoscenza+1"
+     ],
+     "once": true
+    }
    ]
   }
  }

@@ -1,5 +1,5 @@
 {
- "count": 174,
+ "count": 180,
  "files": [
   "assets/backgrounds/bg_archivio_firenze_room_01.jpg",
   "assets/backgrounds/bg_archivio_firenze_room_02.jpg",
@@ -101,6 +101,8 @@
   "assets/source_sheets/varano/71d3610c-4f46-4bda-ab99-47c74a952a03.png",
   "assets/sprites/agente/idle.png",
   "assets/sprites/agente/talk.png",
+  "assets/sprites/agente2/idle.png",
+  "assets/sprites/agente2/talk.png",
   "assets/sprites/albert/idle.png",
   "assets/sprites/albert/talk.png",
   "assets/sprites/archivista/idle.png",
@@ -115,6 +117,8 @@
   "assets/sprites/beps/talk.png",
   "assets/sprites/beps/use.png",
   "assets/sprites/beps/walk.png",
+  "assets/sprites/custode/idle.png",
+  "assets/sprites/custode/talk.png",
   "assets/sprites/ilario/idle.png",
   "assets/sprites/ilario/talk.png",
   "assets/sprites/kiki/idle.png",
@@ -150,6 +154,8 @@
   "assets/sprites/main_characters/varano/varano_talk_6f.png",
   "assets/sprites/main_characters/varano/varano_walk_8f.png",
   "assets/sprites/main_characters/varano/varano_walk_alt_8f.png",
+  "assets/sprites/neri/idle.png",
+  "assets/sprites/neri/talk.png",
   "assets/sprites/npc/agente_orfeo_1/agente_orfeo_1_pose_1_6f.png",
   "assets/sprites/npc/agente_orfeo_1/agente_orfeo_1_pose_2_6f.png",
   "assets/sprites/npc/agente_orfeo_2/agente_orfeo_2_pose_1_6f.png",

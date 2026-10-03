@@ -4,6 +4,9 @@
 
 - Lungarno all'alba (Cap. VII) usa il fondale del Lungarno virato all'alba (`bgFilter`/`bgTint`), con hotspot riposizionati.
 - La schermata del titolo usa la piazza fiorentina notturna.
+- Nuove cutscene con le illustrazioni rimaste: il primo incontro in Archivio, l'allarme alla Teodosiana, la Grotta di Boboli (Kiki ritrovata e il Notaio), lo Studio del Notaio a Parigi; lo studio coi tavoli da disegno apre la fine del Cap. I.
+- Sprite per Mastro Neri, un secondo agente (il caricaturista di Roma) e un nuovo custode di Orfeo nell'Archivio di Parigi, con un breve dialogo.
+- Le panoramiche delle cutscene non mostrano più il bordo dell'immagine.
 - Personaggi più grandi (altezza base 470 → 560) e scala di ogni scena con fondale reale tarata su porte, tavoli e ringhiere.
 - Ufficio della ditta (Cap. I e IV) sul fondale con computer, stampante, macchinetta e bacheca; hotspot riposizionati.
 

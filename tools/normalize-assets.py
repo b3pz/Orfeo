@@ -61,6 +61,12 @@ MAP = [
     ('agente', 'talk', f'{NPC}/agente_orfeo_1/agente_orfeo_1_pose_2_6f.png', 6, 6),
     ('albert', 'idle', f'{NPC}/storico_parigi/storico_parigi_pose_2_6f.png', 6, 4),
     ('albert', 'talk', f'{NPC}/storico_parigi/storico_parigi_pose_1_6f.png', 6, 6),
+    ('neri', 'idle', f'{NPC}/membro_consiglio_orfeo_2/membro_consiglio_orfeo_2_pose_2_6f.png', 6, 4),
+    ('neri', 'talk', f'{NPC}/membro_consiglio_orfeo_2/membro_consiglio_orfeo_2_pose_1_6f.png', 6, 6),
+    ('custode', 'idle', f'{NPC}/membro_consiglio_orfeo_1/membro_consiglio_orfeo_1_pose_2_6f.png', 6, 4),
+    ('custode', 'talk', f'{NPC}/membro_consiglio_orfeo_1/membro_consiglio_orfeo_1_pose_1_6f.png', 6, 6),
+    ('agente2', 'idle', f'{NPC}/agente_orfeo_2/agente_orfeo_2_pose_1_6f.png', 6, 4),
+    ('agente2', 'talk', f'{NPC}/agente_orfeo_2/agente_orfeo_2_pose_2_6f.png', 6, 6),
 ]
 
 
