@@ -1,0 +1,232 @@
+{
+  "_doc": "Enigmi. type = modulo in src/puzzles/. hints = 3 livelli (leggero, specifico, quasi-soluzione). onSolve/onLeave = script. Ogni enigma si può lasciare e riprendere; lo stato è salvato.",
+  "puzzles": {
+    "c1_frammenti": {
+      "type": "fragments", "chapter": 1,
+      "title": "Il documento strappato",
+      "pieces": [
+        { "id": "f1", "text": "ORFEO · PROMEMORIA RISERVATO — Firenze, 9 novembre 1966" },
+        { "id": "f2", "text": "L'acqua è arrivata fino al terzo gradino della stanza. I registri" },
+        { "id": "f3", "text": "si sono salvati, ma qui non sono più al sicuro. Murate la stanza" },
+        { "id": "f4", "text": "e portate le copie a Parigi. Chi cerca il resto segua la catena" },
+        { "id": "f5", "text": "del catalogo: si parte dalla scheda O-1 e si obbedisce sempre" },
+        { "id": "f6", "text": "al rimando in rosso. Il diciassettesimo sa il resto. — E." }
+      ],
+      "solution": ["f1", "f2", "f3", "f4", "f5", "f6"],
+      "initial": ["f4", "f1", "f6", "f3", "f5", "f2"],
+      "successText": "Il promemoria è ricomposto.",
+      "hints": [
+        "Ogni striscia ha un bordo strappato in alto e in basso: due strisce vicine hanno bordi complementari. Anche le frasi devono continuare.",
+        "Il titolo con la data va per primo. Le frasi finiscono a metà: cerca la striscia che comincia con la parola mancante («I registri…» → «si sono salvati»).",
+        "L'ordine è: intestazione → «L'acqua è arrivata…» → «si sono salvati…» → «e portate le copie…» → «del catalogo…» → «al rimando in rosso…»."
+      ],
+      "onSolve": ["@take:frammenti", "@give:promemoria", "@clue:promemoria_1966", "@stat:conoscenza+1", "beps[think]: «Si parte dalla scheda O-1.» Un catalogo con la lettera O. All'Archivio Storico, qui accanto.", "@objective:o1_archivio"]
+    },
+
+    "c1_catena": {
+      "type": "chain", "chapter": 1,
+      "title": "La catena O-17",
+      "cards": {
+        "O-1": { "title": "Registro dei passaggi sull'Arno", "author": "R. Ricci", "year": "1944", "red": "O-6" },
+        "O-2": { "title": "Inventario delle chiavi", "author": "O. Neri", "year": "1944", "red": "O-8" },
+        "O-3": { "title": "Corrispondenza con Roma", "author": "I. Cesti", "year": "1952", "red": "O-12" },
+        "O-4": { "title": "Rubrica dei custodi", "author": "J. Marchetti", "year": "1967", "red": "O-15" },
+        "O-5": { "title": "Lasciapassare falsificati", "author": "Il Tipografo", "year": "1944", "red": "O-9" },
+        "O-6": { "title": "Fotografie del Lungarno", "author": "J. Marchetti", "year": "1944", "red": "O-11" },
+        "O-7": { "title": "Note mediche", "author": "Il Medico", "year": "1944", "red": "O-13" },
+        "O-8": { "title": "Chiavi del Corridoio", "author": "O. Neri", "year": "1945", "red": "O-2" },
+        "O-9": { "title": "Timbri e matrici", "author": "Il Tipografo", "year": "1945", "red": "O-5" },
+        "O-10": { "title": "Orari dei treni per Livorno", "author": "Il Ferroviere", "year": "1944", "red": "O-14" },
+        "O-11": { "title": "Carteggio Parigi", "author": "J. Marchetti", "year": "1967", "smudged": true, "redText": "Vedi anche → O-?", "note": "Il rimando in rosso è stato lavato via dall'acqua. Sotto, a matita: «vedi la scheda dello stesso autore, anno 1967»." },
+        "O-12": { "title": "Lettere da Roma", "author": "I. Cesti", "year": "1958", "red": "O-3" },
+        "O-13": { "title": "Registro dei ricoveri", "author": "Il Medico", "year": "1945", "red": "O-7" },
+        "O-14": { "title": "Itinerario Livorno–Istanbul", "author": "Il Ferroviere", "year": "1944", "red": "O-10" },
+        "O-15": { "title": "Inventario dei sigilli", "author": "Anonimo", "year": "1967", "smudged": true, "redText": "Vedi anche → O-1?", "note": "Il secondo numero è macchiato. Sotto, a matita: «quanti erano i custodi»." },
+        "O-16": { "title": "Verbali delle riunioni", "author": "E. Varano", "year": "1967", "red": "O-4", "note": "Firma del notaio Ettore Varano." },
+        "O-17": { "title": "Fondo Orfeo — Provenienza Parigi 1967", "author": "E.", "year": "1967", "note": "Collocazione: deposito, ripiano 17." }
+      },
+      "solution": ["O-1", "O-6", "O-11", "O-4", "O-15", "O-17"],
+      "successText": "La catena porta a O-17.",
+      "hints": [
+        "Il promemoria dice: si parte da O-1 e si segue sempre il rimando in rosso. Alcune schede però sono state danneggiate dall'alluvione.",
+        "Dove il rosso è illeggibile c'è una nota a matita: su O-11 si cerca un'altra scheda dello stesso autore dello stesso anno; su O-15 il numero dei custodi.",
+        "O-1 → O-6 → O-11 → O-4 (J. Marchetti, 1967) → O-15 → O-17 (i custodi erano diciassette)."
+      ],
+      "onSolve": ["@give:scheda_o17", "@clue:scheda_o17", "@stat:conoscenza+1", "@dialogue:incontro_kiki"]
+    },
+
+    "c2_sovrapposizione": {
+      "type": "overlay", "chapter": 2,
+      "title": "Le due fotografie",
+      "start": { "dx": 70, "dy": -45, "rot": 14, "sc": 0.82 },
+      "successText": "I crocini coincidono. La lira è completa. E la donna è nello stesso punto.",
+      "hints": [
+        "Le crocette rosse agli angoli sono segni di registro: servono proprio a sovrapporre due immagini.",
+        "La foto del 1967 è ruotata, più piccola e spostata. Correggi prima la rotazione, poi la scala, infine trascinala.",
+        "Ruota di circa 14° verso sinistra (⟲ sette volte), ingrandisci di circa nove passi (+), poi sposta in basso a sinistra finché i crocini combaciano."
+      ],
+      "onSolve": [
+        "kiki[surprised]: La lira. Metà incisa sulla foto del '44, metà su quella del '67. Insieme fanno il simbolo di Orfeo.",
+        "beps: E la donna. Stessa posizione, stesso cappello, stesso medaglione. A ventitré anni di distanza.",
+        "kiki: Non è la stessa donna, Beps. Nel '44 è la mia bisnonna Lucia. Nel '67 è nonna Ada. Le ho riconosciute dalle mani.",
+        "beps[think]: Allora la donna nelle fotografie non è una persona. È un posto. Un ruolo.",
+        "@clue:stessa_donna", "@stat:conoscenza+2",
+        { "if": "puzzle.c2_mappa", "do": ["@dialogue:c2_fine"], "else": [ { "if": "item.mappa", "do": ["@objective:o2_mappa_usa"], "else": ["@objective:o2_mappa"] } ] }
+      ]
+    },
+
+    "c2_mappa": {
+      "type": "dial", "chapter": 2,
+      "title": "Il medaglione sulla mappa",
+      "positions": 8, "start": 0, "solution": 3,
+      "readings": ["AINASODOET", "NIDOTEASOA", "SANTODIEOA", "TEODOSIANA", "DEOSATINAO", "ETONDISAAO", "OADIESTANO", "ANOTIDESAO"],
+      "successText": "TEODOSIANA.",
+      "hints": [
+        "La tacca sul bordo del medaglione serve a orientarlo. Sulla mappa c'è un solo segno evidente.",
+        "Sul retro della foto del 1967 c'è scritto: «La stella guida la tacca». Ruota finché la tacca punta la stella rossa.",
+        "La stella è a nord-est: tre scatti in senso orario dalla posizione iniziale. Si legge TEODOSIANA."
+      ],
+      "onSolve": [
+        "beps: TEODOSIANA. Una parola che esiste.",
+        "kiki: La Biblioteca Teodosiana. A Roma. Ci ho fatto un tirocinio, due anni fa. Il bibliotecario ha novant'anni e cita i Pink Floyd.",
+        "@take:mappa", "@clue:teodosiana", "@stat:conoscenza+1",
+        { "if": "puzzle.c2_sovrapposizione", "do": ["@dialogue:c2_fine"], "else": ["@objective:o2_sovrapponi"] }
+      ]
+    },
+
+    "c3_cassetti": {
+      "type": "drawers", "chapter": 3,
+      "title": "I diciassette cassetti",
+      "plaque": "PRIMVS DVCIT · SECVNDA MEMINIT · TERTIVS TRAICIT · VLTIMVS VERBA CVSTODIT",
+      "plaqueIf": [ { "if": "flag.targa_tradotta", "text": "«Il primo guida · la seconda ricorda · il terzo traghetta · l'ultimo custodisce le parole» — apri nell'ordine del giuramento." } ],
+      "drawers": [
+        { "id": "d1", "emblem": "⚙", "label": "Ruota" },
+        { "id": "d2", "emblem": "☾", "label": "Luna" },
+        { "id": "d3", "emblem": "✚", "label": "Croce" },
+        { "id": "d4", "emblem": "⚖", "label": "Bilancia" },
+        { "id": "d5", "emblem": "❧", "label": "Foglia" },
+        { "id": "d6", "emblem": "✦", "label": "Stella" },
+        { "id": "d7", "emblem": "♜", "label": "Torre" },
+        { "id": "d8", "emblem": "⚓", "label": "Àncora" },
+        { "id": "d9", "emblem": "✂", "label": "Forbici" },
+        { "id": "d10", "emblem": "♪", "label": "Lira" },
+        { "id": "d11", "emblem": "◉", "label": "Occhio" },
+        { "id": "d12", "emblem": "⚷", "label": "Chiave" },
+        { "id": "d13", "emblem": "✎", "label": "Penna" },
+        { "id": "d14", "emblem": "☼", "label": "Sole" },
+        { "id": "d15", "emblem": "⇄", "label": "Frecce" },
+        { "id": "d16", "emblem": "▤", "label": "Schedario" },
+        { "id": "d17", "emblem": "⌒", "label": "Raschiato", "erased": true }
+      ],
+      "solution": ["d10", "d2", "d8", "d5"],
+      "successText": "Quattro scatti. Dietro il mobile, qualcosa si apre.",
+      "hints": [
+        "La targa elenca quattro ruoli nell'ordine del giuramento. Kiki sa leggere il latino. La LISTA_17 nel taccuino abbina ogni ruolo al suo emblema.",
+        "Chi guida è Orfeo (la lira), chi ricorda è Euridice (la luna), chi traghetta è il Barcaiolo (l'àncora), chi custodisce le parole è il Libraio (la foglia).",
+        "Apri in quest'ordine: lira ♪, luna ☾, àncora ⚓, foglia ❧."
+      ],
+      "onSolve": [
+        "narr: Il fondo del mobile scorre di lato. Dietro, in una nicchia: una chiave d'ottone, un fascicolo legato e un quarto di cerchio di bronzo rosso.",
+        "@give:chiave_ottone", "@give:lista17", "@give:sigillo_a",
+        "@clue:lista_completa", "@stat:conoscenza+1", "@flag:lista_full",
+        "beps[surprised]: La Lista dei 17. Completa. Con tutti i nomi.",
+        "@dialogue:allarme"
+      ]
+    },
+
+    "c4_sigillo": {
+      "type": "seal", "chapter": 4,
+      "title": "Il Sigillo di Orfeo",
+      "startRot": { "A": 1, "B": 2, "C": 3, "D": 1 },
+      "successText": "ORFEO · NON · VOLTARTI. Il Sigillo è intero.",
+      "hints": [
+        "Ogni frammento ha una parola sul bordo. Ricomposto, il bordo deve leggersi in senso orario partendo dall'alto a sinistra.",
+        "Il motto è «ORFEO · NON · VOLTARTI». La curva esterna di ogni frammento deve stare verso l'esterno del cerchio: ruota i pezzi finché l'arco guarda fuori.",
+        "In alto a sinistra ORFEO (Roma), in alto a destra NON (Banca), in basso a destra VOL (Cantiere), in basso a sinistra TARTI (Ponte Vecchio). Tocca ogni pezzo posato finché la lira al centro si ricompone."
+      ],
+      "onSolve": [
+        "@take:sigillo_a,sigillo_b,sigillo_c,sigillo_d", "@give:sigillo", "@clue:sigillo_intero", "@stat:conoscenza+1",
+        "neri[surprised]: Mio nonno l'ha diviso nel '67 su questo banco. E lei l'ha ricomposto in dieci minuti.",
+        "beps: Undici. Ho sbagliato un pezzo.",
+        { "if": "flag.neri_chiave", "do": ["@objective:o4_corridoio"], "else": ["neri: Adesso le serve la porticina del Corridoio. Me lo chieda.", "@objective:o4_chiave_corridoio"] }
+      ]
+    },
+
+    "c5_anelli": {
+      "type": "rings", "chapter": 5,
+      "title": "Gli anelli di Istanbul",
+      "rings": [
+        ["sole", "luna", "stella", "mano", "occhio", "onda", "lira", "chiave"],
+        ["onda", "mano", "chiave", "lira", "sole", "stella", "luna", "occhio"],
+        ["stella", "occhio", "lira", "sole", "chiave", "luna", "mano", "onda"],
+        ["luna", "lira", "onda", "occhio", "stella", "mano", "sole", "chiave"]
+      ],
+      "target": ["luna", "lira", "onda", "chiave"],
+      "start": [0, 0, 0, 0],
+      "successText": "Luna, lira, onda, chiave. La nicchia si apre.",
+      "hints": [
+        "Il retro del medaglione ha quattro simboli incisi, dal centro verso il bordo. Esamina il medaglione.",
+        "La sequenza è luna, lira, onda, chiave (dall'anello interno all'esterno). Ogni anello trascina quello più interno: sistema prima l'anello esterno.",
+        "Esterno su ⚷ chiave, poi il terzo su ≈ onda, poi il secondo su ♪ lira, infine l'interno su ☾ luna. In quest'ordine, non si scombina più nulla."
+      ],
+      "onSolve": [
+        "narr: La nicchia si apre. Dentro, una lastra di bronzo incisa: una pianta di Firenze. Un cerchio sulla via de' Bardi. Una scala sotto tre gradini.",
+        "kiki[surprised]: La stanza murata. La Camera di Orfeo è sotto la stanza murata. Siamo partiti da lì.",
+        "beps[think]: «L'acqua arrivò al terzo gradino.» Non era solo una password.",
+        "@clue:camera_firenze", "@stat:conoscenza+2",
+        { "if": "flag.tetto_scena", "do": ["@dialogue:c5_fine"], "else": ["kiki[tender]: Prima di ripartire… saliamo sul tetto dell'Han. Solo un momento. Te lo chiedo per favore.", "@objective:o5_tetto"] }
+      ]
+    },
+
+    "c6_cronologia": {
+      "type": "timeline", "chapter": 6,
+      "title": "La cronologia di Orfeo",
+      "docs": [
+        { "id": "t1", "title": "Giuramento dei Quattro", "text": "«Oggi, mentre i tedeschi ordinano di sgomberare i lungarni, quattro di noi giurano: Orfeo, Euridice, il Barcaiolo, il Libraio.» Firenze, 30 luglio 1944." },
+        { "id": "t2", "title": "Rapporto del Barcaiolo", "text": "«Stanotte hanno fatto saltare tutti i ponti. Solo il Ponte Vecchio è rimasto in piedi. Abbiamo portato undici persone di là in barca.» Notte fra il 3 e il 4 agosto 1944." },
+        { "id": "t3", "title": "Lettera di Orfeo", "text": "«Il Ponte Vecchio è crollato all'alba: l'archivio passerà dal ponte Santa Trinita, ancora intatto.» Firenze, 5 agosto 1944. Firmata «Orfeo», autenticata dal Notaio." },
+        { "id": "t4", "title": "Verbale dell'alluvione", "text": "«L'Arno è entrato nella stanza alle 7 del mattino. L'acqua si è fermata al terzo gradino.» Firenze, 4 novembre 1966." },
+        { "id": "t5", "title": "Promemoria di E.", "text": "«Murate la stanza e portate le copie a Parigi.» Firenze, cinque giorni dopo l'alluvione." },
+        { "id": "t6", "title": "Verbale della seduta straordinaria", "text": "«Ruolo XVII abolito all'unanimità dei presenti. Euridice e il Ponte assenti.» Parigi, 12 marzo 1967. Redatto dal Notaio E. Varano." },
+        { "id": "t7", "title": "Lettera di Ada a Selim", "text": "«Ho digitalizzato il Registro e l'ho murato con il resto. Se un giorno lo troveranno, che siano in due.» Istanbul, dicembre 1998." }
+      ],
+      "initial": ["t5", "t3", "t7", "t1", "t6", "t2", "t4"],
+      "solution": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"],
+      "forgeries": ["t3", "t6"],
+      "successText": "Cronologia ricostruita. Due falsi, una sola mano: quella del Notaio.",
+      "hints": [
+        "Alcune date sono implicite: «cinque giorni dopo l'alluvione» viene dopo il 4 novembre 1966. Poi cerca ciò che non può essere vero.",
+        "Una lettera dice che il Ponte Vecchio crollò nel '44: ma è stato l'unico ponte risparmiato (lo dice anche il Barcaiolo). E il nastro del '67 prova che Euridice era presente alla votazione.",
+        "Ordine: Giuramento (30/7/44), Barcaiolo (4/8/44), Lettera di Orfeo (5/8/44), Alluvione (4/11/66), Promemoria (9/11/66), Verbale (12/3/67), Lettera di Ada (1998). Falsi: la Lettera di Orfeo e il Verbale."
+      ],
+      "onSolve": [
+        "kiki: Due falsi. La lettera del '44 dice che il Ponte Vecchio crollò: ma il Ponte Vecchio è l'unico che non cadde. E il verbale del '67 cancella nonna dalla votazione.",
+        "beps: Entrambi autenticati dal Notaio. Bruno Varano nel '44, Ettore Varano nel '67. Padre e figlio.",
+        "kiki[angry]: Un'intera famiglia che riscrive la storia.",
+        "@clue:falso_1944", "@stat:conoscenza+2",
+        { "if": "flag.nastro_ascoltato", "do": ["@objective:o6_varano"], "else": ["@objective:o6_nastro"] }
+      ]
+    },
+
+    "c7_registro": {
+      "type": "register", "chapter": 7,
+      "title": "La Ruota dei Nomi",
+      "options": [
+        { "id": "arco", "emblem": "⌒", "label": "L'arco (il Ponte)" },
+        { "id": "occhio", "emblem": "◉", "label": "L'occhio", "wrong": "L'occhio è il Fotografo, Ruolo IX. Ha già il suo posto." },
+        { "id": "bilancia", "emblem": "⚖", "label": "La bilancia", "wrong": "La bilancia è il Notaio. Non può stare due volte." },
+        { "id": "lira", "emblem": "♪", "label": "La lira", "wrong": "La lira è Orfeo, il primo. Non l'ultimo." }
+      ],
+      "solution": "arco",
+      "eighteenth": { "if": "flag.knows_18 && count.symbols>=7" },
+      "successText": "Il XVII ha di nuovo il suo emblema. I Nomi rispondono.",
+      "successText18": "Il XVII ha di nuovo il suo emblema. E il XVIII, per la prima volta, ha due nomi.",
+      "hints": [
+        "Il ruolo raschiato è il diciassettesimo: quello abolito nel 1967. Don Ilario e il nastro dicono come si chiamava.",
+        "Il XVII era il Ponte (Guido Sarti): il ponte tra Orfeo e il mondo. Il suo emblema è quello che somiglia a un ponte.",
+        "Scegli l'arco ⌒."
+      ],
+      "onSolve": ["@flag:m_registro", "kiki: I Nomi rispondono.", "narr: Un terzo scatto, più profondo. Dall'altra parte, la serratura di Beps si illumina.", "@objective:o7_leva"]
+    }
+  }
+}

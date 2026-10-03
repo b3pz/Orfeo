@@ -1,0 +1,221 @@
+{
+ "_doc": "Finali. req = condizione (vedi DIALOGUE_SYSTEM.md). lockedHint = cosa vede il giocatore se il finale non è disponibile (mai numeri). epilogues = varianti, la prima la cui condizione è vera. postcredit = script dopo i titoli.",
+ "prompt": "Il Registro di Orfeo, ottant'anni di nomi, è tra le vostre mani. Il Notaio aspetta, una scatola di fiammiferi in tasca. Cosa farete?",
+ "order": [
+  "luce",
+  "custodi",
+  "cenere",
+  "segreto"
+ ],
+ "endings": {
+  "luce": {
+   "title": "La Luce",
+   "subtitle": "Il Registro viene reso pubblico.",
+   "choice": "La Luce",
+   "choiceSub": "Consegnare il Registro all'Archivio Storico e alla stampa. Tutti i nomi, quelli che salvarono e quelli che tradirono.",
+   "lockedHint": "Per difendere la verità davanti al mondo vi servirebbero più prove e una conoscenza più profonda di Orfeo.",
+   "req": "stat.conoscenza>=30 && evidence>=9 && item.registro",
+   "script": [
+    "beps: La Luce. Guido Sarti voleva questo. Il Ponte.",
+    "kiki: Tutti i nomi. Anche quelli che fanno male.",
+    {
+     "if": "flag.varano_doubt",
+     "do": [
+      "varano[sad]: Allora testimonierò. Racconterò di mio padre, del verbale. E di mia nonna Lina. È l'unico modo di essere un Varano diverso.",
+      "@flag:varano_testimonia"
+     ],
+     "else": [
+      "varano: Non posso fermarvi. Non vi chiederò di perdonarmi se non verrò alla conferenza stampa."
+     ]
+    },
+    "@cutscene:fine_luce"
+   ],
+   "epilogues": [
+    {
+     "id": "luce_amore",
+     "if": "stat.legame>=20",
+     "text": [
+      "Tre mesi dopo, il Registro di Orfeo viene esposto all'Archivio Storico di Firenze. Ottavia Ricci cura la mostra e, per la prima volta in trent'anni, sorride in pubblico davanti alla foto di suo padre.",
+      "Trecentoquattordici persone salvate. Diciannove delatori. Il nome di Guido Sarti torna nella foto del 1944: un restauratore di carta lo ricostruisce graffio per graffio. Il restauratore è Kiki.",
+      "{varano}",
+      "Beps e Kiki non smettono di litigare su dove appendere la foto. Alla fine la appendono in due posti. Nella loro casa nuova, in Oltrarno, c'è un tavolino del Caffè delle Logge che Tommaso ha giurato di non aver mai venduto."
+     ]
+    },
+    {
+     "id": "luce",
+     "if": "true",
+     "text": [
+      "Tre mesi dopo, il Registro di Orfeo viene esposto all'Archivio Storico di Firenze. Ottavia Ricci cura la mostra.",
+      "Trecentoquattordici persone salvate. Diciannove delatori. Il nome di Guido Sarti torna nella foto del 1944.",
+      "{varano}",
+      "Beps torna ai suoi preventivi. Kiki torna a Parigi. Si scrivono ogni settimana. Lettere, non messaggi. Ada ne sarebbe fiera."
+     ]
+    }
+   ],
+   "postcredit": [
+    "@cutscene:post_luce"
+   ]
+  },
+  "custodi": {
+   "title": "I Custodi",
+   "subtitle": "Orfeo rinasce, con due nuovi custodi.",
+   "choice": "I Custodi",
+   "choiceSub": "Prendere il posto di Euridice e del Ponte. Custodire il Registro, insieme, finché non sarà il momento giusto.",
+   "lockedHint": "Per custodire insieme un segreto così, la fiducia e il legame tra voi dovrebbero essere più forti, e costruiti agendo insieme.",
+   "req": "stat.fiducia>=12 && stat.legame>=20 && flag.coop>=5",
+   "script": [
+    "kiki: Lo custodiamo noi. Io sarò Euridice, come nonna. Hélène sarà felice di restituirmi il cappello.",
+    "beps: E io sarò il Ponte. Il ruolo che hanno cancellato. Deciderò io quando il Registro uscirà. Con te.",
+    "varano[sad]: Il Ponte e la Testimone. Mio padre si rivolterebbe nella tomba.",
+    {
+     "if": "flag.varano_doubt",
+     "do": [
+      "varano: …Bene. Lasciatemi restare il Notaio. Vi prometto che stavolta il verbale dirà la verità.",
+      "@flag:varano_custode"
+     ],
+     "else": [
+      "varano: Fate come volete. Io ho finito con Orfeo."
+     ]
+    },
+    "@cutscene:fine_custodi"
+   ],
+   "epilogues": [
+    {
+     "id": "custodi",
+     "if": "true",
+     "text": [
+      "Orfeo si riunisce di nuovo, il 12 marzo, a Parigi. Diciassette sedie, diciassette custodi. Per la prima volta dal 1967, nessuna è vuota.",
+      "Kiki porta il cappello nero di Ada. Le sta un po' largo. Hélène dice che è giusto così: «Il cappello cresce con te».",
+      "{varano}",
+      "Il Registro torna nella Camera, sotto Firenze. Ma adesso ci sono due chiavi, e nessuno dei due può aprirla da solo. Beps dice che è il progetto di cui va più fiero. Kiki dice che è solo una scusa per vedersi."
+     ]
+    }
+   ],
+   "postcredit": [
+    "@cutscene:post_custodi"
+   ]
+  },
+  "cenere": {
+   "title": "Cenere",
+   "subtitle": "Il Registro viene bruciato.",
+   "choice": "Cenere",
+   "choiceSub": "Lasciare che il Notaio accenda il fiammifero. Nessun nome sarà accusato. Nessun nome sarà ricordato.",
+   "lockedHint": "",
+   "req": "true",
+   "script": [
+    "beps: …Va bene, Varano.",
+    "kiki[sad]: Beps.",
+    "beps: Nessuno di noi ha il diritto di decidere per trecento persone. Nemmeno lui. Ma almeno così nessuno pagherà per i nonni.",
+    "varano[sad]: Grazie.",
+    "narr: Il fiammifero si accende al secondo tentativo. La carta antica brucia in fretta, come se non aspettasse altro.",
+    "@cutscene:fine_cenere"
+   ],
+   "epilogues": [
+    {
+     "id": "cenere_insieme",
+     "if": "stat.legame>=18",
+     "text": [
+      "La cenere del Registro finisce nell'Arno, all'alba, davanti alla targa del '66.",
+      "Varano lascia Firenze una settimana dopo. Nessuno sa dove sia andato. Alla Banca del Giglio, la cassetta 11 viene chiusa.",
+      "Beps e Kiki non ne parlano più. Ma ogni 12 marzo comprano un libretto di Gluck da Monsieur Albert e lo leggono ad alta voce, i nomi che ricordano, quelli che non sono bruciati perché li hanno imparati a memoria.",
+      "Restano insieme. La cenere, dice Kiki, è anche concime."
+     ]
+    },
+    {
+     "id": "cenere_soli",
+     "if": "true",
+     "text": [
+      "La cenere del Registro finisce nell'Arno, all'alba, davanti alla targa del '66.",
+      "Kiki torna a Parigi il giorno stesso. Non litigano. Semplicemente, qualcosa si è spezzato insieme alla carta.",
+      "Varano lascia Firenze. Beps torna ai suoi preventivi, ai suoi muri che non mentono.",
+      "Passano cinque anni. Poi una sera di pioggia, sul Lungarno, una donna col cappotto rosso si siede su una panchina bagnata."
+     ]
+    }
+   ],
+   "postcredit": [
+    "@cutscene:post_cenere"
+   ]
+  },
+  "segreto": {
+   "title": "Il Diciottesimo Nome",
+   "subtitle": "Il primo ruolo condiviso di Orfeo.",
+   "choice": "Il Diciottesimo Nome",
+   "choiceSub": "Né luce né cenere né segreto. Scrivere due nomi in una riga sola, e cambiare le regole di Orfeo.",
+   "secret": true,
+   "lockedHint": "",
+   "req": "stat.fiducia>=14 && stat.legame>=24 && stat.conoscenza>=36 && count.symbols>=7 && count.collectibles>=36 && flag.knows_18 && flag.eighteenth_written && flag.final_perfect",
+   "script": [
+    "kiki[tender]: Varano. Abbiamo già scelto, nella Camera. Lo spazio dopo il diciassettesimo. Ci abbiamo scritto due nomi.",
+    "beps: Il Diciottesimo non è un custode. Sono due. Nessuno deciderà più da solo cosa fare del Registro: né Orfeo, né il Ponte, né un notaio con i fiammiferi.",
+    "beps: Lo apriremo. Non tutto, non subito. Prima i nomi dei salvati, uno alla volta, con le loro famiglie. Poi, insieme a loro, gli altri.",
+    "varano[surprised]: …E mia nonna?",
+    "kiki[tender]: Sua nonna sarà il primo nome che leggeremo, notaio. Accanto a quello di suo nonno. Perché è la verità, e la verità è che erano tutti e due Varano.",
+    "narr: Il Notaio guarda la scatola di fiammiferi per un lungo momento. Poi la lancia nell'Arno.",
+    "varano[sad]: Quarant'anni. Bastava che qualcuno me lo dicesse in due.",
+    "@flag:varano_redento",
+    "@cutscene:fine_segreto"
+   ],
+   "epilogues": [
+    {
+     "id": "segreto",
+     "if": "true",
+     "text": [
+      "Il 12 marzo, a Parigi, Orfeo si riunisce per la prima volta con diciotto sedie. L'ultima è una panca: c'è posto per due.",
+      "Il Registro viene aperto nome per nome, in tre anni, insieme alle famiglie. Il primo nome letto in pubblico è «Lina Varano». Aurelio legge il secondo: «Bruno Varano». Gli trema la voce solo alla fine.",
+      "Guido Sarti torna nella fotografia del 1944. Ottavia Ricci mette la foto di suo padre all'ingresso dell'Archivio. Hélène restituisce il cappello nero, che però resta appeso all'attaccapanni di Ada: nessuno, dicono tutti, è più Euridice da solo.",
+      "Beps e Kiki si sposano a giugno, al Caffè delle Logge. Tommaso fa i cappuccini con la cannella e lascia sul piattino di ognuno 500 lire, dal suo barattolo."
+     ]
+    }
+   ],
+   "postcredit": [
+    "@cutscene:post_segreto"
+   ]
+  }
+ },
+ "credits": [
+  [
+   "Un'avventura grafica di",
+   "b3pz"
+  ],
+  [
+   "Storia e personaggi",
+   "Giuseppe & Kiki"
+  ],
+  [
+   "Motore, sistemi, enigmi e scrittura",
+   "Claude Code (Anthropic) con b3pz"
+  ],
+  [
+   "Illustrazioni finali",
+   "in produzione — vedi docs/ASSET_REQUIREMENTS.md"
+  ],
+  [
+   "Grafica provvisoria",
+   "generata proceduralmente"
+  ],
+  [
+   "Musica e suoni",
+   "sintesi procedurale provvisoria"
+  ],
+  [
+   "Beps",
+   "Giuseppe"
+  ],
+  [
+   "Kiki",
+   "Federica"
+  ],
+  [
+   "Aurelio Varano",
+   "il Notaio"
+  ],
+  [
+   "Ringraziamenti",
+   "Firenze, Parigi, Roma, Istanbul"
+  ],
+  [
+   "E a",
+   "tutti quelli che non si voltano"
+  ]
+ ]
+}

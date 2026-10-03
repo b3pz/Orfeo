@@ -2,81 +2,144 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#12100e" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0c0a08" />
+  <meta name="description" content="Giuseppe & Kiki — Il Segreto di Orfeo. Un'avventura grafica punta-e-clicca in sette capitoli tra Firenze, Parigi, Roma e Istanbul." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
   <title>Giuseppe & Kiki — Il Segreto di Orfeo</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%2312100e' stroke='%23c9a85a' stroke-width='2'/%3E%3Cpath d='M10 8c-3 7 0 14 4 15h4c4-1 7-8 4-15M9 12h14M14 12v11M18 12v11' stroke='%23c9a85a' stroke-width='1.8' fill='none'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="src/style.css" />
 </head>
 <body>
-  <div id="game-shell">
-    <header id="topbar">
-      <div class="brand">
-        <span class="eyebrow">UN'AVVENTURA GRAFICA ORIGINALE</span>
-        <h1>GIUSEPPE & KIKI</h1>
-        <div class="subtitle">IL SEGRETO DI ORFEO</div>
-      </div>
-      <div class="chapter"><span id="chapterLabel">CAPITOLO I</span><b id="locationLabel">FIRENZE · OTTOBRE 2026</b></div>
-    </header>
-
+  <div id="app">
     <main id="stage">
-      <div id="background"></div>
-      <div id="vignette"></div>
-      <button class="hotspot" id="deskHotspot" style="left:12%;top:57%;width:25%;height:26%" aria-label="Scrivania"></button>
-      <button class="hotspot" id="archiveHotspot" style="left:64%;top:21%;width:19%;height:44%" aria-label="Archivio"></button>
-      <button class="hotspot" id="doorHotspot" style="left:84%;top:28%;width:12%;height:49%" aria-label="Porta"></button>
-
-      <div id="character" class="character giuseppe">
-        <div class="head"></div><div class="body"></div>
+      <div id="world" data-cursor="neutral">
+        <div id="bg-layer"></div>
+        <div id="prop-layer"></div>
+        <div id="actor-layer"></div>
+        <div id="hotspot-layer"></div>
+        <div id="fx-layer"></div>
       </div>
-
-      <div id="interactionLabel"></div>
-
-      <section id="dialogue" class="hidden">
-        <div class="portrait" id="portrait"></div>
-        <div class="dialogue-content">
-          <div id="speaker"></div>
-          <div id="line"></div>
-          <div id="choices"></div>
-        </div>
-      </section>
-
-      <section id="journal" class="panel hidden">
-        <h2>Taccuino</h2>
-        <div id="journalContent"></div>
-        <button class="close-panel">Chiudi</button>
-      </section>
-
-      <section id="inventory" class="inventory">
-        <div class="inv-title">INVENTARIO</div>
-        <div id="inventorySlots"></div>
-      </section>
-
-      <nav id="verbbar">
-        <button data-verb="look">GUARDA</button>
-        <button data-verb="use" class="active">USA</button>
-        <button data-verb="talk">PARLA</button>
-        <button id="journalBtn">TACCUINO</button>
-      </nav>
+      <div id="hover-label" aria-hidden="true"></div>
     </main>
 
-    <footer id="statusbar">
-      <span id="objective">Obiettivo: esamina il materiale recuperato dal cantiere.</span>
-      <span class="hint">Punta e clicca · ESC chiude i pannelli</span>
-    </footer>
+    <!-- HUD minimale -->
+    <div id="hud">
+      <div class="hud-left">
+        <button id="btn-menu" class="hud-btn" title="Menu (Esc)" aria-label="Menu"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <button id="btn-journal" class="hud-btn" title="Taccuino (J)" aria-label="Taccuino"><svg viewBox="0 0 24 24"><path d="M6 3h11a2 2 0 0 1 2 2v16H7a2 2 0 0 1-2-2V4a1 1 0 0 1 1-1zM9 3v18M12 8h4M12 12h4"/></svg></button>
+        <button id="btn-hint" class="hud-btn" title="Suggerimento (H)" aria-label="Suggerimento"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.8.4-1 1-1 1.7M12 17h.01"/></svg></button>
+        <button id="btn-reveal" class="hud-btn" title="Mostra punti interattivi (Spazio)" aria-label="Mostra punti interattivi"><svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></button>
+      </div>
+      <div id="location"></div>
+      <div id="objective"></div>
+      <div class="hud-right" id="char-switch">
+        <button id="sw-partner" class="sw-portrait small hidden" aria-label="Cambia personaggio"></button>
+        <div id="sw-active" class="sw-portrait"></div>
+      </div>
+    </div>
+
+    <!-- Inventario richiamabile dal basso -->
+    <section id="inventory" aria-label="Inventario">
+      <button id="inv-handle"><span>Inventario</span> <b id="inv-count">0</b></button>
+      <div id="inv-panel">
+        <div id="inv-slots"></div>
+        <div id="inv-actions"><span>Selezionato: <b id="inv-sel-name"></b></span><button id="inv-examine">Esamina</button><button id="inv-cancel">Annulla</button></div>
+      </div>
+    </section>
+    <div id="item-cursor" aria-hidden="true"></div>
+    <div id="item-card"></div>
+
+    <!-- Dialoghi -->
+    <section id="say" class="hidden" aria-live="polite">
+      <div class="say-portrait left"></div>
+      <div class="say-body">
+        <div class="say-name"></div>
+        <div class="say-text"></div>
+        <div class="say-more">▾</div>
+      </div>
+      <div class="say-portrait right"></div>
+    </section>
+    <div id="topics" class="hidden"></div>
+    <div id="choices" class="hidden"></div>
+
+    <div id="toasts" aria-live="polite"></div>
+    <div id="puzzle"></div>
+    <div id="modal"></div>
+    <div id="cutscene"></div>
+    <div id="chapter-card"></div>
+    <div id="ending-choice"></div>
+    <div id="epilogue"></div>
+    <div id="credits"></div>
+    <div id="end-screen"></div>
+    <div id="flash"></div>
+    <div id="fader"></div>
+    <aside id="debug"></aside>
+
+    <!-- Titolo -->
+    <section id="title-screen" class="hidden">
+      <div id="title-art"></div>
+      <div class="title-veil"></div>
+      <div class="title-card">
+        <div class="ornament">◆</div>
+        <div class="small">UNA STORIA DI MISTERO, VIAGGI E DESTINO</div>
+        <h1>GIUSEPPE<br><span>&amp;</span> KIKI</h1>
+        <h2>IL SEGRETO DI ORFEO</h2>
+        <p>Firenze, 2026. Un archivio dimenticato. Una fotografia del 1944. Due sconosciuti destinati a incontrarsi.</p>
+        <nav class="title-menu">
+          <button id="btn-continue">Continua</button>
+          <button id="btn-new">Nuova partita</button>
+          <button id="btn-load">Carica</button>
+          <button id="btn-options">Opzioni</button>
+          <button id="btn-archive">Archivio</button>
+          <button id="btn-credits">Crediti</button>
+        </nav>
+        <div id="title-endings"></div>
+        <div class="version">v1.0 · Avventura grafica in sette capitoli</div>
+      </div>
+    </section>
+
+    <div id="rotate-hint">Per un'esperienza migliore ruota il dispositivo in orizzontale.</div>
+
+    <section id="loading">
+      <div class="ornament">◆</div>
+      <h1>GIUSEPPE &amp; KIKI</h1>
+      <div class="bar"><i></i></div>
+      <p>Caricamento…</p>
+    </section>
   </div>
 
-  <section id="title-screen">
-    <div class="title-card">
-      <div class="ornament">◆</div>
-      <div class="small">UNA STORIA DI MISTERO, VIAGGI E DESTINO</div>
-      <h2>GIUSEPPE<br><span>&</span> KIKI</h2>
-      <h3>IL SEGRETO DI ORFEO</h3>
-      <p>Firenze, 2026. Un archivio dimenticato. Una fotografia del 1944. Due sconosciuti destinati a incontrarsi.</p>
-      <button id="startBtn">INIZIA L'AVVENTURA</button>
-      <div class="version">Vertical Slice · v0.1</div>
-    </div>
-  </section>
+  <noscript>Questo gioco richiede JavaScript.</noscript>
 
-  <script src="src/game.js"></script>
+  <!-- data bundle: fallback when opened from file:// (generated by tools/build-data.mjs) -->
+  <script src="data/bundle.js"></script>
+  <script src="assets/manifest.js"></script>
+  <script src="src/core/util.js"></script>
+  <script src="src/core/GameState.js"></script>
+  <script src="src/core/AssetManager.js"></script>
+  <script src="src/core/DataLoader.js"></script>
+  <script src="src/art/FallbackArt.js"></script>
+  <script src="src/systems/AudioManager.js"></script>
+  <script src="src/systems/SaveManager.js"></script>
+  <script src="src/systems/MovementController.js"></script>
+  <script src="src/systems/CharacterManager.js"></script>
+  <script src="src/systems/SceneManager.js"></script>
+  <script src="src/systems/HotspotManager.js"></script>
+  <script src="src/systems/ScriptRunner.js"></script>
+  <script src="src/systems/DialogueManager.js"></script>
+  <script src="src/systems/InventoryManager.js"></script>
+  <script src="src/systems/RelationshipManager.js"></script>
+  <script src="src/systems/JournalManager.js"></script>
+  <script src="src/systems/HintManager.js"></script>
+  <script src="src/systems/CollectibleManager.js"></script>
+  <script src="src/systems/PuzzleManager.js"></script>
+  <script src="src/puzzles/documents.js"></script>
+  <script src="src/puzzles/visual.js"></script>
+  <script src="src/puzzles/mechanisms.js"></script>
+  <script src="src/systems/CutsceneManager.js"></script>
+  <script src="src/systems/EndingManager.js"></script>
+  <script src="src/systems/UIManager.js"></script>
+  <script src="src/systems/DebugManager.js"></script>
+  <script src="src/main.js"></script>
 </body>
 </html>
