@@ -6,7 +6,7 @@
   const O = window.Orfeo;
 
   const ANIMS = ['idle', 'walk', 'run', 'talk', 'use', 'pickup', 'inspect', 'read', 'phone', 'reaction'];
-  const BASE_H = 470; // display height (logical px) at scale 1.0
+  const BASE_H = 560; // display height (logical px) at scale 1.0
 
   const Characters = {
     layer: null,
