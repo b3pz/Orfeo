@@ -1,0 +1,1303 @@
+{
+ "_doc": "Struttura in 7 capitoli (da story.json v0.1), obiettivi con 3 livelli di suggerimento, indizi (evidence = prova utile al finale La Luce), i 17 ruoli di Orfeo. debugStart = stato di partenza per la modalità sviluppatore.",
+ "title": "Giuseppe & Kiki — Il Segreto di Orfeo",
+ "titleScene": "c1_lungarno",
+ "start": {
+  "scene": "c1_studio",
+  "at": [
+   1000,
+   900
+  ],
+  "before": [
+   "@give:coltellino",
+   "@give:moneta",
+   "@cutscene:intro",
+   "@chapter:1"
+  ]
+ },
+ "chapters": [
+  {
+   "id": 1,
+   "title": "La stanza murata",
+   "location": "Firenze",
+   "date": "Ottobre 2026",
+   "relationship": "Sconosciuti",
+   "core": "Scoperta del materiale ORFEO e primo incontro nell'archivio.",
+   "summary": "Un computer recuperato da una stanza murata in via de' Bardi contiene la cartella ORFEO. Beps segue una catena di schede all'Archivio Storico e incontra Kiki, che possiede una fotografia identica. Nel buio del deposito, una voce li avverte di lasciar perdere.",
+   "epigraph": "«I muri non mentono. Le persone sì, i muri no.»",
+   "debugStart": {
+    "scene": "c1_studio",
+    "kiki": false,
+    "switchLocked": true,
+    "items": [
+     "coltellino",
+     "moneta"
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "title": "La donna nella fotografia",
+   "location": "Parigi",
+   "date": "Novembre 2026",
+   "relationship": "Alleati",
+   "core": "Una fotografia del 1967 contiene la stessa figura presente nel 1944.",
+   "summary": "Allo Studio Marchetti, Beps e Kiki sovrappongono le foto del 1944 e del 1967: la donna col cappello è nello stesso punto, ma non è la stessa persona. Il medaglione, appoggiato su una mappa cifrata, indica Roma.",
+   "epigraph": "«La verità sta sempre un passo fuori dall'inquadratura.» — Ada Morel",
+   "debugStart": {
+    "scene": "c2_gare",
+    "items": [
+     "coltellino",
+     "moneta",
+     "usb",
+     "foto1944",
+     "scheda_o17",
+     "busta_e",
+     "medaglione",
+     "promemoria"
+    ],
+    "flags": {
+     "met_kiki": true,
+     "kiki_named": true,
+     "pdf_open": true,
+     "lista_seen": true,
+     "kiki_nonna": true
+    },
+    "stats": {
+     "fiducia": 2,
+     "legame": 3,
+     "conoscenza": 6
+    },
+    "solved": [
+     "c1_frammenti",
+     "c1_catena"
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "title": "Diciassette nomi",
+   "location": "Roma",
+   "date": "Novembre 2026",
+   "relationship": "Amici",
+   "core": "La LISTA_17 collega Orfeo a eventi del 1944.",
+   "summary": "Nella Biblioteca Teodosiana, Don Ilario — il Libraio — apre la Sala dei Cassetti. Diciassette emblemi, una targa in latino, e la Lista completa. Poi gli uomini del Notaio, e una fuga che si può fare solo in due.",
+   "epigraph": "«Primus ducit, secunda meminit, tertius traicit, ultimus verba custodit.»",
+   "debugStart": {
+    "scene": "c3_piazza",
+    "items": [
+     "coltellino",
+     "moneta",
+     "usb",
+     "foto1944",
+     "scheda_o17",
+     "busta_e",
+     "medaglione",
+     "foto1967",
+     "lettera_ada"
+    ],
+    "flags": {
+     "met_kiki": true,
+     "kiki_named": true,
+     "pdf_open": true,
+     "lista_seen": true,
+     "retro_1967": true,
+     "helene_met": true
+    },
+    "stats": {
+     "fiducia": 4,
+     "legame": 8,
+     "conoscenza": 14
+    },
+    "solved": [
+     "c1_frammenti",
+     "c1_catena",
+     "c2_sovrapposizione",
+     "c2_mappa"
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "title": "Il ritorno",
+   "location": "Firenze",
+   "date": "Dicembre 2026",
+   "relationship": "Legame crescente",
+   "core": "Luoghi già visitati assumono un nuovo significato e uno dei due scompare.",
+   "summary": "Lo studio di Beps è stato devastato e Kiki sparisce. Da solo, Beps ricompone il Sigillo di Orfeo sul banco di un orafo del Ponte Vecchio e attraversa il Corridoio Vasariano fino alla Grotta di Boboli, dove il Notaio lo aspetta.",
+   "epigraph": "«Le chiavi aprono, ma soprattutto chiudono.» — Oreste Neri",
+   "debugStart": {
+    "scene": "c4_studio",
+    "items": [
+     "coltellino",
+     "moneta",
+     "usb",
+     "foto1944",
+     "medaglione",
+     "foto1967",
+     "lettera_ada",
+     "chiave_ottone",
+     "lista17",
+     "sigillo_a"
+    ],
+    "flags": {
+     "met_kiki": true,
+     "kiki_named": true,
+     "pdf_open": true,
+     "lista_seen": true,
+     "lista_full": true,
+     "helene_met": true,
+     "fuga_ok": true,
+     "ilario_libraio": true,
+     "erased_role_known": true
+    },
+    "stats": {
+     "fiducia": 6,
+     "legame": 12,
+     "conoscenza": 22
+    },
+    "solved": [
+     "c1_frammenti",
+     "c1_catena",
+     "c2_sovrapposizione",
+     "c2_mappa",
+     "c3_cassetti"
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "title": "La porta d'Oriente",
+   "location": "Istanbul",
+   "date": "Dicembre 2026",
+   "relationship": "Primo bacio",
+   "core": "La ricerca conduce al vero scopo dell'organizzazione.",
+   "summary": "Selim, il Traduttore, rivela che il Registro non è mai stato diviso: le metà erano chiavi. Sotto un caravanserraglio, quattro anelli di bronzo indicano la strada di casa. Sul tetto dell'Han, Istanbul accende le sue luci.",
+   "epigraph": "«Chi entra in due, esce in due.»",
+   "debugStart": {
+    "scene": "c5_galata",
+    "items": [
+     "coltellino",
+     "moneta",
+     "usb",
+     "foto1944",
+     "medaglione",
+     "foto1967",
+     "lettera_ada",
+     "chiave_ottone",
+     "lista17",
+     "sigillo",
+     "nastro"
+    ],
+    "flags": {
+     "met_kiki": true,
+     "kiki_named": true,
+     "pdf_open": true,
+     "lista_seen": true,
+     "lista_full": true,
+     "helene_met": true,
+     "fuga_ok": true,
+     "varano_named": true,
+     "kiki_liberata": true,
+     "erased_role_known": true
+    },
+    "stats": {
+     "fiducia": 9,
+     "legame": 16,
+     "conoscenza": 28
+    },
+    "solved": [
+     "c1_frammenti",
+     "c1_catena",
+     "c2_sovrapposizione",
+     "c2_mappa",
+     "c3_cassetti",
+     "c4_sigillo"
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "title": "Orfeo",
+   "location": "Parigi",
+   "date": "Gennaio 2027",
+   "relationship": "Coppia",
+   "core": "Identità e struttura della società segreta vengono finalmente rivelate.",
+   "summary": "Hélène confessa di essere Euridice. Il nastro del 1967 rivela un voto falsificato. Nell'archivio parigino, due falsi portano la firma della stessa famiglia. E nel suo studio, il Notaio racconta di un nonno delatore e di una nonna che salvò trenta persone.",
+   "epigraph": "«La cenere è l'unica cosa che non accusa nessuno.» — Aurelio Varano",
+   "debugStart": {
+    "scene": "c6_pont_neuf",
+    "items": [
+     "coltellino",
+     "moneta",
+     "usb",
+     "foto1944",
+     "medaglione",
+     "foto1967",
+     "lettera_ada",
+     "chiave_ottone",
+     "lista17",
+     "sigillo",
+     "nastro"
+    ],
+    "flags": {
+     "met_kiki": true,
+     "kiki_named": true,
+     "pdf_open": true,
+     "lista_seen": true,
+     "lista_full": true,
+     "helene_met": true,
+     "fuga_ok": true,
+     "varano_named": true,
+     "kiki_liberata": true,
+     "selim_traduttore": true,
+     "bacio": true,
+     "erased_role_known": true
+    },
+    "stats": {
+     "fiducia": 11,
+     "legame": 22,
+     "conoscenza": 34
+    },
+    "clues": [
+     "camera_firenze"
+    ],
+    "solved": [
+     "c1_frammenti",
+     "c1_catena",
+     "c2_sovrapposizione",
+     "c2_mappa",
+     "c3_cassetti",
+     "c4_sigillo",
+     "c5_anelli"
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "title": "L'ultima chiave",
+   "location": "Firenze",
+   "date": "Gennaio 2027",
+   "relationship": "Fiducia completa",
+   "core": "Enigma finale cooperativo. Epilogo: anni dopo, Giuseppe e Kiki si sposano.",
+   "summary": "Sotto la stanza murata, oltre il terzo gradino, la Camera di Orfeo si apre solo in due. All'alba, sul Lungarno, il Registro aspetta una decisione.",
+   "epigraph": "«Non voltarti.»",
+   "debugStart": {
+    "scene": "c7_cantiere",
+    "items": [
+     "coltellino",
+     "moneta",
+     "usb",
+     "foto1944",
+     "medaglione",
+     "foto1967",
+     "lettera_ada",
+     "chiave_ottone",
+     "lista17",
+     "sigillo",
+     "nastro"
+    ],
+    "flags": {
+     "met_kiki": true,
+     "kiki_named": true,
+     "pdf_open": true,
+     "lista_seen": true,
+     "lista_full": true,
+     "helene_met": true,
+     "fuga_ok": true,
+     "varano_named": true,
+     "kiki_liberata": true,
+     "selim_traduttore": true,
+     "bacio": true,
+     "helene_euridice": true,
+     "nastro_ascoltato": true,
+     "varano_doubt": true,
+     "erased_role_known": true,
+     "coop": 5
+    },
+    "stats": {
+     "fiducia": 15,
+     "legame": 27,
+     "conoscenza": 40
+    },
+    "clues": [
+     "promemoria_1966",
+     "lista_parziale",
+     "stessa_donna",
+     "lista_completa",
+     "camera_firenze",
+     "verbale_falso",
+     "falso_1944",
+     "lina_varano",
+     "voce_ada"
+    ],
+    "solved": [
+     "c1_frammenti",
+     "c1_catena",
+     "c2_sovrapposizione",
+     "c2_mappa",
+     "c3_cassetti",
+     "c4_sigillo",
+     "c5_anelli",
+     "c6_cronologia"
+    ]
+   }
+  }
+ ],
+ "objectives": {
+  "o1_esamina": {
+   "chapter": 1,
+   "text": "Esamina il materiale recuperato dal cantiere.",
+   "hints": [
+    "Il vecchio computer sulla scrivania è il motivo per cui sei qui stasera.",
+    "Usa il vecchio computer (clic sinistro, o tocco).",
+    "Clicca sul computer sopra la scrivania: Beps copierà i file sulla chiavetta."
+   ]
+  },
+  "o1_cantiere": {
+   "chapter": 1,
+   "text": "Raggiungi Sandro al cantiere di via de' Bardi. Con un caffè.",
+   "hints": [
+    "Sandro ha chiesto esplicitamente un caffè.",
+    "La macchinetta del caffè dello studio funziona. Poi esci dalla porta, verso il Lungarno e il cantiere (a destra).",
+    "Usa la macchinetta del caffè, esci, attraversa il Lungarno verso destra fino al cantiere e dai il caffè a Sandro."
+   ]
+  },
+  "o1_caffe_sandro": {
+   "chapter": 1,
+   "text": "Porta un caffè a Sandro.",
+   "hints": [
+    "Sandro non apre la stanza senza caffè.",
+    "Lo studio ha una macchinetta. È a due passi.",
+    "Torna allo studio (a sinistra del Lungarno), usa la macchinetta, poi dai il caffè a Sandro (trascinalo su di lui o usa «Mostra un oggetto»)."
+   ]
+  },
+  "o1_stanza": {
+   "chapter": 1,
+   "text": "Esplora la stanza murata.",
+   "hints": [
+    "Guarda bene i muri e i mobili: qualcuno ci ha lavorato fino al 1998.",
+    "L'armadio metallico è chiuso con un lucchetto arrugginito. E nel muro c'è una crepa.",
+    "Usa il coltellino sull'armadio per prendere i frammenti. Prendi il mezzo medaglione dalla crepa."
+   ]
+  },
+  "o1_frammenti": {
+   "chapter": 1,
+   "text": "Ricomponi i frammenti del documento.",
+   "hints": [
+    "I frammenti sono nell'inventario. Si possono esaminare o stendere sul tavolo.",
+    "Esamina i frammenti (clic destro / pressione lunga nell'inventario) oppure usali sul tavolo impolverato.",
+    "Apri il puzzle e ordina le strisce: intestazione, poi «L'acqua è arrivata…», «si sono salvati…», «e portate le copie…», «del catalogo…», «al rimando in rosso…»."
+   ]
+  },
+  "o1_archivio": {
+   "chapter": 1,
+   "text": "Cerca la scheda O-1 all'Archivio Storico.",
+   "hints": [
+    "L'Archivio Storico è sul Lungarno, tra lo studio e il cantiere.",
+    "Il cassetto O del catalogo è chiuso. L'archivista può aprirlo, se le mostri un buon motivo.",
+    "Parla con l'archivista e mostrale il promemoria ricomposto (o la Foto 1944) con «Mostra un oggetto»."
+   ]
+  },
+  "o1_catena": {
+   "chapter": 1,
+   "text": "Segui la catena del catalogo O fino in fondo.",
+   "hints": [
+    "Lo schedario è a sinistra in sala. Si parte da O-1.",
+    "Segui il rimando rosso di ogni scheda; dove l'acqua l'ha cancellato, leggi la nota a matita.",
+    "O-1 → O-6 → O-11 → O-4 → O-15 → O-17."
+   ]
+  },
+  "o1_deposito": {
+   "chapter": 1,
+   "text": "Controlla il ripiano 17 del deposito, con Kiki.",
+   "hints": [
+    "La porta del deposito è in fondo a destra nella sala di lettura.",
+    "Kiki ha la tessera: ora la porta è aperta.",
+    "Entra nel deposito e usa il ripiano 17."
+   ]
+  },
+  "o1_luce": {
+   "chapter": 1,
+   "text": "Al buio: riaccendi la luce.",
+   "hints": [
+    "Beps non vede niente. Kiki ricorda dov'è il quadro elettrico.",
+    "Passa a Kiki (Tab o il ritratto piccolo in alto a destra).",
+    "Come Kiki, usa il quadro elettrico vicino all'ingresso, a sinistra."
+   ]
+  },
+  "o1_caffe": {
+   "chapter": 1,
+   "text": "Parlatene con calma, al Caffè delle Logge.",
+   "hints": [
+    "Il caffè è sul Lungarno.",
+    "Esci dall'Archivio: il Caffè delle Logge è la porta rossa a destra.",
+    "Torna sul Lungarno ed entra nel Caffè delle Logge."
+   ]
+  },
+  "o1_parlare": {
+   "chapter": 1,
+   "text": "Confrontate quello che sapete. Aprite il PDF. Riunite il medaglione.",
+   "hints": [
+    "Parla con Kiki: ha molte cose da raccontare e qualcosa da darti.",
+    "Il PDF si apre col portatile di Kiki e la chiave scritta sulla Scheda O-17. Il medaglione ha due metà.",
+    "Usa la chiavetta USB sul portatile; la password è la data dell'alluvione (4 novembre 1966, targa sul Lungarno). Chiedi a Kiki del medaglione e combina le due metà. Poi chiedile «E adesso?»."
+   ]
+  },
+  "o1_medaglione": {
+   "chapter": 1,
+   "text": "Riunisci le due metà del medaglione.",
+   "hints": [
+    "Hai due metà nell'inventario.",
+    "Gli oggetti si possono combinare: seleziona uno, poi clicca sull'altro.",
+    "Seleziona «Mezzo medaglione», poi clicca su «Mezzo medaglione di Kiki»."
+   ]
+  },
+  "o2_marchetti": {
+   "chapter": 2,
+   "text": "Trova lo Studio Marchetti, in rue des Archives.",
+   "hints": [
+    "La busta del ripiano 17 aveva un indirizzo.",
+    "Dalla stazione prendi il taxi verso la Senna, poi prosegui verso il Marais.",
+    "Gare → Quai (a destra) → rue des Archives (a destra)."
+   ]
+  },
+  "o2_foto1967": {
+   "chapter": 2,
+   "text": "Chiedi a Hélène della fotografia del 1967.",
+   "hints": [
+    "Hélène è nello studio.",
+    "Parla con Hélène: il tema «La fotografia del 1967».",
+    "Scegli «La fotografia del 1967» nel dialogo con Hélène."
+   ]
+  },
+  "o2_sovrapponi": {
+   "chapter": 2,
+   "text": "Stampa il negativo e sovrapponi le due fotografie.",
+   "hints": [
+    "Nella camera oscura c'è un ingranditore. Nello studio c'è un banco luminoso.",
+    "Usa il negativo sull'ingranditore. Poi usa le foto sul banco luminoso.",
+    "Camera oscura → negativo sull'ingranditore. Studio → foto sul banco luminoso → allinea i crocini rossi."
+   ]
+  },
+  "o2_mappa": {
+   "chapter": 2,
+   "text": "Trova una mappa su cui appoggiare il medaglione.",
+   "hints": [
+    "Ada comprava libri da un bouquiniste sul quai. Hélène lo conosce.",
+    "Monsieur Albert, sul Quai des Grands-Augustins, vende un libretto speciale a chi sa rispondere.",
+    "Chiedi ad Albert di Orfeo e rispondi «Gluck». Esamina il libretto: dentro c'è la mappa."
+   ]
+  },
+  "o2_libretto": {
+   "chapter": 2,
+   "text": "Esamina il libretto di Monsieur Albert.",
+   "hints": [
+    "Tra le pagine c'è qualcosa.",
+    "Esamina il libretto nell'inventario (clic destro / pressione lunga).",
+    "Esamina il libretto: ottieni la mappa cifrata. Poi combinala col medaglione."
+   ]
+  },
+  "o2_mappa_usa": {
+   "chapter": 2,
+   "text": "Appoggia il medaglione sulla mappa.",
+   "hints": [
+    "Hai entrambi gli oggetti.",
+    "Combina il medaglione con la mappa cifrata.",
+    "Combina medaglione e mappa; ruota finché la tacca punta la stella rossa (indizio sul retro della foto del '67)."
+   ]
+  },
+  "o2_casa": {
+   "chapter": 2,
+   "text": "Cerca tra le cose di Ada.",
+   "hints": [
+    "Qualcuno ha frugato prima di voi, ma non dappertutto.",
+    "Kiki conosce i nascondigli di sua nonna.",
+    "Come Kiki, usa il mobile del grammofono."
+   ]
+  },
+  "o3_biblioteca": {
+   "chapter": 3,
+   "text": "Entra nella Biblioteca Teodosiana.",
+   "hints": [
+    "Il portone è a destra, dietro le colonne.",
+    "Usa il portone della biblioteca.",
+    "Clicca sul portone con la scritta BIBLIOTECA."
+   ]
+  },
+  "o3_sala": {
+   "chapter": 3,
+   "text": "Entra nella Sala dei Cassetti.",
+   "hints": [
+    "Don Ilario ha la chiave. Ora te l'ha data.",
+    "La porta SALA XVII è in fondo a destra.",
+    "Usa la porta della Sala dei Cassetti."
+   ]
+  },
+  "o3_cassetti": {
+   "chapter": 3,
+   "text": "Apri i diciassette cassetti.",
+   "hints": [
+    "Il mobile è bloccato e la targa è in latino.",
+    "Beps può sbloccare il fermo sul fianco del mobile con il coltellino. Kiki può tradurre la targa.",
+    "Coltellino sul fianco del mobile (Beps), guarda la targa (Kiki), poi apri: lira, luna, àncora, foglia."
+   ]
+  },
+  "o3_fuga": {
+   "chapter": 3,
+   "text": "Fuggite dalla Sala dei Cassetti.",
+   "hints": [
+    "La porta principale è bloccata. C'è un cancello e una grata.",
+    "La grata si svita con il coltellino. Il condotto è troppo stretto per Beps.",
+    "Coltellino sulla grata, poi passa a Kiki e usa la grata."
+   ]
+  },
+  "o3_condotto": {
+   "chapter": 3,
+   "text": "Kiki deve passare nel condotto.",
+   "hints": [
+    "Solo Kiki ci passa.",
+    "Passa a Kiki (Tab).",
+    "Come Kiki, usa la grata."
+   ]
+  },
+  "o3_leva": {
+   "chapter": 3,
+   "text": "Apri il cancello dall'altra parte.",
+   "hints": [
+    "Kiki è nel passaggio di servizio. C'è una leva.",
+    "Usa la leva come Kiki.",
+    "Kiki: usa la leva e tienila."
+   ]
+  },
+  "o3_passa": {
+   "chapter": 3,
+   "text": "Beps deve passare il cancello, finché Kiki tiene la leva.",
+   "hints": [
+    "Kiki non può lasciare la leva.",
+    "Passa a Beps.",
+    "Come Beps, usa il cancello di servizio."
+   ]
+  },
+  "o3_scala": {
+   "chapter": 3,
+   "text": "Raggiungete la scala retrattile.",
+   "hints": [
+    "È troppo in alto per uno solo.",
+    "In due ci si arriva.",
+    "Usa la scala retrattile con entrambi presenti."
+   ]
+  },
+  "o3_esci": {
+   "chapter": 3,
+   "text": "Uscite in cortile.",
+   "hints": [
+    "La scala è giù.",
+    "Usala.",
+    "Usa la scala retrattile."
+   ]
+  },
+  "o3_osteria": {
+   "chapter": 3,
+   "text": "All'Osteria da Fiorella, con calma.",
+   "hints": [
+    "L'osteria è a destra del cortile.",
+    "Esci a destra.",
+    "Uscita a destra del cortile."
+   ]
+  },
+  "o3_lista": {
+   "chapter": 3,
+   "text": "Leggete insieme la Lista dei 17.",
+   "hints": [
+    "Sedetevi al vostro tavolo.",
+    "Usa il tavolo (o la Lista dei 17 sul tavolo).",
+    "Clicca sul tavolo a destra."
+   ]
+  },
+  "o4_studio": {
+   "chapter": 4,
+   "text": "Aspetta Kiki. Intanto cerca quello che i ladri non hanno trovato.",
+   "hints": [
+    "Guarda bene lo studio devastato.",
+    "C'è un pacco che non era lì prima, e un biglietto sulla scrivania.",
+    "Prendi il pacco di Sandro vicino al plastico."
+   ]
+  },
+  "o4_ponte": {
+   "chapter": 4,
+   "text": "Trova Kiki: ricomponi il Sigillo e raggiungi la Grotta di Boboli dal Corridoio Vasariano.",
+   "hints": [
+    "La lista diceva dove sono i quattro frammenti: Roma, il muro, la Banca del Giglio, il ponte che non cadde.",
+    "Sul Ponte Vecchio c'è la bottega di chi custodisce le chiavi. La Banca del Giglio è oltre il ponte; ti serve la chiave d'ottone.",
+    "Mostra la Lista dei 17 a Mastro Neri. In banca chiedi la cassetta 17: il titolare è «Euridice». Poi chiedi a Neri il banco e la porticina."
+   ]
+  },
+  "o4_sigillo": {
+   "chapter": 4,
+   "text": "Ricomponi il Sigillo sul banco di Mastro Neri.",
+   "hints": [
+    "Servono tutti e quattro i frammenti.",
+    "Usa il banco da orafo.",
+    "Bordo: ORFEO in alto a sinistra, poi NON, VOL, TARTI in senso orario; l'arco di ogni pezzo verso l'esterno."
+   ]
+  },
+  "o4_chiave_corridoio": {
+   "chapter": 4,
+   "text": "Chiedi a Mastro Neri della porticina del Corridoio.",
+   "hints": [
+    "La porticina è sul ponte, a destra.",
+    "Mastro Neri ha la chiave.",
+    "Parla con Neri: «La porta del Corridoio»."
+   ]
+  },
+  "o4_corridoio": {
+   "chapter": 4,
+   "text": "Attraversa il Corridoio Vasariano fino alla porta di Orfeo.",
+   "hints": [
+    "La porticina è a destra sul ponte.",
+    "In fondo al corridoio c'è una porta con un incavo rotondo.",
+    "Usa il Sigillo sulla porta di Orfeo."
+   ]
+  },
+  "o4_partenza": {
+   "chapter": 4,
+   "text": "Uscite dalla grotta, verso il giardino di Boboli.",
+   "hints": [
+    "L'uscita è a destra.",
+    "Usa l'uscita verso il giardino.",
+    "Clicca sull'uscita a destra."
+   ]
+  },
+  "o5_bazar": {
+   "chapter": 5,
+   "text": "Trova il Traduttore, «al Bazar, dove vendono il tempo».",
+   "hints": [
+    "Il Bazar è a destra del molo.",
+    "Nel Bazar, la bottega dell'antiquario è a destra.",
+    "Molo → Bazar → bottega di Selim."
+   ]
+  },
+  "o5_camera": {
+   "chapter": 5,
+   "text": "Scendete nella Camera degli Anelli, sotto il Büyük Valide Han.",
+   "hints": [
+    "Servono luce e una leva.",
+    "Selim presta la lanterna; Emre, il ragazzo del tè, ha un piede di porco.",
+    "Chiedi la lanterna a Selim e il piede di porco a Emre. Al Han, Beps usa il piede di porco sulla botola."
+   ]
+  },
+  "o5_botola_beps": {
+   "chapter": 5,
+   "text": "Beps deve forzare la botola.",
+   "hints": [
+    "Servono muscoli da cantiere.",
+    "Passa a Beps.",
+    "Come Beps, usa il piede di porco sulla botola."
+   ]
+  },
+  "o5_scendi": {
+   "chapter": 5,
+   "text": "Scendete nella cisterna.",
+   "hints": [
+    "Serve la lanterna.",
+    "Usa la botola con la lanterna nell'inventario.",
+    "Usa la botola."
+   ]
+  },
+  "o5_anelli": {
+   "chapter": 5,
+   "text": "Fai girare gli anelli.",
+   "hints": [
+    "Al centro va il medaglione. Sul suo retro ci sono quattro simboli.",
+    "Luna, lira, onda, chiave: dall'anello interno all'esterno. Comincia dall'esterno.",
+    "Esterno ⚷, terzo ≈, secondo ♪, interno ☾."
+   ]
+  },
+  "o5_tetto": {
+   "chapter": 5,
+   "text": "Sali con Kiki sul tetto dell'Han.",
+   "hints": [
+    "Dal cortile dell'Han, a sinistra, una scala sale sul tetto.",
+    "Siediti sul muretto.",
+    "Han → scala a sinistra → tetto."
+   ]
+  },
+  "o6_helene": {
+   "chapter": 6,
+   "text": "Andate da Hélène, allo Studio Marchetti.",
+   "hints": [
+    "È a sinistra del Pont Neuf.",
+    "Prendi l'uscita verso il Marais.",
+    "Pont Neuf → uscita a sinistra."
+   ]
+  },
+  "o6_nastro": {
+   "chapter": 6,
+   "text": "Ascoltate il nastro di Orfeo.",
+   "hints": [
+    "Il Revox è sotto lo studio.",
+    "La sala di proiezione è dietro la tenda.",
+    "Usa il nastro sul registratore a bobine."
+   ]
+  },
+  "o6_archivio": {
+   "chapter": 6,
+   "text": "Rimettete in ordine l'archivio di Orfeo.",
+   "hints": [
+    "Passage des Libraires, a destra del Pont Neuf.",
+    "Usa il tavolo dei documenti.",
+    "Ordina per data e segna come falsi la lettera del Ponte Vecchio e il verbale del '67."
+   ]
+  },
+  "o6_cronologia": {
+   "chapter": 6,
+   "text": "Ricostruite la cronologia dei documenti di Orfeo.",
+   "hints": [
+    "Il tavolo è al centro.",
+    "Ordina per data, poi trova due contraddizioni.",
+    "Vedi i suggerimenti dentro l'enigma."
+   ]
+  },
+  "o6_varano": {
+   "chapter": 6,
+   "text": "Affrontate il Notaio nel suo studio.",
+   "hints": [
+    "L'Île de la Cité è in basso, dal Pont Neuf.",
+    "Prendi l'uscita in basso.",
+    "Pont Neuf → uscita in basso."
+   ]
+  },
+  "o6_catacombe": {
+   "chapter": 6,
+   "text": "Attraversate le catacombe fino alla stazione.",
+   "hints": [
+    "L'uscita è a destra.",
+    "Usa l'uscita verso Denfert.",
+    "Uscita a destra."
+   ]
+  },
+  "o7_scendi": {
+   "chapter": 7,
+   "text": "Trova la via per scendere sotto la stanza murata.",
+   "hints": [
+    "«L'acqua arrivò al terzo gradino.»",
+    "I gradini a sinistra. Beps sa riconoscere un vuoto.",
+    "Usa i gradini come Beps."
+   ]
+  },
+  "o7_lastra": {
+   "chapter": 7,
+   "text": "Sollevate insieme la lastra del terzo gradino.",
+   "hints": [
+    "Pesa troppo per uno solo.",
+    "Serve che ci siate tutti e due.",
+    "Usa di nuovo i gradini."
+   ]
+  },
+  "o7_galleria": {
+   "chapter": 7,
+   "text": "Scendete nella galleria.",
+   "hints": [
+    "La scala è aperta.",
+    "Usa i gradini.",
+    "Usa i gradini."
+   ]
+  },
+  "o7_paratoia": {
+   "chapter": 7,
+   "text": "Superate il canale.",
+   "hints": [
+    "C'è una paratoia con una ruota.",
+    "Solo Beps ha la forza di girarla.",
+    "Come Beps, usa la ruota della paratoia."
+   ]
+  },
+  "o7_camera": {
+   "chapter": 7,
+   "text": "Entrate nella Camera di Orfeo.",
+   "hints": [
+    "L'arco in fondo a destra.",
+    "Usa l'arco.",
+    "Clicca sull'arco."
+   ]
+  },
+  "o7_meccanismo": {
+   "chapter": 7,
+   "text": "Aprite il meccanismo: «Il Sigillo apre. La Voce chiama. I Nomi rispondono. La Chiave chiude.»",
+   "hints": [
+    "Ogni passo ha il suo lato: alcuni sono di Beps, altri di Kiki. L'ordine è scritto sull'iscrizione.",
+    "Beps: Sigillo nell'incavo. Kiki: nastro nel grammofono, poi la Ruota dei Nomi. Infine la chiave… ma «nessuno resta solo».",
+    "Sigillo (Beps) → nastro (Kiki) → Ruota: arco ⌒ (Kiki) → leva (Kiki, tenerla) → chiave d'ottone (Beps)."
+   ]
+  },
+  "o7_leva": {
+   "chapter": 7,
+   "text": "«…ma solo se nessuno resta solo.»",
+   "hints": [
+    "C'è una leva dalla parte di Kiki.",
+    "Kiki deve tenere la leva mentre Beps gira la chiave.",
+    "Kiki: usa la leva. Poi passa a Beps e usa la chiave d'ottone sulla serratura."
+   ]
+  },
+  "o7_chiave": {
+   "chapter": 7,
+   "text": "Gira la chiave, mentre Kiki tiene la leva.",
+   "hints": [
+    "Tocca a Beps.",
+    "Passa a Beps.",
+    "Come Beps, usa la chiave d'ottone sulla serratura."
+   ]
+  },
+  "o7_registro": {
+   "chapter": 7,
+   "text": "Prendete il Registro.",
+   "hints": [
+    "Lo scrigno al centro.",
+    "Usa lo scrigno.",
+    "Clicca sullo scrigno."
+   ]
+  },
+  "o7_decidi": {
+   "chapter": 7,
+   "text": "Decidete cosa fare del Registro.",
+   "hints": [
+    "Varano vi aspetta sotto il lampione.",
+    "Parla con Varano: puoi chiedere di ogni possibilità prima di scegliere.",
+    "Parla con Varano e scegli «Abbiamo deciso»."
+   ]
+  },
+  "o6_parla_varano": {
+   "chapter": 6,
+   "text": "Parla con il Notaio.",
+   "hints": [
+    "Varano è dietro la scrivania. Ma guardati intorno: sulla scrivania c'è una lettera.",
+    "Prendi la lettera sulla scrivania, poi parla con Varano di sua nonna.",
+    "Raccogli la lettera di Lina, poi parla con Varano di tutti i temi e salutalo."
+   ]
+  }
+ },
+ "clues": {
+  "cartella_orfeo": {
+   "chapter": 1,
+   "title": "La cartella ORFEO",
+   "text": "Tre file su un computer del 1998 trovato in una stanza murata: FIRENZE_1944.jpg, LISTA_17.pdf (cifrato), NON_APRIRE.wav."
+  },
+  "voce_registrata": {
+   "chapter": 1,
+   "title": "La voce",
+   "text": "«Se qualcuno sta ascoltando questo messaggio, significa che abbiamo fallito. Chi trova questa voce trovi anche l'altra metà. E non si volti.»"
+  },
+  "alluvione": {
+   "chapter": 1,
+   "title": "4 novembre 1966",
+   "text": "La targa sul Lungarno ricorda il giorno dell'alluvione di Firenze."
+  },
+  "donna_lungarno": {
+   "chapter": 1,
+   "title": "La donna sotto il portico",
+   "text": "Abito nero, cappello a falda larga. Sparita lasciando una moneta da 500 lire."
+  },
+  "terzo_gradino": {
+   "chapter": 1,
+   "title": "Il terzo gradino",
+   "text": "Nella stanza murata, il terzo gradino è più chiaro degli altri."
+  },
+  "mezzo_medaglione": {
+   "chapter": 1,
+   "title": "Mezzo medaglione",
+   "text": "Trovato in una crepa del muro: metà di un medaglione d'ottone con mezza lira."
+  },
+  "promemoria_1966": {
+   "chapter": 1,
+   "evidence": true,
+   "title": "Promemoria del 1966",
+   "text": "«Murate la stanza e portate le copie a Parigi. Si parte dalla scheda O-1.» Firmato E."
+  },
+  "signora_francese": {
+   "chapter": 1,
+   "title": "La signora francese",
+   "text": "Nel 1998 una signora francese col cappello pagò in contanti per «risistemare la cantina»."
+  },
+  "barcaiolo": {
+   "chapter": 1,
+   "title": "Il Barcaiolo",
+   "text": "Renzo Ricci, padre dell'archivista, traghettava persone sull'Arno nel 1944."
+  },
+  "testimone": {
+   "chapter": 1,
+   "title": "La Testimone",
+   "text": "Nelle foto di Orfeo la donna col cappello sta sempre nello stesso punto. «C'era sempre, e non c'era mai.»"
+  },
+  "scheda_o17": {
+   "chapter": 1,
+   "title": "Scheda O-17",
+   "text": "Provenienza Parigi 1967; deposito, ripiano 17. «La chiave è il giorno in cui l'acqua arrivò al terzo gradino.»"
+  },
+  "busta_parigi": {
+   "chapter": 1,
+   "title": "Studio Marchetti",
+   "text": "Busta del 1967: Studio Marchetti, 12 rue des Archives, Parigi."
+  },
+  "voce_buio": {
+   "chapter": 1,
+   "title": "La voce nel buio",
+   "text": "«Lasciate stare Orfeo. È per il vostro bene.»"
+  },
+  "uomo_grigio": {
+   "chapter": 1,
+   "title": "L'uomo col cappotto grigio",
+   "text": "Ci osservava sul Lungarno. Conosce i nostri nomi."
+  },
+  "varano_finanzia": {
+   "chapter": 1,
+   "evidence": true,
+   "title": "Il finanziatore",
+   "text": "Il notaio Aurelio Varano finanzia il restauro del palazzo della stanza murata."
+  },
+  "cinquecento_lire": {
+   "chapter": 1,
+   "title": "500 lire",
+   "text": "La donna col cappello lascia sempre una moneta da 500 lire."
+  },
+  "varano_lira": {
+   "chapter": 1,
+   "title": "Il portachiavi",
+   "text": "Varano ha una lira sul portachiavi."
+  },
+  "lista_parziale": {
+   "chapter": 1,
+   "evidence": true,
+   "title": "LISTA_17 (parziale)",
+   "text": "I · Orfeo, la Guida (lira). II · Euridice, la Testimone (luna). VI · Il Barcaiolo (àncora). XIV · Il Libraio (foglia)."
+  },
+  "foto_kiki": {
+   "chapter": 1,
+   "title": "La foto di Kiki",
+   "text": "Kiki possiede la stessa fotografia del 1944. Sua nonna la teneva nel messale."
+  },
+  "voce_ada": {
+   "chapter": 1,
+   "evidence": true,
+   "title": "La voce è di Ada",
+   "text": "La voce registrata è quella di Ada Morel, la nonna di Kiki."
+  },
+  "medaglione_intero": {
+   "chapter": 1,
+   "title": "Il medaglione intero",
+   "text": "Una lira, una tacca sul bordo, dieci fori a spirale. Uno strumento, non un gioiello."
+  },
+  "foto_1967": {
+   "chapter": 2,
+   "title": "Parigi 1967",
+   "text": "La stessa donna col cappello, nello stesso punto della foto del 1944."
+  },
+  "stella_tacca": {
+   "chapter": 2,
+   "title": "«La stella guida la tacca»",
+   "text": "Scritto da Ada sul retro della foto del 1967."
+  },
+  "dodici_marzo": {
+   "chapter": 2,
+   "title": "12 marzo",
+   "text": "La Dame au chapeau comprava Gluck ogni 12 marzo. Un anniversario."
+  },
+  "mappa_cifrata": {
+   "chapter": 2,
+   "title": "La mappa cifrata",
+   "text": "Una carta d'Italia con lettere in cerchio e una stella rossa."
+  },
+  "stessa_donna": {
+   "chapter": 2,
+   "evidence": true,
+   "title": "Non è la stessa donna",
+   "text": "Nel 1944 è Lucia Morel, nel 1967 Ada Morel. Stesso punto, stesso cappello. Un ruolo, non una persona."
+  },
+  "teodosiana": {
+   "chapter": 2,
+   "title": "TEODOSIANA",
+   "text": "Il medaglione sulla mappa indica la Biblioteca Teodosiana di Roma."
+  },
+  "lettera_ada": {
+   "chapter": 2,
+   "title": "La lettera di Ada",
+   "text": "«Non avere paura di chi porta l'altra metà. Non voltarti indietro.»"
+  },
+  "cappello_ada": {
+   "chapter": 2,
+   "title": "Il cappello di Ada",
+   "text": "Il cappello di Ada è a Parigi. Chi lo portava sul Lungarno?"
+  },
+  "donna_roma": {
+   "chapter": 3,
+   "title": "Il balcone",
+   "text": "La donna col cappello su un balcone di Roma."
+  },
+  "targa_latina": {
+   "chapter": 3,
+   "title": "La targa",
+   "text": "«Il primo guida, la seconda ricorda, il terzo traghetta, l'ultimo custodisce le parole.»"
+  },
+  "libraio": {
+   "chapter": 3,
+   "title": "Il Libraio",
+   "text": "Don Ilario Cesti è il Ruolo XIV."
+  },
+  "euridice_ruolo": {
+   "chapter": 3,
+   "title": "Euridice è un ruolo",
+   "text": "La Testimone si eredita: cappello, medaglione, posto nelle fotografie."
+  },
+  "ruolo_ponte": {
+   "chapter": 3,
+   "title": "Il Ponte",
+   "text": "Il Ruolo XVII decideva quando il Registro sarebbe stato reso pubblico. Abolito nel 1967."
+  },
+  "lista_completa": {
+   "chapter": 3,
+   "evidence": true,
+   "title": "La Lista dei 17",
+   "text": "Tutti i ruoli e i loro custodi dal 1944. Il XVII raschiato."
+  },
+  "cancellato": {
+   "chapter": 3,
+   "evidence": true,
+   "title": "Cancellato due volte",
+   "text": "Il volto graffiato nella foto e il nome raschiato nella lista sono la stessa persona."
+  },
+  "sigillo_quattro": {
+   "chapter": 3,
+   "title": "Il Sigillo diviso",
+   "text": "Roma, cassetta 17 della Banca del Giglio, il muro dove l'acqua si fermò, il ponte che non cadde."
+  },
+  "frammento_cantiere": {
+   "chapter": 4,
+   "title": "Il frammento del muro",
+   "text": "Sandro ha trovato il terzo frammento del Sigillo nella stanza murata."
+  },
+  "sms_federica": {
+   "chapter": 4,
+   "title": "«Federica»",
+   "text": "Kiki firma «Federica» solo quando qualcosa non va. La foto mostra la Grotta del Buontalenti."
+  },
+  "corridoio": {
+   "chapter": 4,
+   "title": "Il Corridoio",
+   "text": "Mastro Neri custodiva la chiave della porticina del Corridoio Vasariano."
+  },
+  "nastro_orfeo": {
+   "chapter": 4,
+   "title": "Il nastro",
+   "text": "Bobina: «ORFEO — Parigi, 12.III.1967 — Seduta straordinaria»."
+  },
+  "sigillo_intero": {
+   "chapter": 4,
+   "title": "Il Sigillo",
+   "text": "ORFEO · NON · VOLTARTI."
+  },
+  "registro": {
+   "chapter": 4,
+   "title": "Il Registro",
+   "text": "Ottant'anni di nomi: salvatori, salvati e delatori."
+  },
+  "istanbul": {
+   "chapter": 4,
+   "title": "Istanbul",
+   "text": "Ada andava a Istanbul ogni dicembre. «A comprare tappeti.»"
+  },
+  "retro_medaglione": {
+   "chapter": 5,
+   "title": "Il retro del medaglione",
+   "text": "Dal centro al bordo: luna, lira, onda, chiave."
+  },
+  "donna_istanbul": {
+   "chapter": 5,
+   "title": "Il Bazar",
+   "text": "La donna col cappello, a Istanbul. Il cappello di Ada è a Parigi."
+  },
+  "traduttore": {
+   "chapter": 5,
+   "title": "Il Traduttore",
+   "text": "Selim Aydın, Ruolo XVI. Sua madre accoglieva i fuggiaschi del 1944."
+  },
+  "tetto": {
+   "chapter": 5,
+   "title": "Il tetto dell'Han",
+   "text": "«È bello sapere che si può attraversare.»"
+  },
+  "camera_firenze": {
+   "chapter": 5,
+   "evidence": true,
+   "title": "La Camera di Orfeo",
+   "text": "È sotto la stanza murata di via de' Bardi, oltre il terzo gradino."
+  },
+  "helene_euridice": {
+   "chapter": 6,
+   "title": "Hélène è Euridice",
+   "text": "Ha ereditato il ruolo da Ada nel 2019. Ma non era lei a Istanbul."
+  },
+  "verbale_falso": {
+   "chapter": 6,
+   "evidence": true,
+   "title": "Il voto falsificato",
+   "text": "Nel 1967 Euridice e il Ponte votarono contro. Ettore Varano li verbalizzò come «assenti»."
+  },
+  "guido_sarti": {
+   "chapter": 6,
+   "title": "Guido Sarti",
+   "text": "Il Ponte. Il volto graffiato nella foto del 1944."
+  },
+  "falso_1944": {
+   "chapter": 6,
+   "evidence": true,
+   "title": "Il falso del Ponte Vecchio",
+   "text": "Una lettera del 1944 dice che il Ponte Vecchio crollò: è falsa, autenticata dal Notaio."
+  },
+  "bruno_varano": {
+   "chapter": 6,
+   "evidence": true,
+   "title": "Bruno Varano",
+   "text": "Il nonno di Aurelio: delatore nel 1944."
+  },
+  "lina_varano": {
+   "chapter": 6,
+   "evidence": true,
+   "title": "Lina Varano",
+   "text": "La nonna di Aurelio: nascose trenta persone. Nel Registro, tra i Barcaioli."
+  },
+  "lina": {
+   "chapter": 6,
+   "title": "La lettera di Lina",
+   "text": "«Siamo stati entrambi Varano. Scegli tu quale essere.»"
+  },
+  "camera_due": {
+   "chapter": 6,
+   "title": "In due",
+   "text": "La Camera di Orfeo si apre solo in due."
+  },
+  "iscrizione_camera": {
+   "chapter": 7,
+   "title": "L'iscrizione",
+   "text": "«Il Sigillo apre. La Voce chiama. I Nomi rispondono. La Chiave chiude — ma solo se nessuno resta solo.»"
+  },
+  "diciottesimo": {
+   "chapter": 7,
+   "title": "Il Diciottesimo",
+   "text": "«Il diciottesimo nome appartiene a chi non si volta da solo.»"
+  },
+  "donna_alba": {
+   "chapter": 7,
+   "title": "All'alba",
+   "text": "Una donna col cappello sul Ponte Vecchio. Si volta, e se ne va."
+  }
+ },
+ "roles": [
+  {
+   "name": "Orfeo",
+   "emblem": "♪",
+   "desc": "la Guida. Emblema: la lira.",
+   "early": true,
+   "holders": "Pietro Lanzoni (1944) · Marco Testi (1967) · vacante dal 2003"
+  },
+  {
+   "name": "Euridice",
+   "emblem": "☾",
+   "desc": "la Testimone, che ricorda. Emblema: la luna.",
+   "early": true,
+   "holders": "Lucia Morel (1944) · Ada Morel (1967) · █████ · Hélène Marchetti (2019)"
+  },
+  {
+   "name": "Il Cartografo",
+   "emblem": "✦",
+   "desc": "traccia le vie. Emblema: la stella.",
+   "holders": "Ernesto Valli (1944) · Sandra Valli (1972)"
+  },
+  {
+   "name": "L'Archivista",
+   "emblem": "▤",
+   "desc": "ordina le carte. Emblema: lo schedario.",
+   "holders": "Bice Ferroni (1944) · vacante"
+  },
+  {
+   "name": "Il Tipografo",
+   "emblem": "✎",
+   "desc": "falsifica per salvare. Emblema: la penna.",
+   "holders": "Anonimo (1944)"
+  },
+  {
+   "name": "Il Barcaiolo",
+   "emblem": "⚓",
+   "desc": "colui che traghetta. Emblema: l'àncora.",
+   "early": true,
+   "holders": "Renzo Ricci (1944) · Lina Varano, «barcaiola di cantina» (1944)"
+  },
+  {
+   "name": "La Sarta",
+   "emblem": "✂",
+   "desc": "nasconde nei vestiti. Emblema: le forbici.",
+   "holders": "Ines Bardi (1944)"
+  },
+  {
+   "name": "Il Medico",
+   "emblem": "✚",
+   "desc": "cura senza registrare. Emblema: la croce.",
+   "holders": "Dott. Aldo Segre (1944)"
+  },
+  {
+   "name": "Il Fotografo",
+   "emblem": "◉",
+   "desc": "vede e ricorda. Emblema: l'occhio.",
+   "holders": "Jacques Marchetti (1955)"
+  },
+  {
+   "name": "Il Campanaro",
+   "emblem": "♜",
+   "desc": "dà i segnali. Emblema: la torre.",
+   "holders": "Fra' Teodoro (1944)"
+  },
+  {
+   "name": "Il Notaio",
+   "emblem": "⚖",
+   "desc": "autentica. Emblema: la bilancia.",
+   "holders": "Bruno Varano (1944) · Ettore Varano (1967) · Aurelio Varano (1999)"
+  },
+  {
+   "name": "La Maestra",
+   "emblem": "☼",
+   "desc": "insegna i nomi nuovi. Emblema: il sole.",
+   "holders": "Maria Pace (1944)"
+  },
+  {
+   "name": "Il Ferroviere",
+   "emblem": "⚙",
+   "desc": "conosce gli orari. Emblema: la ruota.",
+   "holders": "Gino Fabbri (1944)"
+  },
+  {
+   "name": "Il Libraio",
+   "emblem": "❧",
+   "desc": "custodisce le parole. Emblema: la foglia.",
+   "early": true,
+   "holders": "Ilario Cesti (1952)"
+  },
+  {
+   "name": "Il Custode delle Chiavi",
+   "emblem": "⚷",
+   "desc": "apre e chiude. Emblema: la chiave.",
+   "holders": "Oreste Neri (1944) · Tommaso Neri (1967) · Stefano Neri"
+  },
+  {
+   "name": "Il Traduttore",
+   "emblem": "⇄",
+   "desc": "fa passare le parole. Emblema: le due frecce.",
+   "holders": "Nermin Aydın (1944) · Selim Aydın (1989)"
+  },
+  {
+   "name": "Il Ponte",
+   "emblem": "⌒",
+   "desc": "decide quando il Registro uscirà alla luce. Emblema: l'arco.",
+   "erased": true,
+   "holders": "Guido Sarti (1944) — abolito nel 1967"
+  }
+ ]
+}

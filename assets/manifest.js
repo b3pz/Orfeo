@@ -1,0 +1,2 @@
+/* GENERATO da tools/scan-assets.mjs */
+window.ORFEO_ASSET_MANIFEST = {"generated":"2026-10-03T11:32:45.618Z","count":0,"files":[]};

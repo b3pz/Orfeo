@@ -1,0 +1,2702 @@
+{
+ "_doc": "Dialoghi a temi. first/intro = script iniziale; topics = temi (if, once, optional, special, end); items = reazioni agli oggetti mostrati; linear = sequenza senza menu.",
+ "dialogues": {
+  "sandro": {
+   "npc": "sandro",
+   "intro": [
+    {
+     "if": "flag.sandro_ok",
+     "do": [
+      "sandro: Architetto. Io resto qui sulla porta, eh."
+     ]
+    },
+    {
+     "do": [
+      "sandro: Allora, architetto? Il caffè?"
+     ]
+    }
+   ],
+   "topics": [
+    {
+     "id": "caffe_dato",
+     "label": "Ecco il caffè",
+     "icon": "item",
+     "if": "item.caffe && !flag.sandro_caffe",
+     "once": true,
+     "do": [
+      "@take:caffe",
+      "@flag:sandro_caffe",
+      "@flag:sandro_ok",
+      "sandro[smile]: Ah. Vita. Lei è un sant'uomo, architetto.",
+      "sandro: Va bene, il telo lo tolgo. Ma io resto qui sulla porta. Se sento l'acqua, scappo.",
+      "@objective:o1_stanza"
+     ]
+    },
+    {
+     "id": "caffe_dimenticato",
+     "label": "Il caffè… me ne sono dimenticato",
+     "icon": "question",
+     "if": "!item.caffe && !flag.sandro_caffe",
+     "once": true,
+     "do": [
+      "sandro[skeptical]: Allora niente stanza. Regola del cantiere: senza caffè non si apre niente.",
+      "beps: Questa regola dove sta scritta?",
+      "sandro: Nel mio cuore, architetto. La macchinetta del suo studio funziona, no?",
+      "@objective:o1_caffe_sandro"
+     ]
+    },
+    {
+     "id": "stanza",
+     "label": "Com'era la stanza quando l'hai aperta?",
+     "icon": "eye",
+     "do": [
+      "sandro[worried]: Asciutta. Troppo asciutta per un posto murato da sessant'anni.",
+      "sandro: E pulita. Come se qualcuno ci fosse stato poco fa. Un computer sul tavolo, una sedia, un armadio col lucchetto.",
+      "beps: Sessant'anni e un computer del '98.",
+      "sandro: Appunto. Io non ci dormo, la notte."
+     ]
+    },
+    {
+     "id": "chi_murato",
+     "label": "Chi ha murato la stanza?",
+     "icon": "person",
+     "once": true,
+     "do": [
+      "sandro: Il vecchio proprietario dice che nel '98 una signora francese pagò una ditta per «risistemare la cantina». In contanti.",
+      "sandro: Io dico che ha murato qualcosa. O qualcuno.",
+      "beps: Una signora francese.",
+      "sandro: Con un cappello così. L'ha detto il proprietario. Chi se lo ricorda un cappello dopo trent'anni? Uno che l'ha guardato bene.",
+      "@clue:signora_francese",
+      "@stat:conoscenza+1"
+     ]
+    },
+    {
+     "id": "acqua",
+     "label": "Davvero si sente l'acqua?",
+     "icon": "question",
+     "optional": true,
+     "do": [
+      "sandro[scared]: Di notte. Un gocciolio, sotto il pavimento. Plic. Plic.",
+      "beps: Sotto il pavimento c'è la terra, Sandro.",
+      "sandro: Appunto, architetto. Appunto.",
+      "@flag:sandro_acqua"
+     ]
+    }
+   ],
+   "items": {
+    "caffe": [
+     {
+      "if": "!flag.sandro_caffe",
+      "do": [
+       "@take:caffe",
+       "@flag:sandro_caffe",
+       "@flag:sandro_ok",
+       "sandro[smile]: Ah. Vita. Lei è un sant'uomo, architetto.",
+       "sandro: Va bene, il telo lo tolgo. Ma io resto qui sulla porta.",
+       "@objective:o1_stanza"
+      ]
+     }
+    ],
+    "foto1944": [
+     "sandro: Mai visti. Però quella col cappello… mia nonna aveva un cappello così.",
+     "sandro: Tutte le nonne avevano un cappello così. È una cosa delle nonne."
+    ],
+    "medaglione_b": [
+     "sandro[worried]: Era nella crepa? L'avevo vista luccicare e ho fatto finta di niente. Io la roba dei morti non la tocco."
+    ],
+    "frammenti": [
+     "sandro: Carta bagnata. Mia moglie con la carta bagnata ci fa le palline per il camino. Lei che ci fa?"
+    ],
+    "*": [
+     "sandro: Architetto, io sono un capocantiere, non un antiquario."
+    ]
+   }
+  },
+  "archivista": {
+   "npc": "archivista",
+   "first": [
+    "@flag:met_archivista",
+    "@person:archivista",
+    "archivista: Architetto Lanzi. Chiudiamo tra venti minuti. Mi dica che ha bisogno di una cosa sola."
+   ],
+   "intro": [
+    "archivista: Ancora lei. Mi dica."
+   ],
+   "topics": [
+    {
+     "id": "catalogo",
+     "label": "Il catalogo O",
+     "icon": "doc",
+     "if": "!flag.catalogo_ok",
+     "do": [
+      "archivista[skeptical]: Non esiste un catalogo O.",
+      "archivista: Esiste un cassetto O, che contiene schede di nessuna importanza ed è chiuso perché la chiave l'ho persa nel 1994.",
+      "beps: Persa.",
+      "archivista: Persa, architetto. Le cose si perdono, negli archivi. A meno che qualcuno non mi dia un buon motivo per ritrovarle.",
+      {
+       "if": "item.promemoria || item.foto1944",
+       "do": [
+        "beps[think]: (Un buon motivo. Forse dovrei mostrarle quello che ho trovato.)"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "alluvione",
+     "label": "L'alluvione del '66",
+     "icon": "city",
+     "do": [
+      "archivista: Avevo otto anni. L'acqua è entrata qui sotto alle sette del mattino e ci è rimasta due giorni.",
+      "archivista: Abbiamo asciugato i fascicoli con la carta assorbente, i phon, le stufe a gas. Gli «angeli del fango» venivano da tutto il mondo.",
+      "archivista[sad]: Mio padre veniva ogni notte. Non era archivista. Diceva solo che c'erano «carte da salvare prima delle altre».",
+      "@stat:conoscenza+1"
+     ],
+     "once": true
+    },
+    {
+     "id": "orfeo",
+     "label": "Che cos'è Orfeo?",
+     "icon": "symbol",
+     "if": "flag.catalogo_ok",
+     "once": true,
+     "do": [
+      "archivista[think]: Una leggenda da archivisti. Una società di custodi nata durante la guerra.",
+      "archivista: Nascondevano persone. E carte. Soprattutto i nomi: chi era stato salvato, e chi aveva tradito.",
+      "archivista[sad]: Mio padre, Renzo, ne parlava solo quando beveva. Diceva di essere stato «il Barcaiolo». Portava la gente di là dall'Arno, di notte, in barca, quando i ponti non c'erano più.",
+      "archivista: Io non ci sono mai entrata. Per scelta. Certe eredità si rifiutano.",
+      "@flag:ottavia_padre",
+      "@clue:barcaiolo",
+      "@stat:conoscenza+1"
+     ]
+    },
+    {
+     "id": "donna",
+     "label": "La donna col cappello",
+     "icon": "photo",
+     "if": "flag.catalogo_ok && item.foto1944",
+     "once": true,
+     "do": [
+      "archivista: La Testimone. Mio padre la chiamava così.",
+      "archivista: Diceva che c'era sempre, e non c'era mai. Che nelle fotografie stava sempre un passo in disparte, nello stesso punto.",
+      "archivista[worried]: L'ho vista anch'io, una volta. Nel 1998. Qui, in sala. Ha chiesto il cassetto O, poi è sparita.",
+      "@clue:testimone",
+      "@stat:conoscenza+1"
+     ]
+    },
+    {
+     "id": "deposito",
+     "label": "Possiamo entrare nel deposito?",
+     "icon": "key",
+     "if": "flag.met_kiki && !flag.deposito_ok",
+     "do": [
+      "archivista: La signorina Morel ha la tessera. Lei no, architetto. Ma se la accompagna… dieci minuti.",
+      "@flag:deposito_ok",
+      "@objective:o1_deposito"
+     ]
+    }
+   ],
+   "items": {
+    "promemoria": [
+     {
+      "if": "!flag.catalogo_ok",
+      "do": [
+       "archivista[surprised]: Dove l'ha trovato?",
+       "beps: In una stanza murata. Con un computer del '98 e un medaglione nel muro.",
+       "archivista: «Si parte dalla scheda O-1.» …",
+       "archivista: Va bene. Ho appena ritrovato la chiave. Che fortuna.",
+       "@sfx:click",
+       "@flag:catalogo_ok",
+       "@objective:o1_catena"
+      ]
+     },
+     {
+      "do": [
+       "archivista: L'ho già letto, architetto. Il cassetto è aperto."
+      ]
+     }
+    ],
+    "foto1944": [
+     {
+      "if": "!flag.catalogo_ok",
+      "do": [
+       "archivista[surprised]: …",
+       "archivista[sad]: Il secondo da sinistra. Quello col berretto. È mio padre, Renzo Ricci.",
+       "archivista: Non l'avevo mai visto così giovane.",
+       "archivista: Va bene, architetto. Le apro il cassetto O. Ma non mi chieda niente che non voglio sapere.",
+       "@sfx:click",
+       "@flag:catalogo_ok",
+       "@flag:ottavia_padre",
+       "@objective:o1_catena",
+       "@stat:conoscenza+1"
+      ]
+     },
+     {
+      "do": [
+       "archivista[sad]: Mio padre. Il secondo da sinistra. Me la lasci guardare ancora un momento."
+      ]
+     }
+    ],
+    "scheda_o17": [
+     "archivista: O-17. Provenienza Parigi. Il deposito, ripiano 17. Se ci va, non mi dica cosa trova."
+    ],
+    "medaglione_b": [
+     "archivista[worried]: Mio padre ne aveva uno simile. Lo hanno sepolto con lui. Metta via quella cosa, architetto."
+    ],
+    "*": [
+     "archivista: Interessante. Ma non è materiale d'archivio."
+    ]
+   }
+  },
+  "kiki_pre": {
+   "npc": "kiki_npc",
+   "intro": [
+    "kiki_npc[skeptical]: Shh. Sala di lettura."
+   ],
+   "byeLabel": "Lasciala leggere",
+   "topics": [
+    {
+     "id": "contrario",
+     "label": "Scusi, sta leggendo al contrario.",
+     "icon": "question",
+     "once": true,
+     "do": [
+      "kiki_npc[skeptical]: È un esercizio. Si chiama «farsi gli affari propri». Glielo consiglio."
+     ]
+    },
+    {
+     "id": "orfeo",
+     "label": "Conosce il fondo Orfeo?",
+     "icon": "symbol",
+     "once": true,
+     "do": [
+      "kiki_npc: …",
+      "kiki_npc[think]: No. Mai sentito. Lei?",
+      "beps: Neanche.",
+      "kiki_npc: Bene. Allora siamo d'accordo."
+     ]
+    }
+   ]
+  },
+  "tommaso": {
+   "npc": "tommaso",
+   "intro": [
+    "tommaso: Cappuccino alle dieci di sera. Io non giudico. Io servo."
+   ],
+   "topics": [
+    {
+     "id": "cappuccino",
+     "label": "Un cappuccino, per favore",
+     "icon": "talk",
+     "once": true,
+     "do": [
+      "tommaso: Arriva. La signorina lo vuole con la cannella, lo so già.",
+      "kiki[surprised]: Come fai a saperlo?",
+      "tommaso: Le signorine che entrano bagnate alle dieci di sera vogliono sempre la cannella."
+     ]
+    },
+    {
+     "id": "donna",
+     "label": "Hai mai visto una donna col cappello nero?",
+     "icon": "person",
+     "if": "flag.woman_1 || item.foto1944",
+     "once": true,
+     "do": [
+      "tommaso[think]: Il giovedì. Da anni. Tè nero, niente zucchero.",
+      "tommaso: Lascia sempre una moneta da 500 lire sul piattino. Lire, capito? Io le tengo in un barattolo. Ne ho quaranta.",
+      "beps[surprised]: 500 lire. Come quella sul gradino.",
+      "@clue:cinquecento_lire",
+      "@stat:conoscenza+1"
+     ]
+    },
+    {
+     "id": "grigio",
+     "label": "E un uomo col cappotto grigio?",
+     "icon": "person",
+     "if": "clue.uomo_grigio || clue.voce_buio",
+     "once": true,
+     "do": [
+      "tommaso: Il notaio Varano? Viene a volte. Lascia mance enormi e non sorride mai.",
+      "tommaso: Una volta gli è caduto un mazzo di chiavi. Sul portachiavi c'era una lira. Tipo quella dei musicisti.",
+      "@flag:varano_named",
+      "@clue:varano_lira",
+      "@stat:conoscenza+1"
+     ]
+    }
+   ],
+   "items": {
+    "moneta": [
+     "tommaso[surprised]: 500 lire! Allora siete del giro. Del giro di chi, non lo so. Ma siete del giro."
+    ],
+    "*": [
+     "tommaso: Bello. Lo prende con lo zucchero o senza?"
+    ]
+   }
+  },
+  "varano_c1": {
+   "npc": "varano",
+   "linear": true,
+   "first": [
+    "varano: Bella serata per un archivio, signor Lanzi.",
+    "beps[surprised]: Conosce il mio nome.",
+    "varano: Conosco il nome di chiunque metta le mani su certe carte. Le do un consiglio gratuito, cosa rara per un notaio:",
+    "varano: restituisca quel computer al cantiere e torni ai suoi preventivi.",
+    {
+     "choice": [
+      {
+       "label": "«Chi è lei?»",
+       "do": [
+        "varano: Uno che ha letto quella lista prima di lei. E che avrebbe preferito non leggerla."
+       ]
+      },
+      {
+       "label": "«Mi sta minacciando?»",
+       "do": [
+        "varano: La sto avvisando. È diverso. Legalmente, intendo."
+       ]
+      },
+      {
+       "label": "«Era lei, nel deposito.»",
+       "do": [
+        "varano: Io sono in molti posti, signor Lanzi. È il vantaggio di essere noiosi: nessuno ti nota."
+       ]
+      }
+     ]
+    },
+    {
+     "if": "present.kiki",
+     "do": [
+      "varano: Buonanotte, signorina Morel. Sua nonna aveva la stessa espressione, quando non era d'accordo.",
+      "kiki[angry]: Lei non sa niente di mia nonna.",
+      "varano: So molto meno di quanto vorrei. Buonanotte."
+     ]
+    },
+    "@flag:varano_lungarno_gone",
+    "@refresh"
+   ],
+   "intro": []
+  },
+  "pdf_password": {
+   "linear": true,
+   "intro": [
+    "@flag:pdf_tried",
+    "kiki: Inserisci la chiavetta. Il PDF chiede una password.",
+    {
+     "choice": [
+      {
+       "label": "Prova «ORFEO»",
+       "do": [
+        "@sfx:fail",
+        "kiki: «Password errata.» Sarebbe stato troppo facile."
+       ]
+      },
+      {
+       "label": "Prova «1944»",
+       "do": [
+        "@sfx:fail",
+        "kiki: «Password errata.»"
+       ]
+      },
+      {
+       "label": "Prova «EURIDICE»",
+       "do": [
+        "@sfx:fail",
+        "kiki[think]: «Password errata.» Però l'idea non era male."
+       ]
+      },
+      {
+       "label": "Il giorno in cui l'acqua arrivò al terzo gradino",
+       "if": "item.scheda_o17",
+       "do": [
+        {
+         "if": "clue.alluvione",
+         "do": [
+          "beps: 4 novembre 1966. C'è scritto sulla targa del Lungarno. Prova «04111966».",
+          "@stat:conoscenza+1"
+         ],
+         "else": [
+          "kiki: L'alluvione. Il 4 novembre 1966: lo sa ogni fiorentino. C'è anche una targa sul Lungarno.",
+          "@clue:alluvione"
+         ]
+        },
+        "@sfx:success",
+        "kiki[surprised]: Si apre.",
+        "narr: LISTA_17. Diciassette righe. Quattro sono leggibili:",
+        "narr: I · Orfeo, la Guida — la lira. II · Euridice, la Testimone — la luna. VI · Il Barcaiolo, colui che traghetta — l'àncora. XIV · Il Libraio, che custodisce le parole — la foglia.",
+        "kiki: Il resto è rumore. Il file è stato danneggiato. O tagliato apposta.",
+        "beps: Euridice. La Testimone. La donna col cappello.",
+        "@flag:pdf_open",
+        "@flag:lista_seen",
+        "@clue:lista_parziale",
+        "@stat:conoscenza+1"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "helene": {
+   "npc": "helene",
+   "first": [
+    "@flag:helene_met",
+    "@person:helene",
+    "helene[surprised]: Federica! Mon Dieu, comme tu ressembles à Ada.",
+    "kiki[tender]: Ciao, Hélène.",
+    "helene: E lui?",
+    "kiki: Lui è Beps. Ha trovato l'altra metà.",
+    "helene[think]: …L'altra metà. Allora è cominciato.",
+    "helene: Tenete. Le chiavi di casa di Ada. Le ho tenute io, in questi anni. Ma prima ditemi cosa vi porta qui.",
+    "@objective:o2_foto1967"
+   ],
+   "intro": [
+    {
+     "if": "active=='kiki'",
+     "do": [
+      "helene[smile]: Dimmi, chérie."
+     ]
+    },
+    {
+     "do": [
+      "helene: Sì, monsieur Beps?"
+     ]
+    }
+   ],
+   "byeLabel": "Merci, Hélène",
+   "topics": [
+    {
+     "id": "foto1967",
+     "label": "La fotografia del 1967",
+     "icon": "photo",
+     "if": "!item.foto1967 && !puzzle.c2_sovrapposizione",
+     "do": [
+      "helene: Avete la busta di mio padre. Allora sapete già dove guardare.",
+      "helene: Ecco la stampa del '67. E il negativo originale: sul retro della pellicola mio padre scriveva sempre qualcosa.",
+      "helene: Stampatelo voi. La camera oscura è dietro la tenda nera. Non aprite la tenda mentre c'è la carta fuori.",
+      "@give:foto1967",
+      "@give:negativo",
+      "@clue:foto_1967",
+      "@objective:o2_sovrapponi"
+     ]
+    },
+    {
+     "id": "studio",
+     "label": "Lo Studio Marchetti",
+     "icon": "city",
+     "do": [
+      "helene: Mio padre Jacques l'ha aperto nel 1955. Ritratti, matrimoni, qualche reportage.",
+      "helene[think]: E riunioni di persone che non volevano essere fotografate. Ma lui le fotografava lo stesso. Era il suo compito."
+     ]
+    },
+    {
+     "id": "ada",
+     "label": "Ada",
+     "icon": "heart",
+     "once": true,
+     "do": [
+      "helene[sad]: Ada mi ha insegnato a guardare. Diceva che la verità sta sempre un passo fuori dall'inquadratura.",
+      "kiki[sad]: Lo diceva anche a me.",
+      "helene: Comprava i libri da Monsieur Albert, sul Quai des Grands-Augustins. Ogni settimana, per cinquant'anni. Se c'è qualcuno che conosce i suoi segreti di carta, è lui.",
+      "@stat:legame+1",
+      "@flag:albert_hint"
+     ]
+    },
+    {
+     "id": "orfeo",
+     "label": "Che cos'è Orfeo?",
+     "icon": "symbol",
+     "once": true,
+     "do": [
+      "helene[worried]: Non sono io quella a cui chiederlo. Non ancora.",
+      "beps: Questa risposta l'ho già sentita. Di solito precede guai.",
+      "helene[smile]: Allora siete sulla strada giusta.",
+      "@flag:helene_evasiva"
+     ]
+    },
+    {
+     "id": "donna",
+     "label": "La donna col cappello",
+     "icon": "person",
+     "if": "item.foto1944",
+     "once": true,
+     "do": [
+      "helene: Mio padre la metteva sempre nello stesso punto, nelle foto di gruppo. Era la regola.",
+      "helene: La Testimone deve esserci. Anche quando non c'è.",
+      "@clue:testimone"
+     ]
+    }
+   ],
+   "items": {
+    "foto1944": [
+     "helene[sad]: Firenze, '44. Mio padre aveva sei anni, quel giorno. Era tra la folla, dietro il fotografo. Lo raccontava sempre."
+    ],
+    "busta_e": [
+     "helene: La busta in cui mio padre spediva le stampe a Firenze. Nel '67 ne ha mandata una sola, e non è mai tornata indietro."
+    ],
+    "medaglione": [
+     "helene[surprised]: Intero. Ada l'ha cercato per cinquant'anni.",
+     "helene: Un medaglione così non si mette al collo. Si appoggia. Su qualcosa di stampato, di solito."
+    ],
+    "medaglione_b": [
+     "helene: Metà. Dov'è l'altra?"
+    ],
+    "foto1967": [
+     "helene: Il negativo, prima stampatelo. Poi sovrapponete le due foto sul banco luminoso. Ci sono i crocini apposta."
+    ],
+    "*": [
+     "helene: Joli. Ma non è una fotografia."
+    ]
+   }
+  },
+  "albert": {
+   "npc": "albert",
+   "first": [
+    "@person:albert",
+    "albert: Bonjour. Qui si guarda, si tocca con gli occhi, e si compra con le domande."
+   ],
+   "intro": [
+    "albert: Alors?"
+   ],
+   "byeLabel": "Au revoir",
+   "topics": [
+    {
+     "id": "orfeo",
+     "label": "Ha qualcosa su Orfeo?",
+     "icon": "symbol",
+     "if": "!item.libretto && !item.mappa && !puzzle.c2_mappa",
+     "do": [
+      "albert: Orfeo? Tre Ovidio, due Monteverdi e un libretto molto speciale, che vendo solo a chi risponde a una domanda.",
+      "albert: Chi ha portato Orfeo all'Opéra di Parigi, nel 1774?",
+      {
+       "choice": [
+        {
+         "label": "Claudio Monteverdi",
+         "do": [
+          "albert: Mantova, 1607. Bellissimo. Non Parigi. Riprovate quando volete."
+         ]
+        },
+        {
+         "label": "Christoph Willibald Gluck",
+         "do": [
+          "albert[smile]: Voilà. «Orphée et Eurydice», versione francese. Il libretto è vostro. Pagate con un sorriso.",
+          "@give:libretto",
+          "@stat:conoscenza+1",
+          "@objective:o2_libretto"
+         ]
+        },
+        {
+         "label": "Jacques Offenbach",
+         "do": [
+          "albert[laugh]: Ah! L'Orfeo all'inferno! Il can-can! No, mon ami: quello è del 1858, e lì Orfeo è contentissimo di perdere Euridice."
+         ]
+        },
+        {
+         "label": "«Kiki?»",
+         "if": "present.kiki && active=='beps'",
+         "line": "beps: Kiki?",
+         "do": [
+          "kiki[smile]: Gluck, Beps. 1774, con il tenore Legros. Nonna aveva il disco.",
+          "albert: La signorina ha studiato. Prego, il libretto.",
+          "@give:libretto",
+          "@inc:coop",
+          "@objective:o2_libretto"
+         ]
+        }
+       ]
+      }
+     ],
+     "repeatSafe": true
+    },
+    {
+     "id": "donna",
+     "label": "Conosceva la donna col cappello?",
+     "icon": "person",
+     "if": "item.foto1944 || item.foto1967",
+     "once": true,
+     "do": [
+      "albert: La Dame au chapeau. Comprava Gluck ogni anno, il 12 marzo. Diceva che era un anniversario.",
+      "albert: Di cosa, non l'ho mai chiesto. Ai quais non si chiede.",
+      "@clue:dodici_marzo",
+      "@stat:conoscenza+1"
+     ]
+    },
+    {
+     "id": "quai",
+     "label": "Da quanto tempo è qui?",
+     "icon": "talk",
+     "optional": true,
+     "once": true,
+     "do": [
+      "albert: Dal 1971. Il Quai mi ha adottato. Io ho adottato un gabbiano. Si chiama Sartre.",
+      "beps: Perché Sartre?",
+      "albert: Perché mi guarda come se l'inferno fossi io."
+     ]
+    }
+   ],
+   "items": {
+    "moneta": [
+     "albert[surprised]: 500 lire! La Dame au chapeau ne lasciava una sotto ogni libro che comprava.",
+     "albert: Voi chi siete, i suoi nipoti?",
+     {
+      "if": "present.kiki",
+      "do": [
+       "kiki[sad]: Più o meno.",
+       "@clue:cinquecento_lire"
+      ]
+     }
+    ],
+    "medaglione": [
+     "albert: Joli. Un medaglione con dei fori… Per leggere, non per indossare. Avete bisogno di una carta, mon ami."
+    ],
+    "*": [
+     "albert: Non compro, vendo. E solo libri."
+    ]
+   }
+  },
+  "sviluppo": {
+   "linear": true,
+   "intro": [
+    {
+     "if": "present.kiki",
+     "do": [
+      "kiki: Il negativo va nell'ingranditore. Uno espone, l'altro sviluppa. Chi fa cosa?",
+      {
+       "choice": [
+        {
+         "label": "«Espongo io, tu sviluppi.»",
+         "do": [
+          "kiki[smile]: Ottima divisione dei compiti, architetto.",
+          "@inc:coop"
+         ]
+        },
+        {
+         "label": "«Fai tu, io guardo e imparo.»",
+         "do": [
+          "kiki: Guarda bene, allora. Domani ti interrogo.",
+          "@stat:fiducia+1"
+         ]
+        },
+        {
+         "label": "«Faccio tutto io, ho visto un tutorial.»",
+         "do": [
+          "kiki[skeptical]: Un tutorial. Va bene, genio.",
+          "narr: Trenta secondi dopo.",
+          "kiki[laugh]: Sovraesposto. Nero come il caffè di Sandro. Rifaccio io."
+         ]
+        }
+       ]
+      }
+     ],
+     "else": [
+      "Espongo, sviluppo, fisso. Come diceva Kiki."
+     ]
+    },
+    "@anim:use",
+    "@sfx:tape",
+    "narr: Sotto la luce rossa, sulla carta bagnata, l'immagine affiora lentamente: il retro della stampa originale, con una riga a inchiostro.",
+    "narr: «La stella guida la tacca.»",
+    "@flag:retro_1967",
+    "@clue:stella_tacca",
+    "@take:negativo",
+    {
+     "if": "present.kiki",
+     "do": [
+      "kiki[surprised]: È la calligrafia di nonna."
+     ]
+    },
+    "beps[think]: La stella… e la tacca. Il medaglione ha una tacca sul bordo."
+   ]
+  },
+  "lettera_ada": {
+   "linear": true,
+   "intro": [
+    "@flag:lettera_letta",
+    {
+     "if": "stat.fiducia>=2",
+     "do": [
+      "kiki[sad]: Te la leggo. Ad alta voce. Così non devo farlo da sola.",
+      "kiki: «Federica, se leggi questo hai trovato l'altra metà. Non avere paura di chi la porta: io mi sono fidata una volta sola, ed era la persona giusta.»",
+      "kiki: «Non voltarti indietro. È l'unica regola. — Nonna»",
+      {
+       "choice": [
+        {
+         "label": "«Tua nonna aveva una bella calligrafia.»",
+         "do": [
+          "kiki[laugh]: Dio, sei impossibile. … Grazie.",
+          "@stat:legame+1"
+         ]
+        },
+        {
+         "label": "«Io non ho paura di portarla, l'altra metà.»",
+         "tone": "tender",
+         "do": [
+          "kiki[tender]: Lo so. È questo che mi spaventa.",
+          "@stat:legame+1",
+          "@stat:fiducia+1"
+         ]
+        },
+        {
+         "label": "Resta in silenzio, vicino a lei",
+         "line": "beps[tender]: …",
+         "do": [
+          "kiki[sad]: …",
+          "@stat:legame+1"
+         ]
+        }
+       ]
+      }
+     ],
+     "else": [
+      "narr: Kiki legge in silenzio. Ripiega la lettera. Ci mette un po' prima di parlare.",
+      "kiki[sad]: Dice di non voltarmi indietro. È l'unica regola.",
+      "beps: Una buona regola.",
+      "kiki: Una regola difficile. Tienila tu, la lettera. Io la perderei apposta."
+     ]
+    },
+    "@clue:lettera_ada"
+   ]
+  },
+  "c2_fine": {
+   "linear": true,
+   "intro": [
+    "@sfx:phone",
+    "beps[surprised]: Numero sconosciuto.",
+    "@anim:phone",
+    "varano: Signor Lanzi. La Teodosiana è chiusa il lunedì. Domani è martedì. Buon viaggio.",
+    "beps[angry]: Come fa a…",
+    "narr: Ha riattaccato.",
+    "kiki[determined]: Ci segue. Ci precede. Fa quello che vuole.",
+    "kiki: Allora noi andiamo più veloci. Il primo treno per Roma parte alle sei.",
+    "@cutscene:c2_fine",
+    "@chapter:3",
+    "@goto:c3_piazza"
+   ]
+  },
+  "peppe": {
+   "npc": "agente",
+   "first": [
+    "agente: Ritratto? Venti euro singolo, trenta in coppia. Per voi trenta, siete una coppia, si vede.",
+    "kiki[skeptical]: Non siamo una coppia."
+   ],
+   "intro": [
+    "agente: Allora, ritratto?"
+   ],
+   "byeLabel": "No, grazie",
+   "topics": [
+    {
+     "id": "ritratto",
+     "label": "«Va bene. In coppia.»",
+     "icon": "us",
+     "once": true,
+     "do": [
+      "narr: Dieci minuti dopo.",
+      "agente: Ecco qua.",
+      "beps[surprised]: Mi hai fatto il naso enorme.",
+      "kiki[laugh]: E io ho gli occhi a cuore. Peppe, sei un truffatore.",
+      "agente: Io disegno quello che vedo, signorina.",
+      "@stat:legame+1"
+     ]
+    },
+    {
+     "id": "donna",
+     "label": "Ha visto una donna col cappello nero?",
+     "icon": "person",
+     "once": true,
+     "do": [
+      "agente: Quella del balcone? Vive lì da sempre, dicono. Ma non l'ho mai vista uscire. Mai.",
+      "agente: Una volta mi ha lanciato una moneta. Cinquecento lire. Pensa te."
+     ]
+    }
+   ]
+  },
+  "ilario": {
+   "npc": "ilario",
+   "first": [
+    "@person:ilario",
+    "ilario: Due giovani in una biblioteca a quest'ora. O siete studiosi, o siete innamorati, o siete nei guai.",
+    "beps: Una delle tre.",
+    "ilario[smile]: Allora siete nei guai. Gli studiosi non arrossiscono."
+   ],
+   "intro": [
+    "ilario: Dite pure. Ho novantun anni, ma ascolto in fretta."
+   ],
+   "topics": [
+    {
+     "id": "teodosiana",
+     "label": "La Teodosiana",
+     "icon": "city",
+     "do": [
+      "ilario: Fondata nel 1601 da un cardinale con troppi libri e pochi amici.",
+      "ilario: Quarantamila volumi, otto fantasmi, un gatto. Il gatto è l'unico che paga le tasse."
+     ]
+    },
+    {
+     "id": "orfeo",
+     "label": "Orfeo",
+     "icon": "symbol",
+     "if": "!flag.cassetti_ok",
+     "do": [
+      "ilario[think]: Orfeo. Il cantore. Scese agli inferi per amore e risalì per obbedienza. Poi si voltò.",
+      "ilario: Perché me lo chiedete?",
+      {
+       "if": "item.medaglione",
+       "do": [
+        "beps: (Forse dovrei mostrargli il medaglione.)"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "donna",
+     "label": "La donna col cappello",
+     "icon": "photo",
+     "if": "flag.ilario_libraio",
+     "once": true,
+     "do": [
+      "ilario: La Testimone viene qui ogni tanto. Nel 1978 si fece fotografare sotto il busto di Teodosio. Sempre nello stesso punto.",
+      "ilario[think]: Ma non era la stessa donna del '67. Il cappello sì. La donna no.",
+      "@flag:euridice_ruolo",
+      "@clue:euridice_ruolo",
+      "@stat:conoscenza+1"
+     ]
+    },
+    {
+     "id": "xvii",
+     "label": "Il ruolo cancellato",
+     "icon": "warning",
+     "if": "flag.ilario_libraio",
+     "once": true,
+     "do": [
+      "ilario[sad]: Il diciassettesimo. Il Ponte.",
+      "ilario: Nel 1967, a Parigi, sedici custodi votarono per abolirlo. Io votai a favore.",
+      "ilario: Me ne pento ogni giorno da cinquantanove anni.",
+      "beps: Che cosa faceva il Ponte?",
+      "ilario: Doveva decidere quando il Registro sarebbe stato reso pubblico. Era il ponte tra Orfeo e il mondo. Lo abbiamo fatto saltare, come i tedeschi coi ponti di Firenze.",
+      "@clue:ruolo_ponte",
+      "@flag:erased_role_known",
+      "@stat:conoscenza+2"
+     ]
+    },
+    {
+     "id": "notaio",
+     "label": "Il Notaio",
+     "icon": "person",
+     "if": "flag.ilario_libraio",
+     "once": true,
+     "do": [
+      "ilario[worried]: Varano. Il figlio di Ettore. Ha ereditato il ruolo XI, la bilancia.",
+      "ilario: Ettore era un uomo pauroso. Aurelio è peggio: è un uomo ferito. I paurosi scappano. I feriti bruciano.",
+      "@flag:varano_named",
+      "@stat:conoscenza+1"
+     ]
+    }
+   ],
+   "items": {
+    "medaglione": [
+     {
+      "if": "!flag.cassetti_ok",
+      "do": [
+       "ilario[surprised]: …",
+       "ilario: Intero. Non lo vedevo intero dal 1967.",
+       "ilario: Allora sono io che devo parlare. Sono il Libraio. Ruolo XIV. Custodisco le parole.",
+       "ilario: E questa è la chiave della Sala dei Cassetti. Ve la do perché la porta questo medaglione, non perché mi fido di voi. Mi fiderò dopo.",
+       "@flag:cassetti_ok",
+       "@flag:ilario_libraio",
+       "@clue:libraio",
+       "@objective:o3_sala",
+       "@stat:conoscenza+1"
+      ]
+     },
+     {
+      "do": [
+       "ilario: Lo so, lo so. È bellissimo. Ora andate, prima che cambi idea."
+      ]
+     }
+    ],
+    "mappa": [
+     "ilario[smile]: La mappa di Ada! Gliel'avevo venduta io, nel '68. In cambio di una bottiglia di Chianti e di un segreto."
+    ],
+    "foto1967": [
+     "ilario: Parigi, '67. Ero lì. Dietro il fotografo, a sinistra. Si vede la mia ombra, guardi."
+    ],
+    "*": [
+     "ilario: Interessante. Ma alla mia età interessa solo quello che si può leggere."
+    ]
+   }
+  },
+  "allarme": {
+   "linear": true,
+   "intro": [
+    "@sfx:door",
+    "@flag:allarme",
+    "@refresh",
+    "narr: Dal salone arrivano voci. Passi pesanti. La voce di Don Ilario, altissima: «La biblioteca è chiusa, signori! CHIUSA!»",
+    "kiki[scared]: Gli uomini del Notaio.",
+    "beps[worried]: La porta del salone è fuori discussione. C'è un cancello di servizio… chiuso dall'altra parte.",
+    "kiki: E una grata, laggiù. Avvitata.",
+    "@objective:o3_fuga"
+   ]
+  },
+  "fuga_riuniti": {
+   "linear": true,
+   "intro": [
+    "@join",
+    "@unflag:leva_tenuta",
+    "kiki: Ci sei? Lascio!",
+    "@sfx:door",
+    "narr: Il cancello ricade con un colpo sordo. Dall'altra parte, qualcuno lo scuote. Troppo tardi.",
+    "beps[surprised]: Questo è stato…",
+    "kiki[smile]: Lavoro di squadra. Ora la scala. Da soli non ci arriviamo.",
+    "@objective:o3_scala"
+   ]
+  },
+  "lista_osteria": {
+   "linear": true,
+   "intro": [
+    "@flag:lista_letta",
+    "@flag:lista_full",
+    "@flag:lista_seen",
+    "kiki: Diciassette ruoli. Per ognuno, chi lo ha custodito dal 1944 a oggi.",
+    "beps: Orfeo, Euridice, il Cartografo, l'Archivista, il Tipografo, il Barcaiolo… Renzo Ricci, il padre di Ottavia.",
+    "kiki: Euridice: Lucia Morel, 1944. Ada Morel, 1967. Poi una riga coperta d'inchiostro. Mia bisnonna e mia nonna, Beps.",
+    "beps: XI, il Notaio: Ettore Varano, poi Aurelio Varano.",
+    "kiki: E il XVII: raschiato. Ma qui, sul margine, c'è un'annotazione minuscola.",
+    "narr: «Il Sigillo è diviso in quattro. Uno resti a Roma. Uno nella cassetta 17 della Banca del Giglio. Uno nel muro dove l'acqua si fermò. Uno sul ponte che non cadde, presso chi custodisce le chiavi.»",
+    "beps[think]: Roma l'abbiamo. La Banca del Giglio: la chiave d'ottone, «B.d.G.». Il muro dove l'acqua si fermò: la stanza murata. E il ponte che non cadde…",
+    "kiki: Il Ponte Vecchio. Tutto torna a Firenze.",
+    {
+     "choice": [
+      {
+       "label": "«Tutto torna a Firenze. Anche noi.»",
+       "do": [
+        "kiki[smile]: Anche noi. Mi piace come suona.",
+        "@stat:legame+1"
+       ]
+      },
+      {
+       "label": "«Dobbiamo stare attenti: Varano sa dove andremo.»",
+       "do": [
+        "kiki: Allora non ci separiamo. Mai.",
+        "beps: Mai.",
+        "@stat:fiducia+1",
+        "@inc:coop"
+       ]
+      },
+      {
+       "label": "«Tua nonna e tua bisnonna erano Euridice. E tu?»",
+       "do": [
+        "kiki[worried]: Io… non lo so. Non me l'ha mai chiesto nessuno.",
+        "kiki: Forse è per questo che nonna ha lasciato tutto a metà. Perché scegliessi io.",
+        "@stat:conoscenza+1",
+        "@stat:fiducia+1"
+       ]
+      }
+     ]
+    },
+    "@clue:sigillo_quattro",
+    "@cutscene:c3_fine",
+    "@chapter:4",
+    "@goto:c4_studio"
+   ]
+  },
+  "sms_kiki": {
+   "linear": true,
+   "intro": [
+    "@sfx:phone",
+    "@anim:phone",
+    "beps: Un messaggio. Da Kiki.",
+    "narr: «Non cercarmi. Sto bene. — Federica.» In allegato, una foto: stalattiti, una statua bianca, una fontana.",
+    "beps[worried]: Kiki non firma mai Federica.",
+    {
+     "if": "stat.fiducia>=4",
+     "do": [
+      "beps[determined]: Lo fa solo con la gente di cui non si fida. Me l'ha detto a Roma. Questo messaggio non l'ha scritto lei. O l'ha scritto lei apposta, perché capissi.",
+      "@stat:fiducia+1"
+     ],
+     "else": [
+      "beps[think]: Mi ha detto di chiamarla Kiki dal primo giorno. «Federica» la usa solo con chi non si fida. Qualcosa non va."
+     ]
+    },
+    "beps: E questa foto… stalattiti finte, una Venere che esce dal bagno. È la Grotta del Buontalenti. Boboli.",
+    "beps: La lista: «Uno sul ponte che non cadde, presso chi custodisce le chiavi.» Il Ponte Vecchio. Il Corridoio porta dritto a Boboli.",
+    "@flag:sms_ricevuto",
+    "@clue:sms_federica",
+    "@objective:o4_ponte"
+   ]
+  },
+  "neri": {
+   "npc": "neri",
+   "first": [
+    "@person:neri",
+    "neri: Buongiorno. Se cerca una fede nuziale, ho un'offerta. Se cerca guai, ho la faccia di chi ne ha visti abbastanza."
+   ],
+   "intro": [
+    "neri: Mi dica."
+   ],
+   "topics": [
+    {
+     "id": "frammento",
+     "label": "Lei custodisce qualcosa di Orfeo?",
+     "icon": "symbol",
+     "if": "!item.sigillo_d && !puzzle.c4_sigillo",
+     "do": [
+      "neri[skeptical]: Orfeo? Il cantante?",
+      "beps: Il Custode delle Chiavi. Ruolo XV.",
+      "neri: Non so di cosa parla.",
+      {
+       "if": "item.lista17",
+       "do": [
+        "beps: (La Lista dei 17. Il suo nome dovrebbe esserci.)"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "corridoio",
+     "label": "La porta del Corridoio",
+     "icon": "key",
+     "if": "flag.neri_fiducia && !flag.neri_chiave",
+     "do": [
+      "neri: La porticina? Mio nonno aveva la chiave. Io ce l'ho ancora. Non l'ho mai usata.",
+      "neri: Prenda. Se va dove credo, porti il Sigillo intero. Là sotto niente si apre a pezzi.",
+      "@flag:neri_chiave",
+      "@clue:corridoio"
+     ]
+    },
+    {
+     "id": "banco",
+     "label": "Posso usare il suo banco?",
+     "icon": "item",
+     "if": "flag.neri_fiducia && !flag.neri_banco",
+     "do": [
+      "neri: Il banco? Mio nonno ci ha diviso il Sigillo nel '67. È giusto che ci torni intero.",
+      "neri: Faccia lei. Ha mani da architetto, non da orafo, ma il Sigillo si ricompone da solo, se sai leggerlo.",
+      "@flag:neri_banco",
+      "@objective:o4_sigillo"
+     ]
+    },
+    {
+     "id": "nonno",
+     "label": "Suo nonno",
+     "icon": "person",
+     "if": "flag.neri_fiducia",
+     "once": true,
+     "do": [
+      "neri[sad]: Oreste Neri. Nel '44 teneva le chiavi di mezza Firenze: botteghe, cantine, il Corridoio. Ci passavano di notte, sopra la testa dei tedeschi.",
+      "neri: Diceva: «Le chiavi aprono, ma soprattutto chiudono». Non l'ho mai capito.",
+      "@stat:conoscenza+1"
+     ]
+    },
+    {
+     "id": "kiki",
+     "label": "Ha visto una ragazza col cappotto rosso?",
+     "icon": "question",
+     "once": true,
+     "do": [
+      "neri: Stamattina presto. Con un signore col cappotto grigio. Lei camminava normale, ma si girava. Ogni tre passi, si girava.",
+      "beps[worried]: Si girava.",
+      "neri: Come se lasciasse dietro qualcosa. O qualcuno."
+     ]
+    }
+   ],
+   "items": {
+    "lista17": [
+     {
+      "if": "!flag.neri_fiducia",
+      "do": [
+       "neri[surprised]: …",
+       "neri: XV. Il Custode delle Chiavi. Oreste Neri, 1944. Tommaso Neri, 1967. E poi… Stefano Neri. Io.",
+       "neri: Mio padre mi ha lasciato un pezzo di bronzo e un ordine: «Darlo solo a chi porta la lista». Non ci avevo mai creduto.",
+       "neri: Eccolo. TARTI, c'è scritto sul bordo.",
+       "@give:sigillo_d",
+       "@flag:neri_fiducia",
+       "@stat:conoscenza+1"
+      ]
+     },
+     {
+      "do": [
+       "neri: Il mio nome è lì. Che strano effetto."
+      ]
+     }
+    ],
+    "sigillo_a": [
+     "neri: Bronzo e ceralacca. Un lavoro di mio nonno. Riconosco il bulino."
+    ],
+    "medaglione": [
+     "neri: Bel lavoro. Ottone, primi Quaranta. La tacca sul bordo serve a orientarlo, sa?"
+    ],
+    "*": [
+     "neri: Bello. Ma non lo compro."
+    ]
+   }
+  },
+  "bellandi": {
+   "npc": "bellandi",
+   "first": [
+    "@person:bellandi",
+    "bellandi: Buongiorno. Cassette di sicurezza. Mi dica in cosa posso esserle utile secondo il regolamento interno, articolo quattro."
+   ],
+   "intro": [
+    "bellandi: Prego."
+   ],
+   "topics": [
+    {
+     "id": "cassetta",
+     "label": "Vorrei aprire la cassetta 17",
+     "icon": "key",
+     "if": "!flag.cassetta_aperta",
+     "do": [
+      "bellandi: La 17. Intestata nel 1944, rinnovata ogni dieci anni da un fondo fiduciario parigino.",
+      {
+       "if": "!item.chiave_ottone",
+       "do": [
+        "bellandi: Ha la chiave del cliente?",
+        "beps: … No.",
+        "bellandi: Allora no."
+       ],
+       "else": [
+        "bellandi: Vedo che ha la chiave. Articolo nove: devo chiederle il nome del titolare.",
+        {
+         "choice": [
+          {
+           "label": "«Orfeo»",
+           "do": [
+            "@sfx:fail",
+            "bellandi: No. Mi spiace."
+           ]
+          },
+          {
+           "label": "«Euridice»",
+           "do": [
+            "bellandi[surprised]: …Corretto.",
+            "narr: Due chiavi, due giri. Il cassetto scivola fuori.",
+            "beps: Dentro: un quarto di sigillo… NON. Una bobina di nastro magnetico. E un foglio.",
+            "@give:sigillo_b",
+            "@give:nastro",
+            "@flag:cassetta_aperta",
+            "@clue:nastro_orfeo",
+            "@stat:conoscenza+1",
+            "bellandi: Firmi qui. E qui. E qui."
+           ]
+          },
+          {
+           "label": "«Il Ponte»",
+           "do": [
+            "@sfx:fail",
+            "bellandi: No."
+           ]
+          },
+          {
+           "label": "«Varano»",
+           "do": [
+            "@sfx:fail",
+            "bellandi[skeptical]: Decisamente no. Il signor Varano ha la cassetta 11."
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "repeatSafe": true
+    },
+    {
+     "id": "varano",
+     "label": "Il notaio Varano viene spesso?",
+     "icon": "person",
+     "once": true,
+     "do": [
+      "bellandi: Non posso rispondere. Articolo dodici.",
+      "bellandi: …Ieri. Ha chiesto della 17. Gli ho detto che non era sua. Si è tolto il cappello e se n'è andato. Un vero signore. Inquietante, ma un signore."
+     ]
+    },
+    {
+     "id": "regolamento",
+     "label": "Mi parli del regolamento",
+     "icon": "doc",
+     "optional": true,
+     "once": true,
+     "do": [
+      "bellandi[smile]: Volentieri. Articolo uno…",
+      "narr: Venti minuti dopo.",
+      "bellandi: …e l'articolo trentatré riguarda i piccioni.",
+      "beps: Bellissimo. Grazie. Davvero."
+     ]
+    }
+   ],
+   "items": {
+    "chiave_ottone": [
+     "bellandi: Una chiave del cliente. Per usarla, mi chieda di aprire la cassetta."
+    ],
+    "*": [
+     "bellandi: Non è un documento d'identità."
+    ]
+   }
+  },
+  "varano_c4": {
+   "npc": "varano",
+   "first": [
+    "@flag:varano_named",
+    "@person:varano",
+    "varano: Mi chiamo Aurelio Varano. Notaio. Ruolo XI di Orfeo, la Bilancia.",
+    "varano: La signorina Morel è libera di andare quando vuole. Lo è sempre stata.",
+    "kiki[angry]: Mi ha presa sotto casa e mi ha detto: «Venga, o lo troveranno prima gli altri.» Non era una domanda.",
+    "varano: Era un consiglio. Ho la brutta abitudine di dare consigli che sembrano minacce. È il mestiere."
+   ],
+   "intro": [
+    "varano: Prego, signor Lanzi. Parliamo."
+   ],
+   "byeLabel": "«Kiki viene con me. Adesso.»",
+   "topics": [
+    {
+     "id": "perche",
+     "label": "Perché ha preso Kiki?",
+     "icon": "question",
+     "once": true,
+     "do": [
+      "varano: Perché volevo parlarle senza di lei. E con lei senza di lei.",
+      "varano: Lei è un architetto, signor Lanzi. Sa che certi edifici vanno demoliti prima che crollino da soli.",
+      "varano: Il Registro di Orfeo è uno di quegli edifici."
+     ]
+    },
+    {
+     "id": "registro",
+     "label": "Che cos'è il Registro?",
+     "icon": "doc",
+     "once": true,
+     "do": [
+      "varano: Ottant'anni di nomi. Chi ha salvato, chi è stato salvato. E chi ha venduto chi.",
+      "varano: Se lo rendete pubblico, i nipoti pagheranno per i nonni. Famiglie intere. Persone che non hanno fatto niente.",
+      "varano[sad]: Io lo so bene.",
+      "@clue:registro",
+      "@stat:conoscenza+1"
+     ]
+    },
+    {
+     "id": "bruciare",
+     "label": "Lei vuole bruciarlo.",
+     "icon": "warning",
+     "once": true,
+     "do": [
+      "varano: Voglio chiudere una ferita. La cenere è l'unica cosa che non accusa nessuno.",
+      "kiki[angry]: La cenere non salva nessuno, notaio.",
+      "varano: Nemmeno la verità, signorina. Nemmeno la verità."
+     ]
+    },
+    {
+     "id": "sigillo",
+     "label": "Il Sigillo",
+     "icon": "key",
+     "once": true,
+     "do": [
+      "varano: Lo tenga. Il Sigillo apre la Camera di Orfeo. Prima o poi ci arriverete. E io sarò lì.",
+      "beps: Perché non lo prende?",
+      "varano: Perché la Camera si apre solo in due. Ve ne accorgerete. Io…",
+      "varano[sad]: Io sono sempre stato solo."
+     ]
+    },
+    {
+     "id": "nome",
+     "label": "«Varano.» Ho già sentito questo nome.",
+     "icon": "person",
+     "if": "clue.varano_finanzia || clue.varano_lira",
+     "once": true,
+     "do": [
+      "varano: Il palazzo di via de' Bardi. Lo finanzio io. Volevo arrivare alla stanza murata prima di chiunque.",
+      "varano[sad]: Sono arrivato secondo. Dopo un architetto con un coltellino e un capocantiere che vuole il caffè.",
+      "@stat:conoscenza+1"
+     ]
+    }
+   ],
+   "bye": [
+    "varano: Vada, signor Lanzi. Portatela fuori.",
+    "varano: Ci rivedremo a Parigi. Sarà lì che capirete chi sono.",
+    "narr: Il Notaio si alza il bavero e sparisce dietro la Venere, come un attore che conosce l'uscita di scena.",
+    "@flag:varano_grotta_via",
+    "@flag:kiki_liberata",
+    "@together:true",
+    "@show:kiki",
+    "@unlockswitch",
+    "@refresh",
+    "@dialogue:riunione_grotta"
+   ]
+  },
+  "riunione_grotta": {
+   "linear": true,
+   "intro": [
+    "kiki[sad]: Beps.",
+    {
+     "choice": [
+      {
+       "label": "Abbracciala",
+       "tone": "tender",
+       "line": "beps[tender]: …",
+       "do": [
+        "narr: Kiki si irrigidisce un secondo. Poi si lascia andare.",
+        "kiki[tender]: Sei venuto.",
+        "beps: «Federica.» Non firmi mai Federica.",
+        "kiki[smile]: Lo sapevo che l'avresti capito.",
+        "@stat:legame+2"
+       ]
+      },
+      {
+       "label": "«Ti ha fatto del male?»",
+       "do": [
+        "kiki: No. Ha parlato. Tanto. Di suo nonno, di sua nonna. Di cenere.",
+        "kiki[worried]: Beps, non è un mostro. È peggio: è uno che crede di avere ragione.",
+        "@stat:conoscenza+1",
+        "@stat:fiducia+1"
+       ]
+      },
+      {
+       "label": "«La prossima volta, i dieci minuti li cronometro io.»",
+       "do": [
+        "kiki[laugh]: Idiota. … Grazie.",
+        "@stat:legame+1",
+        "@stat:fiducia+1"
+       ]
+      }
+     ]
+    },
+    "kiki: Il nastro. L'hai preso, vero? Varano ha detto una cosa: che la metà orientale del Registro è a Istanbul. Dal Traduttore.",
+    "beps: Istanbul.",
+    "kiki: Nonna ci andava ogni anno, a dicembre. Diceva che andava a «comprare tappeti». Non abbiamo mai avuto un tappeto.",
+    "@clue:istanbul",
+    "@objective:o4_partenza"
+   ]
+  },
+  "emre": {
+   "npc": "emre",
+   "first": [
+    "@person:emre",
+    "emre: Çay? Tè? Thé? Tea? Due lire. Euro. Sorrisi. Accetto tutto."
+   ],
+   "intro": [
+    "emre: Çay?"
+   ],
+   "byeLabel": "Teşekkürler",
+   "topics": [
+    {
+     "id": "te",
+     "label": "Due tè, per favore",
+     "icon": "talk",
+     "once": true,
+     "do": [
+      "emre: Ecco. Bollente. Prendetelo dal bordo, non dalla pancia del bicchiere.",
+      "beps[surprised]: Ahi.",
+      "emre: Dalla pancia, l'ha preso.",
+      {
+       "if": "present.kiki",
+       "do": [
+        "kiki[laugh]: Ha detto dal bordo, Beps.",
+        "@stat:legame+1"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "antiquario",
+     "label": "Cerchiamo un antiquario. «Dove vendono il tempo.»",
+     "icon": "question",
+     "once": true,
+     "do": [
+      "emre: Selim Bey! Orologi, mappe, cose vecchie. In fondo a destra. Ditegli che vi manda Emre, mi dà un lira di mancia."
+     ]
+    },
+    {
+     "id": "leva",
+     "label": "Ci serve una leva. Un piede di porco.",
+     "icon": "item",
+     "if": "flag.selim_camera && !item.piede_porco && !flag.botola_aperta",
+     "do": [
+      "emre: Per la botola del Valide Han? Tutti la vogliono aprire, nessuno ci riesce.",
+      "emre: Prendete questo. Me lo riportate. Se non me lo riportate, lo dico a Selim Bey.",
+      "@give:piede_porco"
+     ]
+    },
+    {
+     "id": "donna",
+     "label": "Hai visto una donna col cappello nero?",
+     "icon": "person",
+     "if": "flag.woman_4",
+     "once": true,
+     "do": [
+      "emre: La signora dei cinquecento? Viene ogni dicembre. Paga il tè con monete italiane vecchie. Io le tengo tutte.",
+      "emre: Quest'anno era diversa. Più giovane, forse. O è il cappello che invecchia le persone.",
+      "@stat:conoscenza+1"
+     ]
+    }
+   ],
+   "items": {
+    "moneta": [
+     "emre[surprised]: Cinquecento lire! Siete parenti della signora col cappello?"
+    ],
+    "*": [
+     "emre: Non compro. Vendo tè."
+    ]
+   }
+  },
+  "selim": {
+   "npc": "selim",
+   "first": [
+    "@person:selim",
+    "selim[surprised]: Federica. Ada aveva ragione: hai i suoi occhi e il carattere di tuo nonno.",
+    "kiki[surprised]: Conosceva mio nonno?",
+    "selim: Tutti conoscevano tuo nonno. Nessuno lo sopportava. Era il migliore di tutti.",
+    "selim: E voi siete il signor Beps. Ho saputo del Sigillo. Ho saputo della grotta. A Istanbul le notizie arrivano prima dei treni."
+   ],
+   "intro": [
+    "selim: Prego, prego. Sedetevi. Il tè arriva."
+   ],
+   "byeLabel": "A dopo, Selim Bey",
+   "topics": [
+    {
+     "id": "traduttore",
+     "label": "Lei è il Traduttore?",
+     "icon": "symbol",
+     "once": true,
+     "do": [
+      "selim[smile]: Ruolo XVI. Le due frecce. Traduco Orfeo per chi parla un'altra lingua. E viceversa.",
+      "selim: Mia madre, Nermin, accoglieva qui chi fuggiva da Firenze nel '44. Arrivavano con i documenti falsi del Tipografo e una parola d'ordine: «Euridice».",
+      "@flag:selim_traduttore",
+      "@clue:traduttore",
+      "@stat:conoscenza+1"
+     ]
+    },
+    {
+     "id": "registro",
+     "label": "La metà orientale del Registro",
+     "icon": "doc",
+     "if": "flag.selim_traduttore",
+     "once": true,
+     "do": [
+      "selim: Non è una metà. È una mappa. Il Registro non è mai stato diviso: è sempre stato in un posto solo.",
+      "selim: Le metà sono le chiavi per arrivarci. Sotto questo Han c'è una camera con quattro anelli. Il vostro medaglione la apre. E vi dirà dove andare.",
+      "@flag:selim_camera",
+      "@objective:o5_camera",
+      "@stat:conoscenza+1"
+     ]
+    },
+    {
+     "id": "lanterna",
+     "label": "Ci serve luce, là sotto",
+     "icon": "item",
+     "if": "flag.selim_camera && !item.lanterna",
+     "do": [
+      "selim: Prendete questa lanterna. Vede meglio delle torce elettriche.",
+      "beps: È una metafora?",
+      "selim[smile]: A Istanbul, tutto è una metafora. Anche le lanterne.",
+      "@give:lanterna"
+     ]
+    },
+    {
+     "id": "botola",
+     "label": "Come si scende?",
+     "icon": "key",
+     "if": "flag.selim_camera",
+     "once": true,
+     "do": [
+      "selim: Nel cortile del Valide Han c'è una botola. Arrugginita da quarant'anni. Emre, il ragazzo del tè, ha un piede di porco per ogni occasione."
+     ]
+    },
+    {
+     "id": "ada",
+     "label": "Ada veniva qui ogni dicembre",
+     "icon": "heart",
+     "once": true,
+     "do": [
+      "selim[sad]: Ogni dicembre per trent'anni. Diceva che veniva a comprare tappeti. Non ne ha mai comprato uno.",
+      "selim: Veniva a controllare che la Camera fosse chiusa. E a bere il tè con me. Credo più per il tè.",
+      "kiki[sad]: Non me l'ha mai detto.",
+      "selim: Ti voleva fuori da tutto questo. Poi ha capito che non poteva sceglierlo lei, per te.",
+      "@stat:legame+1"
+     ]
+    },
+    {
+     "id": "donna",
+     "label": "La donna col cappello, al Bazar",
+     "icon": "person",
+     "if": "flag.woman_4",
+     "once": true,
+     "do": [
+      "selim[think]: La Testimone? Qui, a dicembre?",
+      "selim: Non era Hélène. Hélène odia Istanbul: dice che ci sono troppi gatti.",
+      "beps: Allora chi era?",
+      "selim: Euridice è un ruolo, signor Beps. A volte ha più di una persona, come un vestito che passa di mano. A volte nessuno sa chi lo indossa.",
+      "@flag:helene_doubt",
+      "@flag:euridice_ruolo",
+      "@clue:euridice_ruolo",
+      "@stat:conoscenza+1"
+     ]
+    }
+   ],
+   "items": {
+    "medaglione": [
+     "selim: Intero. Ada ne sarebbe felice. Guardatene il retro, con questa luce: le cose vere si leggono solo con la luce giusta.",
+     "@clue:retro_medaglione"
+    ],
+    "lista17": [
+     "selim: XVI, Selim Aydın. Mi hanno scritto con la y senza puntino. Cinquant'anni che glielo dico."
+    ],
+    "foto1967": [
+     "selim: Ada a trentun anni. Bella come una giornata di scirocco."
+    ],
+    "*": [
+     "selim: Bello. Ve lo valuto? No? Peccato."
+    ]
+   }
+  },
+  "tetto": {
+   "linear": true,
+   "intro": [
+    "@flag:tetto_scena",
+    "narr: Si siedono sul muretto. Sotto di loro, Istanbul accende le sue luci una per volta.",
+    "kiki: Nonna diceva che da qui si vede dove finisce l'Europa.",
+    "beps: Ed è bello sapere dove finisce?",
+    "kiki[tender]: No. È bello sapere che si può attraversare.",
+    "narr: Silenzio. Un traghetto suona la sirena, lontano.",
+    {
+     "choice": [
+      {
+       "label": "Baciala",
+       "tone": "tender",
+       "if": "stat.legame>=6",
+       "line": "beps[tender]: …",
+       "do": [
+        "@cutscene:bacio",
+        "@flag:bacio",
+        "kiki[tender]: Era ora, architetto.",
+        "beps[smile]: Avevo calcolato i carichi.",
+        "kiki[laugh]: Idiota.",
+        "@stat:legame+2",
+        "@stat:fiducia+1"
+       ]
+      },
+      {
+       "label": "«Kiki… sono felice che quella sera tu fossi in archivio.»",
+       "tone": "tender",
+       "do": [
+        {
+         "if": "stat.legame>=8",
+         "do": [
+          "kiki[tender]: Anch'io. Molto più di quanto ti dirò mai.",
+          "narr: È lei a baciarlo. Senza fretta.",
+          "@cutscene:bacio",
+          "@flag:bacio",
+          "@stat:legame+2"
+         ],
+         "else": [
+          "kiki[tender]: Anch'io, Beps.",
+          "narr: Kiki gli prende la mano. La tiene. Non dice altro.",
+          "@flag:mano",
+          "@stat:legame+1"
+         ]
+        }
+       ]
+      },
+      {
+       "label": "«Sai che questo muretto è del Seicento? Ottima malta.»",
+       "do": [
+        "kiki[laugh]: Sei impossibile.",
+        {
+         "if": "stat.legame>=10",
+         "do": [
+          "kiki[tender]: Ed è per questo che…",
+          "narr: Lo bacia, ridendo ancora.",
+          "@cutscene:bacio",
+          "@flag:bacio",
+          "@stat:legame+1"
+         ],
+         "else": [
+          "kiki[smile]: Ottima malta. Sì.",
+          "narr: Appoggia la testa sulla sua spalla.",
+          "@flag:mano",
+          "@stat:legame+1"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "@clue:tetto",
+    {
+     "if": "puzzle.c5_anelli",
+     "do": [
+      "@dialogue:c5_fine"
+     ]
+    }
+   ]
+  },
+  "helene_c6": {
+   "npc": "helene",
+   "first": [
+    "helene: Entrate. Chiudete la porta. Daguerre odia gli spifferi.",
+    "helene[sad]: Vi devo una verità. Prima che la sappiate da Varano.",
+    "helene: Il cappello. Questo. Era di Ada fino al 2019. Ora è mio.",
+    "helene: Sono io, Euridice. La Testimone. Ada mi ha passato il ruolo prima di morire.",
+    "kiki[surprised]: Tu? Eri tu sul Lungarno?",
+    "helene: Sul Lungarno, sì. A Roma, sì. Dovevo vedere se eravate pronti.",
+    "beps: E a Istanbul?",
+    "helene[worried]: …Io non sono mai stata a Istanbul a dicembre. Mai.",
+    "narr: Silenzio. Daguerre si stiracchia.",
+    "@flag:helene_euridice",
+    "@flag:helene_doubt",
+    "@flag:euridice_ruolo",
+    "@clue:euridice_ruolo",
+    "@clue:helene_euridice",
+    "@objective:o6_nastro"
+   ],
+   "intro": [
+    "helene: Sì?"
+   ],
+   "byeLabel": "Grazie, Hélène",
+   "topics": [
+    {
+     "id": "istanbul",
+     "label": "Allora chi era, a Istanbul?",
+     "icon": "question",
+     "once": true,
+     "do": [
+      "helene[think]: Non lo so. Davvero. Euridice non è mai stata una persona sola. C'è sempre stata… una riserva. Qualcuno che Ada aveva scelto e non ci ha mai detto.",
+      "kiki: Una riserva.",
+      "helene: Ada aveva molti segreti. Questo è l'ultimo che non ho capito.",
+      "@stat:conoscenza+1"
+     ]
+    },
+    {
+     "id": "nastro",
+     "label": "Il nastro di Orfeo",
+     "icon": "tape",
+     "if": "!flag.nastro_ascoltato",
+     "do": [
+      "helene: Il Revox è giù, nella sala di proiezione. L'ho fatto revisionare la settimana scorsa.",
+      "helene: Ascoltatelo. È la seduta del 12 marzo 1967. Io ero una bambina, aspettavo fuori dalla porta con mio padre."
+     ]
+    },
+    {
+     "id": "archivio",
+     "label": "L'archivio di Orfeo",
+     "icon": "doc",
+     "once": true,
+     "do": [
+      "helene: Passage des Libraires, la porta verde con la lira sul batacchio. Parola d'ordine: «Eurydice». Con la y.",
+      "helene: Ci troverete tutto. In disordine: Varano ci è passato prima di voi. Ha mischiato le carte. Letteralmente.",
+      "@flag:archivio_ok"
+     ]
+    },
+    {
+     "id": "ruolo",
+     "label": "Perché Ada ha scelto te?",
+     "icon": "heart",
+     "once": true,
+     "do": [
+      "helene[sad]: Perché ero la figlia del Fotografo. Perché c'ero sempre, dietro l'obiettivo, anche da bambina.",
+      "helene: E perché non voleva sceglierti, Federica. Voleva che fossi libera di non esserlo.",
+      "kiki[sad]: E se io volessi esserlo?",
+      "helene[smile]: Allora dovrai chiedermelo. E ti dirò di sì.",
+      "@stat:legame+1",
+      "@stat:fiducia+1"
+     ]
+    }
+   ],
+   "items": {
+    "nastro": [
+     "helene: Quel nastro. Mio padre lo ha registrato di nascosto. Ettore Varano non lo ha mai saputo. Ascoltatelo giù."
+    ],
+    "foto1967": [
+     "helene[sad]: Ada nel '67. Io ero dietro, con la macchina di papà al collo. Dodici anni."
+    ],
+    "*": [
+     "helene: Joli."
+    ]
+   }
+  },
+  "nastro": {
+   "linear": true,
+   "intro": [
+    "@flag:nastro_ascoltato",
+    "@sfx:tape",
+    "narr: Il nastro gira. Un fruscio, voci che parlano in italiano e francese, una sedia che si sposta.",
+    "narr: Voce di uomo: «Seduta straordinaria di Orfeo. Parigi, 12 marzo 1967. Ordine del giorno: abolizione del Ruolo XVII, il Ponte.»",
+    "narr: «Il Registro non sarà mai reso pubblico. I nomi dei delatori resteranno nel Registro, e il Registro resterà nell'ombra. Votiamo.»",
+    "narr: Voci. «Favorevole.» «Favorevole.» «Favorevole.» Quindici volte.",
+    "narr: Poi una voce di donna, ferma: «Contraria. Euridice vota contro. E il Ponte, Guido Sarti, vota contro. Siamo due.»",
+    "narr: Silenzio. Poi l'uomo: «Il notaio verbalizza: approvato all'unanimità dei presenti. Euridice risulta assente. Il Ponte risulta assente.»",
+    "narr: Voce di donna: «Ettore, io sono qui.» L'uomo: «Non nel verbale, Ada.»",
+    "narr: Il nastro finisce in un fruscio.",
+    "kiki[angry]: Nonna c'era. Ha votato contro. E lui l'ha cancellata dal verbale.",
+    "beps[angry]: Ettore Varano. Il padre di Aurelio. Ha falsificato l'unanimità.",
+    "beps[think]: E il Ponte aveva un nome: Guido Sarti. Il volto graffiato nella foto del '44.",
+    "@clue:verbale_falso",
+    "@clue:guido_sarti",
+    "@flag:erased_role_known",
+    "@stat:conoscenza+2",
+    {
+     "if": "puzzle.c6_cronologia",
+     "do": [
+      "@objective:o6_varano"
+     ],
+     "else": [
+      "@objective:o6_archivio"
+     ]
+    }
+   ]
+  },
+  "panchina_pn": {
+   "linear": true,
+   "intro": [
+    "narr: La neve cade sulla Senna. Si siedono vicini, più vicini di quanto serva per scaldarsi.",
+    "kiki: Beps. Quando tutto questo sarà finito…",
+    {
+     "choice": [
+      {
+       "label": "«…ti porto a cena. Una cena vera. Senza notai.»",
+       "do": [
+        "kiki[laugh]: Senza notai. Lo metto per iscritto.",
+        "@stat:legame+1"
+       ]
+      },
+      {
+       "label": "«…non sarà finito. Io non me ne vado.»",
+       "tone": "tender",
+       "do": [
+        "kiki[tender]: Era la risposta giusta.",
+        {
+         "if": "!flag.bacio",
+         "do": [
+          "narr: Stavolta nessuno dei due fa una battuta. Si baciano sotto la neve, come in un film che entrambi giurerebbero di detestare.",
+          "@flag:bacio",
+          "@cutscene:bacio"
+         ]
+        },
+        "@stat:legame+2"
+       ]
+      },
+      {
+       "label": "«…cosa farai tu?»",
+       "do": [
+        "kiki[think]: Non lo so. Restaurare carta. Restaurare me. Magari restaurare noi.",
+        "@stat:legame+1",
+        "@stat:fiducia+1"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "varano_c6": {
+   "npc": "varano",
+   "first": [
+    "varano: Avete ascoltato il nastro. Lo vedo dalle vostre facce.",
+    "varano[sad]: Mio padre ha falsificato quel verbale. Io l'ho scoperto nel 1999, il giorno del suo funerale. Ho trovato una copia del nastro nella sua cassaforte. Quella, laggiù.",
+    "varano: L'ho distrutta. Non sapevo che Jacques Marchetti ne avesse un'altra."
+   ],
+   "intro": [
+    {
+     "if": "flag.varano_c6_fine",
+     "do": [
+      "varano: Ancora qui? Le catacombe sono a sinistra, uscendo."
+     ]
+    },
+    {
+     "do": [
+      "varano: Chiedete pure. Stanotte non ho più niente da nascondere. O quasi."
+     ]
+    }
+   ],
+   "byeLabel": "«Ci vediamo nella Camera, Varano.»",
+   "topics": [
+    {
+     "id": "bruno",
+     "label": "Suo nonno, Bruno",
+     "icon": "person",
+     "once": true,
+     "do": [
+      "varano: Bruno Varano. Nel 1944 vendeva nomi ai tedeschi. Tre famiglie del Ghetto, un tipografo, due partigiani dell'Oltrarno.",
+      "varano: È nel Registro. In una colonna a parte. La colonna dei delatori.",
+      "varano[sad]: Mio padre ha cancellato il Ponte perché il Registro non uscisse mai. Per proteggere il nome di suo padre. Il mio nome.",
+      "@flag:varano_past",
+      "@clue:bruno_varano",
+      "@stat:conoscenza+1"
+     ]
+    },
+    {
+     "id": "lina",
+     "label": "Sua nonna, Lina",
+     "icon": "heart",
+     "if": "col.doc_17 || clue.lina",
+     "once": true,
+     "do": [
+      "varano[surprised]: Avete letto la lettera.",
+      "varano: Lina Varano. La moglie di Bruno. Nello stesso anno, nella stessa casa, nascondeva in cantina quelli che lui denunciava. Ne ha salvati trenta.",
+      "varano: È nel Registro anche lei. Nella colonna dei Barcaioli.",
+      "beps: Allora il Registro non accusa solo. Salva anche.",
+      "varano[sad]: …Il Registro dice la verità, signor Lanzi. E la verità sulla mia famiglia è che siamo stati entrambe le cose.",
+      "@flag:varano_doubt",
+      "@clue:lina_varano",
+      "@stat:conoscenza+1",
+      "@stat:fiducia+1"
+     ]
+    },
+    {
+     "id": "verbale",
+     "label": "Il verbale falsificato",
+     "icon": "warning",
+     "if": "clue.verbale_falso",
+     "once": true,
+     "do": [
+      "varano: Quindici favorevoli, due contrari. Mio padre scrisse «unanimità». Euridice e il Ponte, «assenti».",
+      "varano: Guido Sarti morì l'anno dopo, in un incidente stradale. Nessuno ha mai indagato.",
+      "kiki[angry]: Sta dicendo che…",
+      "varano: Sto dicendo che non lo so. E che non voglio saperlo. È questo il problema della mia famiglia: non vogliamo sapere.",
+      "@stat:conoscenza+1"
+     ]
+    },
+    {
+     "id": "camera",
+     "label": "La Camera di Orfeo",
+     "icon": "key",
+     "once": true,
+     "do": [
+      "varano: Sotto la stanza murata, a Firenze. Lo sapete già: ve l'hanno detto gli anelli.",
+      "varano: Il meccanismo si apre solo in due. Chi lo costruì lo volle così: nessuno doveva poter decidere da solo del Registro.",
+      "varano[sad]: Io non ho mai avuto nessuno con cui aprirla. Per questo vi ho seguito. Per questo vi ho lasciato il Sigillo.",
+      "beps: Vuole che la apriamo noi. Per poi bruciare il Registro.",
+      "varano: Voglio che decidiate voi. E poi, sì, lo brucerò. Se me lo lascerete fare.",
+      "@clue:camera_due",
+      "@stat:conoscenza+1"
+     ]
+    },
+    {
+     "id": "perche",
+     "label": "Perché ci ha aiutato?",
+     "icon": "question",
+     "if": "flag.varano_doubt",
+     "once": true,
+     "do": [
+      "varano[sad]: Perché da quarant'anni porto in tasca una scatola di fiammiferi e non ho mai acceso il primo.",
+      "varano: Forse aspettavo qualcuno che mi convincesse a non farlo. O a farlo. Qualcuno, comunque.",
+      "kiki[worried]: Non siamo qui per convincerla.",
+      "varano: Lo so. È per questo che vi ascolto."
+     ]
+    }
+   ],
+   "items": {
+    "lista17": [
+     "varano: XI. Bruno, Ettore, Aurelio. Una riga sola per tre uomini e due bugie."
+    ],
+    "foto1944": [
+     "varano[sad]: Il volto graffiato è Guido Sarti, il primo Ponte. Mio padre lo graffiò nel '67 con un ago da cucito. Me l'ha raccontato quando avevo sei anni, come una favola."
+    ],
+    "sigillo": [
+     "varano: Lo tenga. È più al sicuro con lei che con me."
+    ],
+    "*": [
+     "varano: No."
+    ]
+   },
+   "bye": [
+    "varano: Ci vediamo nella Camera. Passate dalle catacombe: i miei uomini sorvegliano le stazioni, ma non sanno camminare tra i morti.",
+    "@flag:varano_c6_fine",
+    "@objective:o6_catacombe"
+   ]
+  },
+  "c6_fine": {
+   "linear": true,
+   "intro": [
+    "kiki: Il treno della notte parte alle 22:40. Domattina saremo a Firenze.",
+    "beps: Nella stanza murata. Dove è cominciato tutto.",
+    {
+     "if": "flag.bacio",
+     "do": [
+      "kiki[tender]: Dove ci siamo conosciuti, Beps. Dove è cominciato tutto, davvero."
+     ],
+     "else": [
+      "kiki[smile]: Dove mi hai guardata come se fossi un fantasma."
+     ]
+    },
+    "@cutscene:c6_fine",
+    "@chapter:7",
+    "@goto:c7_cantiere"
+   ]
+  },
+  "apertura": {
+   "linear": true,
+   "intro": [
+    "@anim:use",
+    "@sfx:mechanism",
+    "beps: La Chiave chiude.",
+    "kiki: E nessuno resta solo.",
+    "narr: La chiave gira. Dall'altra parte, la leva scende con Kiki attaccata. Un rumore immenso attraversa la Camera: ingranaggi, contrappesi, acqua. Dal fondo dell'abisso sale un ponte di pietra che unisce le due piattaforme.",
+    "narr: Al centro, uno scrigno si apre.",
+    "@flag:meccanismo_aperto",
+    "@unflag:kiki_tiene",
+    "@together:true",
+    {
+     "if": "!flag.final_errors && !flag.hints_c7 && perr.c7_registro==0",
+     "do": [
+      "@flag:final_perfect"
+     ]
+    },
+    "@refresh",
+    "kiki[surprised]: Il Registro.",
+    "@objective:o7_registro"
+   ]
+  },
+  "varano_arriva": {
+   "linear": true,
+   "intro": [
+    "narr: Passi sulla scala. Una torcia. Il Notaio entra nella Camera, si ferma sul ponte di pietra appena emerso.",
+    "varano: Ce l'avete fatta. In due.",
+    "varano[sad]: Io ci ho provato per vent'anni, da solo. Il meccanismo non si è mai mosso.",
+    "beps: È per questo che l'hanno costruito così.",
+    "varano: Lo so. Lo so, adesso.",
+    "varano: Uscite. Vi aspetto sul Lungarno. All'alba. Decideremo lì. All'aperto, davanti al fiume. Mi sembra giusto.",
+    "@cutscene:c7_uscita",
+    "@goto:c7_alba"
+   ]
+  },
+  "varano_finale": {
+   "npc": "varano",
+   "first": [
+    "varano: Allora. Il Registro. Avete deciso?"
+   ],
+   "intro": [
+    "varano: Prendetevi il tempo che serve. Io ho aspettato quarant'anni."
+   ],
+   "byeLabel": "«Abbiamo deciso.»",
+   "topics": [
+    {
+     "id": "luce",
+     "label": "Se lo rendessimo pubblico?",
+     "icon": "doc",
+     "once": true,
+     "do": [
+      "varano: La Luce. Il Ponte voleva questo, nel '44. I nomi di chi ha salvato, finalmente ricordati. I nomi di chi ha venduto, finalmente scritti.",
+      "varano[sad]: Anche quello di mio nonno. Anche quello di mia nonna, accanto.",
+      {
+       "if": "flag.varano_doubt",
+       "do": [
+        "varano: …Sapete una cosa? Se lo fate, testimonierò. Racconterò del verbale. Di mio padre. È l'unico modo di essere un Varano diverso."
+       ],
+       "else": [
+        "varano: Se lo fate, non potrò impedirvelo. Ma non mi chiedete di esserne felice."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "custodi",
+     "label": "Se lo custodissimo noi?",
+     "icon": "us",
+     "once": true,
+     "do": [
+      "varano: I Custodi. Orfeo rinasce. Euridice, il Ponte. Voi due.",
+      "varano: Il Registro resta segreto, ma non sepolto. E un giorno, quando sarà il momento, lo aprirete.",
+      "varano[think]: È la scelta più lenta. Non è detto che sia la più sbagliata."
+     ]
+    },
+    {
+     "id": "cenere",
+     "label": "E se lo bruciassimo?",
+     "icon": "warning",
+     "once": true,
+     "do": [
+      "varano: Cenere. Nessuno accusato, nessuno ricordato. La ferita si chiude.",
+      "kiki[sad]: Chiusa sopra trenta persone salvate da sua nonna. Sopra mia bisnonna. Sopra Guido Sarti.",
+      "varano[sad]: Sì. Anche sopra di loro. È questo il prezzo della cenere."
+     ]
+    },
+    {
+     "id": "noi",
+     "label": "Noi due",
+     "icon": "us",
+     "special": true,
+     "if": "flag.knows_18",
+     "once": true,
+     "do": [
+      "kiki[tender]: Varano. Sul retro della lista c'è un numero. XVIII. Uno spazio largo il doppio.",
+      "varano[surprised]: Il diciottesimo. Ada ne parlava come di una favola. «Un giorno, un ruolo per due.»",
+      "varano: Se è lì… allora qualcuno ha previsto che il Registro non dovesse più scegliere tra luce e cenere. Ma tra soli e insieme.",
+      "@flag:diciottesimo_parlato"
+     ]
+    }
+   ],
+   "bye": [
+    "@ending"
+   ]
+  },
+  "partner_kiki": {
+   "npc": "kiki",
+   "intro": [
+    {
+     "if": "chapter>=5 && stat.legame>=14",
+     "do": [
+      "kiki[tender]: Dimmi, architetto."
+     ]
+    },
+    {
+     "if": "chapter>=3",
+     "do": [
+      "kiki[smile]: Sì?"
+     ]
+    },
+    {
+     "do": [
+      "kiki: Sì?"
+     ]
+    }
+   ],
+   "byeLabel": "Niente, andiamo",
+   "topics": [
+    {
+     "id": "c1_foto",
+     "label": "La tua fotografia",
+     "icon": "photo",
+     "if": "chapter==1",
+     "once": true,
+     "do": [
+      "kiki: Identica alla tua. Stessa carta, stesso taglio, stesso volto graffiato.",
+      "kiki[sad]: Nonna la teneva nel messale. Non andava a messa da quarant'anni, ma il messale lo apriva tutte le sere.",
+      "@clue:foto_kiki"
+     ]
+    },
+    {
+     "id": "c1_voce",
+     "label": "Ascolta NON_APRIRE.wav",
+     "icon": "tape",
+     "if": "chapter==1 && item.usb",
+     "once": true,
+     "do": [
+      "narr: Beps le passa un auricolare. Il file parte.",
+      "narr: «Se qualcuno sta ascoltando questo messaggio, significa che abbiamo fallito.»",
+      "kiki[surprised]: …",
+      "kiki[sad]: È nonna. È la voce di mia nonna. Ada.",
+      "@flag:kiki_nonna",
+      "@clue:voce_ada",
+      {
+       "choice": [
+        {
+         "label": "«Mi dispiace. Vuoi che lo spenga?»",
+         "tone": "tender",
+         "do": [
+          "kiki[tender]: No. Lascialo andare. Non sentivo la sua voce da sette anni.",
+          "@stat:legame+1"
+         ]
+        },
+        {
+         "label": "«Tua nonna era in Orfeo?»",
+         "do": [
+          "kiki[think]: A quanto pare. E non me l'ha mai detto. Nemmeno alla fine.",
+          "@stat:conoscenza+1"
+         ]
+        },
+        {
+         "label": "Restale accanto in silenzio",
+         "line": "beps[tender]: …",
+         "do": [
+          "kiki[sad]: …Grazie.",
+          "@stat:legame+1",
+          "@stat:fiducia+1"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "c1_medaglione",
+     "label": "Il medaglione",
+     "icon": "symbol",
+     "if": "chapter==1 && item.medaglione_b && !flag.got_medaglione_k",
+     "once": true,
+     "do": [
+      {
+       "if": "stat.fiducia>=1",
+       "do": [
+        "kiki[surprised]: Hai l'altra metà. Lo sapevo.",
+        "kiki: Tieni. La mia. Nonna diceva che era «con qualcuno di testardo». Proviamo.",
+        "@give:medaglione_k"
+       ],
+       "else": [
+        "kiki[skeptical]: Prima dimmi dove l'hai trovata.",
+        {
+         "choice": [
+          {
+           "label": "«In una crepa della stanza murata. Te lo giuro.»",
+           "do": [
+            "kiki: Ti credo. Tieni la mia metà. Proviamo.",
+            "@stat:fiducia+1",
+            "@give:medaglione_k"
+           ]
+          },
+          {
+           "label": "«In un mercatino. Due euro.»",
+           "do": [
+            "kiki[skeptical]: Bugiardo. Ma te la do lo stesso: da sola non serve a niente.",
+            "@stat:fiducia-1",
+            "@give:medaglione_k"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      "@objective:o1_medaglione"
+     ]
+    },
+    {
+     "id": "c1_chi",
+     "label": "Chi sei, davvero?",
+     "icon": "person",
+     "if": "chapter==1",
+     "once": true,
+     "do": [
+      "kiki: Federica Morel. Restauratrice di carta, storica d'archivio, metà fiorentina e metà parigina. Diciamo tre quarti fiorentina, quando piove.",
+      "kiki[smile]: Mi chiamano Kiki da quando avevo tre anni e non sapevo dire Federica.",
+      "kiki: E tu, architetto? Cosa ci fa uno come te in un archivio di notte?",
+      "beps: Dieci minuti di lavoro. È una lunga storia.",
+      "@stat:fiducia+1"
+     ]
+    },
+    {
+     "id": "c1_buio",
+     "label": "L'uomo nel buio",
+     "icon": "warning",
+     "if": "chapter==1 && clue.voce_buio",
+     "once": true,
+     "do": [
+      "kiki[worried]: Conosceva il deposito. Sapeva dov'era l'interruttore. E ha detto «Orfeo» come si dice il nome di un parente.",
+      "kiki: Non era una minaccia. Era peggio: era un consiglio sincero."
+     ]
+    },
+    {
+     "id": "c1_adesso",
+     "label": "E adesso?",
+     "icon": "map",
+     "special": true,
+     "if": "chapter==1 && flag.pdf_open && item.medaglione",
+     "do": [
+      "beps: Quattro nomi, una busta per Parigi, un medaglione intero e un uomo col cappotto grigio che sa come ci chiamiamo.",
+      "kiki: Lo Studio Marchetti esiste ancora. Rue des Archives. La figlia del fotografo era un'amica di nonna.",
+      {
+       "choice": [
+        {
+         "label": "«Andiamo a Parigi. Insieme.»",
+         "do": [
+          "kiki[smile]: «Insieme.» Detto da uno sconosciuto conosciuto tre ore fa.",
+          "@stat:legame+1",
+          "@inc:coop"
+         ]
+        },
+        {
+         "label": "«Vado io. Tu resta al sicuro.»",
+         "do": [
+          "kiki[angry]: Al sicuro? La voce è di mia nonna, Beps. Il treno lo prendo io. Tu, se vuoi, vieni.",
+          "@stat:fiducia-1"
+         ]
+        },
+        {
+         "label": "«Prima dimmi tutto quello che sai.»",
+         "do": [
+          "kiki[think]: Giusto. Nonna era nata a Parigi, viveva tra qui e là. Non parlava mai del '67. Mai. Ecco tutto quello che so.",
+          "@stat:conoscenza+1",
+          "@stat:fiducia+1"
+         ]
+        }
+       ]
+      },
+      "kiki: Domani c'è un treno alle sette e dodici. Non fare tardi.",
+      "beps[smile]: Io non faccio mai tardi. Arrivo con un margine creativo.",
+      "@cutscene:c1_fine",
+      "@chapter:2",
+      "@goto:c2_gare"
+     ],
+     "end": true,
+     "repeatSafe": true
+    },
+    {
+     "id": "c1_adesso_presto",
+     "label": "E adesso?",
+     "icon": "map",
+     "if": "chapter==1 && !(flag.pdf_open && item.medaglione)",
+     "do": [
+      {
+       "if": "!flag.pdf_open",
+       "do": [
+        "kiki: Adesso apriamo quel PDF. Il mio portatile è sul tavolo: dammi la chiavetta."
+       ]
+      },
+      {
+       "if": "!item.medaglione",
+       "do": [
+        "kiki: E quelle due metà di medaglione aspettano solo di essere riunite."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "c2_parigi",
+     "label": "Parigi",
+     "icon": "city",
+     "if": "chapter==2",
+     "once": true,
+     "do": [
+      "kiki: Ci sono cresciuta d'estate. Nonna mi portava ai quais, al Louvre il primo sabato del mese, e al cinema a vedere film in bianco e nero che non capivo.",
+      "kiki[smile]: Ora li capisco. Erano tutti su persone che si perdono e si ritrovano.",
+      "@stat:legame+1"
+     ]
+    },
+    {
+     "id": "c2_helene",
+     "label": "Hélène Marchetti",
+     "icon": "person",
+     "if": "chapter==2 && flag.helene_met",
+     "once": true,
+     "do": [
+      "kiki: Era la migliore amica di nonna. Più giovane di vent'anni. Litigavano su tutto, tranne che sulle cose importanti.",
+      "kiki[think]: Ha detto «allora è cominciato». Sa più di quanto dica."
+     ]
+    },
+    {
+     "id": "c2_mappa",
+     "label": "Che ne pensi della mappa?",
+     "icon": "map",
+     "if": "chapter==2 && item.mappa && !puzzle.c2_mappa",
+     "once": true,
+     "do": [
+      "kiki: Lettere in cerchio, una stella rossa. E un medaglione con dieci fori. Si appoggia il medaglione e si gira finché i fori non dicono qualcosa.",
+      "kiki: La tacca del medaglione deve servire a orientarlo. Su cosa, però?"
+     ]
+    },
+    {
+     "id": "c3_roma",
+     "label": "Roma",
+     "icon": "city",
+     "if": "chapter==3",
+     "once": true,
+     "do": [
+      "kiki: Roma mi mette soggezione. Troppa storia per metro quadro.",
+      "beps: Per un architetto è il paradiso. Ogni muro ha tre muri sotto.",
+      "kiki[smile]: Come le persone."
+     ]
+    },
+    {
+     "id": "c3_latino",
+     "label": "Dove hai imparato il latino?",
+     "icon": "doc",
+     "if": "chapter==3 && flag.targa_tradotta",
+     "once": true,
+     "do": [
+      "kiki: Liceo classico a Firenze, poi paleografia a Parigi. E nonna, che mi leggeva Ovidio al posto delle favole.",
+      "kiki[laugh]: «Le Metamorfosi» a sei anni. Ho avuto paura degli alberi per un decennio.",
+      "@stat:legame+1"
+     ]
+    },
+    {
+     "id": "c3_federica",
+     "label": "Perché non ti fai chiamare Federica?",
+     "icon": "question",
+     "if": "chapter==3 && flag.fuga_ok",
+     "once": true,
+     "do": [
+      "kiki[think]: Perché Federica è il nome con cui mi chiama chi non mi conosce. Le banche, i dottori, i professori.",
+      "kiki: Se un giorno firmo «Federica» con te, Beps, vuol dire che qualcosa non va. Ricordatelo.",
+      "@stat:fiducia+2",
+      "@flag:segnale_federica"
+     ]
+    },
+    {
+     "id": "c4_scusa",
+     "label": "Mi hai fatto paura",
+     "icon": "heart",
+     "if": "chapter==4 && flag.kiki_liberata",
+     "once": true,
+     "do": [
+      "kiki[tender]: Lo so. Anch'io ho avuto paura. Non di lui. Di non vederti arrivare.",
+      "@stat:legame+1"
+     ]
+    },
+    {
+     "id": "c5_istanbul",
+     "label": "Istanbul",
+     "icon": "city",
+     "if": "chapter==5",
+     "once": true,
+     "do": [
+      "kiki: Nonna diceva che Istanbul è una città che ti guarda mentre la guardi.",
+      "beps: Lo dice anche il gabbiano lì.",
+      "kiki[laugh]: Smettila con i gabbiani."
+     ]
+    },
+    {
+     "id": "c6_helene",
+     "label": "Hélène è Euridice",
+     "icon": "person",
+     "if": "chapter==6 && flag.helene_euridice",
+     "once": true,
+     "do": [
+      "kiki[sad]: Avrei dovuto capirlo. Il cappello, le domande, il «non ancora».",
+      "kiki: E adesso c'è una terza donna. Quella di Istanbul. Nonna, quanti segreti avevi?",
+      "@stat:conoscenza+1"
+     ]
+    },
+    {
+     "id": "c6_varano",
+     "label": "Che pensi di Varano?",
+     "icon": "warning",
+     "if": "chapter==6 && flag.varano_c6_fine",
+     "once": true,
+     "do": [
+      "kiki: Penso che sia un uomo che ha ereditato una colpa e la porta come un cappotto. Grigio, naturalmente.",
+      "kiki[sad]: E penso che, se non lo fermiamo, brucerà anche i nomi di chi ha salvato sua nonna. Per non vedere quelli di suo nonno."
+     ]
+    },
+    {
+     "id": "c7_paura",
+     "label": "Hai paura?",
+     "icon": "heart",
+     "if": "chapter==7",
+     "once": true,
+     "do": [
+      "kiki: Sì. Tu?",
+      "beps: Da morire.",
+      "kiki[smile]: Bene. Allora siamo pronti."
+     ]
+    },
+    {
+     "id": "noi",
+     "label": "Noi due",
+     "icon": "us",
+     "special": true,
+     "if": "chapter>=5 && !topic.partner_kiki.noi",
+     "do": [
+      "beps: Kiki. Noi due.",
+      "kiki[tender]: Noi due.",
+      {
+       "if": "flag.bacio",
+       "do": [
+        "kiki: Non pensavo che un uomo che parla di malta durante un tramonto potesse piacermi.",
+        "beps: Calce idraulica. La malta era di calce idraulica.",
+        "kiki[laugh]: Appunto."
+       ],
+       "else": [
+        "kiki: Mi hai preso la mano, sul tetto. Non me l'hai più lasciata. Te ne sei accorto?",
+        "beps: Me ne sono accorto."
+       ]
+      },
+      {
+       "choice": [
+        {
+         "label": "«Quando sarà finito, voglio che ci sia ancora un noi.»",
+         "tone": "tender",
+         "do": [
+          "kiki[tender]: Ci sarà. Te lo prometto. Io le promesse le restauro, non le rompo.",
+          "@stat:legame+2",
+          "@inc:coop"
+         ]
+        },
+        {
+         "label": "«Tua nonna aveva previsto anche questo?»",
+         "do": [
+          "kiki[laugh]: «Qualcuno di testardo.» Sì. Credo proprio di sì.",
+          "@stat:legame+1",
+          "@stat:fiducia+1"
+         ]
+        },
+        {
+         "label": "«Ho paura di sbagliare tutto.»",
+         "do": [
+          "kiki[tender]: Sbaglieremo tutto. Insieme. Mi sembra un buon piano.",
+          "@stat:fiducia+2"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "noi_ancora",
+     "label": "Noi due",
+     "icon": "us",
+     "special": true,
+     "if": "chapter>=5 && topic.partner_kiki.noi",
+     "do": [
+      {
+       "if": "flag.bacio",
+       "do": [
+        "kiki[tender]: Ancora tu? Vieni qui.",
+        "narr: Un bacio rapido, a metà di un'avventura."
+       ]
+      },
+      {
+       "do": [
+        "kiki[tender]: Ci sono. Sempre."
+       ]
+      }
+     ]
+    },
+    {
+     "id": "suggerimento",
+     "label": "Tu cosa faresti adesso?",
+     "icon": "question",
+     "do": [
+      {
+       "if": "true",
+       "do": [
+        "kiki[think]: Io? Rileggerei il taccuino. L'obiettivo è lì, e i dettagli di solito sono negli indizi."
+       ]
+      }
+     ]
+    }
+   ],
+   "items": {
+    "foto1944": [
+     "kiki: La nostra foto. Ce l'abbiamo in due. Credo sia il motivo per cui siamo qui."
+    ],
+    "medaglione_b": [
+     {
+      "if": "!flag.got_medaglione_k",
+      "do": [
+       "kiki[surprised]: L'altra metà. Tienila: te la do io la mia, con calma. Chiedimelo."
+      ]
+     },
+     {
+      "do": [
+       "kiki: Uniscile, Beps. Cosa aspetti?"
+      ]
+     }
+    ],
+    "medaglione": [
+     "kiki[tender]: Intero. Nonna non l'ha mai visto intero."
+    ],
+    "moneta": [
+     "kiki: Le tue 500 lire. Le stesse della donna col cappello. Coincidenze, eh?"
+    ],
+    "lettera_ada": [
+     "kiki[sad]: Tienila tu. Te l'ho detto. Io la perderei apposta."
+    ],
+    "registro": [
+     "kiki: Ottant'anni di nomi. Tra cui il mio, un giorno, forse."
+    ],
+    "*": [
+     "kiki[skeptical]: Che dovrei farci, con questo?"
+    ]
+   }
+  },
+  "partner_beps": {
+   "npc": "beps",
+   "intro": [
+    {
+     "if": "chapter>=5 && stat.legame>=14",
+     "do": [
+      "beps[smile]: Signorina restauratrice."
+     ]
+    },
+    {
+     "do": [
+      "beps: Dimmi."
+     ]
+    }
+   ],
+   "byeLabel": "Niente, andiamo",
+   "topics": [
+    {
+     "id": "chi",
+     "label": "Perché fai l'architetto?",
+     "icon": "person",
+     "once": true,
+     "do": [
+      "beps: Mio nonno era muratore. Diceva che i muri non mentono. Io volevo capire perché.",
+      "beps[smile]: Poi ho scoperto che i muri mentono eccome. Ma con onestà: basta saperli leggere.",
+      "@stat:fiducia+1 quiet"
+     ]
+    },
+    {
+     "id": "studio",
+     "label": "Il tuo studio",
+     "icon": "city",
+     "if": "chapter>=4",
+     "once": true,
+     "do": [
+      "beps[sad]: L'hanno distrutto per dirmi qualcosa. Il plastico, lo rifarò. Gli schizzi, li rifarò. Il computer… era loro, in fondo.",
+      "beps: Quello che non potevano prendermi l'avevo già portato via. Te, per esempio. Cioè. La chiavetta. Volevo dire la chiavetta."
+     ]
+    },
+    {
+     "id": "paura",
+     "label": "Hai paura?",
+     "icon": "heart",
+     "if": "chapter==7",
+     "once": true,
+     "do": [
+      "beps: Sì. Tu?",
+      "kiki: Da morire.",
+      "beps[smile]: Bene. Allora siamo pronti."
+     ]
+    },
+    {
+     "id": "noi",
+     "label": "Noi due",
+     "icon": "us",
+     "special": true,
+     "if": "chapter>=5",
+     "once": true,
+     "do": [
+      "kiki: Beps. Noi due.",
+      "beps[tender]: Noi due. Mi piace come suona. Mi piace come lo dici.",
+      {
+       "choice": [
+        {
+         "label": "«Non sparire più per dieci minuti.»",
+         "do": [
+          "beps[tender]: Mai più. Nemmeno per un caffè.",
+          "@stat:legame+1",
+          "@stat:fiducia+1"
+         ]
+        },
+        {
+         "label": "«Sei la persona più testarda che conosco.»",
+         "do": [
+          "beps[laugh]: Detto da te è un complimento enorme.",
+          "@stat:legame+1"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "suggerimento",
+     "label": "Tu cosa faresti adesso?",
+     "icon": "question",
+     "do": [
+      "beps[think]: Guarderei bene le cose che ho in tasca. Spesso la soluzione è un oggetto che ci siamo dimenticati di usare."
+     ]
+    }
+   ],
+   "items": {
+    "foto1944": [
+     "beps: La nostra foto. Ce l'abbiamo in due."
+    ],
+    "lettera_ada": [
+     "beps: La tengo io, come mi hai chiesto. Non la perderò."
+    ],
+    "*": [
+     "beps: Bello. Lo usiamo per qualcosa o è un regalo?"
+    ]
+   }
+  },
+  "incontro_kiki": {
+   "linear": true,
+   "intro": [
+    "narr: Beps richiude il cassetto O. Una sedia si sposta, alle sue spalle.",
+    "kiki_npc: «Mi scusi… lei ha appena consultato il fascicolo Orfeo?»",
+    "beps[surprised]: Mi voltai. Non avevo mai visto quella donna prima di allora.",
+    "@show:kiki",
+    "@flag:met_kiki",
+    "@person:kiki",
+    "@refresh",
+    "kiki[skeptical]: «Perché quel fascicolo interessa anche a me.»",
+    {
+     "choice": [
+      {
+       "label": "«Chi è lei?»",
+       "do": [
+        "kiki: «Federica. Ma tutti mi chiamano Kiki.»",
+        "@flag:kiki_named"
+       ]
+      },
+      {
+       "label": "«Dipende. Chi lo chiede?»",
+       "do": [
+        "kiki[smile]: «Qualcuno che ha una fotografia identica alla sua.»",
+        "kiki: Federica Morel. Kiki, per chi mi risponde a tono.",
+        "@flag:kiki_named",
+        "@stat:legame+1"
+       ]
+      },
+      {
+       "label": "Non dire nulla",
+       "line": "beps: …",
+       "do": [
+        "kiki[think]: «Va bene. Allora comincio io: Parigi, 1967. Le dice qualcosa?»",
+        "beps: La scheda che ho in mano dice «Provenienza: Parigi, 1967».",
+        "kiki: Lo so. L'ho letta da sopra la sua spalla. Federica. Kiki.",
+        "@flag:kiki_named",
+        "@stat:conoscenza+1"
+       ]
+      }
+     ]
+    },
+    "narr: Kiki appoggia sul tavolo una fotografia. Quattro uomini, un palazzo, una donna col cappello, un volto graffiato.",
+    "beps[surprised]: È identica alla mia.",
+    "kiki: Lo so. Ripiano 17, giusto? Io ho la tessera per il deposito. Lei no. Venga con me, architetto.",
+    {
+     "choice": [
+      {
+       "label": "«Perché dovrei fidarmi di lei?»",
+       "do": [
+        "kiki[skeptical]: Non deve. Ma io la sto portando nel deposito, non il contrario. Chi rischia di più?",
+        "@stat:conoscenza+1"
+       ]
+      },
+      {
+       "label": "«Andiamo.»",
+       "do": [
+        "kiki[smile]: Bene. Mi piacciono le persone che non fanno domande inutili.",
+        "@stat:fiducia+1",
+        "@inc:coop"
+       ]
+      }
+     ]
+    },
+    "@flag:deposito_ok",
+    "archivista: Dieci minuti, signorina Morel. Dieci. E l'architetto non tocca niente.",
+    "@objective:o1_deposito"
+   ]
+  },
+  "c5_fine": {
+   "linear": true,
+   "intro": [
+    "@sfx:phone",
+    "kiki: È Hélène.",
+    "@anim:phone",
+    "helene: Federica. Varano è a Parigi. Vuole vedervi. E io… io devo dirvi una cosa che avrei dovuto dirvi a novembre.",
+    "kiki[worried]: Hélène?",
+    "helene: Venite a Parigi. Portate il nastro.",
+    "selim: Andate. Il traghetto per l'aeroporto parte tra un'ora. E ricordatevi: chi entra in due, esce in due.",
+    "@cutscene:c5_fine",
+    "@chapter:6",
+    "@goto:c6_pont_neuf"
+   ]
+  },
+  "diciottesimo": {
+   "linear": true,
+   "intro": [
+    "@sfx:clue",
+    "@flag:knows_18",
+    "@clue:diciottesimo",
+    "narr: Sette lire, sette parole. Messe in fila, dicono una frase sola:",
+    "narr: «Il diciottesimo nome appartiene a chi non si volta da solo.»",
+    {
+     "if": "present.kiki && present.beps",
+     "do": [
+      "kiki[surprised]: Il diciottesimo? I ruoli sono diciassette.",
+      "beps[think]: Sulla Lista, sul retro… guarda. Un XVIII a matita. Uno spazio largo il doppio."
+     ],
+     "else": [
+      "Il diciottesimo? I ruoli sono diciassette. Eppure, sul retro della Lista, c'è un XVIII a matita."
+     ]
+    }
+   ]
+  },
+  "c4_fine": {
+   "linear": true,
+   "intro": [
+    "kiki: Andiamo. Istanbul ci aspetta.",
+    "@cutscene:c4_fine",
+    "@chapter:5",
+    "@goto:c5_galata"
+   ]
+  }
+ }
+}

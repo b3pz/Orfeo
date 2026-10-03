@@ -1,0 +1,146 @@
+{
+  "_doc": "Oggetti. icon = icona procedurale di riserva; l'immagine reale va in assets/items/<id>.png. examine: testo (o script) per personaggio. combos: oggetto+oggetto (ordine indifferente). notYet: risposta se la combinazione esiste ma non è ancora possibile.",
+  "items": {
+    "usb": {
+      "name": "Chiavetta USB", "kind": "Copia della cartella ORFEO", "icon": { "k": "usb" },
+      "examine": { "beps": "La mia chiavetta. Dentro, tre file: FIRENZE_1944.jpg, LISTA_17.pdf, NON_APRIRE.wav. Il PDF è cifrato.", "kiki": "La chiavetta di Beps. Dentro c'è la voce di mia nonna. Non riesco a smettere di pensarci." },
+      "examineIf": [ { "if": "flag.pdf_open", "do": { "beps": "Il PDF ora è leggibile. Diciassette righe, quasi tutte corrotte. Quattro si leggono.", "kiki": "LISTA_17. Quattro nomi leggibili, tredici mangiati dai bit. Come muffa digitale." } } ],
+      "wrong": { "beps": "Non vedo una porta USB. Siamo in un'avventura, non in un ufficio.", "kiki": "Non tutto ha una porta USB, Beps." }
+    },
+    "foto1944": {
+      "name": "Foto 1944", "kind": "Stampa da FIRENZE_1944.jpg", "icon": { "k": "photo", "c": "#8a7454" },
+      "examine": {
+        "beps": ["Quattro uomini davanti a un palazzo. Una donna col cappello, un po' in disparte. Il terzo volto da sinistra è stato graffiato via, deliberatamente.", "E negli angoli quattro piccole croci rosse. Come mirini."],
+        "kiki": ["Firenze, estate 1944. La donna col cappello porta un medaglione. Ce l'ho identica, questa foto. Nonna la teneva nel messale.", "Le crocette agli angoli sono segni di registro. Si usano in tipografia per sovrapporre due lastre."]
+      }
+    },
+    "caffe": {
+      "name": "Caffè in bicchierino", "kind": "Dalla macchinetta dello studio", "icon": { "k": "candle", "c": "#5a3a20" },
+      "examine": { "beps": "Caffè della macchinetta. Tecnicamente è caffè. Legalmente, non saprei.", "kiki": "Ha un colore preoccupante." },
+      "wrong": { "beps": "Non è il momento di sprecare caffè.", "kiki": "No, questo caffè ha già sofferto abbastanza." }
+    },
+    "frammenti": {
+      "name": "Frammenti di documento", "kind": "Dalla stanza murata", "icon": { "k": "fragment" },
+      "examine": ["Sei strisce di carta strappata, macchiate d'acqua. Se le ricompongo forse si legge qualcosa.", "@puzzle:c1_frammenti"]
+    },
+    "promemoria": {
+      "name": "Promemoria 1966", "kind": "Documento ricomposto", "icon": { "k": "letter" },
+      "examine": { "beps": "«Murate la stanza e portate le copie a Parigi. Chi cerca il resto segua la catena del catalogo: si parte dalla scheda O-1.» Firmato: E.", "kiki": "Carta del '66, inchiostro ferrogallico. Chi l'ha scritto aveva le mani bagnate: si vede dalle sbavature." }
+    },
+    "medaglione_b": {
+      "name": "Mezzo medaglione", "kind": "Trovato in una crepa del muro", "icon": { "k": "medal_l" },
+      "examine": { "beps": "Metà di un medaglione d'ottone. Il bordo spezzato è netto, come se l'avessero diviso apposta. C'è mezza lira incisa.", "kiki": "La metà di Beps. Il taglio combacia con la mia, lo vedo da qui." }
+    },
+    "medaglione_k": {
+      "name": "Mezzo medaglione di Kiki", "kind": "Eredità di nonna Ada", "icon": { "k": "medal_r" },
+      "examine": { "beps": "La metà di Kiki. Me l'ha data come si dà una cosa che non si vuole perdere.", "kiki": "Nonna la portava sempre. Diceva che l'altra metà era «da qualche parte, con qualcuno di testardo»." }
+    },
+    "medaglione": {
+      "name": "Medaglione", "kind": "Le due metà riunite", "icon": { "k": "medal" },
+      "examine": {
+        "beps": ["Le due metà combaciano. Una lira, una piccola tacca sul bordo, e dieci forellini disposti a spirale.", "Sembra fatto per stare sopra qualcosa. Una mappa, magari."],
+        "kiki": ["Intero. Nonna non l'ha mai visto intero.", "Una tacca sul bordo e dieci fori. È uno strumento, non un gioiello."]
+      },
+      "examineIf": [ { "if": "chapter>=5", "do": { "beps": ["Sul retro, ora che lo guardo con questa luce, ci sono quattro simboli in fila, dal centro verso il bordo: luna, lira, onda, chiave.", "@clue:retro_medaglione"], "kiki": ["Sul retro ci sono quattro simboli incisi, dal centro al bordo: luna, lira, onda, chiave. Come una formula.", "@clue:retro_medaglione"] } } ]
+    },
+    "scheda_o17": {
+      "name": "Scheda O-17", "kind": "Catalogo dell'Archivio Storico", "icon": { "k": "card" },
+      "examine": {
+        "beps": ["«O-17 · Fondo Orfeo · Provenienza: Parigi, 1967. Collocazione: deposito, ripiano 17.»", "Sul retro, a matita: «La chiave è il giorno in cui l'acqua arrivò al terzo gradino.»"],
+        "kiki": ["Una scheda del catalogo O, quello che ufficialmente non esiste. Provenienza: Parigi, 1967.", "Sul retro: «La chiave è il giorno in cui l'acqua arrivò al terzo gradino.» L'alluvione, ovviamente."]
+      }
+    },
+    "busta_e": {
+      "name": "Busta di Euridice", "kind": "Dal ripiano 17", "icon": { "k": "envelope" },
+      "examine": { "beps": "Una busta del 1967 con un timbro: «Studio Marchetti — 12, rue des Archives, Paris». Vuota, a parte una lira disegnata a matita.", "kiki": "Rue des Archives. Nonna abitava a due strade da lì. Questo non è un caso." }
+    },
+    "moneta": {
+      "name": "500 lire", "kind": "Il portafortuna di Beps", "icon": { "k": "coin" },
+      "examine": { "beps": "Le 500 lire bimetalliche di mio nonno. Non valgono niente. Valgono tutto.", "kiki": "Le porta in tasca da sempre. Gliel'ho visto toccare tre volte oggi." },
+      "wrong": { "beps": "No, le 500 lire non le spendo così.", "kiki": "Non credo che le sue 500 lire servano qui." }
+    },
+    "coltellino": {
+      "name": "Coltellino multiuso", "kind": "Attrezzatura da cantiere", "icon": { "k": "pen", "c": "#8a1a1a" },
+      "examine": { "beps": "Lama, cacciavite, metro, apribottiglie. L'architetto moderno è pronto a tutto, tranne che a trovare parcheggio.", "kiki": "Ha un metro dentro il coltellino. Certo che ce l'ha." },
+      "wrong": { "beps": "Il coltellino non risolve tutto. Quasi tutto.", "kiki": "Metti via quel coltellino, MacGyver." }
+    },
+    "libretto": {
+      "name": "Libretto «Orphée et Eurydice»", "kind": "Dal banco di Monsieur Albert", "icon": { "k": "book" },
+      "examine": ["Il libretto dell'opera di Gluck, Parigi 1774. Edizione del 1960. Tra le pagine c'è una carta ripiegata…", "@take:libretto", "@give:mappa", "@clue:mappa_cifrata"]
+    },
+    "mappa": {
+      "name": "Mappa cifrata", "kind": "Carta d'Italia con una stella rossa", "icon": { "k": "map" },
+      "examine": { "beps": "Una carta d'Italia del 1960 piena di lettere minuscole stampate in cerchio, come un rosone. Una stella rossa a nord-est del centro. Il cerchio ha la misura esatta del medaglione.", "kiki": "Le lettere sono disposte attorno a un punto. Se ci appoggi sopra qualcosa con dei fori… sì. È una griglia di Cardano, più o meno." }
+    },
+    "foto1967": {
+      "name": "Foto 1967", "kind": "Stampa dai negativi Marchetti", "icon": { "k": "photo", "c": "#5d6668" },
+      "examine": {
+        "beps": ["Parigi, 1967. Tre uomini, un'auto, una facciata. E lei: la donna col cappello. Nello stesso identico punto della foto del '44.", "Anche qui, quattro crocette rosse negli angoli."],
+        "kiki": ["Questa è nonna. Ada, a trentun anni. Ha il cappello di quella del '44. E il medaglione.", "Crocini di registro agli angoli. Le due foto sono fatte per essere sovrapposte."]
+      },
+      "examineIf": [ { "if": "flag.retro_1967", "do": { "beps": "Sul retro, sviluppata dal negativo, la scritta: «La stella guida la tacca».", "kiki": "«La stella guida la tacca.» Calligrafia di nonna." } } ]
+    },
+    "negativo": {
+      "name": "Negativo 1967", "kind": "Striscia di pellicola", "icon": { "k": "negative" },
+      "examine": { "beps": "Una striscia di negativi. Controluce si vede del testo, ma al contrario. Servirebbe un ingranditore.", "kiki": "Negativo in bianco e nero, probabilmente Ilford. Va stampato, non guardato." }
+    },
+    "lettera_ada": {
+      "name": "Lettera di Ada", "kind": "«Per Federica, quando sarà il momento»", "icon": { "k": "letter" },
+      "examine": {
+        "beps": "Non è mia da leggere. La tengo io solo perché Kiki me l'ha chiesto. Le mani le tremavano.",
+        "kiki": ["«Federica, se leggi questo hai trovato l'altra metà. Non avere paura di chi la porta: io mi sono fidata una volta sola, ed era la persona giusta.»", "«Non voltarti indietro. È l'unica regola. — Nonna»"]
+      }
+    },
+    "chiave_ottone": {
+      "name": "Chiave d'ottone", "kind": "Dal cassetto della Teodosiana", "icon": { "k": "key" },
+      "examine": { "beps": "Una chiave d'ottone col numero 17 punzonato sull'impugnatura. Pesante, fatta per durare.", "kiki": "Ha un'etichetta minuscola: «B.d.G.». Banca del Giglio? A Firenze c'è una sede storica." }
+    },
+    "lista17": {
+      "name": "Lista dei 17", "kind": "Il registro dei ruoli di Orfeo", "icon": { "k": "list" },
+      "examine": {
+        "beps": ["Diciassette ruoli, con i nomi di chi li ha custoditi dal 1944 a oggi. Il diciassettesimo è stato raschiato via col temperino.", "@flag:lista_full", "@flag:lista_seen"],
+        "kiki": ["Diciassette ruoli, diciassette successioni. Il XVII è stato cancellato. Non strappato: raschiato. Qualcuno ci ha messo tempo.", "@flag:lista_full", "@flag:lista_seen"]
+      },
+      "examineIf": [ { "if": "flag.knows_18", "do": { "beps": "E sul retro, a matita, un numero che prima non c'era: XVIII. Uno spazio largo il doppio.", "kiki": "XVIII. Uno spazio per due nomi, non per uno. Nonna, che cosa avevi in mente?" } } ]
+    },
+    "sigillo_a": { "name": "Frammento del Sigillo (Roma)", "kind": "Un quarto di sigillo in ceralacca e bronzo", "icon": { "k": "seal_piece" }, "examine": { "beps": "Un quarto di cerchio di bronzo rosso. Sul bordo, inciso: ORFEO.", "kiki": "Un quarto di sigillo. Sul bordo leggo «ORFEO». Mancano tre pezzi." } },
+    "sigillo_b": { "name": "Frammento del Sigillo (Banca)", "kind": "Dalla cassetta 17", "icon": { "k": "seal_piece" }, "examine": { "beps": "Un altro quarto. Sul bordo: NON.", "kiki": "«NON». Un quarto che dice di no." } },
+    "sigillo_c": { "name": "Frammento del Sigillo (Cantiere)", "kind": "Recuperato da Sandro", "icon": { "k": "seal_piece" }, "examine": { "beps": "Questo era nel muro della stanza murata. Sul bordo: VOL.", "kiki": "«VOL». Volare? Voltare?" } },
+    "sigillo_d": { "name": "Frammento del Sigillo (Ponte Vecchio)", "kind": "Custodito da Mastro Neri", "icon": { "k": "seal_piece" }, "examine": { "beps": "L'ultimo quarto. Sul bordo: TARTI.", "kiki": "«TARTI». Non voltarti. Ovvio." } },
+    "sigillo": {
+      "name": "Sigillo di Orfeo", "kind": "Ricomposto sul banco di Mastro Neri", "icon": { "k": "seal" },
+      "examine": { "beps": "Il Sigillo intero. Sul bordo: ORFEO · NON · VOLTARTI. Al centro la lira. Pesa più di quanto dovrebbe.", "kiki": "«Orfeo, non voltarti.» Il patto del mito. Se ti volti a guardare, perdi chi ami." }
+    },
+    "nastro": {
+      "name": "Nastro ORFEO", "kind": "Bobina magnetica, 1967", "icon": { "k": "tape" },
+      "examine": { "beps": "Una bobina da registratore a nastro. Sull'etichetta: «ORFEO — Parigi, 12.III.1967 — Seduta straordinaria».", "kiki": "Nastro da un quarto di pollice. Serve un Revox o un Nagra. A Parigi, nello studio di Hélène, ce n'era uno." }
+    },
+    "lanterna": {
+      "name": "Lanterna", "kind": "Prestata da Selim", "icon": { "k": "torch" },
+      "examine": { "beps": "Una lanterna a olio vecchia di un secolo. Selim dice che «vede meglio delle torce elettriche». Non ho capito se è una metafora.", "kiki": "Fa una luce calda. Mi piace di più dei telefoni." }
+    },
+    "piede_porco": {
+      "name": "Piede di porco", "kind": "Prestato da Emre", "icon": { "k": "crowbar" },
+      "examine": { "beps": "Un piede di porco. Il miglior amico dell'architetto nei cantieri e nelle avventure.", "kiki": "Emre ce l'ha prestato senza fare domande. Questo dovrebbe preoccuparmi." }
+    },
+    "registro": {
+      "name": "Il Registro di Orfeo", "kind": "1944–2026", "icon": { "k": "book", "c": "#2a1a12" },
+      "examine": { "beps": "Ottant'anni di nomi. Chi ha nascosto, chi è stato nascosto, chi ha tradito. Pesa come un mattone. Pesa più di un mattone.", "kiki": "Il Registro. Ci sono mia nonna, mia bisnonna, e accanto a loro centinaia di persone salvate. E i nomi di chi li ha venduti." }
+    }
+  },
+  "combos": [
+    { "a": "medaglione_b", "b": "medaglione_k", "do": ["@take:medaglione_b,medaglione_k", "@give:medaglione", "@sfx:success", "beps[surprised]: Combaciano. Perfettamente.", { "if": "present.kiki", "do": ["kiki[tender]: Nonna diceva che l'altra metà era con qualcuno di testardo.", "beps[smile]: Testardo è una parola grossa. Diciamo perseverante.", "@stat:legame+1"] }, "@clue:medaglione_intero"] },
+    { "a": "mappa", "b": "medaglione", "do": ["@puzzle:c2_mappa"] },
+    { "a": "foto1944", "b": "foto1967", "if": "scene=='c2_studio_marchetti'", "do": ["@puzzle:c2_sovrapposizione"], "notYet": { "beps": "Per sovrapporle mi servirebbe un piano luminoso.", "kiki": "Serve un tavolo luminoso. Da Hélène ce n'è uno." } },
+    { "a": "sigillo_a", "b": "sigillo_b", "if": "false", "do": [], "notYet": { "beps": "Per ricomporlo servono tutti e quattro i frammenti e un banco da orafo.", "kiki": "Servono tutti i pezzi. E mani da orafo." } },
+    { "a": "sigillo_a", "b": "sigillo_c", "if": "false", "do": [], "notYet": "Servono tutti e quattro i frammenti e un banco da orafo." },
+    { "a": "sigillo_a", "b": "sigillo_d", "if": "false", "do": [], "notYet": "Servono tutti e quattro i frammenti e un banco da orafo." },
+    { "a": "sigillo_b", "b": "sigillo_c", "if": "false", "do": [], "notYet": "Servono tutti e quattro i frammenti e un banco da orafo." },
+    { "a": "sigillo_b", "b": "sigillo_d", "if": "false", "do": [], "notYet": "Servono tutti e quattro i frammenti e un banco da orafo." },
+    { "a": "sigillo_c", "b": "sigillo_d", "if": "false", "do": [], "notYet": "Servono tutti e quattro i frammenti e un banco da orafo." },
+    { "a": "frammenti", "b": "scheda_o17", "do": ["Prima devo ricomporre i frammenti. Uno alla volta."] },
+    { "a": "usb", "b": "scheda_o17", "do": { "beps": ["La scheda dice che la chiave è il giorno in cui l'acqua arrivò al terzo gradino. Mi serve un computer per provarla.", { "if": "!clue.alluvione", "do": ["Il giorno dell'acqua… l'alluvione del '66. Ma che giorno, esattamente? Sul Lungarno c'è una targa."] }], "kiki": ["Ci serve un computer. Il mio portatile, al caffè."] } },
+    { "a": "nastro", "b": "lista17", "do": ["Il nastro è del 1967, la lista arriva al 2026. Il nastro va ascoltato, non confrontato."] },
+    { "a": "foto1944", "b": "lista17", "do": { "beps": ["Il volto graffiato nella foto… e il nome raschiato nella lista. Stessa mano? Stessa paura.", "@clue:cancellato"], "kiki": ["Il volto graffiato e il ruolo raschiato. Hanno cancellato una persona due volte.", "@clue:cancellato"] } }
+  ]
+}
