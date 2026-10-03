@@ -96,7 +96,11 @@
       if (bg) {
         const img = await O.Assets.image(bg);
         if (img) {
-          this.bgLayer.appendChild(O.el('img.bg-img', { src: bg, alt: '' }));
+          const el = O.el('img.bg-img', { src: bg, alt: '' });
+          // the same picture can serve another time of day (bgFilter / bgTint)
+          if (sc.bgFilter) el.style.filter = sc.bgFilter;
+          this.bgLayer.appendChild(el);
+          if (sc.bgTint) this.bgLayer.appendChild(O.el('div.bg-tint', { style: { background: sc.bgTint } }));
           this.hasRealBg = true;
         }
       }

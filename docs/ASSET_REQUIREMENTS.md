@@ -66,7 +66,7 @@ Le immagini approvate non vengono mai sovrascritte da nessuno script: gli strume
 | ⬜ manca | `assets/backgrounds/c7_cantiere.webp` | La stanza murata | 7 | Via de' Bardi · Firenze · notte | Gradini [60,700,260,260]; Armadio vuoto [330,290,230,400]; Tavolo [620,580,380,160]; Breccia [1260,260,280,360]; Esci [1840,700,80,360] |
 | ⬜ manca | `assets/backgrounds/c7_galleria.webp` | Galleria sotto l'Arno | 7 | Fondamenta di Firenze | Ruota della paratoia [820,500,180,200]; Canale [0,700,1920,110]; Iscrizione [240,300,320,120]; Arco verso la Camera [1280,220,400,480]; Risali [100,600,100,300] |
 | ⬜ manca | `assets/backgrounds/c7_camera.webp` | La Camera di Orfeo | 7 | Sotto Firenze | Iscrizione del meccanismo [740,60,440,90]; Incavo del Sigillo [560,360,120,120]; Serratura [380,420,90,110]; Grammofono [1320,420,180,220]; Ruota dei Nomi [1560,300,220,220]; Leva [1180,500,100,200] |
-| ⬜ manca | `assets/backgrounds/c7_alba.webp` | Lungarno all'alba | 7 | Firenze | Panchina [300,830,280,110]; Ponte Vecchio [40,450,540,170]; Figura sul ponte [300,440,50,120]; Targa dell'alluvione [1150,470,110,64]; Caffè delle Logge [1440,560,170,250] |
+| ⬜ manca | `assets/backgrounds/c7_alba.webp` | Lungarno all'alba | 7 | Firenze | Panchina [400,880,280,110]; Ponte Vecchio [500,490,540,80]; Figura sul ponte [700,455,30,70]; Targa dell'alluvione [1612,420,70,90]; Caffè delle Logge [1530,320,90,390] |
 
 ### 1b. Oggetti di scena rimovibili (`assets/items/scene/<scena>_<hotspot>.png`) — PNG trasparente, dimensione = rect dell'hotspot
 Servono solo per gli oggetti che **spariscono** quando vengono raccolti (collezionabili, oggetti presi). Se lo sfondo reale li ha già dipinti e non spariscono, non servono.
@@ -125,6 +125,7 @@ Servono solo per gli oggetti che **spariscono** quando vengono raccolti (collezi
 | ⬜ manca | `assets/items/scene/c7_galleria_nicchia_voce.png` | c7_galleria | 70×50 | Nicchia con registratore (collezionabile rec_07) |
 | ⬜ manca | `assets/items/scene/c7_galleria_lira_volta.png` | c7_galleria | 70×70 | Lira sulla volta (collezionabile sym_7) |
 | ⬜ manca | `assets/items/scene/c7_camera_foto_originale.png` | c7_camera | 120×150 | Fotografia incorniciata (collezionabile photo_12) |
+| ⬜ manca | `assets/items/scene/c7_alba_donna_ponte.png` | c7_alba | 30×70 | Figura sul ponte |
 
 ---
 

@@ -21,7 +21,7 @@
         const sc = O.Data.scenes.scenes[shot.scene];
         if (sc) {
           const bgReal = O.Scene.bgPath(sc);
-          if (bgReal) return `<img src="${bgReal}" alt="">`;
+          if (bgReal) return `<img src="${bgReal}" alt=""${sc.bgFilter ? ` style="filter:${sc.bgFilter}"` : ''}>`;
           let svg = O.Art.background(sc);
           // add the scene's props so the illustration is readable
           const props = (sc.hotspots || []).filter((h) => h.art && !h.col && O.cond(h.if)).map((h) => {

@@ -11085,6 +11085,9 @@
    ]
   },
   "c7_alba": {
+   "bg": "assets/backgrounds/bg_lungarno_notte_01.jpg",
+   "bgFilter": "brightness(1.1) saturate(1.1) sepia(0.2)",
+   "bgTint": "linear-gradient(180deg, rgba(255,120,100,.55) 0%, rgba(255,160,110,.4) 35%, rgba(255,190,140,.12) 60%, transparent 80%)",
    "name": "Lungarno all'alba",
    "place": "Firenze",
    "chapter": 7,
@@ -11146,36 +11149,48 @@
    },
    "walk": [
     [
-     0,
-     1060
+     120,
+     1080
     ],
     [
      1920,
-     1060
+     1080
     ],
     [
      1920,
-     830
+     900
     ],
     [
-     620,
-     830
+     1600,
+     780
     ],
     [
-     0,
-     800
+     1300,
+     665
+    ],
+    [
+     1100,
+     645
+    ],
+    [
+     1000,
+     655
+    ],
+    [
+     790,
+     770
     ]
    ],
    "scale": [
-    780,
-    0.78,
-    1060,
-    1.02
+    650,
+    0.42,
+    1080,
+    0.95
    ],
    "spawn": {
     "default": [
-     500,
-     920,
+     640,
+     990,
      "r"
     ]
    },
@@ -11183,8 +11198,8 @@
     {
      "id": "varano7",
      "char": "varano",
-     "x": 1360,
-     "y": 870,
+     "x": 900,
+     "y": 775,
      "dir": "l",
      "talk": "varano_finale",
      "look": {
@@ -11204,8 +11219,8 @@
      "id": "panchina",
      "name": "Panchina",
      "rect": [
-      300,
-      830,
+      400,
+      880,
       280,
       110
      ],
@@ -11213,8 +11228,8 @@
       "k": "bench"
      },
      "at": [
-      440,
-      960
+      560,
+      1010
      ],
      "look": {
       "beps": "La panchina bagnata della prima sera. Adesso è asciutta. Ci starebbero due persone.",
@@ -11225,10 +11240,10 @@
      "id": "ponte",
      "name": "Ponte Vecchio",
      "rect": [
-      40,
-      450,
+      500,
+      490,
       540,
-      170
+      80
      ],
      "look": {
       "beps": "Il ponte che non cadde. Sopra, sulla spalletta, c'è una figura in nero. Col cappello.",
@@ -11239,15 +11254,16 @@
      "id": "donna_ponte",
      "name": "Figura sul ponte",
      "rect": [
-      300,
-      440,
-      50,
-      120
+      700,
+      455,
+      30,
+      70
      ],
      "art": {
       "k": "figure",
       "hat": true,
-      "c": "#0a0a0c"
+      "c": "#0a0a0c",
+      "overlay": true
      },
      "look": {
       "beps": "Ci guarda. Alza una mano. Un saluto? Poi si volta e se ne va.",
@@ -11263,10 +11279,10 @@
      "id": "targa",
      "name": "Targa dell'alluvione",
      "rect": [
-      1150,
-      470,
-      110,
-      64
+      1612,
+      420,
+      70,
+      90
      ],
      "art": {
       "k": "sign",
@@ -11282,10 +11298,10 @@
      "id": "caffe",
      "name": "Caffè delle Logge",
      "rect": [
-      1440,
-      560,
-      170,
-      250
+      1530,
+      320,
+      90,
+      390
      ],
      "art": {
       "k": "door",

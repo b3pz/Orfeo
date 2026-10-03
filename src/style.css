@@ -34,6 +34,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 #world { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; overflow: hidden; user-select: none; -webkit-user-select: none; }
 #bg-layer, #prop-layer, #actor-layer, #hotspot-layer, #fx-layer { position: absolute; inset: 0; }
 #bg-layer svg, #bg-layer img { width: 100%; height: 100%; display: block; object-fit: cover; }
+#bg-layer .bg-tint { position: absolute; inset: 0; mix-blend-mode: screen; pointer-events: none; }
 #prop-layer { pointer-events: none; }
 .prop { position: absolute; overflow: visible; }
 #actor-layer { pointer-events: none; }
