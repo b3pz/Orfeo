@@ -124,7 +124,7 @@
    "date": "Dicembre 2026",
    "relationship": "Legame crescente",
    "core": "Luoghi già visitati assumono un nuovo significato e uno dei due scompare.",
-   "summary": "Lo studio di Beps è stato devastato e Kiki sparisce. Da solo, Beps ricompone il Sigillo di Orfeo sul banco di un orafo del Ponte Vecchio e attraversa il Corridoio Vasariano fino alla Grotta di Boboli, dove il Notaio lo aspetta.",
+   "summary": "L'ufficio di Beps è stato devastato e Kiki sparisce. Da solo, Beps ricompone il Sigillo di Orfeo sul banco di un orafo del Ponte Vecchio e attraversa il Corridoio Vasariano fino alla Grotta di Boboli, dove il Notaio lo aspetta.",
    "epigraph": "«Le chiavi aprono, ma soprattutto chiudono.» — Oreste Neri",
    "debugStart": {
     "scene": "c4_studio",
@@ -359,7 +359,7 @@
    "text": "Raggiungi Sandro al cantiere di via de' Bardi. Con un caffè.",
    "hints": [
     "Sandro ha chiesto esplicitamente un caffè.",
-    "La macchinetta del caffè dello studio funziona. Poi esci dalla porta, verso il Lungarno e il cantiere (a destra).",
+    "La macchinetta del caffè dell'ufficio funziona. Poi esci dalla porta, verso il Lungarno e il cantiere (a destra).",
     "Usa la macchinetta del caffè, esci, attraversa il Lungarno verso destra fino al cantiere e dai il caffè a Sandro."
    ]
   },
@@ -368,8 +368,8 @@
    "text": "Porta un caffè a Sandro.",
    "hints": [
     "Sandro non apre la stanza senza caffè.",
-    "Lo studio ha una macchinetta. È a due passi.",
-    "Torna allo studio (a sinistra del Lungarno), usa la macchinetta, poi dai il caffè a Sandro (trascinalo su di lui o usa «Mostra un oggetto»)."
+    "L'ufficio ha una macchinetta. È a due passi.",
+    "Torna in ufficio (a sinistra del Lungarno), usa la macchinetta, poi dai il caffè a Sandro (trascinalo su di lui o usa «Mostra un oggetto»)."
    ]
   },
   "o1_stanza": {
@@ -394,7 +394,7 @@
    "chapter": 1,
    "text": "Cerca la scheda O-1 all'Archivio Storico.",
    "hints": [
-    "L'Archivio Storico è sul Lungarno, tra lo studio e il cantiere.",
+    "L'Archivio Storico è sul Lungarno, tra l'ufficio e il cantiere.",
     "Il cassetto O del catalogo è chiuso. L'archivista può aprirlo, se le mostri un buon motivo.",
     "Parla con l'archivista e mostrale il promemoria ricomposto (o la Foto 1944) con «Mostra un oggetto»."
    ]
@@ -619,9 +619,9 @@
    "chapter": 4,
    "text": "Aspetta Kiki. Intanto cerca quello che i ladri non hanno trovato.",
    "hints": [
-    "Guarda bene lo studio devastato.",
+    "Guarda bene l'ufficio devastato.",
     "C'è un pacco che non era lì prima, e un biglietto sulla scrivania.",
-    "Prendi il pacco di Sandro vicino al plastico."
+    "Prendi il pacco di Sandro vicino al plastico del palazzo."
    ]
   },
   "o4_ponte": {
@@ -691,7 +691,7 @@
    "chapter": 5,
    "text": "Beps deve forzare la botola.",
    "hints": [
-    "Servono muscoli da cantiere.",
+    "Serve forza: tocca a Beps.",
     "Passa a Beps.",
     "Come Beps, usa il piede di porco sulla botola."
    ]

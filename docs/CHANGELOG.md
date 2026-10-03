@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 1.0.1 — Collegamento delle immagini caricate
+
+- Sprite reali per Beps, Kiki, Varano, Ottavia, Don Ilario, Selim, Monsieur Albert e gli agenti (strisce ricavate con `tools/normalize-assets.py`); il motore usa la proporzione reale di ogni striscia.
+- Ritratti aggiuntivi di Beps e Kiki dai busti caricati; ritratto *worried* di Beps ricostruito, *surprised* sostituito.
+- Fondali reali per Lungarno, Deposito, Sala dei Cassetti, Camera degli Anelli e ufficio devastato, con hotspot e aree camminabili riposizionati (anche per Ufficio e Archivio Storico).
+- 12 inquadrature delle cutscene collegate alle illustrazioni caricate.
+- Icone oggetti ripulite; metà del medaglione ricavate dall'immagine intera.
+- Descrizioni di Varano e di Kiki «sconosciuta» allineate all'aspetto degli sprite.
+
 ## 1.0.0 — Punta-e-clicca completo (ottobre 2026)
 
 Ricostruzione del prototipo v0.1 (una scena, tre hotspot) in un'avventura grafica completa e data-driven.

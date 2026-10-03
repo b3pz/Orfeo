@@ -22,3 +22,15 @@ Riepilogo per categoria:
 | Effetti | 15 | `assets/audio/sfx/<id>.ogg` |
 
 Personaggi: Beps, Kiki, Aurelio Varano (il Notaio, «Nemico 1»), Ottavia Ricci (archivista), Sandro (capocantiere), Tommaso (barista), Hélène Marchetti, Monsieur Albert, Don Ilario Cesti, Mastro Neri, Dott.ssa Bellandi, Selim Aydın, Emre, gli agenti di Orfeo, la donna in nero.
+
+## Immagini caricate con nomi generati — come sono state collegate
+
+Le immagini prodotte con un generatore arrivano con nomi arbitrari. Il gioco carica solo i percorsi «canonici» (o quelli indicati esplicitamente nei dati), quindi:
+
+- **Sprite** — le strisce sorgente restano in `assets/sprites/main_characters/` e `assets/sprites/npc/`; `python3 tools/normalize-assets.py` le ritaglia in celle pulite (le figure sconfinavano nel fotogramma vicino), allinea i piedi e scrive `assets/sprites/<personaggio>/<animazione>.png`. La tabella `MAP` nello script dice cosa diventa cosa (es. `archivista_firenze_pose_1` → `archivista/idle`, `storico_parigi` → `albert`, `antiquario_istanbul` → `selim`, `bibliotecario_roma` → `ilario`, `agente_orfeo_1` → `agente`). Lo script stampa i blocchi `sprites` per `data/characters.json` (larghezza della cella diversa per ogni animazione: il motore usa `w/h`).
+- **Ritratti** — i busti scontornati di `assets/beps/`, `assets/kiki/` vengono composti 600×720 su fondo carta in `assets/portraits/<id>/<espressione>.png` (tabella `PORTRAITS`; le etichette stampate sotto skeptical/tender vengono tagliate). Beps `surprised` usa il busto *scared*; `worried` è stato ricucito dai due ritagli sbagliati.
+- **Oggetti** — lo script toglie dalle icone le strisce degli oggetti vicini e ricava `medaglione_b`/`medaglione_k` dalle due metà di `medaglione.png`.
+- **Fondali** — il campo `bg` della scena punta al file: `c1_lungarno` ← `bg_lungarno_notte_01.jpg`, `c1_corridoio` ← `bg_archivio_firenze_room_01.jpg` (Scaffale O-17), `c3_sala_cassetti` ← `bg_archivio_firenze_room_02.jpg` (Schedario romano), `c5_camera_anelli` ← `bg_camera_segreta_orfeo_01.jpg`, `c4_studio` ← `c1_studio.webp`. Hotspot e aree camminabili di queste scene sono stati riposizionati sulle immagini.
+- **Cutscene** — il campo `img` dell'inquadratura punta al file (es. `fine_luce_1` ← `cutscene_03_rivelazione_orfeo.jpg`, `intro_1` ← `reference/cutscenes/florence_night.webp`).
+
+Dopo aver aggiunto o rinominato file: `python3 tools/normalize-assets.py` (se servono sprite/ritratti), poi `node tools/scan-assets.mjs && node tools/build-data.mjs && node tools/asset-list.mjs`.

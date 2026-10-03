@@ -31,7 +31,7 @@ Risultato: le due metà della lira si completano e la donna occupa lo stesso pun
 Il medaglione (10 fori, una tacca) ruota in 8 posizioni sulla mappa cifrata; ogni posizione mostra 10 lettere. Indizio: «La stella guida la tacca» (retro della Foto 1967, da stampare in camera oscura) e la stella rossa a nord-est. Soluzione: tacca sulla stella → **TEODOSIANA**. Le altre letture sono anagrammi senza senso.
 
 ## 5. I diciassette cassetti (Cap. III) — cooperativo
-- **Beps** (architetto) nota che il mobile è 20 cm più corto della nicchia e sblocca il fermo laterale col coltellino (Kiki non può: «è il tuo mestiere»).
+- **Beps**, curioso che smonta qualunque cosa, nota che il mobile è 20 cm più corto della nicchia e sblocca il fermo laterale col coltellino (Kiki non ci arriva: «smonta tutto da quando è nato»).
 - **Kiki** traduce la targa: *Primus ducit, secunda meminit, tertius traicit, ultimus verba custodit* (Beps «ha fatto il classico vent'anni fa»).
 - La LISTA_17 parziale (Cap. I) associa ruoli ed emblemi: guida = lira ♪, ricorda = luna ☾, traghetta = àncora ⚓, custodisce le parole = foglia ❧.
 Ordine: ♪ ☾ ⚓ ❧. Un cassetto sbagliato richiude tutti con un clac (nessuna penalità). Il cassetto ⌒ raschiato non si apre (aggancio narrativo al XVII).

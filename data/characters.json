@@ -4,29 +4,29 @@
     "beps": {
       "name": "Beps",
       "protagonist": true,
-      "role": "Giuseppe, architetto restauratore",
+      "role": "Giuseppe, informatico curioso della ditta di restauro",
       "height": 1.0,
       "look": { "skin": "#d9a882", "hair": "#2a1d14", "hairStyle": "short", "beard": true, "top": "#2a3a52", "topStyle": "jacket", "shirt": "#e8e2d4", "bottom": "#2b2f3a", "shoes": "#3a2414", "eyes": "#4a3020", "portraitBg": "#2a3442" },
       "sprites": {
-        "idle": { "src": "assets/sprites/beps/idle.png", "frames": 6, "fps": 6, "w": 200, "h": 420 },
-        "walk": { "src": "assets/sprites/beps/walk.png", "frames": 8, "fps": 12, "w": 200, "h": 420 },
-        "run": { "src": "assets/sprites/beps/run.png", "frames": 8, "fps": 16, "w": 200, "h": 420 },
-        "talk": { "src": "assets/sprites/beps/talk.png", "frames": 6, "fps": 8, "w": 200, "h": 420 },
-        "use": { "src": "assets/sprites/beps/use.png", "frames": 6, "fps": 10, "w": 200, "h": 420 },
-        "pickup": { "src": "assets/sprites/beps/pickup.png", "frames": 6, "fps": 10, "w": 200, "h": 420 },
-        "inspect": { "src": "assets/sprites/beps/inspect.png", "frames": 6, "fps": 8, "w": 200, "h": 420 },
-        "read": { "src": "assets/sprites/beps/read.png", "frames": 6, "fps": 6, "w": 200, "h": 420 },
-        "phone": { "src": "assets/sprites/beps/phone.png", "frames": 6, "fps": 6, "w": 200, "h": 420 },
-        "reaction": { "src": "assets/sprites/beps/reaction.png", "frames": 6, "fps": 10, "w": 200, "h": 420 }
+        "idle": { "src": "assets/sprites/beps/idle.png", "frames": 6, "fps": 6, "w": 242, "h": 512 },
+        "walk": { "src": "assets/sprites/beps/walk.png", "frames": 8, "fps": 12, "w": 228, "h": 512 },
+        "run": { "src": "assets/sprites/beps/run.png", "frames": 8, "fps": 16, "w": 282, "h": 512 },
+        "talk": { "src": "assets/sprites/beps/talk.png", "frames": 6, "fps": 8, "w": 332, "h": 512 },
+        "use": { "src": "assets/sprites/beps/use.png", "frames": 6, "fps": 8, "w": 234, "h": 512 },
+        "pickup": { "src": "assets/sprites/beps/pickup.png", "frames": 6, "fps": 10, "w": 264, "h": 512 },
+        "inspect": { "src": "assets/sprites/beps/inspect.png", "frames": 6, "fps": 6, "w": 298, "h": 512 },
+        "read": { "src": "assets/sprites/beps/read.png", "frames": 6, "fps": 5, "w": 310, "h": 512 },
+        "phone": { "src": "assets/sprites/beps/phone.png", "frames": 6, "fps": 5, "w": 244, "h": 512 },
+        "reaction": { "src": "assets/sprites/beps/reaction.png", "frames": 6, "fps": 10, "w": 304, "h": 512 }
       },
       "desc": "Beps.",
       "lookLines": [
         { "if": "chapter>=5 && stat.legame>=14", "text": { "kiki": ["kiki[tender]: Ha i capelli spettinati dal vento. Non glielo dirò. Mi piace così."] } },
-        { "if": "chapter>=3", "text": { "kiki": ["kiki[smile]: Beps. Architetto, testardo, incapace di leggere il latino. Il mio socio."] } },
-        { "if": "true", "text": { "kiki": ["kiki[skeptical]: Un architetto che si infila negli archivi altrui. Non so ancora se fidarmi."] } }
+        { "if": "chapter>=3", "text": { "kiki": ["kiki[smile]: Beps. Informatico, testardo, incapace di leggere il latino. Il mio socio."] } },
+        { "if": "true", "text": { "kiki": ["kiki[skeptical]: Un informatico che si infila negli archivi altrui. Non so ancora se fidarmi."] } }
       ],
       "journal": [
-        { "if": "true", "text": "Giuseppe, per tutti Beps. Architetto restauratore in uno studio dell'Oltrarno. Doveva essere un intervento di dieci minuti." },
+        { "if": "true", "text": "Giuseppe, per tutti Beps. Fa l'informatico per la ditta di restauro che lavora al palazzo di via de' Bardi. Curioso di tutto, smonta qualunque cosa per vedere come funziona. Doveva essere un intervento di dieci minuti." },
         { "if": "chapter>=4", "text": "Ha attraversato Firenze da solo per ritrovare Kiki. Non lo ammetterà mai, ma aveva paura." }
       ]
     },
@@ -38,16 +38,15 @@
       "height": 0.95,
       "look": { "skin": "#e2b594", "hair": "#3a2216", "hairStyle": "long", "top": "#7a2a2a", "topStyle": "coat", "shirt": "#e8dccc", "scarf": "#c9a85a", "bottom": "#2a2228", "shoes": "#1a1210", "eyes": "#5a3a1a", "lipstick": "#a8443a", "earring": true, "portraitBg": "#4a2a28" },
       "sprites": {
-        "idle": { "src": "assets/sprites/kiki/idle.png", "frames": 6, "fps": 6, "w": 200, "h": 420 },
-        "walk": { "src": "assets/sprites/kiki/walk.png", "frames": 8, "fps": 12, "w": 200, "h": 420 },
-        "run": { "src": "assets/sprites/kiki/run.png", "frames": 8, "fps": 16, "w": 200, "h": 420 },
-        "talk": { "src": "assets/sprites/kiki/talk.png", "frames": 6, "fps": 8, "w": 200, "h": 420 },
-        "use": { "src": "assets/sprites/kiki/use.png", "frames": 6, "fps": 10, "w": 200, "h": 420 },
-        "pickup": { "src": "assets/sprites/kiki/pickup.png", "frames": 6, "fps": 10, "w": 200, "h": 420 },
-        "inspect": { "src": "assets/sprites/kiki/inspect.png", "frames": 6, "fps": 8, "w": 200, "h": 420 },
-        "read": { "src": "assets/sprites/kiki/read.png", "frames": 6, "fps": 6, "w": 200, "h": 420 },
-        "phone": { "src": "assets/sprites/kiki/phone.png", "frames": 6, "fps": 6, "w": 200, "h": 420 },
-        "reaction": { "src": "assets/sprites/kiki/reaction.png", "frames": 6, "fps": 10, "w": 200, "h": 420 }
+        "idle": { "src": "assets/sprites/kiki/idle.png", "frames": 6, "fps": 6, "w": 208, "h": 512 },
+        "walk": { "src": "assets/sprites/kiki/walk.png", "frames": 8, "fps": 12, "w": 238, "h": 512 },
+        "run": { "src": "assets/sprites/kiki/run.png", "frames": 8, "fps": 16, "w": 286, "h": 512 },
+        "talk": { "src": "assets/sprites/kiki/talk.png", "frames": 6, "fps": 8, "w": 380, "h": 512 },
+        "use": { "src": "assets/sprites/kiki/use.png", "frames": 6, "fps": 8, "w": 384, "h": 512 },
+        "pickup": { "src": "assets/sprites/kiki/pickup.png", "frames": 6, "fps": 10, "w": 266, "h": 512 },
+        "inspect": { "src": "assets/sprites/kiki/inspect.png", "frames": 6, "fps": 6, "w": 304, "h": 512 },
+        "read": { "src": "assets/sprites/kiki/read.png", "frames": 6, "fps": 5, "w": 356, "h": 512 },
+        "reaction": { "src": "assets/sprites/kiki/reaction.png", "frames": 6, "fps": 8, "w": 380, "h": 512 }
       },
       "lookLines": [
         { "if": "chapter>=5 && stat.legame>=14", "text": { "beps": ["beps[tender]: Kiki. Quando si concentra, morde il tappo della penna. Ho smesso di contare le penne."] } },
@@ -65,6 +64,17 @@
       "name": "La sconosciuta",
       "look": { "skin": "#e2b594", "hair": "#3a2216", "hairStyle": "long", "top": "#7a2a2a", "topStyle": "coat", "scarf": "#c9a85a", "bottom": "#2a2228", "lipstick": "#a8443a", "earring": true, "portraitBg": "#4a2a28" },
       "height": 0.95,
+      "sprites": {
+        "idle": { "src": "assets/sprites/kiki/idle.png", "frames": 6, "fps": 6, "w": 208, "h": 512 },
+        "walk": { "src": "assets/sprites/kiki/walk.png", "frames": 8, "fps": 12, "w": 238, "h": 512 },
+        "run": { "src": "assets/sprites/kiki/run.png", "frames": 8, "fps": 16, "w": 286, "h": 512 },
+        "talk": { "src": "assets/sprites/kiki/talk.png", "frames": 6, "fps": 8, "w": 380, "h": 512 },
+        "use": { "src": "assets/sprites/kiki/use.png", "frames": 6, "fps": 8, "w": 384, "h": 512 },
+        "pickup": { "src": "assets/sprites/kiki/pickup.png", "frames": 6, "fps": 10, "w": 266, "h": 512 },
+        "inspect": { "src": "assets/sprites/kiki/inspect.png", "frames": 6, "fps": 6, "w": 304, "h": 512 },
+        "read": { "src": "assets/sprites/kiki/read.png", "frames": 6, "fps": 5, "w": 356, "h": 512 },
+        "reaction": { "src": "assets/sprites/kiki/reaction.png", "frames": 6, "fps": 8, "w": 380, "h": 512 }
+      },
       "portraitOf": "kiki"
     },
     "archivista": {
@@ -73,6 +83,10 @@
       "role": "Capo archivista, Archivio Storico di Firenze",
       "height": 0.92,
       "look": { "skin": "#e0b898", "hair": "#b8b0a8", "hairStyle": "bun", "glasses": true, "top": "#4a5a4a", "topStyle": "cardigan", "bottom": "#3a3a3a", "portraitBg": "#3a4238" },
+      "sprites": {
+        "idle": { "src": "assets/sprites/archivista/idle.png", "frames": 6, "fps": 4, "w": 226, "h": 512 },
+        "talk": { "src": "assets/sprites/archivista/talk.png", "frames": 6, "fps": 6, "w": 314, "h": 512 }
+      },
       "journal": [
         { "if": "true", "text": "Capo archivista da trentun anni. Conosce ogni scheda del catalogo, comprese quelle che non dovrebbero esistere." },
         { "if": "flag.ottavia_padre", "text": "Suo padre, Renzo Ricci, era il Barcaiolo: nel 1944 traghettava persone sull'Arno di notte. Lei non è mai entrata in Orfeo. Per scelta." }
@@ -97,8 +111,13 @@
       "role": "Notaio — Ruolo XI di Orfeo",
       "height": 1.04,
       "look": { "skin": "#d6b098", "hair": "#c8c4bc", "hairStyle": "hat", "hatColor": "#2a2a2e", "top": "#5a5e64", "topStyle": "coat", "shirt": "#e8e8e8", "scarf": "#2a2a30", "bottom": "#2a2a30", "shoes": "#111", "eyes": "#5a6a7a", "portraitBg": "#2a2e34" },
+      "sprites": {
+        "idle": { "src": "assets/sprites/varano/idle.png", "frames": 6, "fps": 5, "w": 252, "h": 512 },
+        "talk": { "src": "assets/sprites/varano/talk.png", "frames": 6, "fps": 7, "w": 318, "h": 512 },
+        "walk": { "src": "assets/sprites/varano/walk.png", "frames": 8, "fps": 11, "w": 272, "h": 512 }
+      },
       "journal": [
-        { "if": "true", "text": "Un uomo alto, cappotto grigio, guanti di pelle. Vi segue da Firenze. Non sembra avere fretta." },
+        { "if": "true", "text": "Un uomo alto, cappotto grigio scuro, sciarpa bordeaux, guanti di pelle. Vi segue da Firenze. Non sembra avere fretta." },
         { "if": "flag.varano_named", "text": "Aurelio Varano, notaio fiorentino. Custodisce il Ruolo XI di Orfeo, quello del Notaio, ereditato dal padre Ettore." },
         { "if": "flag.varano_past", "text": "Suo nonno Bruno, nel 1944, fu un delatore. Sua nonna Lina, nello stesso anno, salvò trenta persone. Nel Registro ci sono entrambi. Aurelio non sa quale dei due essere." },
         { "if": "flag.varano_doubt", "text": "Vuole bruciare l'archivio per chiudere una ferita. Ma ha esitato. Due volte." }
@@ -119,6 +138,10 @@
       "name": "Monsieur Albert",
       "role": "Bouquiniste sul Quai des Grands-Augustins",
       "look": { "skin": "#e0b090", "hair": "#e0dcd4", "hairStyle": "grey", "beard": true, "beardColor": "#e0dcd4", "top": "#3a4a3a", "topStyle": "coat", "scarf": "#8a2a2a", "bottom": "#3a3428", "portraitBg": "#2a3a30" },
+      "sprites": {
+        "idle": { "src": "assets/sprites/albert/idle.png", "frames": 6, "fps": 4, "w": 250, "h": 512 },
+        "talk": { "src": "assets/sprites/albert/talk.png", "frames": 6, "fps": 6, "w": 284, "h": 512 }
+      },
       "journal": [ { "if": "true", "text": "Vende libri sulla Senna da cinquant'anni. Accetta pagamenti solo da chi sa rispondere alle sue domande." } ]
     },
     "ilario": {
@@ -126,6 +149,10 @@
       "role": "Bibliotecario della Teodosiana — Ruolo XIV, il Libraio",
       "height": 0.9,
       "look": { "skin": "#e0c0a0", "hair": "#e8e4dc", "hairStyle": "grey", "glasses": true, "top": "#141414", "topStyle": "coat", "shirt": "#f4f4f4", "bottom": "#141414", "portraitBg": "#2a2420" },
+      "sprites": {
+        "idle": { "src": "assets/sprites/ilario/idle.png", "frames": 6, "fps": 4, "w": 182, "h": 512 },
+        "talk": { "src": "assets/sprites/ilario/talk.png", "frames": 6, "fps": 6, "w": 318, "h": 512 }
+      },
       "journal": [
         { "if": "true", "text": "Novantun anni, bibliotecario della Teodosiana. Cita Seneca e i Pink Floyd con la stessa disinvoltura." },
         { "if": "flag.ilario_libraio", "text": "È il Libraio, Ruolo XIV di Orfeo. Il più anziano dei custodi ancora vivi." }
@@ -135,6 +162,10 @@
       "name": "Agente di Orfeo",
       "role": "Uomini del Notaio",
       "look": { "skin": "#d0a888", "hair": "#d8c070", "hairStyle": "short", "top": "#1a1a1e", "topStyle": "coat", "bottom": "#1a1a1e", "glasses": true, "portraitBg": "#1a1a20" },
+      "sprites": {
+        "idle": { "src": "assets/sprites/agente/idle.png", "frames": 6, "fps": 4, "w": 196, "h": 512 },
+        "talk": { "src": "assets/sprites/agente/talk.png", "frames": 6, "fps": 6, "w": 288, "h": 512 }
+      },
       "journal": [ { "if": "true", "text": "Due uomini in cappotto scuro. Uno biondo, uno che non parla mai. Lavorano per il Notaio, ma non sembrano entusiasti." } ]
     },
     "neri": {
@@ -154,6 +185,10 @@
       "role": "Antiquario al Gran Bazar — Ruolo XVI, il Traduttore",
       "height": 0.97,
       "look": { "skin": "#c89870", "hair": "#d8d4cc", "hairStyle": "grey", "moustache": true, "top": "#6a3a2a", "topStyle": "vest", "vest": "#3a2a5a", "shirt": "#e8e0d0", "bottom": "#3a3028", "portraitBg": "#4a2a20" },
+      "sprites": {
+        "idle": { "src": "assets/sprites/selim/idle.png", "frames": 6, "fps": 4, "w": 234, "h": 512 },
+        "talk": { "src": "assets/sprites/selim/talk.png", "frames": 6, "fps": 6, "w": 350, "h": 512 }
+      },
       "journal": [
         { "if": "true", "text": "Antiquario nel Gran Bazar. Parla sei lingue e le mescola quando si emoziona." },
         { "if": "flag.selim_traduttore", "text": "È il Traduttore, Ruolo XVI. Sua madre Nermin accoglieva a Istanbul chi fuggiva da Firenze nel 1944." }

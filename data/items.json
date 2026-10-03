@@ -15,7 +15,7 @@
       }
     },
     "caffe": {
-      "name": "Caffè in bicchierino", "kind": "Dalla macchinetta dello studio", "icon": { "k": "candle", "c": "#5a3a20" },
+      "name": "Caffè in bicchierino", "kind": "Dalla macchinetta dell'ufficio", "icon": { "k": "candle", "c": "#5a3a20" },
       "examine": { "beps": "Caffè della macchinetta. Tecnicamente è caffè. Legalmente, non saprei.", "kiki": "Ha un colore preoccupante." },
       "wrong": { "beps": "Non è il momento di sprecare caffè.", "kiki": "No, questo caffè ha già sofferto abbastanza." }
     },
@@ -61,7 +61,7 @@
     },
     "coltellino": {
       "name": "Coltellino multiuso", "kind": "Attrezzatura da cantiere", "icon": { "k": "pen", "c": "#8a1a1a" },
-      "examine": { "beps": "Lama, cacciavite, metro, apribottiglie. L'architetto moderno è pronto a tutto, tranne che a trovare parcheggio.", "kiki": "Ha un metro dentro il coltellino. Certo che ce l'ha." },
+      "examine": { "beps": "Lama, cacciavite, metro, apribottiglie. Un informatico serio gira sempre con un cacciavite. E un apribottiglie, per i casi gravi.", "kiki": "Ha un metro dentro il coltellino. Certo che ce l'ha." },
       "wrong": { "beps": "Il coltellino non risolve tutto. Quasi tutto.", "kiki": "Metti via quel coltellino, MacGyver." }
     },
     "libretto": {
@@ -121,7 +121,7 @@
     },
     "piede_porco": {
       "name": "Piede di porco", "kind": "Prestato da Emre", "icon": { "k": "crowbar" },
-      "examine": { "beps": "Un piede di porco. Il miglior amico dell'architetto nei cantieri e nelle avventure.", "kiki": "Emre ce l'ha prestato senza fare domande. Questo dovrebbe preoccuparmi." }
+      "examine": { "beps": "Un piede di porco. Lo strumento di supporto tecnico più antico del mondo.", "kiki": "Emre ce l'ha prestato senza fare domande. Questo dovrebbe preoccuparmi." }
     },
     "registro": {
       "name": "Il Registro di Orfeo", "kind": "1944–2026", "icon": { "k": "book", "c": "#2a1a12" },
