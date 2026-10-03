@@ -97,9 +97,12 @@
           a.inner.appendChild(div);
           a.spriteEl = div;
         }
+        const resized = !a.sprite || a.sprite.w !== sp.w || a.sprite.h !== sp.h;
         a.sprite = sp;
         a.frame = 0;
         a.t = 0;
+        a.spriteEl.style.backgroundPosition = '0 0';
+        if (resized && O.Scene.current) this.update(a.id);
       } else {
         if (a.sprite || !a.inner.firstChild) {
           a.inner.innerHTML = O.Art.character(a.charId, this.def(a.charId).look || {});
@@ -150,7 +153,7 @@
       const s = O.Movement.scaleAt(scene, y) * (a.height || 1) * ((a.npc && a.npc.scale) || 1);
       const h = BASE_H * s;
       a.el.style.height = h + 'px';
-      a.el.style.width = h * (200 / 420) + 'px';
+      a.el.style.width = h * (a.sprite ? (a.sprite.w || 200) / (a.sprite.h || 420) : 200 / 420) + 'px';
       a.el.style.left = x + 'px';
       a.el.style.top = y + 'px';
       a.el.style.zIndex = String(Math.round(y));

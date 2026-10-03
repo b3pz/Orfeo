@@ -1087,7 +1087,7 @@
     },
     {
      "id": "kiki",
-     "label": "Ha visto una ragazza col cappotto rosso?",
+     "label": "Ha visto una ragazza con la giacca marrone e gli occhiali?",
      "icon": "question",
      "once": true,
      "do": [

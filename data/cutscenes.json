@@ -4,17 +4,17 @@
     "intro": {
       "music": "title", "ambience": "rain",
       "shots": [
-        { "scene": "c1_lungarno", "title": "Firenze", "sub": "OTTOBRE 2026", "cam": { "from": [30, 45, 1.25], "to": [55, 50, 1.05] }, "fx": ["rain"], "dur": 4200 },
+        { "img": "assets/reference/cutscenes/florence_night.webp", "scene": "c1_lungarno", "title": "Firenze", "sub": "OTTOBRE 2026", "cam": { "from": [30, 45, 1.25], "to": [55, 50, 1.05] }, "fx": ["rain"], "dur": 4200 },
         { "scene": "c1_cantiere", "text": "Durante alcuni lavori in un palazzo dell'Oltrarno è stata aperta una stanza murata.", "cam": { "from": [70, 40, 1.3], "to": [55, 55, 1.05] }, "fx": ["dust"] },
         { "scene": "c1_studio", "text": "Tra il materiale recuperato c'era un vecchio computer. Lo hanno portato in ufficio, dall'informatico della ditta: un ragazzo curioso che si chiama Giuseppe.", "cam": { "from": [30, 50, 1.3], "to": [35, 55, 1.1] }, "fx": ["dust"], "figures": [ { "id": "beps", "x": 980, "y": 900, "s": 1.05 } ] },
-        { "photo": "photo1944", "photoOpts": { "half": false }, "text": "Una cartella chiamata ORFEO. Una fotografia del 1944. Una lista di diciassette nomi. E una voce.", "cam": { "from": [50, 50, 1.4], "to": [50, 55, 1.0] } }
+        { "img": "assets/reference/cutscenes/discovery_orfeo.webp", "photo": "photo1944", "photoOpts": { "half": false }, "text": "Una cartella chiamata ORFEO. Una fotografia del 1944. Una lista di diciassette nomi. E una voce.", "cam": { "from": [50, 50, 1.4], "to": [50, 55, 1.0] } }
       ]
     },
     "c1_fine": {
       "music": "tender",
       "shots": [
         { "scene": "c1_lungarno", "text": "Quella notte Beps non dormì. Guardò la fotografia fino all'alba, e il volto graffiato guardò lui.", "cam": { "from": [50, 45, 1.0], "to": [20, 50, 1.25] }, "fx": ["rain"] },
-        { "scene": "c2_gare", "title": "Il treno delle 7:12", "sub": "FIRENZE — PARIGI", "cam": { "from": [50, 50, 1.2], "to": [50, 45, 1.0] }, "fx": ["light"], "figures": [ { "id": "kiki", "x": 820, "y": 900 }, { "id": "beps", "x": 1060, "y": 900, "flip": true } ] }
+        { "img": "assets/cutscenes/cutscene_01_arrivo_in_citta.jpg", "scene": "c2_gare", "title": "Il treno delle 7:12", "sub": "FIRENZE — PARIGI", "cam": { "from": [50, 50, 1.2], "to": [50, 45, 1.0] }, "fx": ["light"], "figures": [ { "id": "kiki", "x": 820, "y": 900 }, { "id": "beps", "x": 1060, "y": 900, "flip": true } ] }
       ]
     },
     "c2_fine": {
@@ -28,13 +28,13 @@
       "music": "firenze",
       "shots": [
         { "scene": "c3_osteria", "text": "Pagarono le carbonare, lasciarono una mancia esagerata e presero il primo treno per Firenze.", "cam": { "from": [50, 50, 1.0], "to": [60, 55, 1.2] }, "figures": [ { "id": "beps", "x": 1380, "y": 920 }, { "id": "kiki", "x": 1560, "y": 920, "flip": true } ] },
-        { "scene": "c4_ponte", "title": "Il ritorno", "sub": "FIRENZE · DICEMBRE", "cam": { "from": [50, 45, 1.2], "to": [50, 50, 1.0] }, "fx": ["fog"] }
+        { "img": "assets/reference/cutscenes/lungarno_reunion.webp", "scene": "c4_ponte", "title": "Il ritorno", "sub": "FIRENZE · DICEMBRE", "cam": { "from": [50, 45, 1.2], "to": [50, 50, 1.0] }, "fx": ["fog"] }
       ]
     },
     "c4_fine": {
       "music": "istanbul",
       "shots": [
-        { "scene": "c4_grotta", "text": "Uscirono da Boboli tenendosi per mano. Nessuno dei due ricordò, dopo, chi l'avesse presa per primo.", "cam": { "from": [50, 50, 1.0], "to": [50, 60, 1.25] }, "fx": ["fog"] },
+        { "img": "assets/reference/cutscenes/sigillo_together.webp", "scene": "c4_grotta", "text": "Uscirono da Boboli tenendosi per mano. Nessuno dei due ricordò, dopo, chi l'avesse presa per primo.", "cam": { "from": [50, 50, 1.0], "to": [50, 60, 1.25] }, "fx": ["fog"] },
         { "scene": "c5_galata", "title": "Istanbul", "sub": "LA PORTA D'ORIENTE", "cam": { "from": [70, 40, 1.3], "to": [50, 50, 1.0] } }
       ]
     },
@@ -49,7 +49,7 @@
       "music": "paris",
       "shots": [
         { "scene": "c5_galata", "text": "Selim li accompagnò al molo. Disse addio in sei lingue e in nessuna riuscì a finire la frase.", "cam": { "from": [50, 50, 1.0], "to": [40, 45, 1.2] } },
-        { "scene": "c6_pont_neuf", "title": "Orfeo", "sub": "PARIGI · GENNAIO", "cam": { "from": [50, 40, 1.2], "to": [50, 50, 1.0] }, "fx": ["snow"] }
+        { "img": "assets/reference/cutscenes/arrival_paris.webp", "scene": "c6_pont_neuf", "title": "Orfeo", "sub": "PARIGI · GENNAIO", "cam": { "from": [50, 40, 1.2], "to": [50, 50, 1.0] }, "fx": ["snow"] }
       ]
     },
     "c6_fine": {
@@ -69,14 +69,14 @@
     "fine_luce": {
       "music": "finale",
       "shots": [
-        { "scene": "c1_archivio", "title": "La Luce", "cam": { "from": [50, 40, 1.2], "to": [50, 50, 1.0] }, "fx": ["light", "dust"] },
+        { "img": "assets/cutscenes/cutscene_03_rivelazione_orfeo.jpg", "scene": "c1_archivio", "title": "La Luce", "cam": { "from": [50, 40, 1.2], "to": [50, 50, 1.0] }, "fx": ["light", "dust"] },
         { "photo": "photo1944", "photoOpts": { "half": false }, "text": "Il volto di Guido Sarti, ricostruito graffio per graffio, torna nella fotografia. Dopo cinquantanove anni, il Ponte è di nuovo al suo posto.", "cam": { "from": [65, 60, 1.6], "to": [50, 50, 1.0] } }
       ]
     },
     "fine_custodi": {
       "music": "finale",
       "shots": [
-        { "scene": "c6_archivio", "title": "I Custodi", "cam": { "from": [50, 45, 1.2], "to": [50, 50, 1.0] }, "fx": ["dust"] },
+        { "img": "assets/cutscenes/cutscene_06_ricerca_finale.jpg", "scene": "c6_archivio", "title": "I Custodi", "cam": { "from": [50, 45, 1.2], "to": [50, 50, 1.0] }, "fx": ["dust"] },
         { "scene": "c2_appartamento", "text": "Il cappello nero torna sull'attaccapanni di Ada. Accanto, da oggi, c'è anche un berretto da cantiere.", "cam": { "from": [80, 40, 1.4], "to": [70, 45, 1.1] }, "fx": ["light"] }
       ]
     },
@@ -91,7 +91,7 @@
       "music": "tender",
       "shots": [
         { "scene": "c7_alba", "title": "Il Diciottesimo Nome", "cam": { "from": [50, 50, 1.0], "to": [30, 45, 1.3] }, "fx": ["light"] },
-        { "scene": "c7_camera", "text": "Nella Ruota dei Nomi, dopo il XVII, c'è una riga larga il doppio. Ci sono due nomi, scritti con due penne diverse e una sola mano.", "cam": { "from": [50, 30, 1.5], "to": [50, 40, 1.1] }, "fx": ["embers"] }
+        { "img": "assets/cutscenes/cutscene_02_scoperta_in_archivio.jpg", "scene": "c7_camera", "text": "Nella Ruota dei Nomi, dopo il XVII, c'è una riga larga il doppio. Ci sono due nomi, scritti con due penne diverse e una sola mano.", "cam": { "from": [50, 30, 1.5], "to": [50, 40, 1.1] }, "fx": ["embers"] }
       ]
     },
     "post_luce": {
@@ -99,7 +99,7 @@
       "shots": [
         { "scene": "c1_caffe", "title": "Un anno dopo", "cam": { "from": [50, 50, 1.2], "to": [50, 50, 1.0] }, "figures": [ { "id": "beps", "x": 860, "y": 920 }, { "id": "kiki", "x": 1060, "y": 920, "flip": true } ] },
         { "scene": "c1_caffe", "text": "Il giorno del matrimonio, tra i regali, c'è una busta senza mittente. Dentro, una fotografia: Beps e Kiki che escono dal Comune, sotto il riso.", "cam": { "from": [40, 50, 1.3], "to": [55, 45, 1.1] } },
-        { "photo": "generic", "photoOpts": { "woman": true, "marks": false }, "text": "In un angolo della foto, un passo in disparte, c'è una donna col cappello nero. Sul retro, a matita: «Brava, Federica. — E.»", "cam": { "from": [50, 50, 1.0], "to": [50, 55, 1.5] } }
+        { "img": "assets/reference/cutscenes/anonymous_envelope.webp", "photo": "generic", "photoOpts": { "woman": true, "marks": false }, "text": "In un angolo della foto, un passo in disparte, c'è una donna col cappello nero. Sul retro, a matita: «Brava, Federica. — E.»", "cam": { "from": [50, 50, 1.0], "to": [50, 55, 1.5] } }
       ]
     },
     "post_custodi": {
@@ -119,9 +119,9 @@
     "post_segreto": {
       "music": "tender",
       "shots": [
-        { "scene": "c6_archivio", "title": "Registro di Orfeo", "sub": "RUOLO XVIII", "cam": { "from": [50, 50, 1.3], "to": [50, 50, 1.0] }, "fx": ["dust"] },
+        { "img": "assets/reference/cutscenes/orfeo_reveal.webp", "scene": "c6_archivio", "title": "Registro di Orfeo", "sub": "RUOLO XVIII", "cam": { "from": [50, 50, 1.3], "to": [50, 50, 1.0] }, "fx": ["dust"] },
         { "color": "#e9dfc6", "text": "«XVIII · Il Ponte e la Testimone, insieme. Giuseppe e Federica. Giurano il 12 marzo, per primi e per ultimi, in due.»", "dur": 6000 },
-        { "scene": "c1_caffe", "text": "Il giovedì dopo, al Caffè delle Logge, Tommaso trova sul piattino di una donna col cappello nero un biglietto: «Ottimo lavoro. Ora tocca a voi.» Nessuno l'ha vista entrare.", "cam": { "from": [60, 45, 1.3], "to": [50, 50, 1.0] } }
+        { "img": "assets/reference/cutscenes/anonymous_envelope_old.webp", "scene": "c1_caffe", "text": "Il giovedì dopo, al Caffè delle Logge, Tommaso trova sul piattino di una donna col cappello nero un biglietto: «Ottimo lavoro. Ora tocca a voi.» Nessuno l'ha vista entrare.", "cam": { "from": [60, 45, 1.3], "to": [50, 50, 1.0] } }
       ]
     }
   }

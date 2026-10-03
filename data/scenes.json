@@ -57,40 +57,44 @@
    },
    "walk": [
     [
-     120,
-     1060
+     900,
+     1080
     ],
     [
      1880,
-     1060
+     1080
     ],
     [
      1830,
-     730
+     720
     ],
     [
-     1100,
-     715
+     1500,
+     700
     ],
     [
-     200,
-     730
+     1000,
+     700
+    ],
+    [
+     930,
+     760
     ]
    ],
    "scale": [
     700,
-    0.72,
-    1060,
-    1.02
+    0.75,
+    1080,
+    1.05
    ],
    "spawn": {
     "default": [
-     1000,
-     900
+     1150,
+     920
     ],
     "from_c1_lungarno": [
-     1700,
-     860,
+     1720,
+     880,
      "l"
     ]
    },
@@ -105,18 +109,18 @@
      "id": "scrivania",
      "name": "Scrivania",
      "rect": [
-      330,
-      560,
-      520,
-      270
+      0,
+      600,
+      900,
+      330
      ],
      "art": {
       "k": "desk",
       "items": false
      },
      "at": [
-      600,
-      880
+      960,
+      980
      ],
      "look": "La mia scrivania. Sepolta sotto tre portatili da riparare, due tazze e un computer che non è mio.",
      "use": "Non ho tempo per mettere in ordine. Non ho mai tempo per mettere in ordine."
@@ -125,17 +129,17 @@
      "id": "computer",
      "name": "Vecchio computer",
      "rect": [
-      440,
-      420,
-      250,
-      170
+      1375,
+      265,
+      230,
+      190
      ],
      "art": {
       "k": "computer"
      },
      "at": [
-      560,
-      870
+      1480,
+      760
      ],
      "face": "l",
      "look": "Il computer recuperato dal cantiere. Vecchio, polveroso e stranamente ancora leggibile. Un Pentium del '98, a occhio.",
@@ -195,18 +199,18 @@
      "id": "stampante",
      "name": "Stampante",
      "rect": [
-      880,
-      570,
-      150,
-      100
+      1720,
+      420,
+      130,
+      80
      ],
      "art": {
       "k": "machine",
       "c": "#5a5a5e"
      },
      "at": [
-      950,
-      870
+      1720,
+      780
      ],
      "look": "La stampante dell'ufficio. Inceppa un foglio su tre per principio.",
      "use": [
@@ -227,10 +231,10 @@
      "id": "finestra",
      "name": "Finestra",
      "rect": [
-      1090,
-      180,
-      340,
-      330
+      900,
+      0,
+      450,
+      480
      ],
      "art": {
       "k": "window",
@@ -243,10 +247,10 @@
      "id": "foto_nonno",
      "name": "Foto del nonno",
      "rect": [
-      760,
-      270,
-      110,
-      140
+      1380,
+      135,
+      85,
+      120
      ],
      "art": {
       "k": "frame",
@@ -261,18 +265,18 @@
      "id": "macchinetta",
      "name": "Macchinetta del caffè",
      "rect": [
-      1300,
-      520,
-      120,
-      150
+      1610,
+      590,
+      80,
+      90
      ],
      "art": {
       "k": "machine",
       "c": "#2e2e32"
      },
      "at": [
-      1360,
-      840
+      1640,
+      780
      ],
      "look": "La macchinetta a cialde. Produce qualcosa di marrone e caldo. Il resto è fede.",
      "use": [
@@ -308,10 +312,10 @@
      "id": "plastico",
      "name": "Plastico",
      "rect": [
-      1480,
-      610,
-      280,
-      160
+      250,
+      470,
+      210,
+      130
      ],
      "art": {
       "k": "building",
@@ -319,8 +323,8 @@
       "lit": 1
      },
      "at": [
-      1600,
-      860
+      960,
+      960
      ],
      "look": [
       "Il plastico del palazzo di via de' Bardi, in scala 1:50. L'hanno fatto i tecnici della ditta: io ho solo fatto il rendering 3D.",
@@ -329,12 +333,12 @@
     },
     {
      "id": "lavagna",
-     "name": "Lavagna dei backup",
+     "name": "Bacheca",
      "rect": [
-      1500,
-      200,
-      320,
-      250
+      400,
+      70,
+      290,
+      310
      ],
      "art": {
       "k": "corkboard"
@@ -345,18 +349,18 @@
      "id": "libreria",
      "name": "Libreria",
      "rect": [
-      60,
-      180,
-      250,
-      520
+      0,
+      30,
+      330,
+      400
      ],
      "art": {
       "k": "shelves",
       "c": "#4a3526"
      },
      "at": [
-      260,
-      840
+      960,
+      960
      ],
      "face": "l",
      "look": "Manuali di Linux, un libro sulla crittografia, un Palladio lasciato dai tecnici e tre gialli di Simenon. Le priorità di un informatico.",
@@ -367,13 +371,14 @@
      "name": "Cestino",
      "rect": [
       960,
-      830,
+      880,
       90,
       110
      ],
      "art": {
       "k": "crate",
-      "c": "#6a6a6a"
+      "c": "#6a6a6a",
+      "overlay": true
      },
      "look": "Un mouse rotto, un cavo VGA e la mia dignità del lunedì mattina."
     },
@@ -381,18 +386,18 @@
      "id": "porta",
      "name": "Porta dell'ufficio",
      "rect": [
-      1790,
-      240,
-      120,
-      530
+      1830,
+      200,
+      90,
+      700
      ],
      "art": {
       "k": "door",
       "label": "UFFICIO"
      },
      "at": [
-      1760,
-      860
+      1800,
+      900
      ],
      "exit": {
       "to": "c1_lungarno",
@@ -405,6 +410,7 @@
    ]
   },
   "c1_lungarno": {
+   "bg": "assets/backgrounds/bg_lungarno_notte_01.jpg",
    "name": "Lungarno",
    "place": "Firenze · sera di pioggia",
    "chapter": 1,
@@ -473,54 +479,68 @@
    },
    "walk": [
     [
-     0,
-     1060
+     120,
+     1080
     ],
     [
      1920,
-     1060
+     1080
     ],
     [
      1920,
-     830
+     900
     ],
     [
-     620,
-     830
+     1600,
+     780
     ],
     [
-     0,
-     800
+     1300,
+     665
+    ],
+    [
+     1100,
+     645
+    ],
+    [
+     1000,
+     655
+    ],
+    [
+     790,
+     770
     ]
    ],
    "scale": [
-    780,
-    0.78,
-    1060,
-    1.02
+    650,
+    0.42,
+    1080,
+    0.95
    ],
    "spawn": {
     "default": [
-     300,
-     900
+     640,
+     990
     ],
     "from_c1_studio": [
-     160,
-     920,
+     330,
+     1040,
      "r"
     ],
     "from_c1_cantiere": [
      1780,
-     920,
+     1010,
      "l"
     ],
     "from_c1_archivio": [
-     850,
-     880
+     1700,
+     930,
+     "l"
     ],
     "from_c1_caffe": [
-     1460,
-     880
+     1540,
+     830,
+     "l"
     ]
    },
    "firstEnter": [
@@ -532,7 +552,7 @@
      "do": [
       "@flag:varano_lungarno",
       "kiki[worried]: Beps. Sotto il lampione. Non girarti di scatto.",
-      "beps[surprised]: Cappotto grigio, cappello. Ci sta guardando.",
+      "beps[surprised]: Cappotto grigio scuro, sciarpa bordeaux. Ci sta guardando.",
       "varano: …",
       "kiki: Se ne va. Senza fretta. Come chi sa che ci rivedrà.",
       "@person:varano",
@@ -545,8 +565,8 @@
      "id": "varano_lamp",
      "char": "varano",
      "name": "L'uomo col cappotto grigio",
-     "x": 1360,
-     "y": 830,
+     "x": 900,
+     "y": 775,
      "dir": "l",
      "if": "flag.deposito_done && !flag.varano_lungarno_gone",
      "look": {
@@ -563,8 +583,8 @@
      "rect": [
       0,
       560,
-      600,
-      130
+      640,
+      200
      ],
      "art": null,
      "look": {
@@ -576,10 +596,10 @@
      "id": "ponte",
      "name": "Ponte Vecchio",
      "rect": [
-      40,
-      450,
+      500,
+      490,
       540,
-      170
+      80
      ],
      "look": {
       "beps": "Il Ponte Vecchio. Nel '44 i tedeschi fecero saltare tutti i ponti di Firenze tranne questo. Nessuno sa bene perché.",
@@ -590,10 +610,10 @@
      "id": "targa",
      "name": "Targa dell'alluvione",
      "rect": [
-      1150,
-      470,
-      110,
-      64
+      1612,
+      420,
+      70,
+      90
      ],
      "art": {
       "k": "sign",
@@ -615,10 +635,10 @@
      "id": "lampione",
      "name": "Lampione",
      "rect": [
-      1300,
-      300,
-      70,
-      500
+      780,
+      160,
+      80,
+      580
      ],
      "art": {
       "k": "streetlamp"
@@ -632,8 +652,8 @@
      "id": "panchina",
      "name": "Panchina",
      "rect": [
-      300,
-      830,
+      400,
+      880,
       280,
       110
      ],
@@ -641,8 +661,8 @@
       "k": "bench"
      },
      "at": [
-      440,
-      960
+      560,
+      1010
      ],
      "look": {
       "beps": "Una panchina bagnata. L'ultima volta che mi ci sono seduto ho passato il pomeriggio a spiegare a un turista che il Duomo non è in vendita.",
@@ -655,16 +675,17 @@
     },
     {
      "id": "edicola",
-     "name": "Edicola",
+     "name": "Locandina dell'edicola",
      "rect": [
-      1700,
-      470,
-      200,
-      300
+      1040,
+      400,
+      80,
+      110
      ],
      "art": {
-      "k": "stall",
-      "c": "#2a3a2a"
+      "k": "sign",
+      "label": "MISTERO IN OLTRARNO",
+      "c": "#e8e0c8"
      },
      "look": {
       "beps": "L'edicola di Gianni. Chiusa. Sul cartellone: «MISTERO IN OLTRARNO: TROVATA STANZA MURATA». Fantastico. Adesso lo sa tutta Firenze.",
@@ -675,10 +696,10 @@
      "id": "donna",
      "name": "Figura sotto il portico",
      "rect": [
-      1020,
-      560,
-      70,
-      210
+      1262,
+      470,
+      80,
+      150
      ],
      "art": {
       "k": "figure",
@@ -688,7 +709,7 @@
      "if": "flag.pc_read && !flag.woman_1",
      "look": "Una donna sotto il portico. Abito nero, cappello a falda larga. Come quella della foto.",
      "use": [
-      "@walk:980,860",
+      "@walk:1250,690",
       "beps[surprised]: Era lì. Adesso non c'è più.",
       "Solo l'odore di tè e pioggia. E una moneta da 500 lire sul gradino.",
       "@flag:woman_1",
@@ -701,10 +722,10 @@
      "id": "porta_archivio",
      "name": "Archivio Storico",
      "rect": [
-      760,
-      560,
+      1690,
+      240,
       180,
-      250
+      570
      ],
      "art": {
       "k": "door",
@@ -712,8 +733,8 @@
       "c": "#3a2a1c"
      },
      "at": [
-      850,
-      860
+      1720,
+      930
      ],
      "exit": {
       "to": "c1_archivio",
@@ -727,10 +748,10 @@
      "id": "porta_caffe",
      "name": "Caffè delle Logge",
      "rect": [
-      1440,
-      560,
-      170,
-      250
+      1530,
+      320,
+      90,
+      390
      ],
      "art": {
       "k": "door",
@@ -738,8 +759,8 @@
       "c": "#4a1f1a"
      },
      "at": [
-      1520,
-      860
+      1540,
+      830
      ],
      "exit": {
       "to": "c1_caffe",
@@ -759,9 +780,9 @@
      "name": "Verso l'ufficio",
      "rect": [
       0,
-      780,
-      90,
-      280
+      880,
+      150,
+      200
      ],
      "art": {
       "k": "exit"
@@ -776,9 +797,9 @@
      "name": "Via de' Bardi (cantiere)",
      "rect": [
       1830,
-      780,
+      880,
       90,
-      280
+      200
      ],
      "art": {
       "k": "exit"
@@ -1245,41 +1266,53 @@
    "walk": [
     [
      60,
-     1060
+     1080
     ],
     [
      1880,
-     1060
+     1080
     ],
     [
-     1800,
+     1830,
      700
     ],
     [
-     140,
-     700
+     1080,
+     690
+    ],
+    [
+     1040,
+     960
+    ],
+    [
+     600,
+     1000
+    ],
+    [
+     80,
+     1000
     ]
    ],
    "scale": [
-    700,
+    690,
     0.72,
-    1060,
+    1080,
     1.0
    ],
    "spawn": {
     "default": [
-     300,
-     900,
+     240,
+     1040,
      "r"
     ],
     "from_c1_lungarno": [
      180,
-     900,
+     1040,
      "r"
     ],
     "from_c1_corridoio": [
-     1700,
-     860,
+     1120,
+     740,
      "l"
     ]
    },
@@ -1299,11 +1332,11 @@
      "id": "kiki_lettrice",
      "char": "kiki_npc",
      "name": "Una lettrice",
-     "x": 640,
-     "y": 820,
+     "x": 1150,
+     "y": 770,
      "dir": "r",
      "if": "!flag.met_kiki",
-     "look": "Una donna al tavolo di lettura. Cappotto rosso, sciarpa ocra. Finge di leggere un registro del Seicento. Lo tiene al contrario.",
+     "look": "Una donna al tavolo di lettura. Giacca marrone, borsa di cuoio a tracolla, occhiali. Finge di leggere un registro del Seicento. Lo tiene al contrario.",
      "talk": "kiki_pre"
     }
    ],
@@ -1312,10 +1345,10 @@
      "id": "bancone",
      "name": "Bancone",
      "rect": [
-      1200,
-      560,
-      420,
-      180
+      1010,
+      430,
+      240,
+      170
      ],
      "art": {
       "k": "counter",
@@ -1330,10 +1363,10 @@
      "id": "schedario",
      "name": "Schedario del catalogo",
      "rect": [
-      160,
-      330,
-      300,
-      340
+      0,
+      320,
+      285,
+      360
      ],
      "art": {
       "k": "cabinet",
@@ -1342,8 +1375,8 @@
       "rows": 6
      },
      "at": [
-      320,
-      840
+      300,
+      1040
      ],
      "face": "l",
      "look": {
@@ -1376,10 +1409,10 @@
      "id": "finestre",
      "name": "Finestre alte",
      "rect": [
-      700,
-      70,
-      300,
-      300
+      1450,
+      0,
+      330,
+      520
      ],
      "art": {
       "k": "window",
@@ -1395,10 +1428,10 @@
      "id": "ritratto",
      "name": "Ritratto",
      "rect": [
-      1660,
-      170,
-      170,
-      230
+      1095,
+      128,
+      120,
+      220
      ],
      "art": {
       "k": "painting",
@@ -1414,10 +1447,10 @@
      "id": "lampada",
      "name": "Lampada verde",
      "rect": [
-      520,
-      560,
-      110,
-      120
+      500,
+      420,
+      150,
+      110
      ],
      "art": {
       "k": "lamp"
@@ -1431,10 +1464,10 @@
      "id": "carrello",
      "name": "Carrello dei libri",
      "rect": [
-      930,
-      690,
-      190,
-      170
+      1245,
+      530,
+      70,
+      110
      ],
      "art": {
       "k": "boxes",
@@ -1450,9 +1483,9 @@
      "name": "Orologio",
      "rect": [
       1250,
-      140,
-      110,
-      110
+      150,
+      80,
+      100
      ],
      "art": {
       "k": "clock"
@@ -1466,7 +1499,7 @@
      "id": "cartello",
      "name": "Cartello",
      "rect": [
-      1660,
+      1680,
       520,
       170,
       60
@@ -1485,8 +1518,8 @@
      "id": "foto_alluvione",
      "name": "Fotografia incorniciata",
      "rect": [
-      1060,
-      600,
+      900,
+      610,
       70,
       60
      ],
@@ -1501,10 +1534,10 @@
      "id": "porta_deposito",
      "name": "Porta del deposito",
      "rect": [
-      1820,
-      290,
-      100,
-      460
+      950,
+      280,
+      90,
+      150
      ],
      "art": {
       "k": "door",
@@ -1512,8 +1545,8 @@
       "c": "#3a2a1a"
      },
      "at": [
-      1760,
-      840
+      1100,
+      720
      ],
      "exit": {
       "to": "c1_corridoio",
@@ -1533,7 +1566,7 @@
      "name": "Uscita",
      "rect": [
       0,
-      620,
+      640,
       80,
       440
      ],
@@ -1557,6 +1590,7 @@
    ]
   },
   "c1_corridoio": {
+   "bg": "assets/backgrounds/bg_archivio_firenze_room_01.jpg",
    "name": "Deposito — Corridoio dei ripiani",
    "place": "Archivio Storico · Firenze",
    "chapter": 1,
@@ -1620,36 +1654,64 @@
    "walk": [
     [
      100,
-     1060
+     1080
     ],
     [
-     1840,
-     1060
+     1520,
+     1080
     ],
     [
-     1700,
-     700
+     1520,
+     1010
     ],
     [
-     260,
-     700
+     1040,
+     1010
+    ],
+    [
+     990,
+     760
+    ],
+    [
+     880,
+     640
+    ],
+    [
+     760,
+     640
+    ],
+    [
+     700,
+     760
+    ],
+    [
+     440,
+     770
+    ],
+    [
+     380,
+     860
+    ],
+    [
+     100,
+     1010
     ]
    ],
    "scale": [
-    700,
-    0.72,
-    1060,
+    640,
+    0.5,
+    1080,
     1.0
    ],
    "spawn": {
     "default": [
      300,
-     900,
+     1030,
      "r"
     ],
     "from_c1_archivio": [
      260,
-     920,
+     1040,
      "r"
     ]
    },
@@ -1662,10 +1724,10 @@
      "id": "ripiano",
      "name": "Ripiano 17",
      "rect": [
-      1240,
-      260,
-      240,
-      420
+      1545,
+      100,
+      375,
+      900
      ],
      "art": {
       "k": "shelves",
@@ -1674,8 +1736,8 @@
       "seed": "17"
      },
      "at": [
-      1360,
-      840
+      1460,
+      1040
      ],
      "if": "!flag.blackout",
      "look": {
@@ -1719,18 +1781,18 @@
      "id": "quadro",
      "name": "Quadro elettrico",
      "rect": [
-      120,
-      380,
-      110,
-      150
+      408,
+      340,
+      56,
+      130
      ],
      "art": {
       "k": "safe",
       "c": "#6a6a6a"
      },
      "at": [
-      240,
-      840
+      470,
+      800
      ],
      "only": "kiki",
      "onlyMsg": {
@@ -1773,9 +1835,9 @@
      "name": "Buio",
      "rect": [
       300,
-      200,
+      150,
       1300,
-      500
+      600
      ],
      "if": "flag.blackout",
      "look": {
@@ -1791,8 +1853,8 @@
      "id": "microcassetta",
      "name": "Microcassetta",
      "rect": [
-      1300,
-      600,
+      1640,
+      610,
       50,
       40
      ],
@@ -1808,8 +1870,8 @@
      "id": "registro",
      "name": "Registro di consultazione",
      "rect": [
-      640,
-      640,
+      600,
+      520,
       70,
       50
      ],
@@ -1825,10 +1887,10 @@
      "id": "estintore",
      "name": "Estintore",
      "rect": [
-      1110,
-      560,
-      50,
-      120
+      800,
+      540,
+      60,
+      160
      ],
      "art": {
       "k": "pillar",
@@ -1842,12 +1904,12 @@
     },
     {
      "id": "finestrella",
-     "name": "Finestrella",
+     "name": "Finestra ad arco",
      "rect": [
-      820,
-      80,
-      200,
-      110
+      610,
+      250,
+      110,
+      170
      ],
      "art": {
       "k": "window",
@@ -1855,18 +1917,18 @@
      },
      "if": "!flag.blackout",
      "look": {
-      "beps": "Una finestrella a bocca di lupo. Si vedono le scarpe dei passanti sul Lungarno.",
-      "kiki": "Pioggia e scarpe. Firenze vista dagli archivisti."
+      "beps": "Una finestrella ad arco. Da quaggiù si vede solo la cupola. Che, per una finestra di un deposito, non è poco.",
+      "kiki": "La cupola sotto la pioggia. Firenze vista dagli archivisti."
      }
     },
     {
      "id": "scaffali",
-     "name": "Scaffali",
+     "name": "Catalogo A-Z",
      "rect": [
       40,
-      120,
-      520,
-      260
+      160,
+      380,
+      560
      ],
      "if": "!flag.blackout",
      "look": {
@@ -1879,9 +1941,9 @@
      "name": "Torna in sala",
      "rect": [
       0,
-      640,
-      80,
-      420
+      700,
+      90,
+      380
      ],
      "art": {
       "k": "exit"
@@ -4393,6 +4455,7 @@
    ]
   },
   "c3_sala_cassetti": {
+   "bg": "assets/backgrounds/bg_archivio_firenze_room_02.jpg",
    "name": "Sala dei Cassetti",
    "place": "Biblioteca Teodosiana · Roma",
    "chapter": 3,
@@ -4448,37 +4511,61 @@
    },
    "walk": [
     [
-     100,
-     1060
+     600,
+     1080
     ],
     [
-     1820,
-     1060
+     1700,
+     1080
     ],
     [
-     1760,
-     720
+     1800,
+     960
     ],
     [
-     160,
-     720
+     1720,
+     820
+    ],
+    [
+     1300,
+     870
+    ],
+    [
+     1000,
+     870
+    ],
+    [
+     960,
+     650
+    ],
+    [
+     860,
+     560
+    ],
+    [
+     720,
+     560
+    ],
+    [
+     640,
+     700
     ]
    ],
    "scale": [
-    720,
-    0.74,
-    1060,
+    560,
+    0.45,
+    1080,
     1.0
    ],
    "spawn": {
     "default": [
-     300,
-     920,
+     700,
+     1000,
      "r"
     ],
     "from_c3_biblioteca": [
-     260,
-     920,
+     680,
+     1010,
      "r"
     ]
    },
@@ -4493,10 +4580,10 @@
      "id": "mobile",
      "name": "Mobile dei diciassette cassetti",
      "rect": [
-      700,
-      280,
-      520,
-      400
+      370,
+      290,
+      200,
+      460
      ],
      "art": {
       "k": "cabinet",
@@ -4505,8 +4592,8 @@
       "rows": 3
      },
      "at": [
-      960,
-      860
+      660,
+      900
      ],
      "look": {
       "beps": [
@@ -4555,18 +4642,18 @@
      "id": "fianco",
      "name": "Fianco del mobile",
      "rect": [
-      1220,
-      300,
-      80,
-      380
+      120,
+      620,
+      250,
+      300
      ],
      "art": {
       "k": "pillar",
       "c": "#4a3018"
      },
      "at": [
-      1280,
-      860
+      640,
+      990
      ],
      "if": "!flag.fermo_sbloccato",
      "only": "beps",
@@ -4603,10 +4690,10 @@
      "id": "targa",
      "name": "Targa in latino",
      "rect": [
-      760,
-      120,
-      400,
-      110
+      170,
+      435,
+      230,
+      150
      ],
      "art": {
       "k": "sign",
@@ -4646,38 +4733,38 @@
     },
     {
      "id": "arazzo",
-     "name": "Arazzo",
+     "name": "Affresco",
      "rect": [
-      80,
-      100,
-      260,
-      560
+      1340,
+      0,
+      380,
+      140
      ],
      "look": {
-      "beps": "Un arazzo con Orfeo che suona la lira agli animali. Il leone sembra annoiato.",
-      "kiki": "Fiandre, Cinquecento. Orfeo che incanta le belve. Hanno restaurato male la zampa del leone: si vede la cucitura."
+      "beps": "Un affresco sbiadito: Orfeo che suona la lira agli animali. Il leone sembra annoiato.",
+      "kiki": "Fine Cinquecento. Orfeo che incanta le belve. Hanno restaurato male la zampa del leone: si vede il ritocco."
      }
     },
     {
      "id": "candelabro",
-     "name": "Candele",
+     "name": "Lume a olio",
      "rect": [
-      580,
-      440,
-      80,
-      120
+      1190,
+      470,
+      90,
+      140
      ],
      "look": {
-      "beps": "Candele vere. In una biblioteca. Il mio assicuratore sta piangendo da qualche parte.",
-      "kiki": "Cera d'api. Don Ilario non vuole luci elettriche qui. Dice che i libri dormono meglio."
+      "beps": "Un lume a olio vero. In una biblioteca. Il mio assicuratore sta piangendo da qualche parte.",
+      "kiki": "Don Ilario non vuole luci elettriche qui. Dice che i libri dormono meglio."
      }
     },
     {
      "id": "verbale",
      "name": "Verbale ingiallito",
      "rect": [
-      1360,
-      660,
+      1250,
+      615,
       70,
       50
      ],
@@ -4694,8 +4781,8 @@
      "rect": [
       0,
       640,
-      80,
-      420
+      110,
+      440
      ],
      "art": {
       "k": "exit"
@@ -4716,20 +4803,20 @@
     },
     {
      "id": "cancello",
-     "name": "Cancello di servizio",
+     "name": "Porta di servizio",
      "rect": [
-      1560,
+      1540,
       260,
-      220,
-      470
+      190,
+      560
      ],
      "art": {
       "k": "gate",
       "open": false
      },
      "at": [
-      1660,
-      860
+      1620,
+      900
      ],
      "if": "!flag.fuga_cancello",
      "look": {
@@ -4757,17 +4844,18 @@
      "id": "grata",
      "name": "Grata di aerazione",
      "rect": [
-      1380,
-      760,
-      140,
-      110
+      1300,
+      650,
+      120,
+      90
      ],
      "art": {
-      "k": "vent"
+      "k": "vent",
+      "overlay": true
      },
      "at": [
-      1440,
-      940
+      1360,
+      900
      ],
      "if": "flag.allarme",
      "look": {
@@ -5561,6 +5649,7 @@
    ]
   },
   "c4_studio": {
+   "bg": "assets/backgrounds/c1_studio.webp",
    "name": "Ufficio della ditta (devastato)",
    "place": "Oltrarno · Firenze · dicembre 2026",
    "chapter": 4,
@@ -5608,40 +5697,44 @@
    },
    "walk": [
     [
-     120,
-     1060
+     900,
+     1080
     ],
     [
      1880,
-     1060
+     1080
     ],
     [
      1830,
-     730
+     720
     ],
     [
-     1100,
-     715
+     1500,
+     700
     ],
     [
-     200,
-     730
+     1000,
+     700
+    ],
+    [
+     930,
+     760
     ]
    ],
    "scale": [
     700,
-    0.72,
-    1060,
-    1.02
+    0.75,
+    1080,
+    1.05
    ],
    "spawn": {
     "default": [
-     1000,
-     900
+     1150,
+     920
     ],
     "from_c4_ponte": [
-     1700,
-     860,
+     1720,
+     880,
      "l"
     ]
    },
@@ -5682,18 +5775,18 @@
      "id": "scrivania",
      "name": "Scrivania",
      "rect": [
-      330,
-      560,
-      520,
-      270
+      0,
+      600,
+      900,
+      330
      ],
      "art": {
       "k": "desk",
       "items": false
      },
      "at": [
-      600,
-      880
+      960,
+      980
      ],
      "look": "La mia scrivania. Il computer non c'è più. Al suo posto, un biglietto.",
      "use": "Hanno svuotato i cassetti. Le mie matite sono ovunque. Le ritroverò fra tre anni sotto un mobile."
@@ -5702,8 +5795,8 @@
      "id": "biglietto",
      "name": "Biglietto",
      "rect": [
-      520,
-      520,
+      600,
+      600,
       80,
       50
      ],
@@ -5717,20 +5810,21 @@
      "id": "pacco",
      "name": "Pacco di Sandro",
      "rect": [
-      1500,
-      640,
+      1560,
+      800,
       120,
       100
      ],
      "art": {
       "k": "crate",
       "c": "#a8865a",
-      "label": "S."
+      "label": "S.",
+      "overlay": true
      },
      "if": "!flag.got_sigillo_c",
      "at": [
       1560,
-      860
+      980
      ],
      "look": "Un pacco con un biglietto: «Beps, l'ho trovato nel muro dopo che sei andato via. Io non lo tocco più. — Sandro».",
      "use": [
@@ -5747,17 +5841,17 @@
      "id": "plastico",
      "name": "Plastico distrutto",
      "rect": [
-      1480,
-      610,
-      280,
-      160
+      250,
+      470,
+      210,
+      130
      ],
      "art": {
       "k": "boxes"
      },
      "at": [
-      1600,
-      860
+      960,
+      960
      ],
      "look": [
       "Il plastico del palazzo. Spaccato con un colpo solo, nel punto esatto della stanza murata.",
@@ -5768,10 +5862,10 @@
      "id": "finestra",
      "name": "Finestra",
      "rect": [
-      1090,
-      180,
-      340,
-      330
+      900,
+      0,
+      450,
+      480
      ],
      "art": {
       "k": "window",
@@ -5782,12 +5876,12 @@
     },
     {
      "id": "lavagna",
-     "name": "Lavagna",
+     "name": "Bacheca",
      "rect": [
-      1500,
-      200,
-      320,
-      250
+      400,
+      70,
+      290,
+      310
      ],
      "art": {
       "k": "corkboard"
@@ -5798,8 +5892,8 @@
      "id": "telefono",
      "name": "Telefono",
      "rect": [
-      780,
-      560,
+      820,
+      650,
       60,
       40
      ],
@@ -5808,8 +5902,8 @@
       "overlay": true
      },
      "at": [
-      800,
-      880
+      960,
+      980
      ],
      "look": "Il mio telefono. Nessun messaggio di Kiki.",
      "use": [
@@ -5830,18 +5924,18 @@
      "id": "porta",
      "name": "Porta dell'ufficio",
      "rect": [
-      1790,
-      240,
-      120,
-      530
+      1830,
+      200,
+      90,
+      700
      ],
      "art": {
       "k": "door",
       "label": "UFFICIO"
      },
      "at": [
-      1760,
-      860
+      1800,
+      900
      ],
      "exit": {
       "to": "c4_ponte",
@@ -8349,20 +8443,14 @@
    ]
   },
   "c5_camera_anelli": {
+   "bg": "assets/backgrounds/bg_camera_segreta_orfeo_01.jpg",
    "name": "Camera degli Anelli",
    "place": "Sotto Istanbul",
    "chapter": 5,
    "music": "mystery",
    "ambience": "underground",
    "fx": [
-    "dust",
-    {
-     "k": "light",
-     "x": 760,
-     "y": 0,
-     "w": 400,
-     "h": 1000
-    }
+    "dust"
    ],
    "art": {
     "type": "underground",
@@ -8382,37 +8470,45 @@
    },
    "walk": [
     [
-     160,
-     1060
+     100,
+     1080
     ],
     [
-     1760,
-     1060
+     1850,
+     1080
     ],
     [
-     1640,
-     760
+     1700,
+     830
     ],
     [
-     280,
-     760
+     1500,
+     795
+    ],
+    [
+     420,
+     795
+    ],
+    [
+     220,
+     830
     ]
    ],
    "scale": [
-    760,
-    0.76,
-    1060,
+    790,
+    0.62,
+    1080,
     1.0
    ],
    "spawn": {
     "default": [
-     400,
-     940,
+     420,
+     990,
      "r"
     ],
     "from_c5_cisterna": [
-     360,
-     940,
+     320,
+     1010,
      "r"
     ]
    },
@@ -8426,17 +8522,17 @@
      "id": "anelli",
      "name": "Meccanismo degli anelli",
      "rect": [
-      700,
-      200,
-      520,
-      520
+      580,
+      110,
+      760,
+      650
      ],
      "art": {
       "k": "rings"
      },
      "at": [
       960,
-      880
+      900
      ],
      "look": {
       "beps": "Quattro anelli concentrici, ognuno con otto simboli. Una tacca rossa in alto. Il meccanismo è collegato: girando un anello, quello più interno lo segue.",
@@ -8492,10 +8588,10 @@
      "id": "iscrizioni",
      "name": "Iscrizioni",
      "rect": [
-      200,
-      160,
-      380,
-      300
+      430,
+      150,
+      140,
+      520
      ],
      "look": {
       "beps": "Iscrizioni in italiano, turco, francese, ebraico, greco. Tutte dicono la stessa cosa, credo.",
@@ -8506,10 +8602,10 @@
      "id": "nicchia",
      "name": "Nicchia",
      "rect": [
-      1360,
-      400,
-      200,
-      240
+      1500,
+      150,
+      280,
+      620
      ],
      "art": {
       "k": "arch",
@@ -8546,29 +8642,29 @@
     },
     {
      "id": "lanterne",
-     "name": "Lanterne a muro",
+     "name": "Torce a muro",
      "rect": [
-      1640,
-      240,
+      1410,
+      320,
       120,
-      160
+      200
      ],
      "art": {
       "k": "candle"
      },
      "look": {
-      "beps": "Lanterne di ottone fissate al muro. Qualcuno le ha riempite d'olio di recente. Selim, probabilmente. O qualcun altro.",
-      "kiki": "Olio fresco. Qualcuno viene qui spesso. Più spesso di Selim."
+      "beps": "Torce di ferro fissate al muro. Qualcuno le ha accese da poco. Selim, probabilmente. O qualcun altro.",
+      "kiki": "Pece fresca. Qualcuno viene qui spesso. Più spesso di Selim."
      }
     },
     {
      "id": "uscita",
      "name": "Torna alla cisterna",
      "rect": [
-      160,
-      640,
-      80,
-      420
+      150,
+      250,
+      130,
+      500
      ],
      "art": {
       "k": "exit"
@@ -9594,7 +9690,7 @@
      "dir": "l",
      "talk": "varano_c6",
      "look": {
-      "beps": "Varano, senza cappello. Ha i capelli bianchi e l'aria di uno che non dorme da anni.",
+      "beps": "Varano. Capelli brizzolati, barba grigia e l'aria di uno che non dorme da anni.",
       "kiki": "Senza cappello sembra più vecchio. E più stanco."
      }
     }

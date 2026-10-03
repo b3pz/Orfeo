@@ -11,7 +11,7 @@ Motto: **«Orfeo, non voltarti.»**
 ## Personaggi chiave
 
 ### Aurelio Varano — Nemico 1, «il Notaio» (Ruolo XI)
-- **Aspetto** (design mantenuto): cappotto grigio lungo, cappello, guanti di pelle, capelli bianchi, sguardo stanco. Prima appare come «L'uomo col cappotto grigio».
+- **Aspetto** (design mantenuto): cappotto grigio scuro lungo, sciarpa bordeaux, guanti di pelle, capelli brizzolati e barba, sguardo stanco (come negli sprite e nei ritratti `assets/varano/`). Prima appare come «L'uomo col cappotto grigio».
 - **Passato**: notaio fiorentino, figlio di Ettore (che falsificò il verbale del 1967) e nipote di **Bruno Varano**, delatore nel 1944. Ha scoperto il falso nel 1999, al funerale del padre, e ha distrutto la copia del nastro.
 - **Ruolo in Orfeo**: custode della Bilancia, autentica i documenti. Finanzia il restauro del palazzo di via de' Bardi per arrivare per primo alla stanza murata.
 - **Motivazione**: bruciare il Registro per «chiudere la ferita»: niente nipoti che pagano per i nonni.

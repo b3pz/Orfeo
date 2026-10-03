@@ -1,7 +1,7 @@
 # ASSET REQUIREMENTS — Il Segreto di Orfeo
 
 > File generato da `node tools/asset-list.mjs` a partire da `data/*.json` e `assets/manifest.json`.
-> Stato al momento della generazione: **0 file reali presenti** in `assets/`.
+> Stato al momento della generazione: **174 file reali presenti** in `assets/`.
 
 ## Come funziona la sostituzione
 
@@ -28,11 +28,11 @@ Le immagini approvate non vengono mai sovrascritte da nessuno script: gli strume
 
 | Stato | File | Scena | Capitolo | Luogo | Hotspot principali (x,y,w,h) |
 |---|---|---|---|---|---|
-| ⬜ manca | `assets/backgrounds/c1_studio.webp` | Ufficio della ditta | 1 | Oltrarno · Firenze · ottobre 2026 | Scrivania [330,560,520,270]; Vecchio computer [440,420,250,170]; Stampante [880,570,150,100]; Finestra [1090,180,340,330]; Foto del nonno [760,270,110,140]; Macchinetta del caffè [1300,520,120,150] |
-| ⬜ manca | `assets/backgrounds/c1_lungarno.webp` | Lungarno | 1 | Firenze · sera di pioggia | Arno [0,560,600,130]; Ponte Vecchio [40,450,540,170]; Targa dell'alluvione [1150,470,110,64]; Lampione [1300,300,70,500]; Panchina [300,830,280,110]; Edicola [1700,470,200,300] |
+| ✅ presente | `assets/backgrounds/c1_studio.webp` | Ufficio della ditta | 1 | Oltrarno · Firenze · ottobre 2026 | Scrivania [0,600,900,330]; Vecchio computer [1375,265,230,190]; Stampante [1720,420,130,80]; Finestra [900,0,450,480]; Foto del nonno [1380,135,85,120]; Macchinetta del caffè [1610,590,80,90] |
+| ⬜ manca | `assets/backgrounds/c1_lungarno.webp` | Lungarno | 1 | Firenze · sera di pioggia | Arno [0,560,640,200]; Ponte Vecchio [500,490,540,80]; Targa dell'alluvione [1612,420,70,90]; Lampione [780,160,80,580]; Panchina [400,880,280,110]; Locandina dell'edicola [1040,400,80,110] |
 | ⬜ manca | `assets/backgrounds/c1_cantiere.webp` | La stanza murata | 1 | Cantiere di via de' Bardi · notte | Telo sulla breccia [1180,200,420,490]; Breccia nel muro [1260,260,280,360]; Armadio metallico [330,290,230,400]; Tavolo impolverato [620,580,380,160]; Crepa nel muro [700,300,70,100]; Gradini [60,700,260,260] |
-| ⬜ manca | `assets/backgrounds/c1_archivio.webp` | Archivio Storico — Sala di lettura | 1 | Firenze | Bancone [1200,560,420,180]; Schedario del catalogo [160,330,300,340]; Finestre alte [700,70,300,300]; Ritratto [1660,170,170,230]; Lampada verde [520,560,110,120]; Carrello dei libri [930,690,190,170] |
-| ⬜ manca | `assets/backgrounds/c1_corridoio.webp` | Deposito — Corridoio dei ripiani | 1 | Archivio Storico · Firenze | Ripiano 17 [1240,260,240,420]; Quadro elettrico [120,380,110,150]; Buio [300,200,1300,500]; Estintore [1110,560,50,120]; Finestrella [820,80,200,110]; Scaffali [40,120,520,260] |
+| ✅ presente | `assets/backgrounds/c1_archivio.webp` | Archivio Storico — Sala di lettura | 1 | Firenze | Bancone [1010,430,240,170]; Schedario del catalogo [0,320,285,360]; Finestre alte [1450,0,330,520]; Ritratto [1095,128,120,220]; Lampada verde [500,420,150,110]; Carrello dei libri [1245,530,70,110] |
+| ⬜ manca | `assets/backgrounds/c1_corridoio.webp` | Deposito — Corridoio dei ripiani | 1 | Archivio Storico · Firenze | Ripiano 17 [1545,100,375,900]; Quadro elettrico [408,340,56,130]; Buio [300,150,1300,600]; Estintore [800,540,60,160]; Finestra ad arco [610,250,110,170]; Catalogo A-Z [40,160,380,560] |
 | ⬜ manca | `assets/backgrounds/c1_caffe.webp` | Caffè delle Logge | 1 | Firenze · notte | Bancone [1100,520,560,220]; Vetrina dei dolci [1680,560,200,180]; Specchio [560,160,260,260]; Tavolino [380,720,340,190]; Portatile di Kiki [500,660,120,70]; Giornale [760,760,120,60] |
 | ⬜ manca | `assets/backgrounds/c2_gare.webp` | Gare de Lyon | 2 | Parigi · novembre 2026, mattina | Tabellone delle partenze [1080,120,560,160]; Orologio della torre [860,60,160,160]; Le Train Bleu [200,160,360,220]; Edicola [1500,470,220,290]; Piccione [700,840,80,70]; Armadietti (consigne) [120,460,300,300] |
 | ⬜ manca | `assets/backgrounds/c2_quai.webp` | Quai des Grands-Augustins | 2 | Parigi · lungo la Senna | Bancarella di libri [380,620,340,200]; Senna [0,540,1920,110]; Notre-Dame [1300,200,460,320]; Panchina [1180,830,300,110]; Verso la Gare de Lyon [0,760,90,300]; Verso il Marais (rue des Archives) [1830,760,90,300] |
@@ -41,11 +41,11 @@ Le immagini approvate non vengono mai sovrascritte da nessuno script: gli strume
 | ⬜ manca | `assets/backgrounds/c2_appartamento.webp` | Casa di Ada | 2 | Rue Vieille-du-Temple · Parigi | Scrittoio [1040,560,300,200]; Mobile del grammofono [200,480,200,280]; Cappello sull'attaccapanni [1600,300,160,440]; Mobili coperti [420,600,420,220]; Finestra sui tetti [1180,120,320,300]; Cassetti rovesciati [940,780,260,90] |
 | ⬜ manca | `assets/backgrounds/c3_piazza.webp` | Piazza dei Librai | 3 | Roma · sera | Fontana [820,700,300,200]; Facciata della chiesa [720,120,480,300]; Balcone [1440,300,160,200]; Cartellone [1340,520,150,190]; Tavolini [80,720,300,160]; Biblioteca Teodosiana [1520,520,200,240] |
 | ⬜ manca | `assets/backgrounds/c3_biblioteca.webp` | Biblioteca Teodosiana — Salone | 3 | Roma | Scaffali a tutta altezza [0,40,760,300]; Scala a pioli [620,120,120,560]; Globo celeste [820,600,180,220]; Busto [1220,360,120,200]; Bancone del bibliotecario [1000,600,300,160]; Sala dei Cassetti [1720,300,140,440] |
-| ⬜ manca | `assets/backgrounds/c3_sala_cassetti.webp` | Sala dei Cassetti | 3 | Biblioteca Teodosiana · Roma | Mobile dei diciassette cassetti [700,280,520,400]; Fianco del mobile [1220,300,80,380]; Targa in latino [760,120,400,110]; Arazzo [80,100,260,560]; Candele [580,440,80,120]; Porta del salone [0,640,80,420] |
+| ⬜ manca | `assets/backgrounds/c3_sala_cassetti.webp` | Sala dei Cassetti | 3 | Biblioteca Teodosiana · Roma | Mobile dei diciassette cassetti [370,290,200,460]; Fianco del mobile [120,620,250,300]; Targa in latino [170,435,230,150]; Affresco [1340,0,380,140]; Lume a olio [1190,470,90,140]; Porta del salone [0,640,110,440] |
 | ⬜ manca | `assets/backgrounds/c3_passaggio.webp` | Passaggio di servizio | 3 | Sotto la Teodosiana · Roma | Leva del cancello [300,440,120,260]; Cancello (dall'altra parte) [700,300,240,420]; Scala retrattile [1180,80,160,300]; Casse del 1944 [1500,760,260,200]; Ragnatele [200,60,400,200] |
 | ⬜ manca | `assets/backgrounds/c3_cortile.webp` | Cortile di Trastevere | 3 | Roma · notte | Panni stesi [300,200,1300,120]; Fontanella [900,760,80,130]; Gatti [1500,840,200,90]; Edicola votiva [1300,360,140,180]; Vespa [180,820,260,160]; Osteria da Fiorella [1830,760,90,300] |
 | ⬜ manca | `assets/backgrounds/c3_osteria.webp` | Osteria da Fiorella | 3 | Trastevere · Roma | Il nostro tavolo [1300,700,340,200]; Porta della cucina [1660,280,160,420]; Fiasco di vino [460,660,60,80]; Tovaglia a quadri [300,720,380,200]; Esci [0,640,80,420] |
-| ⬜ manca | `assets/backgrounds/c4_studio.webp` | Ufficio della ditta (devastato) | 4 | Oltrarno · Firenze · dicembre 2026 | Scrivania [330,560,520,270]; Pacco di Sandro [1500,640,120,100]; Plastico distrutto [1480,610,280,160]; Finestra [1090,180,340,330]; Lavagna [1500,200,320,250]; Telefono [780,560,60,40] |
+| ⬜ manca | `assets/backgrounds/c4_studio.webp` | Ufficio della ditta (devastato) | 4 | Oltrarno · Firenze · dicembre 2026 | Scrivania [0,600,900,330]; Pacco di Sandro [1560,800,120,100]; Plastico distrutto [250,470,210,130]; Finestra [900,0,450,480]; Bacheca [400,70,290,310]; Telefono [820,650,60,40] |
 | ⬜ manca | `assets/backgrounds/c4_ponte.webp` | Ponte Vecchio | 4 | Firenze · mattina d'inverno | Bottega di Mastro Neri [140,360,360,330]; Banco da orafo [520,600,200,140]; Busto di Cellini [880,300,160,340]; Lucchetti [880,640,160,60]; Arno [700,520,520,120]; Porticina del Corridoio Vasariano [1240,340,120,220] |
 | ⬜ manca | `assets/backgrounds/c4_banca.webp` | Banca del Giglio — Cassette di sicurezza | 4 | Via Por Santa Maria · Firenze | Parete delle cassette [300,160,1320,470]; Cassetta 17 [660,260,110,90]; Telecamera [1700,120,90,70]; Quadro [120,220,150,200]; Orologio [1700,300,110,110]; Esci [0,640,80,420] |
 | ⬜ manca | `assets/backgrounds/c4_corridoio.webp` | Corridoio Vasariano | 4 | Sopra il Ponte Vecchio · Firenze | Finestre sul fiume [520,180,240,220]; Autoritratti [100,140,380,260]; Porta di Orfeo [880,300,160,340]; Torna al Ponte [860,990,200,70] |
@@ -56,7 +56,7 @@ Le immagini approvate non vengono mai sovrascritte da nessuno script: gli strume
 | ⬜ manca | `assets/backgrounds/c5_han.webp` | Büyük Valide Han | 5 | Istanbul · crepuscolo | Botola [880,820,180,100]; Vecchio pozzo [1300,700,180,200]; Laboratorio dei tessitori [80,420,400,280]; Piccioni [1200,200,300,140]; Scala per il tetto [0,700,90,360]; Torna al Bazar [860,1000,200,60] |
 | ⬜ manca | `assets/backgrounds/c5_tetto.webp` | Il tetto dell'Han | 5 | Istanbul · notte sul Corno d'Oro | Il Corno d'Oro [0,360,1920,320]; Comignolo [1300,600,120,200]; Stendibiancheria [200,680,300,200]; Gabbiano [1600,640,100,80]; Muretto [700,820,400,100]; Scendi nel cortile [1830,760,90,300] |
 | ⬜ manca | `assets/backgrounds/c5_cisterna.webp` | La cisterna | 5 | Sotto il Büyük Valide Han | Testa di Medusa [860,640,200,160]; Colonne [0,80,1920,300]; Pesci [200,700,600,80]; Passerella [1200,700,400,100]; Porta di bronzo [1600,380,200,340]; Risali [160,300,140,300] |
-| ⬜ manca | `assets/backgrounds/c5_camera_anelli.webp` | Camera degli Anelli | 5 | Sotto Istanbul | Meccanismo degli anelli [700,200,520,520]; Iscrizioni [200,160,380,300]; Nicchia [1360,400,200,240]; Lanterne a muro [1640,240,120,160]; Torna alla cisterna [160,640,80,420] |
+| ⬜ manca | `assets/backgrounds/c5_camera_anelli.webp` | Camera degli Anelli | 5 | Sotto Istanbul | Meccanismo degli anelli [580,110,760,650]; Iscrizioni [430,150,140,520]; Nicchia [1500,150,280,620]; Torce a muro [1410,320,120,200]; Torna alla cisterna [150,250,130,500] |
 | ⬜ manca | `assets/backgrounds/c6_pont_neuf.webp` | Pont Neuf | 6 | Parigi · gennaio 2027, notte di neve | Statua di Enrico IV [860,260,200,420]; Senna [0,540,1920,120]; Panchina innevata [1100,820,300,110]; Lampione [440,300,80,480]; Verso il Marais (Studio Marchetti) [0,760,90,300]; Passage des Libraires [1830,760,90,300] |
 | ⬜ manca | `assets/backgrounds/c6_atelier.webp` | Studio Marchetti (notte) | 6 | Rue des Archives · Parigi | Banco luminoso [560,600,420,160]; Daguerre [1180,640,120,80]; Sala di proiezione [1660,260,180,470]; Finestra [1240,120,300,280]; Esci [0,620,80,440] |
 | ⬜ manca | `assets/backgrounds/c6_sala.webp` | Sala di proiezione | 6 | Sotto lo Studio Marchetti | Registratore a bobine [160,560,220,180]; Schermo [520,100,880,420]; Proiettore [1400,360,240,200]; Poltrone [560,760,820,180]; Torna su [0,620,80,440] |
@@ -73,7 +73,8 @@ Servono solo per gli oggetti che **spariscono** quando vengono raccolti (collezi
 
 | Stato | File | Scena | Dimensione (px logici) | Descrizione |
 |---|---|---|---|---|
-| ⬜ manca | `assets/items/scene/c1_lungarno_donna.png` | c1_lungarno | 70×210 | Figura sotto il portico |
+| ⬜ manca | `assets/items/scene/c1_studio_cestino.png` | c1_studio | 90×110 | Cestino |
+| ⬜ manca | `assets/items/scene/c1_lungarno_donna.png` | c1_lungarno | 80×150 | Figura sotto il portico |
 | ⬜ manca | `assets/items/scene/c1_cantiere_crepa.png` | c1_cantiere | 70×100 | Crepa nel muro |
 | ⬜ manca | `assets/items/scene/c1_cantiere_lira.png` | c1_cantiere | 90×90 | Simbolo inciso (collezionabile sym_1) |
 | ⬜ manca | `assets/items/scene/c1_cantiere_bolla.png` | c1_cantiere | 60×45 | Foglio sul tavolo (collezionabile doc_01) |
@@ -95,6 +96,7 @@ Servono solo per gli oggetti che **spariscono** quando vengono raccolti (collezi
 | ⬜ manca | `assets/items/scene/c3_piazza_balcone.png` | c3_piazza | 160×200 | Balcone |
 | ⬜ manca | `assets/items/scene/c3_biblioteca_catalogo.png` | c3_biblioteca | 70×50 | Lettera nel catalogo (collezionabile doc_07) |
 | ⬜ manca | `assets/items/scene/c3_sala_cassetti_verbale.png` | c3_sala_cassetti | 70×50 | Verbale ingiallito (collezionabile doc_08) |
+| ⬜ manca | `assets/items/scene/c3_sala_cassetti_grata.png` | c3_sala_cassetti | 120×90 | Grata di aerazione |
 | ⬜ manca | `assets/items/scene/c3_passaggio_dittafono.png` | c3_passaggio | 60×40 | Dittafono (collezionabile rec_03) |
 | ⬜ manca | `assets/items/scene/c3_cortile_foglio.png` | c3_cortile | 60×40 | Foglio sul muretto (collezionabile doc_09) |
 | ⬜ manca | `assets/items/scene/c3_osteria_foto_muro.png` | c3_osteria | 160×140 | Foto alle pareti (collezionabile photo_07) |
@@ -133,42 +135,42 @@ Se manca un'animazione si usa `idle`; se manca anche `idle` si usa la figura pro
 
 | Stato | File | Personaggio | Animazione | Frame | Dimensione striscia consigliata |
 |---|---|---|---|---|---|
-| ⬜ manca | `assets/sprites/beps/idle.png` | Beps | idle | 6 | 2400×840 |
-| ⬜ manca | `assets/sprites/beps/walk.png` | Beps | walk | 8 | 3200×840 |
-| ⬜ manca | `assets/sprites/beps/run.png` | Beps | run | 8 | 3200×840 |
-| ⬜ manca | `assets/sprites/beps/talk.png` | Beps | talk | 6 | 2400×840 |
-| ⬜ manca | `assets/sprites/beps/use.png` | Beps | use | 6 | 2400×840 |
-| ⬜ manca | `assets/sprites/beps/pickup.png` | Beps | pickup | 6 | 2400×840 |
-| ⬜ manca | `assets/sprites/beps/inspect.png` | Beps | inspect | 6 | 2400×840 |
-| ⬜ manca | `assets/sprites/beps/read.png` | Beps | read | 6 | 2400×840 |
-| ⬜ manca | `assets/sprites/beps/phone.png` | Beps | phone | 6 | 2400×840 |
-| ⬜ manca | `assets/sprites/beps/reaction.png` | Beps | reaction | 6 | 2400×840 |
-| ⬜ manca | `assets/sprites/kiki/idle.png` | Kiki | idle | 6 | 2400×840 |
-| ⬜ manca | `assets/sprites/kiki/walk.png` | Kiki | walk | 8 | 3200×840 |
-| ⬜ manca | `assets/sprites/kiki/run.png` | Kiki | run | 8 | 3200×840 |
-| ⬜ manca | `assets/sprites/kiki/talk.png` | Kiki | talk | 6 | 2400×840 |
-| ⬜ manca | `assets/sprites/kiki/use.png` | Kiki | use | 6 | 2400×840 |
-| ⬜ manca | `assets/sprites/kiki/pickup.png` | Kiki | pickup | 6 | 2400×840 |
-| ⬜ manca | `assets/sprites/kiki/inspect.png` | Kiki | inspect | 6 | 2400×840 |
-| ⬜ manca | `assets/sprites/kiki/read.png` | Kiki | read | 6 | 2400×840 |
+| ✅ presente | `assets/sprites/beps/idle.png` | Beps | idle | 6 | 2400×840 |
+| ✅ presente | `assets/sprites/beps/walk.png` | Beps | walk | 8 | 3200×840 |
+| ✅ presente | `assets/sprites/beps/run.png` | Beps | run | 8 | 3200×840 |
+| ✅ presente | `assets/sprites/beps/talk.png` | Beps | talk | 6 | 2400×840 |
+| ✅ presente | `assets/sprites/beps/use.png` | Beps | use | 6 | 2400×840 |
+| ✅ presente | `assets/sprites/beps/pickup.png` | Beps | pickup | 6 | 2400×840 |
+| ✅ presente | `assets/sprites/beps/inspect.png` | Beps | inspect | 6 | 2400×840 |
+| ✅ presente | `assets/sprites/beps/read.png` | Beps | read | 6 | 2400×840 |
+| ✅ presente | `assets/sprites/beps/phone.png` | Beps | phone | 6 | 2400×840 |
+| ✅ presente | `assets/sprites/beps/reaction.png` | Beps | reaction | 6 | 2400×840 |
+| ✅ presente | `assets/sprites/kiki/idle.png` | Kiki | idle | 6 | 2400×840 |
+| ✅ presente | `assets/sprites/kiki/walk.png` | Kiki | walk | 8 | 3200×840 |
+| ✅ presente | `assets/sprites/kiki/run.png` | Kiki | run | 8 | 3200×840 |
+| ✅ presente | `assets/sprites/kiki/talk.png` | Kiki | talk | 6 | 2400×840 |
+| ✅ presente | `assets/sprites/kiki/use.png` | Kiki | use | 6 | 2400×840 |
+| ✅ presente | `assets/sprites/kiki/pickup.png` | Kiki | pickup | 6 | 2400×840 |
+| ✅ presente | `assets/sprites/kiki/inspect.png` | Kiki | inspect | 6 | 2400×840 |
+| ✅ presente | `assets/sprites/kiki/read.png` | Kiki | read | 6 | 2400×840 |
 | ⬜ manca | `assets/sprites/kiki/phone.png` | Kiki | phone | 6 | 2400×840 |
-| ⬜ manca | `assets/sprites/kiki/reaction.png` | Kiki | reaction | 6 | 2400×840 |
+| ✅ presente | `assets/sprites/kiki/reaction.png` | Kiki | reaction | 6 | 2400×840 |
 
 PNG NPC (per ora fallback procedurale; per attivarli aggiungere il blocco `sprites` in `data/characters.json` come per Beps/Kiki):
 
 | Stato | File | Personaggio | Animazioni minime |
 |---|---|---|---|
-| ⬜ manca | `assets/sprites/archivista/idle.png`, `talk.png` | Ottavia Ricci — Capo archivista, Archivio Storico di Firenze | idle (6), talk (6) |
+| ✅ presente | `assets/sprites/archivista/idle.png`, `talk.png` | Ottavia Ricci — Capo archivista, Archivio Storico di Firenze | idle (6), talk (6) |
 | ⬜ manca | `assets/sprites/sandro/idle.png`, `talk.png` | Sandro — Capocantiere | idle (6), talk (6) |
 | ⬜ manca | `assets/sprites/tommaso/idle.png`, `talk.png` | Tommaso — Barista del Caffè delle Logge | idle (6), talk (6) |
-| ⬜ manca | `assets/sprites/varano/idle.png`, `talk.png` | Aurelio Varano — Notaio — Ruolo XI di Orfeo | idle (6), talk (6), walk (8) |
+| ✅ presente | `assets/sprites/varano/idle.png`, `talk.png` | Aurelio Varano — Notaio — Ruolo XI di Orfeo | idle (6), talk (6), walk (8) |
 | ⬜ manca | `assets/sprites/helene/idle.png`, `talk.png` | Hélène Marchetti — Fotografa, Studio Marchetti — Parigi | idle (6), talk (6) |
-| ⬜ manca | `assets/sprites/albert/idle.png`, `talk.png` | Monsieur Albert — Bouquiniste sul Quai des Grands-Augustins | idle (6), talk (6) |
-| ⬜ manca | `assets/sprites/ilario/idle.png`, `talk.png` | Don Ilario Cesti — Bibliotecario della Teodosiana — Ruolo XIV, il Libraio | idle (6), talk (6) |
-| ⬜ manca | `assets/sprites/agente/idle.png`, `talk.png` | Agente di Orfeo — Uomini del Notaio | idle (6), talk (6) |
+| ✅ presente | `assets/sprites/albert/idle.png`, `talk.png` | Monsieur Albert — Bouquiniste sul Quai des Grands-Augustins | idle (6), talk (6) |
+| ✅ presente | `assets/sprites/ilario/idle.png`, `talk.png` | Don Ilario Cesti — Bibliotecario della Teodosiana — Ruolo XIV, il Libraio | idle (6), talk (6) |
+| ✅ presente | `assets/sprites/agente/idle.png`, `talk.png` | Agente di Orfeo — Uomini del Notaio | idle (6), talk (6) |
 | ⬜ manca | `assets/sprites/neri/idle.png`, `talk.png` | Mastro Neri — Orafo sul Ponte Vecchio | idle (6), talk (6) |
 | ⬜ manca | `assets/sprites/bellandi/idle.png`, `talk.png` | Dott.ssa Bellandi — Responsabile cassette di sicurezza, Banca del Giglio | idle (6), talk (6) |
-| ⬜ manca | `assets/sprites/selim/idle.png`, `talk.png` | Selim Aydın — Antiquario al Gran Bazar — Ruolo XVI, il Traduttore | idle (6), talk (6) |
+| ✅ presente | `assets/sprites/selim/idle.png`, `talk.png` | Selim Aydın — Antiquario al Gran Bazar — Ruolo XVI, il Traduttore | idle (6), talk (6) |
 | ⬜ manca | `assets/sprites/emre/idle.png`, `talk.png` | Emre — Ragazzo del tè | idle (6), talk (6) |
 | ⬜ manca | `assets/sprites/donna/idle.png`, `talk.png` | La donna in nero — La donna nelle fotografie | idle (6), talk (6) |
 
@@ -181,12 +183,12 @@ Espressioni supportate: `neutral`, `smile`, `laugh`, `surprised`, `worried`, `sa
 
 | Personaggio | Priorità | Espressioni richieste | Presenti |
 |---|---|---|---|
-| Beps (`beps`) | ALTA (tutte) | neutral, smile, laugh, surprised, worried, sad, angry, think, skeptical, tender, determined, scared | 0/12 |
-| Kiki (`kiki`) | ALTA (tutte) | neutral, smile, laugh, surprised, worried, sad, angry, think, skeptical, tender, determined, scared | 0/12 |
+| Beps (`beps`) | ALTA (tutte) | neutral, smile, laugh, surprised, worried, sad, angry, think, skeptical, tender, determined, scared | 12/12 |
+| Kiki (`kiki`) | ALTA (tutte) | neutral, smile, laugh, surprised, worried, sad, angry, think, skeptical, tender, determined, scared | 12/12 |
 | Ottavia Ricci (`archivista`) | media | neutral, smile, surprised, sad, worried | 0/5 |
 | Sandro (`sandro`) | bassa | neutral, smile, surprised, sad, worried | 0/5 |
 | Tommaso (`tommaso`) | bassa | neutral, smile, surprised, sad, worried | 0/5 |
-| Aurelio Varano (`varano`) | ALTA | neutral, sad, angry, surprised, think, smile | 0/6 |
+| Aurelio Varano (`varano`) | ALTA | neutral, sad, angry, surprised, think, smile | 5/6 |
 | Hélène Marchetti (`helene`) | media | neutral, smile, surprised, sad, worried | 0/5 |
 | Monsieur Albert (`albert`) | bassa | neutral, smile, surprised, sad, worried | 0/5 |
 | Don Ilario Cesti (`ilario`) | media | neutral, smile, surprised, sad, worried | 0/5 |
@@ -203,20 +205,20 @@ Espressioni supportate: `neutral`, `smile`, `laugh`, `surprised`, `worried`, `sa
 
 | Stato | File | Oggetto | Descrizione |
 |---|---|---|---|
-| ⬜ manca | `assets/items/usb.png` | Chiavetta USB | Copia della cartella ORFEO |
-| ⬜ manca | `assets/items/foto1944.png` | Foto 1944 | Stampa da FIRENZE_1944.jpg |
+| ✅ presente | `assets/items/usb.png` | Chiavetta USB | Copia della cartella ORFEO |
+| ✅ presente | `assets/items/foto1944.png` | Foto 1944 | Stampa da FIRENZE_1944.jpg |
 | ⬜ manca | `assets/items/caffe.png` | Caffè in bicchierino | Dalla macchinetta dell'ufficio |
 | ⬜ manca | `assets/items/frammenti.png` | Frammenti di documento | Dalla stanza murata |
 | ⬜ manca | `assets/items/promemoria.png` | Promemoria 1966 | Documento ricomposto |
-| ⬜ manca | `assets/items/medaglione_b.png` | Mezzo medaglione | Trovato in una crepa del muro |
-| ⬜ manca | `assets/items/medaglione_k.png` | Mezzo medaglione di Kiki | Eredità di nonna Ada |
-| ⬜ manca | `assets/items/medaglione.png` | Medaglione | Le due metà riunite |
-| ⬜ manca | `assets/items/scheda_o17.png` | Scheda O-17 | Catalogo dell'Archivio Storico |
-| ⬜ manca | `assets/items/busta_e.png` | Busta di Euridice | Dal ripiano 17 |
+| ✅ presente | `assets/items/medaglione_b.png` | Mezzo medaglione | Trovato in una crepa del muro |
+| ✅ presente | `assets/items/medaglione_k.png` | Mezzo medaglione di Kiki | Eredità di nonna Ada |
+| ✅ presente | `assets/items/medaglione.png` | Medaglione | Le due metà riunite |
+| ✅ presente | `assets/items/scheda_o17.png` | Scheda O-17 | Catalogo dell'Archivio Storico |
+| ✅ presente | `assets/items/busta_e.png` | Busta di Euridice | Dal ripiano 17 |
 | ⬜ manca | `assets/items/moneta.png` | 500 lire | Il portafortuna di Beps |
 | ⬜ manca | `assets/items/coltellino.png` | Coltellino multiuso | Attrezzatura da cantiere |
 | ⬜ manca | `assets/items/libretto.png` | Libretto «Orphée et Eurydice» | Dal banco di Monsieur Albert |
-| ⬜ manca | `assets/items/mappa.png` | Mappa cifrata | Carta d'Italia con una stella rossa |
+| ✅ presente | `assets/items/mappa.png` | Mappa cifrata | Carta d'Italia con una stella rossa |
 | ⬜ manca | `assets/items/foto1967.png` | Foto 1967 | Stampa dai negativi Marchetti |
 | ⬜ manca | `assets/items/negativo.png` | Negativo 1967 | Striscia di pellicola |
 | ⬜ manca | `assets/items/lettera_ada.png` | Lettera di Ada | «Per Federica, quando sarà il momento» |
@@ -227,7 +229,7 @@ Espressioni supportate: `neutral`, `smile`, `laugh`, `surprised`, `worried`, `sa
 | ⬜ manca | `assets/items/sigillo_c.png` | Frammento del Sigillo (Cantiere) | Recuperato da Sandro |
 | ⬜ manca | `assets/items/sigillo_d.png` | Frammento del Sigillo (Ponte Vecchio) | Custodito da Mastro Neri |
 | ⬜ manca | `assets/items/sigillo.png` | Sigillo di Orfeo | Ricomposto sul banco di Mastro Neri |
-| ⬜ manca | `assets/items/nastro.png` | Nastro ORFEO | Bobina magnetica, 1967 |
+| ✅ presente | `assets/items/nastro.png` | Nastro ORFEO | Bobina magnetica, 1967 |
 | ⬜ manca | `assets/items/lanterna.png` | Lanterna | Prestata da Selim |
 | ⬜ manca | `assets/items/piede_porco.png` | Piede di porco | Prestato da Emre |
 | ⬜ manca | `assets/items/registro.png` | Il Registro di Orfeo | 1944–2026 |
@@ -252,7 +254,7 @@ Ogni inquadratura viene animata con pan/zoom/fade; un'immagine leggermente più 
 | ⬜ manca | `assets/cutscenes/c3_fine_2.webp` | c3_fine | 2 | Titolo «Il ritorno» | sfondo c4_ponte |
 | ⬜ manca | `assets/cutscenes/c4_fine_1.webp` | c4_fine | 1 | Uscirono da Boboli tenendosi per mano. Nessuno dei due ricordò, dopo, chi l'avesse presa p… | sfondo c4_grotta |
 | ⬜ manca | `assets/cutscenes/c4_fine_2.webp` | c4_fine | 2 | Titolo «Istanbul» | sfondo c5_galata |
-| ⬜ manca | `assets/cutscenes/bacio_1.webp` | bacio | 1 |  | sfondo c5_tetto |
+| ✅ presente | `assets/cutscenes/bacio_1.webp` | bacio | 1 |  | sfondo c5_tetto |
 | ⬜ manca | `assets/cutscenes/bacio_2.webp` | bacio | 2 | Sotto di loro, Istanbul accende le sue luci. Nessuno dei due se ne accorge. | colore |
 | ⬜ manca | `assets/cutscenes/c5_fine_1.webp` | c5_fine | 1 | Selim li accompagnò al molo. Disse addio in sei lingue e in nessuna riuscì a finire la fra… | sfondo c5_galata |
 | ⬜ manca | `assets/cutscenes/c5_fine_2.webp` | c5_fine | 2 | Titolo «Orfeo» | sfondo c6_pont_neuf |
@@ -269,12 +271,12 @@ Ogni inquadratura viene animata con pan/zoom/fade; un'immagine leggermente più 
 | ⬜ manca | `assets/cutscenes/fine_segreto_1.webp` | fine_segreto | 1 | Titolo «Il Diciottesimo Nome» | sfondo c7_alba |
 | ⬜ manca | `assets/cutscenes/fine_segreto_2.webp` | fine_segreto | 2 | Nella Ruota dei Nomi, dopo il XVII, c'è una riga larga il doppio. Ci sono due nomi, scritt… | sfondo c7_camera |
 | ⬜ manca | `assets/cutscenes/post_luce_1.webp` | post_luce | 1 | Titolo «Un anno dopo» | sfondo c1_caffe |
-| ⬜ manca | `assets/cutscenes/post_luce_2.webp` | post_luce | 2 | Il giorno del matrimonio, tra i regali, c'è una busta senza mittente. Dentro, una fotograf… | sfondo c1_caffe |
+| ✅ presente | `assets/cutscenes/post_luce_2.webp` | post_luce | 2 | Il giorno del matrimonio, tra i regali, c'è una busta senza mittente. Dentro, una fotograf… | sfondo c1_caffe |
 | ⬜ manca | `assets/cutscenes/post_luce_3.webp` | post_luce | 3 | In un angolo della foto, un passo in disparte, c'è una donna col cappello nero. Sul retro,… | foto generic |
 | ⬜ manca | `assets/cutscenes/post_custodi_1.webp` | post_custodi | 1 | Titolo «Un anno dopo» | sfondo c1_archivio |
-| ⬜ manca | `assets/cutscenes/post_custodi_2.webp` | post_custodi | 2 | Il Sigillo di Orfeo è di nuovo diviso. Non in quattro, stavolta: in due. Una metà la porta… | foto generic |
+| ✅ presente | `assets/cutscenes/post_custodi_2.webp` | post_custodi | 2 | Il Sigillo di Orfeo è di nuovo diviso. Non in quattro, stavolta: in due. Una metà la porta… | foto generic |
 | ⬜ manca | `assets/cutscenes/post_cenere_1.webp` | post_cenere | 1 | Titolo «Il Lungarno» | sfondo c1_lungarno |
-| ⬜ manca | `assets/cutscenes/post_cenere_2.webp` | post_cenere | 2 | Un uomo con le mani in tasca le si siede accanto, senza ombrello. Le offre metà di una mon… | sfondo c1_lungarno |
+| ✅ presente | `assets/cutscenes/post_cenere_2.webp` | post_cenere | 2 | Un uomo con le mani in tasca le si siede accanto, senza ombrello. Le offre metà di una mon… | sfondo c1_lungarno |
 | ⬜ manca | `assets/cutscenes/post_segreto_1.webp` | post_segreto | 1 | Titolo «Registro di Orfeo» | sfondo c6_archivio |
 | ⬜ manca | `assets/cutscenes/post_segreto_2.webp` | post_segreto | 2 | «XVIII · Il Ponte e la Testimone, insieme. Giuseppe e Federica. Giurano il 12 marzo, per p… | colore |
 | ⬜ manca | `assets/cutscenes/post_segreto_3.webp` | post_segreto | 3 | Il giovedì dopo, al Caffè delle Logge, Tommaso trova sul piattino di una donna col cappell… | sfondo c1_caffe |
