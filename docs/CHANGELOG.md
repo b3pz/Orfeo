@@ -4,6 +4,7 @@
 
 - Lungarno all'alba (Cap. VII) usa il fondale del Lungarno virato all'alba (`bgFilter`/`bgTint`), con hotspot riposizionati.
 - La schermata del titolo usa la piazza fiorentina notturna.
+- Ufficio della ditta (Cap. I e IV) sul fondale con computer, stampante, macchinetta e bacheca; hotspot riposizionati.
 
 ## 1.0.1 — Collegamento delle immagini caricate
 

@@ -28,7 +28,7 @@ Le immagini approvate non vengono mai sovrascritte da nessuno script: gli strume
 
 | Stato | File | Scena | Capitolo | Luogo | Hotspot principali (x,y,w,h) |
 |---|---|---|---|---|---|
-| ✅ presente | `assets/backgrounds/c1_studio.webp` | Ufficio della ditta | 1 | Oltrarno · Firenze · ottobre 2026 | Scrivania [0,600,900,330]; Vecchio computer [1375,265,230,190]; Stampante [1720,420,130,80]; Finestra [900,0,450,480]; Foto del nonno [1380,135,85,120]; Macchinetta del caffè [1610,590,80,90] |
+| ✅ presente | `assets/backgrounds/c1_studio.webp` | Ufficio della ditta | 1 | Oltrarno · Firenze · ottobre 2026 | Scrivania [100,600,750,300]; Vecchio computer [500,490,160,140]; Stampante [1150,520,220,160]; Finestra [500,90,770,400]; Foto del nonno [1300,440,70,90]; Macchinetta del caffè [1480,560,190,170] |
 | ⬜ manca | `assets/backgrounds/c1_lungarno.webp` | Lungarno | 1 | Firenze · sera di pioggia | Arno [0,560,640,200]; Ponte Vecchio [500,490,540,80]; Targa dell'alluvione [1612,420,70,90]; Lampione [780,160,80,580]; Panchina [400,880,280,110]; Locandina dell'edicola [1040,400,80,110] |
 | ⬜ manca | `assets/backgrounds/c1_cantiere.webp` | La stanza murata | 1 | Cantiere di via de' Bardi · notte | Telo sulla breccia [1180,200,420,490]; Breccia nel muro [1260,260,280,360]; Armadio metallico [330,290,230,400]; Tavolo impolverato [620,580,380,160]; Crepa nel muro [700,300,70,100]; Gradini [60,700,260,260] |
 | ✅ presente | `assets/backgrounds/c1_archivio.webp` | Archivio Storico — Sala di lettura | 1 | Firenze | Bancone [1010,430,240,170]; Schedario del catalogo [0,320,285,360]; Finestre alte [1450,0,330,520]; Ritratto [1095,128,120,220]; Lampada verde [500,420,150,110]; Carrello dei libri [1245,530,70,110] |
@@ -45,7 +45,7 @@ Le immagini approvate non vengono mai sovrascritte da nessuno script: gli strume
 | ⬜ manca | `assets/backgrounds/c3_passaggio.webp` | Passaggio di servizio | 3 | Sotto la Teodosiana · Roma | Leva del cancello [300,440,120,260]; Cancello (dall'altra parte) [700,300,240,420]; Scala retrattile [1180,80,160,300]; Casse del 1944 [1500,760,260,200]; Ragnatele [200,60,400,200] |
 | ⬜ manca | `assets/backgrounds/c3_cortile.webp` | Cortile di Trastevere | 3 | Roma · notte | Panni stesi [300,200,1300,120]; Fontanella [900,760,80,130]; Gatti [1500,840,200,90]; Edicola votiva [1300,360,140,180]; Vespa [180,820,260,160]; Osteria da Fiorella [1830,760,90,300] |
 | ⬜ manca | `assets/backgrounds/c3_osteria.webp` | Osteria da Fiorella | 3 | Trastevere · Roma | Il nostro tavolo [1300,700,340,200]; Porta della cucina [1660,280,160,420]; Fiasco di vino [460,660,60,80]; Tovaglia a quadri [300,720,380,200]; Esci [0,640,80,420] |
-| ⬜ manca | `assets/backgrounds/c4_studio.webp` | Ufficio della ditta (devastato) | 4 | Oltrarno · Firenze · dicembre 2026 | Scrivania [0,600,900,330]; Pacco di Sandro [1560,800,120,100]; Plastico distrutto [250,470,210,130]; Finestra [900,0,450,480]; Bacheca [400,70,290,310]; Telefono [820,650,60,40] |
+| ⬜ manca | `assets/backgrounds/c4_studio.webp` | Ufficio della ditta (devastato) | 4 | Oltrarno · Firenze · dicembre 2026 | Scrivania [100,600,750,300]; Pacco di Sandro [1180,900,120,100]; Plastico distrutto [290,510,180,90]; Finestra [500,90,770,400]; Bacheca [1380,160,320,370]; Telefono [800,700,60,40] |
 | ⬜ manca | `assets/backgrounds/c4_ponte.webp` | Ponte Vecchio | 4 | Firenze · mattina d'inverno | Bottega di Mastro Neri [140,360,360,330]; Banco da orafo [520,600,200,140]; Busto di Cellini [880,300,160,340]; Lucchetti [880,640,160,60]; Arno [700,520,520,120]; Porticina del Corridoio Vasariano [1240,340,120,220] |
 | ⬜ manca | `assets/backgrounds/c4_banca.webp` | Banca del Giglio — Cassette di sicurezza | 4 | Via Por Santa Maria · Firenze | Parete delle cassette [300,160,1320,470]; Cassetta 17 [660,260,110,90]; Telecamera [1700,120,90,70]; Quadro [120,220,150,200]; Orologio [1700,300,110,110]; Esci [0,640,80,420] |
 | ⬜ manca | `assets/backgrounds/c4_corridoio.webp` | Corridoio Vasariano | 4 | Sopra il Ponte Vecchio · Firenze | Finestre sul fiume [520,180,240,220]; Autoritratti [100,140,380,260]; Porta di Orfeo [880,300,160,340]; Torna al Ponte [860,990,200,70] |
@@ -73,7 +73,7 @@ Servono solo per gli oggetti che **spariscono** quando vengono raccolti (collezi
 
 | Stato | File | Scena | Dimensione (px logici) | Descrizione |
 |---|---|---|---|---|
-| ⬜ manca | `assets/items/scene/c1_studio_cestino.png` | c1_studio | 90×110 | Cestino |
+| ⬜ manca | `assets/items/scene/c1_studio_foto_nonno.png` | c1_studio | 70×90 | Foto del nonno |
 | ⬜ manca | `assets/items/scene/c1_lungarno_donna.png` | c1_lungarno | 80×150 | Figura sotto il portico |
 | ⬜ manca | `assets/items/scene/c1_cantiere_crepa.png` | c1_cantiere | 70×100 | Crepa nel muro |
 | ⬜ manca | `assets/items/scene/c1_cantiere_lira.png` | c1_cantiere | 90×90 | Simbolo inciso (collezionabile sym_1) |
