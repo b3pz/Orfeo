@@ -28,11 +28,11 @@ Le immagini approvate non vengono mai sovrascritte da nessuno script: gli strume
 
 | Stato | File | Scena | Capitolo | Luogo | Hotspot principali (x,y,w,h) |
 |---|---|---|---|---|---|
-| ✅ presente | `assets/backgrounds/c1_studio.webp` | Ufficio della ditta | 1 | Oltrarno · Firenze · ottobre 2026 | Scrivania [100,600,750,300]; Vecchio computer [500,490,160,140]; Stampante [1150,520,220,160]; Finestra [500,90,770,400]; Foto del nonno [1300,440,70,90]; Macchinetta del caffè [1480,560,190,170] |
-| ⬜ manca | `assets/backgrounds/c1_lungarno.webp` | Lungarno | 1 | Firenze · sera di pioggia | Arno [0,560,640,200]; Ponte Vecchio [500,490,540,80]; Targa dell'alluvione [1612,420,70,90]; Lampione [780,160,80,580]; Panchina [400,880,280,110]; Locandina dell'edicola [1040,400,80,110] |
+| ✅ presente | `assets/backgrounds/bg_studio_architettura_firenze_clean.jpg` | Ufficio della ditta | 1 | Oltrarno · Firenze · ottobre 2026 | Scrivania [100,600,750,300]; Vecchio computer [500,490,160,140]; Stampante [1150,520,220,160]; Finestra [500,90,770,400]; Foto del nonno [1300,440,70,90]; Macchinetta del caffè [1480,560,190,170] |
+| ✅ presente | `assets/backgrounds/bg_lungarno_notte_01.jpg` | Lungarno | 1 | Firenze · sera di pioggia | Arno [0,560,640,200]; Ponte Vecchio [500,490,540,80]; Targa dell'alluvione [1612,420,70,90]; Lampione [780,160,80,580]; Panchina [400,880,280,110]; Locandina dell'edicola [1040,400,80,110] |
 | ⬜ manca | `assets/backgrounds/c1_cantiere.webp` | La stanza murata | 1 | Cantiere di via de' Bardi · notte | Telo sulla breccia [1180,200,420,490]; Breccia nel muro [1260,260,280,360]; Armadio metallico [330,290,230,400]; Tavolo impolverato [620,580,380,160]; Crepa nel muro [700,300,70,100]; Gradini [60,700,260,260] |
 | ✅ presente | `assets/backgrounds/c1_archivio.webp` | Archivio Storico — Sala di lettura | 1 | Firenze | Bancone [1010,430,240,170]; Schedario del catalogo [0,320,285,360]; Finestre alte [1450,0,330,520]; Ritratto [1095,128,120,220]; Lampada verde [500,420,150,110]; Carrello dei libri [1245,530,70,110] |
-| ⬜ manca | `assets/backgrounds/c1_corridoio.webp` | Deposito — Corridoio dei ripiani | 1 | Archivio Storico · Firenze | Ripiano 17 [1545,100,375,900]; Quadro elettrico [408,340,56,130]; Buio [300,150,1300,600]; Estintore [800,540,60,160]; Finestra ad arco [610,250,110,170]; Catalogo A-Z [40,160,380,560] |
+| ✅ presente | `assets/backgrounds/bg_archivio_firenze_room_01.jpg` | Deposito — Corridoio dei ripiani | 1 | Archivio Storico · Firenze | Ripiano 17 [1545,100,375,900]; Quadro elettrico [408,340,56,130]; Buio [300,150,1300,600]; Estintore [800,540,60,160]; Finestra ad arco [610,250,110,170]; Catalogo A-Z [40,160,380,560] |
 | ⬜ manca | `assets/backgrounds/c1_caffe.webp` | Caffè delle Logge | 1 | Firenze · notte | Bancone [1100,520,560,220]; Vetrina dei dolci [1680,560,200,180]; Specchio [560,160,260,260]; Tavolino [380,720,340,190]; Portatile di Kiki [500,660,120,70]; Giornale [760,760,120,60] |
 | ⬜ manca | `assets/backgrounds/c2_gare.webp` | Gare de Lyon | 2 | Parigi · novembre 2026, mattina | Tabellone delle partenze [1080,120,560,160]; Orologio della torre [860,60,160,160]; Le Train Bleu [200,160,360,220]; Edicola [1500,470,220,290]; Piccione [700,840,80,70]; Armadietti (consigne) [120,460,300,300] |
 | ⬜ manca | `assets/backgrounds/c2_quai.webp` | Quai des Grands-Augustins | 2 | Parigi · lungo la Senna | Bancarella di libri [380,620,340,200]; Senna [0,540,1920,110]; Notre-Dame [1300,200,460,320]; Panchina [1180,830,300,110]; Verso la Gare de Lyon [0,760,90,300]; Verso il Marais (rue des Archives) [1830,760,90,300] |
@@ -41,11 +41,11 @@ Le immagini approvate non vengono mai sovrascritte da nessuno script: gli strume
 | ⬜ manca | `assets/backgrounds/c2_appartamento.webp` | Casa di Ada | 2 | Rue Vieille-du-Temple · Parigi | Scrittoio [1040,560,300,200]; Mobile del grammofono [200,480,200,280]; Cappello sull'attaccapanni [1600,300,160,440]; Mobili coperti [420,600,420,220]; Finestra sui tetti [1180,120,320,300]; Cassetti rovesciati [940,780,260,90] |
 | ⬜ manca | `assets/backgrounds/c3_piazza.webp` | Piazza dei Librai | 3 | Roma · sera | Fontana [820,700,300,200]; Facciata della chiesa [720,120,480,300]; Balcone [1440,300,160,200]; Cartellone [1340,520,150,190]; Tavolini [80,720,300,160]; Biblioteca Teodosiana [1520,520,200,240] |
 | ⬜ manca | `assets/backgrounds/c3_biblioteca.webp` | Biblioteca Teodosiana — Salone | 3 | Roma | Scaffali a tutta altezza [0,40,760,300]; Scala a pioli [620,120,120,560]; Globo celeste [820,600,180,220]; Busto [1220,360,120,200]; Bancone del bibliotecario [1000,600,300,160]; Sala dei Cassetti [1720,300,140,440] |
-| ⬜ manca | `assets/backgrounds/c3_sala_cassetti.webp` | Sala dei Cassetti | 3 | Biblioteca Teodosiana · Roma | Mobile dei diciassette cassetti [370,290,200,460]; Fianco del mobile [120,620,250,300]; Targa in latino [170,435,230,150]; Affresco [1340,0,380,140]; Lume a olio [1190,470,90,140]; Porta del salone [0,640,110,440] |
+| ✅ presente | `assets/backgrounds/bg_archivio_firenze_room_02.jpg` | Sala dei Cassetti | 3 | Biblioteca Teodosiana · Roma | Mobile dei diciassette cassetti [370,290,200,460]; Fianco del mobile [120,620,250,300]; Targa in latino [170,435,230,150]; Affresco [1340,0,380,140]; Lume a olio [1190,470,90,140]; Porta del salone [0,640,110,440] |
 | ⬜ manca | `assets/backgrounds/c3_passaggio.webp` | Passaggio di servizio | 3 | Sotto la Teodosiana · Roma | Leva del cancello [300,440,120,260]; Cancello (dall'altra parte) [700,300,240,420]; Scala retrattile [1180,80,160,300]; Casse del 1944 [1500,760,260,200]; Ragnatele [200,60,400,200] |
 | ⬜ manca | `assets/backgrounds/c3_cortile.webp` | Cortile di Trastevere | 3 | Roma · notte | Panni stesi [300,200,1300,120]; Fontanella [900,760,80,130]; Gatti [1500,840,200,90]; Edicola votiva [1300,360,140,180]; Vespa [180,820,260,160]; Osteria da Fiorella [1830,760,90,300] |
 | ⬜ manca | `assets/backgrounds/c3_osteria.webp` | Osteria da Fiorella | 3 | Trastevere · Roma | Il nostro tavolo [1300,700,340,200]; Porta della cucina [1660,280,160,420]; Fiasco di vino [460,660,60,80]; Tovaglia a quadri [300,720,380,200]; Esci [0,640,80,420] |
-| ⬜ manca | `assets/backgrounds/c4_studio.webp` | Ufficio della ditta (devastato) | 4 | Oltrarno · Firenze · dicembre 2026 | Scrivania [100,600,750,300]; Pacco di Sandro [1180,900,120,100]; Plastico distrutto [290,510,180,90]; Finestra [500,90,770,400]; Bacheca [1380,160,320,370]; Telefono [800,700,60,40] |
+| ✅ presente | `assets/backgrounds/bg_studio_architettura_firenze_clean.jpg` | Ufficio della ditta (devastato) | 4 | Oltrarno · Firenze · dicembre 2026 | Scrivania [100,600,750,300]; Pacco di Sandro [1180,900,120,100]; Plastico distrutto [290,510,180,90]; Finestra [500,90,770,400]; Bacheca [1380,160,320,370]; Telefono [800,700,60,40] |
 | ⬜ manca | `assets/backgrounds/c4_ponte.webp` | Ponte Vecchio | 4 | Firenze · mattina d'inverno | Bottega di Mastro Neri [140,360,360,330]; Banco da orafo [520,600,200,140]; Busto di Cellini [880,300,160,340]; Lucchetti [880,640,160,60]; Arno [700,520,520,120]; Porticina del Corridoio Vasariano [1240,340,120,220] |
 | ⬜ manca | `assets/backgrounds/c4_banca.webp` | Banca del Giglio — Cassette di sicurezza | 4 | Via Por Santa Maria · Firenze | Parete delle cassette [300,160,1320,470]; Cassetta 17 [660,260,110,90]; Telecamera [1700,120,90,70]; Quadro [120,220,150,200]; Orologio [1700,300,110,110]; Esci [0,640,80,420] |
 | ⬜ manca | `assets/backgrounds/c4_corridoio.webp` | Corridoio Vasariano | 4 | Sopra il Ponte Vecchio · Firenze | Finestre sul fiume [520,180,240,220]; Autoritratti [100,140,380,260]; Porta di Orfeo [880,300,160,340]; Torna al Ponte [860,990,200,70] |
@@ -56,7 +56,7 @@ Le immagini approvate non vengono mai sovrascritte da nessuno script: gli strume
 | ⬜ manca | `assets/backgrounds/c5_han.webp` | Büyük Valide Han | 5 | Istanbul · crepuscolo | Botola [880,820,180,100]; Vecchio pozzo [1300,700,180,200]; Laboratorio dei tessitori [80,420,400,280]; Piccioni [1200,200,300,140]; Scala per il tetto [0,700,90,360]; Torna al Bazar [860,1000,200,60] |
 | ⬜ manca | `assets/backgrounds/c5_tetto.webp` | Il tetto dell'Han | 5 | Istanbul · notte sul Corno d'Oro | Il Corno d'Oro [0,360,1920,320]; Comignolo [1300,600,120,200]; Stendibiancheria [200,680,300,200]; Gabbiano [1600,640,100,80]; Muretto [700,820,400,100]; Scendi nel cortile [1830,760,90,300] |
 | ⬜ manca | `assets/backgrounds/c5_cisterna.webp` | La cisterna | 5 | Sotto il Büyük Valide Han | Testa di Medusa [860,640,200,160]; Colonne [0,80,1920,300]; Pesci [200,700,600,80]; Passerella [1200,700,400,100]; Porta di bronzo [1600,380,200,340]; Risali [160,300,140,300] |
-| ⬜ manca | `assets/backgrounds/c5_camera_anelli.webp` | Camera degli Anelli | 5 | Sotto Istanbul | Meccanismo degli anelli [580,110,760,650]; Iscrizioni [430,150,140,520]; Nicchia [1500,150,280,620]; Torce a muro [1410,320,120,200]; Torna alla cisterna [150,250,130,500] |
+| ✅ presente | `assets/backgrounds/bg_camera_segreta_orfeo_01.jpg` | Camera degli Anelli | 5 | Sotto Istanbul | Meccanismo degli anelli [580,110,760,650]; Iscrizioni [430,150,140,520]; Nicchia [1500,150,280,620]; Torce a muro [1410,320,120,200]; Torna alla cisterna [150,250,130,500] |
 | ⬜ manca | `assets/backgrounds/c6_pont_neuf.webp` | Pont Neuf | 6 | Parigi · gennaio 2027, notte di neve | Statua di Enrico IV [860,260,200,420]; Senna [0,540,1920,120]; Panchina innevata [1100,820,300,110]; Lampione [440,300,80,480]; Verso il Marais (Studio Marchetti) [0,760,90,300]; Passage des Libraires [1830,760,90,300] |
 | ⬜ manca | `assets/backgrounds/c6_atelier.webp` | Studio Marchetti (notte) | 6 | Rue des Archives · Parigi | Banco luminoso [560,600,420,160]; Daguerre [1180,640,120,80]; Sala di proiezione [1660,260,180,470]; Finestra [1240,120,300,280]; Esci [0,620,80,440] |
 | ⬜ manca | `assets/backgrounds/c6_sala.webp` | Sala di proiezione | 6 | Sotto lo Studio Marchetti | Registratore a bobine [160,560,220,180]; Schermo [520,100,880,420]; Proiettore [1400,360,240,200]; Poltrone [560,760,820,180]; Torna su [0,620,80,440] |
@@ -66,7 +66,7 @@ Le immagini approvate non vengono mai sovrascritte da nessuno script: gli strume
 | ⬜ manca | `assets/backgrounds/c7_cantiere.webp` | La stanza murata | 7 | Via de' Bardi · Firenze · notte | Gradini [60,700,260,260]; Armadio vuoto [330,290,230,400]; Tavolo [620,580,380,160]; Breccia [1260,260,280,360]; Esci [1840,700,80,360] |
 | ⬜ manca | `assets/backgrounds/c7_galleria.webp` | Galleria sotto l'Arno | 7 | Fondamenta di Firenze | Ruota della paratoia [820,500,180,200]; Canale [0,700,1920,110]; Iscrizione [240,300,320,120]; Arco verso la Camera [1280,220,400,480]; Risali [100,600,100,300] |
 | ⬜ manca | `assets/backgrounds/c7_camera.webp` | La Camera di Orfeo | 7 | Sotto Firenze | Iscrizione del meccanismo [740,60,440,90]; Incavo del Sigillo [560,360,120,120]; Serratura [380,420,90,110]; Grammofono [1320,420,180,220]; Ruota dei Nomi [1560,300,220,220]; Leva [1180,500,100,200] |
-| ⬜ manca | `assets/backgrounds/c7_alba.webp` | Lungarno all'alba | 7 | Firenze | Panchina [400,880,280,110]; Ponte Vecchio [500,490,540,80]; Figura sul ponte [700,455,30,70]; Targa dell'alluvione [1612,420,70,90]; Caffè delle Logge [1530,320,90,390] |
+| ✅ presente | `assets/backgrounds/bg_lungarno_notte_01.jpg` | Lungarno all'alba | 7 | Firenze | Panchina [400,880,280,110]; Ponte Vecchio [500,490,540,80]; Figura sul ponte [700,455,30,70]; Targa dell'alluvione [1612,420,70,90]; Caffè delle Logge [1530,320,90,390] |
 
 ### 1b. Oggetti di scena rimovibili (`assets/items/scene/<scena>_<hotspot>.png`) — PNG trasparente, dimensione = rect dell'hotspot
 Servono solo per gli oggetti che **spariscono** quando vengono raccolti (collezionabili, oggetti presi). Se lo sfondo reale li ha già dipinti e non spariscono, non servono.
@@ -247,49 +247,49 @@ Ogni inquadratura viene animata con pan/zoom/fade; un'immagine leggermente più 
 
 | Stato | File | Cutscene | Inquadratura | Contenuto | Fallback attuale |
 |---|---|---|---|---|---|
-| ⬜ manca | `assets/cutscenes/intro_1.webp` | intro | 1 | Titolo «Firenze» | sfondo c1_lungarno |
+| ✅ presente | `assets/reference/cutscenes/florence_night.webp` | intro | 1 | Titolo «Firenze» | sfondo c1_lungarno |
 | ⬜ manca | `assets/cutscenes/intro_2.webp` | intro | 2 | Durante alcuni lavori in un palazzo dell'Oltrarno è stata aperta una stanza murata. | sfondo c1_cantiere |
 | ⬜ manca | `assets/cutscenes/intro_3.webp` | intro | 3 | Tra il materiale recuperato c'era un vecchio computer. Lo hanno portato in ufficio, dall'i… | sfondo c1_studio |
-| ⬜ manca | `assets/cutscenes/intro_4.webp` | intro | 4 | Una cartella chiamata ORFEO. Una fotografia del 1944. Una lista di diciassette nomi. E una… | foto photo1944 |
-| ⬜ manca | `assets/cutscenes/c1_fine_1.webp` | c1_fine | 1 | Quella notte Beps non dormì. Guardò la fotografia fino all'alba, e il volto graffiato guar… | sfondo c1_lungarno |
-| ⬜ manca | `assets/cutscenes/c1_fine_2.webp` | c1_fine | 2 | Titolo «Il treno delle 7:12» | sfondo c2_gare |
+| ✅ presente | `assets/reference/cutscenes/discovery_orfeo.webp` | intro | 4 | Una cartella chiamata ORFEO. Una fotografia del 1944. Una lista di diciassette nomi. E una… | foto photo1944 |
+| ✅ presente | `assets/backgrounds/c1_studio.webp` | c1_fine | 1 | Quella notte Beps non dormì. Guardò la fotografia fino all'alba, e il volto graffiato guar… | sfondo c1_lungarno |
+| ✅ presente | `assets/cutscenes/cutscene_01_arrivo_in_citta.jpg` | c1_fine | 2 | Titolo «Il treno delle 7:12» | sfondo c2_gare |
 | ⬜ manca | `assets/cutscenes/c2_fine_1.webp` | c2_fine | 1 | Parigi li salutò con un tramonto che sembrava dipinto apposta. Kiki non si voltò a guardar… | sfondo c2_quai |
 | ⬜ manca | `assets/cutscenes/c2_fine_2.webp` | c2_fine | 2 | Titolo «Roma» | sfondo c3_piazza |
 | ⬜ manca | `assets/cutscenes/c3_fine_1.webp` | c3_fine | 1 | Pagarono le carbonare, lasciarono una mancia esagerata e presero il primo treno per Firenz… | sfondo c3_osteria |
-| ⬜ manca | `assets/cutscenes/c3_fine_2.webp` | c3_fine | 2 | Titolo «Il ritorno» | sfondo c4_ponte |
-| ⬜ manca | `assets/cutscenes/c4_fine_1.webp` | c4_fine | 1 | Uscirono da Boboli tenendosi per mano. Nessuno dei due ricordò, dopo, chi l'avesse presa p… | sfondo c4_grotta |
+| ✅ presente | `assets/reference/cutscenes/lungarno_reunion.webp` | c3_fine | 2 | Titolo «Il ritorno» | sfondo c4_ponte |
+| ✅ presente | `assets/reference/cutscenes/sigillo_together.webp` | c4_fine | 1 | Uscirono da Boboli tenendosi per mano. Nessuno dei due ricordò, dopo, chi l'avesse presa p… | sfondo c4_grotta |
 | ⬜ manca | `assets/cutscenes/c4_fine_2.webp` | c4_fine | 2 | Titolo «Istanbul» | sfondo c5_galata |
 | ✅ presente | `assets/cutscenes/bacio_1.webp` | bacio | 1 |  | sfondo c5_tetto |
 | ⬜ manca | `assets/cutscenes/bacio_2.webp` | bacio | 2 | Sotto di loro, Istanbul accende le sue luci. Nessuno dei due se ne accorge. | colore |
 | ⬜ manca | `assets/cutscenes/c5_fine_1.webp` | c5_fine | 1 | Selim li accompagnò al molo. Disse addio in sei lingue e in nessuna riuscì a finire la fra… | sfondo c5_galata |
-| ⬜ manca | `assets/cutscenes/c5_fine_2.webp` | c5_fine | 2 | Titolo «Orfeo» | sfondo c6_pont_neuf |
+| ✅ presente | `assets/reference/cutscenes/arrival_paris.webp` | c5_fine | 2 | Titolo «Orfeo» | sfondo c6_pont_neuf |
 | ⬜ manca | `assets/cutscenes/c6_fine_1.webp` | c6_fine | 1 | Uscirono dalle catacombe a Denfert-Rochereau, sotto la neve, alle dieci di sera. Il treno … | sfondo c6_catacombe |
 | ⬜ manca | `assets/cutscenes/c6_fine_2.webp` | c6_fine | 2 | Titolo «L'ultima chiave» | sfondo c7_cantiere |
 | ⬜ manca | `assets/cutscenes/c7_uscita_1.webp` | c7_uscita | 1 | Risalirono la scala con il Registro tra le braccia, a turno. Pesava come un mattone. Pesav… | sfondo c7_camera |
 | ⬜ manca | `assets/cutscenes/c7_uscita_2.webp` | c7_uscita | 2 | Fuori, Firenze stava diventando rosa. | sfondo c7_alba |
-| ⬜ manca | `assets/cutscenes/fine_luce_1.webp` | fine_luce | 1 | Titolo «La Luce» | sfondo c1_archivio |
+| ✅ presente | `assets/cutscenes/cutscene_03_rivelazione_orfeo.jpg` | fine_luce | 1 | Titolo «La Luce» | sfondo c1_archivio |
 | ⬜ manca | `assets/cutscenes/fine_luce_2.webp` | fine_luce | 2 | Il volto di Guido Sarti, ricostruito graffio per graffio, torna nella fotografia. Dopo cin… | foto photo1944 |
-| ⬜ manca | `assets/cutscenes/fine_custodi_1.webp` | fine_custodi | 1 | Titolo «I Custodi» | sfondo c6_archivio |
+| ✅ presente | `assets/cutscenes/cutscene_06_ricerca_finale.jpg` | fine_custodi | 1 | Titolo «I Custodi» | sfondo c6_archivio |
 | ⬜ manca | `assets/cutscenes/fine_custodi_2.webp` | fine_custodi | 2 | Il cappello nero torna sull'attaccapanni di Ada. Accanto, da oggi, c'è anche un berretto d… | sfondo c2_appartamento |
 | ⬜ manca | `assets/cutscenes/fine_cenere_1.webp` | fine_cenere | 1 | Titolo «Cenere» | sfondo c7_alba |
 | ⬜ manca | `assets/cutscenes/fine_cenere_2.webp` | fine_cenere | 2 | La carta brucia in fretta. I nomi, un po' più piano. | colore |
 | ⬜ manca | `assets/cutscenes/fine_segreto_1.webp` | fine_segreto | 1 | Titolo «Il Diciottesimo Nome» | sfondo c7_alba |
-| ⬜ manca | `assets/cutscenes/fine_segreto_2.webp` | fine_segreto | 2 | Nella Ruota dei Nomi, dopo il XVII, c'è una riga larga il doppio. Ci sono due nomi, scritt… | sfondo c7_camera |
+| ✅ presente | `assets/cutscenes/cutscene_02_scoperta_in_archivio.jpg` | fine_segreto | 2 | Nella Ruota dei Nomi, dopo il XVII, c'è una riga larga il doppio. Ci sono due nomi, scritt… | sfondo c7_camera |
 | ⬜ manca | `assets/cutscenes/post_luce_1.webp` | post_luce | 1 | Titolo «Un anno dopo» | sfondo c1_caffe |
 | ✅ presente | `assets/cutscenes/post_luce_2.webp` | post_luce | 2 | Il giorno del matrimonio, tra i regali, c'è una busta senza mittente. Dentro, una fotograf… | sfondo c1_caffe |
-| ⬜ manca | `assets/cutscenes/post_luce_3.webp` | post_luce | 3 | In un angolo della foto, un passo in disparte, c'è una donna col cappello nero. Sul retro,… | foto generic |
+| ✅ presente | `assets/reference/cutscenes/anonymous_envelope.webp` | post_luce | 3 | In un angolo della foto, un passo in disparte, c'è una donna col cappello nero. Sul retro,… | foto generic |
 | ⬜ manca | `assets/cutscenes/post_custodi_1.webp` | post_custodi | 1 | Titolo «Un anno dopo» | sfondo c1_archivio |
 | ✅ presente | `assets/cutscenes/post_custodi_2.webp` | post_custodi | 2 | Il Sigillo di Orfeo è di nuovo diviso. Non in quattro, stavolta: in due. Una metà la porta… | foto generic |
 | ⬜ manca | `assets/cutscenes/post_cenere_1.webp` | post_cenere | 1 | Titolo «Il Lungarno» | sfondo c1_lungarno |
 | ✅ presente | `assets/cutscenes/post_cenere_2.webp` | post_cenere | 2 | Un uomo con le mani in tasca le si siede accanto, senza ombrello. Le offre metà di una mon… | sfondo c1_lungarno |
-| ⬜ manca | `assets/cutscenes/post_segreto_1.webp` | post_segreto | 1 | Titolo «Registro di Orfeo» | sfondo c6_archivio |
+| ✅ presente | `assets/reference/cutscenes/orfeo_reveal.webp` | post_segreto | 1 | Titolo «Registro di Orfeo» | sfondo c6_archivio |
 | ⬜ manca | `assets/cutscenes/post_segreto_2.webp` | post_segreto | 2 | «XVIII · Il Ponte e la Testimone, insieme. Giuseppe e Federica. Giurano il 12 marzo, per p… | colore |
-| ⬜ manca | `assets/cutscenes/post_segreto_3.webp` | post_segreto | 3 | Il giovedì dopo, al Caffè delle Logge, Tommaso trova sul piattino di una donna col cappell… | sfondo c1_caffe |
-| ⬜ manca | `assets/cutscenes/incontro_1.webp` | incontro | 1 | Tra gli scaffali, una donna con gli occhiali e un fascio di carte sotto il braccio. Mi gua… | sfondo c1_archivio |
-| ⬜ manca | `assets/cutscenes/allarme_roma_1.webp` | allarme_roma | 1 | Kiki si lascia scivolare contro gli scaffali. Beps le prende le mani. Sulla porta, un'ombr… | sfondo c3_sala_cassetti |
-| ⬜ manca | `assets/cutscenes/grotta_1.webp` | grotta | 1 | Titolo «Grotta del Buontalenti» | sfondo c4_grotta |
-| ⬜ manca | `assets/cutscenes/grotta_2.webp` | grotta | 2 | Dall'ombra della grotta, un uomo col cappotto lungo e il bastone. Li stava aspettando. | sfondo c4_grotta |
-| ⬜ manca | `assets/cutscenes/varano_parigi_1.webp` | varano_parigi | 1 | Titolo «Studio del Notaio» | sfondo c6_ufficio |
+| ✅ presente | `assets/reference/cutscenes/anonymous_envelope_old.webp` | post_segreto | 3 | Il giovedì dopo, al Caffè delle Logge, Tommaso trova sul piattino di una donna col cappell… | sfondo c1_caffe |
+| ✅ presente | `assets/reference/cutscenes/first_meeting.webp` | incontro | 1 | Tra gli scaffali, una donna con gli occhiali e un fascio di carte sotto il braccio. Mi gua… | sfondo c1_archivio |
+| ✅ presente | `assets/cutscenes/cutscene_05_momento_di_crisi.jpg` | allarme_roma | 1 | Kiki si lascia scivolare contro gli scaffali. Beps le prende le mani. Sulla porta, un'ombr… | sfondo c3_sala_cassetti |
+| ✅ presente | `assets/reference/cutscenes/kiki_rescue.webp` | grotta | 1 | Titolo «Grotta del Buontalenti» | sfondo c4_grotta |
+| ✅ presente | `assets/cutscenes/cutscene_04_incontro_sotterraneo.jpg` | grotta | 2 | Dall'ombra della grotta, un uomo col cappotto lungo e il bastone. Li stava aspettando. | sfondo c4_grotta |
+| ✅ presente | `assets/reference/cutscenes/varano_confrontation.webp` | varano_parigi | 1 | Titolo «Studio del Notaio» | sfondo c6_ufficio |
 
 ---
 

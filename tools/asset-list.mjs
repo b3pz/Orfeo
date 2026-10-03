@@ -52,7 +52,8 @@ Le immagini approvate non vengono mai sovrascritte da nessuno script: gli strume
 `;
 for (const [id, s] of Object.entries(scenes)) {
   const hs = (s.hotspots || []).filter((h) => !h.col).slice(0, 6).map((h) => `${h.name} [${h.rect.join(',')}]`).join('; ');
-  md += `| ${mark(`assets/backgrounds/${id}.webp`, `assets/backgrounds/${id}.jpg`, `assets/backgrounds/${id}.png`)} | \`assets/backgrounds/${id}.webp\` | ${s.name} | ${s.chapter} | ${s.place || ''} | ${hs} |\n`;
+  const bgFile = s.bg && have(s.bg) ? s.bg : `assets/backgrounds/${id}.webp`;
+  md += `| ${mark(...[s.bg, `assets/backgrounds/${id}.webp`, `assets/backgrounds/${id}.jpg`, `assets/backgrounds/${id}.png`].filter(Boolean))} | \`${bgFile}\` | ${s.name} | ${s.chapter} | ${s.place || ''} | ${hs} |\n`;
 }
 
 md += `
@@ -128,7 +129,7 @@ Ogni inquadratura viene animata con pan/zoom/fade; un'immagine leggermente più 
 |---|---|---|---|---|---|
 `;
 for (const [id, c] of Object.entries(cuts)) c.shots.forEach((s, i) => {
-  const p = `assets/cutscenes/${id}_${i + 1}.webp`;
+  const p = s.img && have(s.img) ? s.img : `assets/cutscenes/${id}_${i + 1}.webp`;
   const what = s.title ? `Titolo «${s.title}»` : s.text ? s.text.slice(0, 90) + (s.text.length > 90 ? '…' : '') : '';
   md += `| ${mark(p, p.replace('.webp', '.jpg'), p.replace('.webp', '.png'))} | \`${p}\` | ${id} | ${i + 1} | ${what} | ${s.scene ? 'sfondo ' + s.scene : s.photo ? 'foto ' + s.photo : 'colore'} |\n`;
 });
