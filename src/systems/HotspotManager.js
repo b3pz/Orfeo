@@ -88,7 +88,10 @@
           b.classList.add('exit');
           b.appendChild(O.el('span.exit-arrow', { 'data-dir': h.arrow || (x < 200 ? 'l' : x + w > 1720 ? 'r' : y + hh > 950 ? 'd' : 'u') }));
         }
-        b.appendChild(O.el('span.hs-name', { text: this.name(t) }));
+        const nm = O.el('span.hs-name', { text: this.name(t) });
+        if (x < 160) nm.classList.add('al-left');
+        else if (x + w > 1760) nm.classList.add('al-right');
+        b.appendChild(nm);
         layer.appendChild(b);
       });
       // NPCs

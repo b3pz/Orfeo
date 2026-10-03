@@ -458,7 +458,23 @@
     return s;
   }
 
+  // clothesline / line of hanging prints
+  PROPS.rope = function (w, h, o) {
+    let s = path(`M0 4 Q${w / 2} ${h} ${w} 4`, 'none', 'stroke="#2a2420" stroke-width="3"');
+    const r = rng('rope' + w);
+    const n = Math.max(3, Math.round(w / 140));
+    for (let i = 1; i < n; i++) {
+      const x = (i * w) / n;
+      const t = x / w;
+      const y = 4 + 4 * (h - 4) * t * (1 - t);
+      const pw = 50 + r() * 40, ph = 60 + r() * 50;
+      s += rect(x - pw / 2, y, pw, ph, ['#e8e0d0', '#c8d0d8', '#d8b0a0', '#efe6cf'][i % 4], `transform="rotate(${r() * 8 - 4} ${x} ${y})"`) + rect(x - 4, y - 4, 8, 10, '#6a5a40');
+    }
+    return s;
+  };
+
   function drawProp(kind, w, h, opts) {
+    if (!PROPS[kind] && ICONS[kind]) return `<g transform="scale(${w / 96} ${h / 96})">${ICONS[kind]((opts || {}).c)}</g>`;
     const fn = PROPS[kind] || PROPS.generic;
     try {
       return fn(w, h, opts || {});
