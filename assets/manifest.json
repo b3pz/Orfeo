@@ -1,5 +1,5 @@
 {
- "count": 62,
+ "count": 68,
  "files": [
   "assets/backgrounds/bg_archivio_firenze_room_01.jpg",
   "assets/backgrounds/bg_archivio_firenze_room_02.jpg",
@@ -10,6 +10,12 @@
   "assets/backgrounds/c1_lungarno.webp",
   "assets/backgrounds/c1_studio.webp",
   "assets/cutscenes/bacio_1.webp",
+  "assets/cutscenes/cutscene_01_arrivo_in_citta.jpg",
+  "assets/cutscenes/cutscene_02_scoperta_in_archivio.jpg",
+  "assets/cutscenes/cutscene_03_rivelazione_orfeo.jpg",
+  "assets/cutscenes/cutscene_04_incontro_sotterraneo.jpg",
+  "assets/cutscenes/cutscene_05_momento_di_crisi.jpg",
+  "assets/cutscenes/cutscene_06_ricerca_finale.jpg",
   "assets/cutscenes/post_cenere_2.webp",
   "assets/cutscenes/post_custodi_2.webp",
   "assets/cutscenes/post_luce_2.webp",
