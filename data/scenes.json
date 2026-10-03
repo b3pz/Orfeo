@@ -2,7 +2,7 @@
  "_doc": "Scene. Coordinate nel mondo logico 1920x1080. walk = poligono camminabile; walkFor = poligono per personaggio; walkIf = poligoni alternativi condizionali. hotspots: rect [x,y,w,h], at = punto d'interazione, look/use/talk/exit/items, only = solo un personaggio. art = oggetto disegnato proceduralmente se manca lo sfondo reale.",
  "scenes": {
   "c1_studio": {
-   "name": "Studio di architettura",
+   "name": "Ufficio della ditta",
    "place": "Oltrarno · Firenze · ottobre 2026",
    "chapter": 1,
    "music": "firenze",
@@ -118,7 +118,7 @@
       600,
       880
      ],
-     "look": "La mia scrivania. Sepolta sotto tre progetti in ritardo, due tazze e un computer che non è mio.",
+     "look": "La mia scrivania. Sepolta sotto tre portatili da riparare, due tazze e un computer che non è mio.",
      "use": "Non ho tempo per mettere in ordine. Non ho mai tempo per mettere in ordine."
     },
     {
@@ -173,10 +173,10 @@
         "@sfx:phone",
         "beps[surprised]: Il telefono. Alle nove di sera.",
         "@anim:phone",
-        "sandro: Architetto? Sono Sandro, del cantiere di via de' Bardi. Senta… nella stanza murata c'è dell'altro. Un armadio. E una cosa nel muro.",
+        "sandro: Beps? Sono Sandro, del cantiere di via de' Bardi. Senta… nella stanza murata c'è dell'altro. Un armadio. E una cosa nel muro.",
         "sandro: Io lì dentro da solo non ci torno. Di notte si sente l'acqua.",
         "beps: Arrivo. Tienimi il caffè in caldo.",
-        "sandro: Il caffè lo porta lei, architetto. La macchinetta del cantiere è morta con l'ultimo papa.",
+        "sandro: Il caffè lo porti tu, Beps. La macchinetta del cantiere è morta con l'ultimo papa.",
         "@person:sandro",
         "@objective:o1_cantiere"
        ]
@@ -208,7 +208,7 @@
       950,
       870
      ],
-     "look": "La stampante dello studio. Inceppa un foglio su tre per principio.",
+     "look": "La stampante dell'ufficio. Inceppa un foglio su tre per principio.",
      "use": [
       {
        "if": "flag.pc_read",
@@ -253,7 +253,7 @@
       "c": "#b8a888"
      },
      "look": [
-      "Nonno Gigi, muratore, davanti al cantiere della Biblioteca Nazionale dopo l'alluvione del '66. Mi ha lasciato le 500 lire e la passione per i muri vecchi.",
+      "Nonno Gigi, muratore, davanti al cantiere della Biblioteca Nazionale dopo l'alluvione del '66. Mi ha lasciato le 500 lire e la mania di smontare le cose per capire come funzionano.",
       "Diceva: «I muri non mentono. Le persone sì, i muri no.»"
      ]
     },
@@ -323,13 +323,13 @@
       860
      ],
      "look": [
-      "Il plastico del palazzo di via de' Bardi, in scala 1:50. L'ho costruito io.",
-      "Guardandolo adesso: tra il secondo e il terzo pilastro c'è un vuoto che sul rilievo non c'era. La stanza murata."
+      "Il plastico del palazzo di via de' Bardi, in scala 1:50. L'hanno fatto i tecnici della ditta: io ho solo fatto il rendering 3D.",
+      "Guardandolo adesso: tra il secondo e il terzo pilastro c'è un vuoto che nel rilievo laser non c'era. La stanza murata."
      ]
     },
     {
      "id": "lavagna",
-     "name": "Lavagna degli schizzi",
+     "name": "Lavagna dei backup",
      "rect": [
       1500,
       200,
@@ -339,7 +339,7 @@
      "art": {
       "k": "corkboard"
      },
-     "look": "Schizzi, fili rossi, conti del ferro. Sembra la bacheca di un serial killer, ma è solo un preventivo."
+     "look": "Password dei clienti, schemi di rete e fili rossi. Sembra la bacheca di un serial killer, ma è solo il piano dei backup."
     },
     {
      "id": "libreria",
@@ -359,7 +359,7 @@
       840
      ],
      "face": "l",
-     "look": "Manuali di restauro, Vitruvio, un Palladio ingiallito e tre gialli di Simenon. Le priorità di un architetto.",
+     "look": "Manuali di Linux, un libro sulla crittografia, un Palladio lasciato dai tecnici e tre gialli di Simenon. Le priorità di un informatico.",
      "use": "Cerco qualcosa su un'organizzazione chiamata Orfeo… Niente. Solo l'Orfeo di Monteverdi, e non credo c'entri."
     },
     {
@@ -375,11 +375,11 @@
       "k": "crate",
       "c": "#6a6a6a"
      },
-     "look": "Il progetto della villetta a Scandicci. Rifiutato dal committente perché «troppo poco svizzera». Ci riproverò."
+     "look": "Un mouse rotto, un cavo VGA e la mia dignità del lunedì mattina."
     },
     {
      "id": "porta",
-     "name": "Porta dello studio",
+     "name": "Porta dell'ufficio",
      "rect": [
       1790,
       240,
@@ -388,7 +388,7 @@
      ],
      "art": {
       "k": "door",
-      "label": "STUDIO"
+      "label": "UFFICIO"
      },
      "at": [
       1760,
@@ -756,7 +756,7 @@
     },
     {
      "id": "verso_studio",
-     "name": "Verso lo studio",
+     "name": "Verso l'ufficio",
      "rect": [
       0,
       780,
@@ -837,7 +837,7 @@
       "y": 760,
       "w": 160,
       "h": 120,
-      "label": "LANZI"
+      "label": "DITTA"
      }
     ]
    },
@@ -892,7 +892,7 @@
     }
    ],
    "firstEnter": [
-    "sandro: Architetto! Grazie a Dio. Ha portato il caffè?",
+    "sandro: Beps! Grazie a Dio. Hai portato il caffè?",
     {
      "if": "item.caffe",
      "do": [
@@ -1148,7 +1148,7 @@
      "art": {
       "k": "scaffold"
      },
-     "look": "Il ponteggio della mia ditta. Collaudato, certificato e, alle dieci di sera, molto inquietante."
+     "look": "Il ponteggio della ditta. Collaudato, certificato e, alle dieci di sera, molto inquietante."
     },
     {
      "id": "lampada",
@@ -1870,7 +1870,7 @@
      ],
      "if": "!flag.blackout",
      "look": {
-      "beps": "Chilometri di carta. Qualcuno dovrebbe calcolare quanto pesa la storia. Io lo farei, è il mio mestiere.",
+      "beps": "Chilometri di carta. Qualcuno dovrebbe calcolare quanto pesa la storia. Io scriverei un programma per farlo.",
       "kiki": "Ventimila faldoni, più o meno. Li ho restaurati in duecento."
      }
     },
@@ -1997,7 +1997,7 @@
    ],
    "firstEnter": [
     "kiki: Due cappuccini, Tommaso. Lo so che sono le dieci di sera. Non giudicarci.",
-    "kiki[skeptical]: Allora, architetto. Adesso mi racconti tutto. E io, forse, racconto qualcosa a te.",
+    "kiki[skeptical]: Allora, informatico. Adesso mi racconti tutto. E io, forse, racconto qualcosa a te.",
     "@objective:o1_parlare"
    ],
    "hotspots": [
@@ -2712,7 +2712,7 @@
       320
      ],
      "look": {
-      "beps": "Notre-Dame, rinata dopo l'incendio. Ogni volta che la vedo penso: i muri non mentono. Si possono ricostruire.",
+      "beps": "Notre-Dame, rinata dopo l'incendio. Ogni volta che la vedo penso: anche le cose bruciate si possono ripristinare. Come un backup.",
       "kiki": "L'hanno restaurata pietra per pietra. Ci sono restauratori che piangono quando ne parlano. Io sono una di loro."
      }
     },
@@ -3016,7 +3016,7 @@
       "k": "projector"
      },
      "look": {
-      "beps": "Una macchina fotografica a soffietto su un cavalletto di legno. Bella come un pezzo di architettura.",
+      "beps": "Una macchina fotografica a soffietto su un cavalletto di legno. Hardware vero, di quello che non si aggiorna.",
       "kiki": "Una Deardorff degli anni Cinquanta. Jacques Marchetti ci ha fotografato mezza Parigi."
      }
     },
@@ -4532,7 +4532,7 @@
           "beps[think]: Venti centimetri di vuoto dietro. Un meccanismo. Ci dev'essere un fermo."
          ],
          "else": [
-          "kiki: Bloccati. Tutti. Beps, tu che i muri li leggi: questo mobile ti dice qualcosa?"
+          "kiki: Bloccati. Tutti. Beps, tu che smonti qualunque cosa: questo mobile ti dice qualcosa?"
          ]
         }
        ]
@@ -4572,7 +4572,7 @@
      "only": "beps",
      "onlyMsg": {
       "kiki": [
-       "Il fianco del mobile. Non vedo niente di strano. Beps saprebbe dove guardare: è il suo mestiere."
+       "Il fianco del mobile. Non vedo niente di strano. Beps saprebbe dove guardare: smonta tutto da quando è nato."
       ]
      },
      "look": {
@@ -4591,7 +4591,7 @@
        {
         "if": "present.kiki",
         "do": [
-         "kiki[smile]: Ammetto che a volte gli architetti servono.",
+         "kiki[smile]: Ammetto che a volte gli informatici servono anche fuori dai computer.",
          "@stat:fiducia+1"
         ]
        },
@@ -4786,7 +4786,7 @@
       {
        "if": "!flag.grata_aperta",
        "do": [
-        "Avvitata. Quattro viti. Ci vuole un cacciavite. O un coltellino da architetto."
+        "Avvitata. Quattro viti. Ci vuole un cacciavite. O il coltellino di un informatico."
        ]
       },
       {
@@ -4804,7 +4804,7 @@
       },
       {
        "do": [
-        "beps: Non ci passo. Sono un architetto, non un contorsionista.",
+        "beps: Non ci passo. Sono un informatico, non un contorsionista.",
         "kiki[determined]: Ci passo io. Passa a me, Beps.",
         "@objective:o3_condotto"
        ]
@@ -5561,7 +5561,7 @@
    ]
   },
   "c4_studio": {
-   "name": "Studio di architettura (devastato)",
+   "name": "Ufficio della ditta (devastato)",
    "place": "Oltrarno · Firenze · dicembre 2026",
    "chapter": 4,
    "music": "tension",
@@ -5648,7 +5648,7 @@
    "switch": false,
    "switchMsg": "Kiki non è qui.",
    "firstEnter": [
-    "beps[surprised]: Il mio studio.",
+    "beps[surprised]: Il mio ufficio.",
     "kiki[worried]: Beps…",
     "narr: Cassetti rovesciati, disegni strappati, il plastico del palazzo spaccato in due. Il vecchio computer è sparito.",
     "beps[angry]: Il computer. Si sono presi il computer.",
@@ -5674,7 +5674,7 @@
     },
     "@hide:kiki",
     "@lockswitch",
-    "narr: Kiki esce. La porta si chiude. Lo studio è silenzioso come un cantiere la domenica.",
+    "narr: Kiki esce. La porta si chiude. L'ufficio è silenzioso come un cantiere la domenica.",
     "@objective:o4_studio"
    ],
    "hotspots": [
@@ -5732,7 +5732,7 @@
       1560,
       860
      ],
-     "look": "Un pacco con un biglietto: «Architetto, l'ho trovato nel muro dopo che è andato via. Io non lo tocco più. — Sandro».",
+     "look": "Un pacco con un biglietto: «Beps, l'ho trovato nel muro dopo che sei andato via. Io non lo tocco più. — Sandro».",
      "use": [
       "@anim:pickup",
       "Dentro, avvolto in un giornale del '66: un quarto di cerchio di bronzo rosso. Sul bordo: VOL.",
@@ -5760,7 +5760,7 @@
       860
      ],
      "look": [
-      "Il mio plastico. Spaccato con un colpo solo, nel punto esatto della stanza murata.",
+      "Il plastico del palazzo. Spaccato con un colpo solo, nel punto esatto della stanza murata.",
       "Non cercavano. Volevano dirmi qualcosa."
      ]
     },
@@ -5828,7 +5828,7 @@
     },
     {
      "id": "porta",
-     "name": "Porta dello studio",
+     "name": "Porta dell'ufficio",
      "rect": [
       1790,
       240,
@@ -5837,7 +5837,7 @@
      ],
      "art": {
       "k": "door",
-      "label": "STUDIO"
+      "label": "UFFICIO"
      },
      "at": [
       1760,
@@ -6104,7 +6104,7 @@
     },
     {
      "id": "verso_studio",
-     "name": "Verso l'Oltrarno (studio)",
+     "name": "Verso l'Oltrarno (ufficio)",
      "rect": [
       0,
       760,
@@ -6699,7 +6699,7 @@
    "firstEnter": [
     "beps[surprised]: Kiki!",
     "kiki: Beps! Sto bene. Non ha… non mi ha fatto niente.",
-    "varano: Il signor Lanzi. Ha trovato la porta. Ha ricomposto il Sigillo. Sono quasi orgoglioso.",
+    "varano: Giuseppe. Ha trovato la porta. Ha ricomposto il Sigillo. Sono quasi orgoglioso.",
     "@dialogue:varano_c4"
    ],
    "hotspots": [
@@ -6959,7 +6959,7 @@
       340
      ],
      "look": {
-      "beps": "Una cupola, quattro semicupole, due minareti. È un trattato di statica scritto in pietra.",
+      "beps": "Una cupola, quattro semicupole, due minareti. È come un codice scritto bene: niente di troppo, niente che manchi.",
       "kiki": "Il richiamo alla preghiera sta per cominciare. Ascoltalo. Non c'è niente di simile."
      }
     },
@@ -7762,7 +7762,7 @@
        },
        {
         "do": [
-         "kiki: Ci provo… niente. Beps, questo è un lavoro da muscoli di cantiere.",
+         "kiki: Ci provo… niente. Beps, questo è un lavoro per te.",
          "@objective:o5_botola_beps"
         ]
        }
@@ -8241,7 +8241,7 @@
      },
      "look": {
       "beps": "Una testa di Medusa usata come base di una colonna. Capovolta. I bizantini erano pratici: le sculture pagane diventavano mattoni.",
-      "kiki": "Medusa capovolta. Chi la guarda diventa pietra. Chi la capovolge, diventa architetto."
+      "kiki": "Medusa capovolta. Chi la guarda diventa pietra. Chi la capovolge, diventa un genio del riciclo."
      }
     },
     {
@@ -9600,7 +9600,7 @@
     }
    ],
    "firstEnter": [
-    "varano: Signor Lanzi. Signorina Morel. Accomodatevi. Vi aspettavo da Firenze.",
+    "varano: Giuseppe. Signorina Morel. Accomodatevi. Vi aspettavo da Firenze.",
     "varano: Prendetevi un momento. Guardatevi intorno. Poi parliamo.",
     "@objective:o6_parla_varano"
    ],
@@ -10036,7 +10036,7 @@
           "@objective:o7_lastra"
          ],
          "else": [
-          "kiki: Busso… sembra vuoto. Beps, tu che i muri li senti: ascolta qui."
+          "kiki: Busso… sembra vuoto. Beps, tu che sei curioso di tutto: ascolta qui."
          ]
         }
        ]
@@ -10101,7 +10101,7 @@
       360
      ],
      "look": {
-      "beps": "La breccia che ha aperto Sandro. Dall'altra parte, il cantiere e il mio ponteggio. Il mondo normale.",
+      "beps": "La breccia che ha aperto Sandro. Dall'altra parte, il cantiere e il ponteggio della ditta. Il mondo normale.",
       "kiki": "Il mondo normale. Sembra così lontano."
      }
     },

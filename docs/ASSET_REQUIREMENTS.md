@@ -28,7 +28,7 @@ Le immagini approvate non vengono mai sovrascritte da nessuno script: gli strume
 
 | Stato | File | Scena | Capitolo | Luogo | Hotspot principali (x,y,w,h) |
 |---|---|---|---|---|---|
-| ⬜ manca | `assets/backgrounds/c1_studio.webp` | Studio di architettura | 1 | Oltrarno · Firenze · ottobre 2026 | Scrivania [330,560,520,270]; Vecchio computer [440,420,250,170]; Stampante [880,570,150,100]; Finestra [1090,180,340,330]; Foto del nonno [760,270,110,140]; Macchinetta del caffè [1300,520,120,150] |
+| ⬜ manca | `assets/backgrounds/c1_studio.webp` | Ufficio della ditta | 1 | Oltrarno · Firenze · ottobre 2026 | Scrivania [330,560,520,270]; Vecchio computer [440,420,250,170]; Stampante [880,570,150,100]; Finestra [1090,180,340,330]; Foto del nonno [760,270,110,140]; Macchinetta del caffè [1300,520,120,150] |
 | ⬜ manca | `assets/backgrounds/c1_lungarno.webp` | Lungarno | 1 | Firenze · sera di pioggia | Arno [0,560,600,130]; Ponte Vecchio [40,450,540,170]; Targa dell'alluvione [1150,470,110,64]; Lampione [1300,300,70,500]; Panchina [300,830,280,110]; Edicola [1700,470,200,300] |
 | ⬜ manca | `assets/backgrounds/c1_cantiere.webp` | La stanza murata | 1 | Cantiere di via de' Bardi · notte | Telo sulla breccia [1180,200,420,490]; Breccia nel muro [1260,260,280,360]; Armadio metallico [330,290,230,400]; Tavolo impolverato [620,580,380,160]; Crepa nel muro [700,300,70,100]; Gradini [60,700,260,260] |
 | ⬜ manca | `assets/backgrounds/c1_archivio.webp` | Archivio Storico — Sala di lettura | 1 | Firenze | Bancone [1200,560,420,180]; Schedario del catalogo [160,330,300,340]; Finestre alte [700,70,300,300]; Ritratto [1660,170,170,230]; Lampada verde [520,560,110,120]; Carrello dei libri [930,690,190,170] |
@@ -45,7 +45,7 @@ Le immagini approvate non vengono mai sovrascritte da nessuno script: gli strume
 | ⬜ manca | `assets/backgrounds/c3_passaggio.webp` | Passaggio di servizio | 3 | Sotto la Teodosiana · Roma | Leva del cancello [300,440,120,260]; Cancello (dall'altra parte) [700,300,240,420]; Scala retrattile [1180,80,160,300]; Casse del 1944 [1500,760,260,200]; Ragnatele [200,60,400,200] |
 | ⬜ manca | `assets/backgrounds/c3_cortile.webp` | Cortile di Trastevere | 3 | Roma · notte | Panni stesi [300,200,1300,120]; Fontanella [900,760,80,130]; Gatti [1500,840,200,90]; Edicola votiva [1300,360,140,180]; Vespa [180,820,260,160]; Osteria da Fiorella [1830,760,90,300] |
 | ⬜ manca | `assets/backgrounds/c3_osteria.webp` | Osteria da Fiorella | 3 | Trastevere · Roma | Il nostro tavolo [1300,700,340,200]; Porta della cucina [1660,280,160,420]; Fiasco di vino [460,660,60,80]; Tovaglia a quadri [300,720,380,200]; Esci [0,640,80,420] |
-| ⬜ manca | `assets/backgrounds/c4_studio.webp` | Studio di architettura (devastato) | 4 | Oltrarno · Firenze · dicembre 2026 | Scrivania [330,560,520,270]; Pacco di Sandro [1500,640,120,100]; Plastico distrutto [1480,610,280,160]; Finestra [1090,180,340,330]; Lavagna [1500,200,320,250]; Telefono [780,560,60,40] |
+| ⬜ manca | `assets/backgrounds/c4_studio.webp` | Ufficio della ditta (devastato) | 4 | Oltrarno · Firenze · dicembre 2026 | Scrivania [330,560,520,270]; Pacco di Sandro [1500,640,120,100]; Plastico distrutto [1480,610,280,160]; Finestra [1090,180,340,330]; Lavagna [1500,200,320,250]; Telefono [780,560,60,40] |
 | ⬜ manca | `assets/backgrounds/c4_ponte.webp` | Ponte Vecchio | 4 | Firenze · mattina d'inverno | Bottega di Mastro Neri [140,360,360,330]; Banco da orafo [520,600,200,140]; Busto di Cellini [880,300,160,340]; Lucchetti [880,640,160,60]; Arno [700,520,520,120]; Porticina del Corridoio Vasariano [1240,340,120,220] |
 | ⬜ manca | `assets/backgrounds/c4_banca.webp` | Banca del Giglio — Cassette di sicurezza | 4 | Via Por Santa Maria · Firenze | Parete delle cassette [300,160,1320,470]; Cassetta 17 [660,260,110,90]; Telecamera [1700,120,90,70]; Quadro [120,220,150,200]; Orologio [1700,300,110,110]; Esci [0,640,80,420] |
 | ⬜ manca | `assets/backgrounds/c4_corridoio.webp` | Corridoio Vasariano | 4 | Sopra il Ponte Vecchio · Firenze | Finestre sul fiume [520,180,240,220]; Autoritratti [100,140,380,260]; Porta di Orfeo [880,300,160,340]; Torna al Ponte [860,990,200,70] |
@@ -205,7 +205,7 @@ Espressioni supportate: `neutral`, `smile`, `laugh`, `surprised`, `worried`, `sa
 |---|---|---|---|
 | ⬜ manca | `assets/items/usb.png` | Chiavetta USB | Copia della cartella ORFEO |
 | ⬜ manca | `assets/items/foto1944.png` | Foto 1944 | Stampa da FIRENZE_1944.jpg |
-| ⬜ manca | `assets/items/caffe.png` | Caffè in bicchierino | Dalla macchinetta dello studio |
+| ⬜ manca | `assets/items/caffe.png` | Caffè in bicchierino | Dalla macchinetta dell'ufficio |
 | ⬜ manca | `assets/items/frammenti.png` | Frammenti di documento | Dalla stanza murata |
 | ⬜ manca | `assets/items/promemoria.png` | Promemoria 1966 | Documento ricomposto |
 | ⬜ manca | `assets/items/medaglione_b.png` | Mezzo medaglione | Trovato in una crepa del muro |
@@ -242,7 +242,7 @@ Ogni inquadratura viene animata con pan/zoom/fade; un'immagine leggermente più 
 |---|---|---|---|---|---|
 | ⬜ manca | `assets/cutscenes/intro_1.webp` | intro | 1 | Titolo «Firenze» | sfondo c1_lungarno |
 | ⬜ manca | `assets/cutscenes/intro_2.webp` | intro | 2 | Durante alcuni lavori in un palazzo dell'Oltrarno è stata aperta una stanza murata. | sfondo c1_cantiere |
-| ⬜ manca | `assets/cutscenes/intro_3.webp` | intro | 3 | Tra il materiale recuperato c'era un vecchio computer. Lo hanno portato nello studio dell'… | sfondo c1_studio |
+| ⬜ manca | `assets/cutscenes/intro_3.webp` | intro | 3 | Tra il materiale recuperato c'era un vecchio computer. Lo hanno portato in ufficio, dall'i… | sfondo c1_studio |
 | ⬜ manca | `assets/cutscenes/intro_4.webp` | intro | 4 | Una cartella chiamata ORFEO. Una fotografia del 1944. Una lista di diciassette nomi. E una… | foto photo1944 |
 | ⬜ manca | `assets/cutscenes/c1_fine_1.webp` | c1_fine | 1 | Quella notte Beps non dormì. Guardò la fotografia fino all'alba, e il volto graffiato guar… | sfondo c1_lungarno |
 | ⬜ manca | `assets/cutscenes/c1_fine_2.webp` | c1_fine | 2 | Titolo «Il treno delle 7:12» | sfondo c2_gare |
@@ -276,7 +276,7 @@ Ogni inquadratura viene animata con pan/zoom/fade; un'immagine leggermente più 
 | ⬜ manca | `assets/cutscenes/post_cenere_1.webp` | post_cenere | 1 | Titolo «Il Lungarno» | sfondo c1_lungarno |
 | ⬜ manca | `assets/cutscenes/post_cenere_2.webp` | post_cenere | 2 | Un uomo con le mani in tasca le si siede accanto, senza ombrello. Le offre metà di una mon… | sfondo c1_lungarno |
 | ⬜ manca | `assets/cutscenes/post_segreto_1.webp` | post_segreto | 1 | Titolo «Registro di Orfeo» | sfondo c6_archivio |
-| ⬜ manca | `assets/cutscenes/post_segreto_2.webp` | post_segreto | 2 | «XVIII · Il Ponte e la Testimone, insieme. Giuseppe Lanzi e Federica Morel. Giurano il 12 … | colore |
+| ⬜ manca | `assets/cutscenes/post_segreto_2.webp` | post_segreto | 2 | «XVIII · Il Ponte e la Testimone, insieme. Giuseppe e Federica. Giurano il 12 marzo, per p… | colore |
 | ⬜ manca | `assets/cutscenes/post_segreto_3.webp` | post_segreto | 3 | Il giovedì dopo, al Caffè delle Logge, Tommaso trova sul piattino di una donna col cappell… | sfondo c1_caffe |
 
 ---

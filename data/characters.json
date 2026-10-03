@@ -4,7 +4,7 @@
     "beps": {
       "name": "Beps",
       "protagonist": true,
-      "role": "Giuseppe, architetto restauratore",
+      "role": "Giuseppe, informatico curioso della ditta di restauro",
       "height": 1.0,
       "look": { "skin": "#d9a882", "hair": "#2a1d14", "hairStyle": "short", "beard": true, "top": "#2a3a52", "topStyle": "jacket", "shirt": "#e8e2d4", "bottom": "#2b2f3a", "shoes": "#3a2414", "eyes": "#4a3020", "portraitBg": "#2a3442" },
       "sprites": {
@@ -22,11 +22,11 @@
       "desc": "Beps.",
       "lookLines": [
         { "if": "chapter>=5 && stat.legame>=14", "text": { "kiki": ["kiki[tender]: Ha i capelli spettinati dal vento. Non glielo dirò. Mi piace così."] } },
-        { "if": "chapter>=3", "text": { "kiki": ["kiki[smile]: Beps. Architetto, testardo, incapace di leggere il latino. Il mio socio."] } },
-        { "if": "true", "text": { "kiki": ["kiki[skeptical]: Un architetto che si infila negli archivi altrui. Non so ancora se fidarmi."] } }
+        { "if": "chapter>=3", "text": { "kiki": ["kiki[smile]: Beps. Informatico, testardo, incapace di leggere il latino. Il mio socio."] } },
+        { "if": "true", "text": { "kiki": ["kiki[skeptical]: Un informatico che si infila negli archivi altrui. Non so ancora se fidarmi."] } }
       ],
       "journal": [
-        { "if": "true", "text": "Giuseppe, per tutti Beps. Architetto restauratore in uno studio dell'Oltrarno. Doveva essere un intervento di dieci minuti." },
+        { "if": "true", "text": "Giuseppe, per tutti Beps. Fa l'informatico per la ditta di restauro che lavora al palazzo di via de' Bardi. Curioso di tutto, smonta qualunque cosa per vedere come funziona. Doveva essere un intervento di dieci minuti." },
         { "if": "chapter>=4", "text": "Ha attraversato Firenze da solo per ritrovare Kiki. Non lo ammetterà mai, ma aveva paura." }
       ]
     },

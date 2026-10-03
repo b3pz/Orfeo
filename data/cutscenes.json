@@ -6,7 +6,7 @@
       "shots": [
         { "scene": "c1_lungarno", "title": "Firenze", "sub": "OTTOBRE 2026", "cam": { "from": [30, 45, 1.25], "to": [55, 50, 1.05] }, "fx": ["rain"], "dur": 4200 },
         { "scene": "c1_cantiere", "text": "Durante alcuni lavori in un palazzo dell'Oltrarno è stata aperta una stanza murata.", "cam": { "from": [70, 40, 1.3], "to": [55, 55, 1.05] }, "fx": ["dust"] },
-        { "scene": "c1_studio", "text": "Tra il materiale recuperato c'era un vecchio computer. Lo hanno portato nello studio dell'architetto che dirige il cantiere.", "cam": { "from": [30, 50, 1.3], "to": [35, 55, 1.1] }, "fx": ["dust"], "figures": [ { "id": "beps", "x": 980, "y": 900, "s": 1.05 } ] },
+        { "scene": "c1_studio", "text": "Tra il materiale recuperato c'era un vecchio computer. Lo hanno portato in ufficio, dall'informatico della ditta: un ragazzo curioso che si chiama Giuseppe.", "cam": { "from": [30, 50, 1.3], "to": [35, 55, 1.1] }, "fx": ["dust"], "figures": [ { "id": "beps", "x": 980, "y": 900, "s": 1.05 } ] },
         { "photo": "photo1944", "photoOpts": { "half": false }, "text": "Una cartella chiamata ORFEO. Una fotografia del 1944. Una lista di diciassette nomi. E una voce.", "cam": { "from": [50, 50, 1.4], "to": [50, 55, 1.0] } }
       ]
     },
@@ -120,7 +120,7 @@
       "music": "tender",
       "shots": [
         { "scene": "c6_archivio", "title": "Registro di Orfeo", "sub": "RUOLO XVIII", "cam": { "from": [50, 50, 1.3], "to": [50, 50, 1.0] }, "fx": ["dust"] },
-        { "color": "#e9dfc6", "text": "«XVIII · Il Ponte e la Testimone, insieme. Giuseppe Lanzi e Federica Morel. Giurano il 12 marzo, per primi e per ultimi, in due.»", "dur": 6000 },
+        { "color": "#e9dfc6", "text": "«XVIII · Il Ponte e la Testimone, insieme. Giuseppe e Federica. Giurano il 12 marzo, per primi e per ultimi, in due.»", "dur": 6000 },
         { "scene": "c1_caffe", "text": "Il giovedì dopo, al Caffè delle Logge, Tommaso trova sul piattino di una donna col cappello nero un biglietto: «Ottimo lavoro. Ora tocca a voi.» Nessuno l'ha vista entrare.", "cam": { "from": [60, 45, 1.3], "to": [50, 50, 1.0] } }
       ]
     }

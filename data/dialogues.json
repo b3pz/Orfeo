@@ -7,12 +7,12 @@
     {
      "if": "flag.sandro_ok",
      "do": [
-      "sandro: Architetto. Io resto qui sulla porta, eh."
+      "sandro: Beps. Io resto qui sulla porta, eh."
      ]
     },
     {
      "do": [
-      "sandro: Allora, architetto? Il caffè?"
+      "sandro: Allora, Beps? Il caffè?"
      ]
     }
    ],
@@ -27,7 +27,7 @@
       "@take:caffe",
       "@flag:sandro_caffe",
       "@flag:sandro_ok",
-      "sandro[smile]: Ah. Vita. Lei è un sant'uomo, architetto.",
+      "sandro[smile]: Ah. Vita. Sei un sant'uomo, Beps.",
       "sandro: Va bene, il telo lo tolgo. Ma io resto qui sulla porta. Se sento l'acqua, scappo.",
       "@objective:o1_stanza"
      ]
@@ -41,7 +41,7 @@
      "do": [
       "sandro[skeptical]: Allora niente stanza. Regola del cantiere: senza caffè non si apre niente.",
       "beps: Questa regola dove sta scritta?",
-      "sandro: Nel mio cuore, architetto. La macchinetta del suo studio funziona, no?",
+      "sandro: Nel mio cuore, Beps. La macchinetta dell'ufficio funziona, no?",
       "@objective:o1_caffe_sandro"
      ]
     },
@@ -78,7 +78,7 @@
      "do": [
       "sandro[scared]: Di notte. Un gocciolio, sotto il pavimento. Plic. Plic.",
       "beps: Sotto il pavimento c'è la terra, Sandro.",
-      "sandro: Appunto, architetto. Appunto.",
+      "sandro: Appunto, Beps. Appunto.",
       "@flag:sandro_acqua"
      ]
     }
@@ -91,7 +91,7 @@
        "@take:caffe",
        "@flag:sandro_caffe",
        "@flag:sandro_ok",
-       "sandro[smile]: Ah. Vita. Lei è un sant'uomo, architetto.",
+       "sandro[smile]: Ah. Vita. Sei un sant'uomo, Beps.",
        "sandro: Va bene, il telo lo tolgo. Ma io resto qui sulla porta.",
        "@objective:o1_stanza"
       ]
@@ -108,7 +108,7 @@
      "sandro: Carta bagnata. Mia moglie con la carta bagnata ci fa le palline per il camino. Lei che ci fa?"
     ],
     "*": [
-     "sandro: Architetto, io sono un capocantiere, non un antiquario."
+     "sandro: Beps, io sono un capocantiere, non un antiquario."
     ]
    }
   },
@@ -117,7 +117,7 @@
    "first": [
     "@flag:met_archivista",
     "@person:archivista",
-    "archivista: Architetto Lanzi. Chiudiamo tra venti minuti. Mi dica che ha bisogno di una cosa sola."
+    "archivista: Buonasera, giovanotto. Chiudiamo tra venti minuti. Mi dica che ha bisogno di una cosa sola."
    ],
    "intro": [
     "archivista: Ancora lei. Mi dica."
@@ -132,7 +132,7 @@
       "archivista[skeptical]: Non esiste un catalogo O.",
       "archivista: Esiste un cassetto O, che contiene schede di nessuna importanza ed è chiuso perché la chiave l'ho persa nel 1994.",
       "beps: Persa.",
-      "archivista: Persa, architetto. Le cose si perdono, negli archivi. A meno che qualcuno non mi dia un buon motivo per ritrovarle.",
+      "archivista: Persa, giovanotto. Le cose si perdono, negli archivi. A meno che qualcuno non mi dia un buon motivo per ritrovarle.",
       {
        "if": "item.promemoria || item.foto1944",
        "do": [
@@ -189,7 +189,7 @@
      "icon": "key",
      "if": "flag.met_kiki && !flag.deposito_ok",
      "do": [
-      "archivista: La signorina Morel ha la tessera. Lei no, architetto. Ma se la accompagna… dieci minuti.",
+      "archivista: La signorina Morel ha la tessera. Lei no, giovanotto. Ma se la accompagna… dieci minuti.",
       "@flag:deposito_ok",
       "@objective:o1_deposito"
      ]
@@ -211,7 +211,7 @@
      },
      {
       "do": [
-       "archivista: L'ho già letto, architetto. Il cassetto è aperto."
+       "archivista: L'ho già letto, giovanotto. Il cassetto è aperto."
       ]
      }
     ],
@@ -222,7 +222,7 @@
        "archivista[surprised]: …",
        "archivista[sad]: Il secondo da sinistra. Quello col berretto. È mio padre, Renzo Ricci.",
        "archivista: Non l'avevo mai visto così giovane.",
-       "archivista: Va bene, architetto. Le apro il cassetto O. Ma non mi chieda niente che non voglio sapere.",
+       "archivista: Va bene, giovanotto. Le apro il cassetto O. Ma non mi chieda niente che non voglio sapere.",
        "@sfx:click",
        "@flag:catalogo_ok",
        "@flag:ottavia_padre",
@@ -240,7 +240,7 @@
      "archivista: O-17. Provenienza Parigi. Il deposito, ripiano 17. Se ci va, non mi dica cosa trova."
     ],
     "medaglione_b": [
-     "archivista[worried]: Mio padre ne aveva uno simile. Lo hanno sepolto con lui. Metta via quella cosa, architetto."
+     "archivista[worried]: Mio padre ne aveva uno simile. Lo hanno sepolto con lui. Metta via quella cosa, giovanotto."
     ],
     "*": [
      "archivista: Interessante. Ma non è materiale d'archivio."
@@ -336,10 +336,10 @@
    "npc": "varano",
    "linear": true,
    "first": [
-    "varano: Bella serata per un archivio, signor Lanzi.",
+    "varano: Bella serata per un archivio, Giuseppe.",
     "beps[surprised]: Conosce il mio nome.",
     "varano: Conosco il nome di chiunque metta le mani su certe carte. Le do un consiglio gratuito, cosa rara per un notaio:",
-    "varano: restituisca quel computer al cantiere e torni ai suoi preventivi.",
+    "varano: restituisca quel computer al cantiere e torni a riparare stampanti.",
     {
      "choice": [
       {
@@ -357,7 +357,7 @@
       {
        "label": "«Era lei, nel deposito.»",
        "do": [
-        "varano: Io sono in molti posti, signor Lanzi. È il vantaggio di essere noiosi: nessuno ti nota."
+        "varano: Io sono in molti posti, Giuseppe. È il vantaggio di essere noiosi: nessuno ti nota."
        ]
       }
      ]
@@ -663,7 +663,7 @@
         {
          "label": "«Espongo io, tu sviluppi.»",
          "do": [
-          "kiki[smile]: Ottima divisione dei compiti, architetto.",
+          "kiki[smile]: Ottima divisione dei compiti, informatico.",
           "@inc:coop"
          ]
         },
@@ -760,7 +760,7 @@
     "@sfx:phone",
     "beps[surprised]: Numero sconosciuto.",
     "@anim:phone",
-    "varano: Signor Lanzi. La Teodosiana è chiusa il lunedì. Domani è martedì. Buon viaggio.",
+    "varano: Giuseppe. La Teodosiana è chiusa il lunedì. Domani è martedì. Buon viaggio.",
     "beps[angry]: Come fa a…",
     "narr: Ha riattaccato.",
     "kiki[determined]: Ci segue. Ci precede. Fa quello che vuole.",
@@ -1068,7 +1068,7 @@
      "if": "flag.neri_fiducia && !flag.neri_banco",
      "do": [
       "neri: Il banco? Mio nonno ci ha diviso il Sigillo nel '67. È giusto che ci torni intero.",
-      "neri: Faccia lei. Ha mani da architetto, non da orafo, ma il Sigillo si ricompone da solo, se sai leggerlo.",
+      "neri: Faccia lei. Ha mani da informatico, non da orafo, ma il Sigillo si ricompone da solo, se sai leggerlo.",
       "@flag:neri_banco",
       "@objective:o4_sigillo"
      ]
@@ -1242,7 +1242,7 @@
     "varano: Era un consiglio. Ho la brutta abitudine di dare consigli che sembrano minacce. È il mestiere."
    ],
    "intro": [
-    "varano: Prego, signor Lanzi. Parliamo."
+    "varano: Prego, Giuseppe. Parliamo."
    ],
    "byeLabel": "«Kiki viene con me. Adesso.»",
    "topics": [
@@ -1253,7 +1253,7 @@
      "once": true,
      "do": [
       "varano: Perché volevo parlarle senza di lei. E con lei senza di lei.",
-      "varano: Lei è un architetto, signor Lanzi. Sa che certi edifici vanno demoliti prima che crollino da soli.",
+      "varano: Lei ripara computer, Giuseppe. Sa che certi sistemi vanno spenti prima che si rompano da soli.",
       "varano: Il Registro di Orfeo è uno di quegli edifici."
      ]
     },
@@ -1301,13 +1301,13 @@
      "once": true,
      "do": [
       "varano: Il palazzo di via de' Bardi. Lo finanzio io. Volevo arrivare alla stanza murata prima di chiunque.",
-      "varano[sad]: Sono arrivato secondo. Dopo un architetto con un coltellino e un capocantiere che vuole il caffè.",
+      "varano[sad]: Sono arrivato secondo. Dopo un informatico con un coltellino e un capocantiere che vuole il caffè.",
       "@stat:conoscenza+1"
      ]
     }
    ],
    "bye": [
-    "varano: Vada, signor Lanzi. Portatela fuori.",
+    "varano: Vada, Giuseppe. La porti fuori.",
     "varano: Ci rivedremo a Parigi. Sarà lì che capirete chi sono.",
     "narr: Il Notaio si alza il bavero e sparisce dietro la Venere, come un attore che conosce l'uscita di scena.",
     "@flag:varano_grotta_via",
@@ -1563,8 +1563,8 @@
        "do": [
         "@cutscene:bacio",
         "@flag:bacio",
-        "kiki[tender]: Era ora, architetto.",
-        "beps[smile]: Avevo calcolato i carichi.",
+        "kiki[tender]: Era ora, informatico.",
+        "beps[smile]: Stavo aspettando che finisse il download del coraggio.",
         "kiki[laugh]: Idiota.",
         "@stat:legame+2",
         "@stat:fiducia+1"
@@ -1593,7 +1593,7 @@
        ]
       },
       {
-       "label": "«Sai che questo muretto è del Seicento? Ottima malta.»",
+       "label": "«Sai che da qui il Wi-Fi prende benissimo?»",
        "do": [
         "kiki[laugh]: Sei impossibile.",
         {
@@ -1606,7 +1606,7 @@
           "@stat:legame+1"
          ],
          "else": [
-          "kiki[smile]: Ottima malta. Sì.",
+          "kiki[smile]: Ottimo Wi-Fi. Sì.",
           "narr: Appoggia la testa sulla sua spalla.",
           "@flag:mano",
           "@stat:legame+1"
@@ -1829,7 +1829,7 @@
       "varano: Lina Varano. La moglie di Bruno. Nello stesso anno, nella stessa casa, nascondeva in cantina quelli che lui denunciava. Ne ha salvati trenta.",
       "varano: È nel Registro anche lei. Nella colonna dei Barcaioli.",
       "beps: Allora il Registro non accusa solo. Salva anche.",
-      "varano[sad]: …Il Registro dice la verità, signor Lanzi. E la verità sulla mia famiglia è che siamo stati entrambe le cose.",
+      "varano[sad]: …Il Registro dice la verità, Giuseppe. E la verità sulla mia famiglia è che siamo stati entrambe le cose.",
       "@flag:varano_doubt",
       "@clue:lina_varano",
       "@stat:conoscenza+1",
@@ -2030,7 +2030,7 @@
     {
      "if": "chapter>=5 && stat.legame>=14",
      "do": [
-      "kiki[tender]: Dimmi, architetto."
+      "kiki[tender]: Dimmi, informatico."
      ]
     },
     {
@@ -2152,7 +2152,7 @@
      "do": [
       "kiki: Federica Morel. Restauratrice di carta, storica d'archivio, metà fiorentina e metà parigina. Diciamo tre quarti fiorentina, quando piove.",
       "kiki[smile]: Mi chiamano Kiki da quando avevo tre anni e non sapevo dire Federica.",
-      "kiki: E tu, architetto? Cosa ci fa uno come te in un archivio di notte?",
+      "kiki: E tu, informatico? Cosa ci fa uno come te in un archivio di notte?",
       "beps: Dieci minuti di lavoro. È una lunga storia.",
       "@stat:fiducia+1"
      ]
@@ -2275,7 +2275,7 @@
      "once": true,
      "do": [
       "kiki: Roma mi mette soggezione. Troppa storia per metro quadro.",
-      "beps: Per un architetto è il paradiso. Ogni muro ha tre muri sotto.",
+      "beps: Per uno curioso come me è il paradiso. Ogni muro ha tre muri sotto.",
       "kiki[smile]: Come le persone."
      ]
     },
@@ -2374,8 +2374,8 @@
       {
        "if": "flag.bacio",
        "do": [
-        "kiki: Non pensavo che un uomo che parla di malta durante un tramonto potesse piacermi.",
-        "beps: Calce idraulica. La malta era di calce idraulica.",
+        "kiki: Non pensavo che un uomo che parla di Wi-Fi durante un tramonto potesse piacermi.",
+        "beps: Cinque tacche. Il segnale aveva cinque tacche.",
         "kiki[laugh]: Appunto."
        ],
        "else": [
@@ -2501,23 +2501,23 @@
    "topics": [
     {
      "id": "chi",
-     "label": "Perché fai l'architetto?",
+     "label": "Perché fai l'informatico?",
      "icon": "person",
      "once": true,
      "do": [
-      "beps: Mio nonno era muratore. Diceva che i muri non mentono. Io volevo capire perché.",
-      "beps[smile]: Poi ho scoperto che i muri mentono eccome. Ma con onestà: basta saperli leggere.",
+      "beps: Da bambino smontavo tutto: radio, telefoni, il tostapane di mia nonna. Volevo capire cosa c'era dentro.",
+      "beps[smile]: Poi ho scoperto che i computer sono uguali, ma non prendono fuoco. Quasi mai.",
       "@stat:fiducia+1 quiet"
      ]
     },
     {
      "id": "studio",
-     "label": "Il tuo studio",
+     "label": "Il tuo ufficio",
      "icon": "city",
      "if": "chapter>=4",
      "once": true,
      "do": [
-      "beps[sad]: L'hanno distrutto per dirmi qualcosa. Il plastico, lo rifarò. Gli schizzi, li rifarò. Il computer… era loro, in fondo.",
+      "beps[sad]: L'hanno distrutto per dirmi qualcosa. La mia scrivania, la rimetterò a posto. I cavi, li ricollegherò. Il computer… era loro, in fondo.",
       "beps: Quello che non potevano prendermi l'avevo già portato via. Te, per esempio. Cioè. La chiavetta. Volevo dire la chiavetta."
      ]
     },
@@ -2629,7 +2629,7 @@
     },
     "narr: Kiki appoggia sul tavolo una fotografia. Quattro uomini, un palazzo, una donna col cappello, un volto graffiato.",
     "beps[surprised]: È identica alla mia.",
-    "kiki: Lo so. Ripiano 17, giusto? Io ho la tessera per il deposito. Lei no. Venga con me, architetto.",
+    "kiki: Lo so. Ripiano 17, giusto? Io ho la tessera per il deposito. Lei no. Venga con me, informatico.",
     {
      "choice": [
       {
@@ -2650,7 +2650,7 @@
      ]
     },
     "@flag:deposito_ok",
-    "archivista: Dieci minuti, signorina Morel. Dieci. E l'architetto non tocca niente.",
+    "archivista: Dieci minuti, signorina Morel. Dieci. E il giovanotto non tocca niente.",
     "@objective:o1_deposito"
    ]
   },
