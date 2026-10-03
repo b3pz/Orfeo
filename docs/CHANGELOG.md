@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.0.3 — Menu dipinto e animazioni più calme
+
+- Schermata del titolo sul menu dipinto (`assets/gui/title_menu.webp`, da `reference/gui/menu_principale.png`): i pulsanti veri stanno sulle targhe dipinte, «Esci» diventa «Archivio», Crediti e finali scoperti sotto.
+- Da fermi e mentre parlano i personaggi tengono una posa e la cambiano ogni tanto (prima scorrevano tutti i fotogrammi di continuo); le azioni si giocano una volta sola, più lente.
+- Strisce di camminata e corsa ritagliate seguendo la forma delle gambe: niente più punte di scarpe del fotogramma vicino né piedi tagliati.
+
 ## 1.0.2 — Più fondali reali
 
 - Lungarno all'alba (Cap. VII) usa il fondale del Lungarno virato all'alba (`bgFilter`/`bgTint`), con hotspot riposizionati.

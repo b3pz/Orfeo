@@ -101,6 +101,7 @@
         a.sprite = sp;
         a.frame = 0;
         a.t = 0;
+        a.hold = null;
         a.spriteEl.style.backgroundPosition = '0 0';
         if (resized && O.Scene.current) this.update(a.id);
       } else {
@@ -115,8 +116,28 @@
       if (!a.sprite) return;
       const sp = a.sprite;
       a.t += dt;
-      const fps = sp.fps || 8;
-      const f = Math.floor(a.t * fps) % sp.frames;
+      let f = a.frame;
+      if (sp.anim === 'walk' || sp.anim === 'run') {
+        // cycles: every frame in order
+        f = Math.floor(a.t * (sp.fps || 8)) % sp.frames;
+      } else if (sp.anim === 'idle' || sp.anim === 'talk') {
+        // the frames are different poses, not in-betweens: hold one for a
+        // while and change pose now and then (idle mostly rests on frame 0)
+        if (a.hold == null) a.hold = sp.anim === 'idle' ? 2 + Math.random() * 4 : 0.6;
+        if (a.t >= a.hold) {
+          a.t = 0;
+          if (sp.anim === 'idle') {
+            f = a.frame === 0 ? 1 + Math.floor(Math.random() * (sp.frames - 1)) : 0;
+            a.hold = f === 0 ? 4 + Math.random() * 5 : 1.4 + Math.random() * 1.2;
+          } else {
+            do f = Math.floor(Math.random() * sp.frames); while (sp.frames > 1 && f === a.frame);
+            a.hold = 0.7 + Math.random() * 0.6;
+          }
+        }
+      } else {
+        // one-off actions: play once, slowly, and stay on the last frame
+        f = Math.min(sp.frames - 1, Math.floor(a.t * Math.min(sp.fps || 6, 6)));
+      }
       if (f !== a.frame) {
         a.frame = f;
         a.spriteEl.style.backgroundPosition = `${sp.frames > 1 ? (f / (sp.frames - 1)) * 100 : 0}% 0`;

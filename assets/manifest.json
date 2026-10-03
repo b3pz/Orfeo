@@ -1,5 +1,5 @@
 {
- "count": 180,
+ "count": 181,
  "files": [
   "assets/backgrounds/bg_archivio_firenze_room_01.jpg",
   "assets/backgrounds/bg_archivio_firenze_room_02.jpg",
@@ -24,6 +24,7 @@
   "assets/cutscenes/post_cenere_2.webp",
   "assets/cutscenes/post_custodi_2.webp",
   "assets/cutscenes/post_luce_2.webp",
+  "assets/gui/title_menu.webp",
   "assets/items/busta_e.png",
   "assets/items/foto1944.png",
   "assets/items/mappa.png",

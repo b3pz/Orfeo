@@ -1,7 +1,7 @@
 # ASSET REQUIREMENTS — Il Segreto di Orfeo
 
 > File generato da `node tools/asset-list.mjs` a partire da `data/*.json` e `assets/manifest.json`.
-> Stato al momento della generazione: **180 file reali presenti** in `assets/`.
+> Stato al momento della generazione: **181 file reali presenti** in `assets/`.
 
 ## Come funziona la sostituzione
 
