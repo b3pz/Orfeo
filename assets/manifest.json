@@ -1,6 +1,11 @@
 {
- "count": 57,
+ "count": 62,
  "files": [
+  "assets/backgrounds/bg_archivio_firenze_room_01.jpg",
+  "assets/backgrounds/bg_archivio_firenze_room_02.jpg",
+  "assets/backgrounds/bg_camera_segreta_orfeo_01.jpg",
+  "assets/backgrounds/bg_lungarno_notte_01.jpg",
+  "assets/backgrounds/bg_studio_architettura_firenze_clean.jpg",
   "assets/backgrounds/c1_archivio.webp",
   "assets/backgrounds/c1_lungarno.webp",
   "assets/backgrounds/c1_studio.webp",
