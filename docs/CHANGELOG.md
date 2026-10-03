@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.0.2 — Più fondali reali
+
+- Lungarno all'alba (Cap. VII) usa il fondale del Lungarno virato all'alba (`bgFilter`/`bgTint`), con hotspot riposizionati.
+- La schermata del titolo usa la piazza fiorentina notturna.
+- Personaggi più grandi (altezza base 470 → 560) e scala di ogni scena con fondale reale tarata su porte, tavoli e ringhiere.
+- Ufficio della ditta (Cap. I e IV) sul fondale con computer, stampante, macchinetta e bacheca; hotspot riposizionati.
+
 ## 1.0.1 — Collegamento delle immagini caricate
 
 - Sprite reali per Beps, Kiki, Varano, Ottavia, Don Ilario, Selim, Monsieur Albert e gli agenti (strisce ricavate con `tools/normalize-assets.py`); il motore usa la proporzione reale di ogni striscia.

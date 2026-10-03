@@ -54,7 +54,7 @@
       });
       const first = O.Data.chapters.start && O.Data.chapters.start.scene;
       if (first) list.push(`assets/backgrounds/${first}.jpg`, `assets/backgrounds/${first}.webp`, `assets/backgrounds/${first}.png`);
-      list.push('assets/gui/title.jpg', 'assets/gui/title.png');
+      list.push('assets/gui/title.jpg', 'assets/gui/title.png', 'assets/gui/title.webp', 'assets/backgrounds/piazza_firenze_notte.webp');
       return list;
     },
 
@@ -99,8 +99,9 @@
       const cont = O.$('#btn-continue');
       cont.disabled = !latest;
       cont.innerHTML = latest ? `Continua <small>Cap. ${O.roman(latest.chapter)} · ${latest.sceneName || ''}</small>` : 'Continua';
-      const img = O.Assets.first('assets/gui/title.jpg', 'assets/gui/title.png');
-      O.$('#title-art').innerHTML = img ? `<img src="${img}" alt="">` : O.Art.background(O.Data.scenes.scenes[O.Data.chapters.titleScene || 'c1_lungarno'] || { id: 't', art: { type: 'exterior', time: 'night' } });
+      const titleScene = O.Data.scenes.scenes[O.Data.chapters.titleScene || 'c1_lungarno'];
+      const img = O.Assets.first('assets/gui/title.jpg', 'assets/gui/title.png', 'assets/gui/title.webp', 'assets/backgrounds/piazza_firenze_notte.webp') || (titleScene && O.Scene.bgPath(titleScene));
+      O.$('#title-art').innerHTML = img ? `<img src="${img}" alt="">` : O.Art.background(titleScene || { id: 't', art: { type: 'exterior', time: 'night' } });
       const found = Object.keys(O.State.profile.endings || {}).length;
       O.$('#title-endings').textContent = found ? `Finali scoperti: ${found} / ${O.Endings.order().length}` : '';
       O.Audio.music('title');

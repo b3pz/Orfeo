@@ -2,6 +2,7 @@
  "_doc": "Scene. Coordinate nel mondo logico 1920x1080. walk = poligono camminabile; walkFor = poligono per personaggio; walkIf = poligoni alternativi condizionali. hotspots: rect [x,y,w,h], at = punto d'interazione, look/use/talk/exit/items, only = solo un personaggio. art = oggetto disegnato proceduralmente se manca lo sfondo reale.",
  "scenes": {
   "c1_studio": {
+   "bg": "assets/backgrounds/bg_studio_architettura_firenze_clean.jpg",
    "name": "Ufficio della ditta",
    "place": "Oltrarno · Firenze · ottobre 2026",
    "chapter": 1,
@@ -57,44 +58,56 @@
    },
    "walk": [
     [
-     900,
+     600,
      1080
     ],
     [
-     1880,
+     1760,
      1080
     ],
     [
-     1830,
-     720
+     1760,
+     960
+    ],
+    [
+     1600,
+     950
     ],
     [
      1500,
-     700
+     860
     ],
     [
-     1000,
-     700
+     1350,
+     790
     ],
     [
-     930,
-     760
+     850,
+     780
+    ],
+    [
+     820,
+     820
+    ],
+    [
+     700,
+     860
     ]
    ],
    "scale": [
-    700,
-    0.75,
+    790,
+    0.9,
     1080,
-    1.05
+    1.2
    ],
    "spawn": {
     "default": [
-     1150,
-     920
+     1000,
+     930
     ],
     "from_c1_lungarno": [
-     1720,
-     880,
+     1650,
+     1010,
      "l"
     ]
    },
@@ -109,18 +122,18 @@
      "id": "scrivania",
      "name": "Scrivania",
      "rect": [
-      0,
+      100,
       600,
-      900,
-      330
+      750,
+      300
      ],
      "art": {
       "k": "desk",
       "items": false
      },
      "at": [
-      960,
-      980
+      760,
+      930
      ],
      "look": "La mia scrivania. Sepolta sotto tre portatili da riparare, due tazze e un computer che non è mio.",
      "use": "Non ho tempo per mettere in ordine. Non ho mai tempo per mettere in ordine."
@@ -129,17 +142,17 @@
      "id": "computer",
      "name": "Vecchio computer",
      "rect": [
-      1375,
-      265,
-      230,
-      190
+      500,
+      490,
+      160,
+      140
      ],
      "art": {
       "k": "computer"
      },
      "at": [
-      1480,
-      760
+      760,
+      900
      ],
      "face": "l",
      "look": "Il computer recuperato dal cantiere. Vecchio, polveroso e stranamente ancora leggibile. Un Pentium del '98, a occhio.",
@@ -199,18 +212,18 @@
      "id": "stampante",
      "name": "Stampante",
      "rect": [
-      1720,
-      420,
-      130,
-      80
+      1150,
+      520,
+      220,
+      160
      ],
      "art": {
       "k": "machine",
       "c": "#5a5a5e"
      },
      "at": [
-      1720,
-      780
+      1200,
+      860
      ],
      "look": "La stampante dell'ufficio. Inceppa un foglio su tre per principio.",
      "use": [
@@ -231,10 +244,10 @@
      "id": "finestra",
      "name": "Finestra",
      "rect": [
-      900,
-      0,
-      450,
-      480
+      500,
+      90,
+      770,
+      400
      ],
      "art": {
       "k": "window",
@@ -247,14 +260,15 @@
      "id": "foto_nonno",
      "name": "Foto del nonno",
      "rect": [
-      1380,
-      135,
-      85,
-      120
+      1300,
+      440,
+      70,
+      90
      ],
      "art": {
       "k": "frame",
-      "c": "#b8a888"
+      "c": "#b8a888",
+      "overlay": true
      },
      "look": [
       "Nonno Gigi, muratore, davanti al cantiere della Biblioteca Nazionale dopo l'alluvione del '66. Mi ha lasciato le 500 lire e la mania di smontare le cose per capire come funzionano.",
@@ -265,18 +279,18 @@
      "id": "macchinetta",
      "name": "Macchinetta del caffè",
      "rect": [
-      1610,
-      590,
-      80,
-      90
+      1480,
+      560,
+      190,
+      170
      ],
      "art": {
       "k": "machine",
       "c": "#2e2e32"
      },
      "at": [
-      1640,
-      780
+      1480,
+      900
      ],
      "look": "La macchinetta a cialde. Produce qualcosa di marrone e caldo. Il resto è fede.",
      "use": [
@@ -312,10 +326,10 @@
      "id": "plastico",
      "name": "Plastico",
      "rect": [
-      250,
-      470,
-      210,
-      130
+      290,
+      510,
+      180,
+      90
      ],
      "art": {
       "k": "building",
@@ -323,8 +337,8 @@
       "lit": 1
      },
      "at": [
-      960,
-      960
+      700,
+      950
      ],
      "look": [
       "Il plastico del palazzo di via de' Bardi, in scala 1:50. L'hanno fatto i tecnici della ditta: io ho solo fatto il rendering 3D.",
@@ -335,10 +349,10 @@
      "id": "lavagna",
      "name": "Bacheca",
      "rect": [
-      400,
-      70,
-      290,
-      310
+      1380,
+      160,
+      320,
+      370
      ],
      "art": {
       "k": "corkboard"
@@ -350,17 +364,17 @@
      "name": "Libreria",
      "rect": [
       0,
-      30,
-      330,
-      400
+      80,
+      480,
+      520
      ],
      "art": {
       "k": "shelves",
       "c": "#4a3526"
      },
      "at": [
-      960,
-      960
+      700,
+      950
      ],
      "face": "l",
      "look": "Manuali di Linux, un libro sulla crittografia, un Palladio lasciato dai tecnici e tre gialli di Simenon. Le priorità di un informatico.",
@@ -370,15 +384,14 @@
      "id": "cestino",
      "name": "Cestino",
      "rect": [
-      960,
-      880,
-      90,
-      110
+      1360,
+      800,
+      110,
+      140
      ],
      "art": {
       "k": "crate",
-      "c": "#6a6a6a",
-      "overlay": true
+      "c": "#6a6a6a"
      },
      "look": "Un mouse rotto, un cavo VGA e la mia dignità del lunedì mattina."
     },
@@ -386,18 +399,18 @@
      "id": "porta",
      "name": "Porta dell'ufficio",
      "rect": [
-      1830,
-      200,
-      90,
-      700
+      1740,
+      110,
+      180,
+      880
      ],
      "art": {
       "k": "door",
       "label": "UFFICIO"
      },
      "at": [
-      1800,
-      900
+      1700,
+      1000
      ],
      "exit": {
       "to": "c1_lungarno",
@@ -1295,9 +1308,9 @@
    ],
    "scale": [
     690,
-    0.72,
+    0.6,
     1080,
-    1.0
+    1.15
    ],
    "spawn": {
     "default": [
@@ -1699,9 +1712,9 @@
    ],
    "scale": [
     640,
-    0.5,
+    0.6,
     1080,
-    1.0
+    1.15
    ],
    "spawn": {
     "default": [
@@ -4553,9 +4566,9 @@
    ],
    "scale": [
     560,
-    0.45,
+    0.4,
     1080,
-    1.0
+    1.25
    ],
    "spawn": {
     "default": [
@@ -5649,7 +5662,7 @@
    ]
   },
   "c4_studio": {
-   "bg": "assets/backgrounds/c1_studio.webp",
+   "bg": "assets/backgrounds/bg_studio_architettura_firenze_clean.jpg",
    "name": "Ufficio della ditta (devastato)",
    "place": "Oltrarno · Firenze · dicembre 2026",
    "chapter": 4,
@@ -5697,44 +5710,56 @@
    },
    "walk": [
     [
-     900,
+     600,
      1080
     ],
     [
-     1880,
+     1760,
      1080
     ],
     [
-     1830,
-     720
+     1760,
+     960
+    ],
+    [
+     1600,
+     950
     ],
     [
      1500,
-     700
+     860
     ],
     [
-     1000,
-     700
+     1350,
+     790
     ],
     [
-     930,
-     760
+     850,
+     780
+    ],
+    [
+     820,
+     820
+    ],
+    [
+     700,
+     860
     ]
    ],
    "scale": [
-    700,
-    0.75,
+    790,
+    0.9,
     1080,
-    1.05
+    1.2
    ],
    "spawn": {
     "default": [
-     1150,
-     920
+     1000,
+     930
     ],
     "from_c4_ponte": [
-     1720,
-     880,
+     1650,
+     1010,
      "l"
     ]
    },
@@ -5743,8 +5768,8 @@
    "firstEnter": [
     "beps[surprised]: Il mio ufficio.",
     "kiki[worried]: Beps…",
-    "narr: Cassetti rovesciati, disegni strappati, il plastico del palazzo spaccato in due. Il vecchio computer è sparito.",
-    "beps[angry]: Il computer. Si sono presi il computer.",
+    "narr: Cassetti rovesciati, disegni strappati, il plastico del palazzo spaccato in due. Il vecchio computer trovato nella stanza murata è sparito: sulla scrivania è rimasto solo il terminale di Beps.",
+    "beps[angry]: Il computer del palazzo. Si sono presi quello.",
     "kiki: Ma la chiavetta ce l'hai tu. Non hanno niente.",
     "kiki[worried]: Vado a vedere se hanno visitato anche casa mia. È a dieci minuti. Torno subito.",
     {
@@ -5775,18 +5800,18 @@
      "id": "scrivania",
      "name": "Scrivania",
      "rect": [
-      0,
+      100,
       600,
-      900,
-      330
+      750,
+      300
      ],
      "art": {
       "k": "desk",
       "items": false
      },
      "at": [
-      960,
-      980
+      760,
+      930
      ],
      "look": "La mia scrivania. Il computer non c'è più. Al suo posto, un biglietto.",
      "use": "Hanno svuotato i cassetti. Le mie matite sono ovunque. Le ritroverò fra tre anni sotto un mobile."
@@ -5795,8 +5820,8 @@
      "id": "biglietto",
      "name": "Biglietto",
      "rect": [
-      600,
-      600,
+      560,
+      640,
       80,
       50
      ],
@@ -5810,8 +5835,8 @@
      "id": "pacco",
      "name": "Pacco di Sandro",
      "rect": [
-      1560,
-      800,
+      1180,
+      900,
       120,
       100
      ],
@@ -5823,8 +5848,8 @@
      },
      "if": "!flag.got_sigillo_c",
      "at": [
-      1560,
-      980
+      1150,
+      1040
      ],
      "look": "Un pacco con un biglietto: «Beps, l'ho trovato nel muro dopo che sei andato via. Io non lo tocco più. — Sandro».",
      "use": [
@@ -5841,17 +5866,17 @@
      "id": "plastico",
      "name": "Plastico distrutto",
      "rect": [
-      250,
-      470,
-      210,
-      130
+      290,
+      510,
+      180,
+      90
      ],
      "art": {
       "k": "boxes"
      },
      "at": [
-      960,
-      960
+      700,
+      950
      ],
      "look": [
       "Il plastico del palazzo. Spaccato con un colpo solo, nel punto esatto della stanza murata.",
@@ -5862,10 +5887,10 @@
      "id": "finestra",
      "name": "Finestra",
      "rect": [
-      900,
-      0,
-      450,
-      480
+      500,
+      90,
+      770,
+      400
      ],
      "art": {
       "k": "window",
@@ -5878,10 +5903,10 @@
      "id": "lavagna",
      "name": "Bacheca",
      "rect": [
-      400,
-      70,
-      290,
-      310
+      1380,
+      160,
+      320,
+      370
      ],
      "art": {
       "k": "corkboard"
@@ -5892,8 +5917,8 @@
      "id": "telefono",
      "name": "Telefono",
      "rect": [
-      820,
-      650,
+      800,
+      700,
       60,
       40
      ],
@@ -5902,8 +5927,8 @@
       "overlay": true
      },
      "at": [
-      960,
-      980
+      760,
+      930
      ],
      "look": "Il mio telefono. Nessun messaggio di Kiki.",
      "use": [
@@ -5924,18 +5949,18 @@
      "id": "porta",
      "name": "Porta dell'ufficio",
      "rect": [
-      1830,
-      200,
-      90,
-      700
+      1740,
+      110,
+      180,
+      880
      ],
      "art": {
       "k": "door",
       "label": "UFFICIO"
      },
      "at": [
-      1800,
-      900
+      1700,
+      1000
      ],
      "exit": {
       "to": "c4_ponte",
@@ -5945,7 +5970,8 @@
       ]
      }
     }
-   ]
+   ],
+   "bgFilter": "saturate(0.75) brightness(0.92) hue-rotate(8deg)"
   },
   "c4_ponte": {
    "name": "Ponte Vecchio",
@@ -8496,9 +8522,9 @@
    ],
    "scale": [
     790,
-    0.62,
+    0.72,
     1080,
-    1.0
+    1.1
    ],
    "spawn": {
     "default": [
@@ -11085,6 +11111,9 @@
    ]
   },
   "c7_alba": {
+   "bg": "assets/backgrounds/bg_lungarno_notte_01.jpg",
+   "bgFilter": "brightness(1.1) saturate(1.1) sepia(0.2)",
+   "bgTint": "linear-gradient(180deg, rgba(255,120,100,.55) 0%, rgba(255,160,110,.4) 35%, rgba(255,190,140,.12) 60%, transparent 80%)",
    "name": "Lungarno all'alba",
    "place": "Firenze",
    "chapter": 7,
@@ -11146,36 +11175,48 @@
    },
    "walk": [
     [
-     0,
-     1060
+     120,
+     1080
     ],
     [
      1920,
-     1060
+     1080
     ],
     [
      1920,
-     830
+     900
     ],
     [
-     620,
-     830
+     1600,
+     780
     ],
     [
-     0,
-     800
+     1300,
+     665
+    ],
+    [
+     1100,
+     645
+    ],
+    [
+     1000,
+     655
+    ],
+    [
+     790,
+     770
     ]
    ],
    "scale": [
-    780,
-    0.78,
-    1060,
-    1.02
+    650,
+    0.42,
+    1080,
+    0.95
    ],
    "spawn": {
     "default": [
-     500,
-     920,
+     640,
+     990,
      "r"
     ]
    },
@@ -11183,8 +11224,8 @@
     {
      "id": "varano7",
      "char": "varano",
-     "x": 1360,
-     "y": 870,
+     "x": 900,
+     "y": 775,
      "dir": "l",
      "talk": "varano_finale",
      "look": {
@@ -11204,8 +11245,8 @@
      "id": "panchina",
      "name": "Panchina",
      "rect": [
-      300,
-      830,
+      400,
+      880,
       280,
       110
      ],
@@ -11213,8 +11254,8 @@
       "k": "bench"
      },
      "at": [
-      440,
-      960
+      560,
+      1010
      ],
      "look": {
       "beps": "La panchina bagnata della prima sera. Adesso è asciutta. Ci starebbero due persone.",
@@ -11225,10 +11266,10 @@
      "id": "ponte",
      "name": "Ponte Vecchio",
      "rect": [
-      40,
-      450,
+      500,
+      490,
       540,
-      170
+      80
      ],
      "look": {
       "beps": "Il ponte che non cadde. Sopra, sulla spalletta, c'è una figura in nero. Col cappello.",
@@ -11239,15 +11280,16 @@
      "id": "donna_ponte",
      "name": "Figura sul ponte",
      "rect": [
-      300,
-      440,
-      50,
-      120
+      700,
+      455,
+      30,
+      70
      ],
      "art": {
       "k": "figure",
       "hat": true,
-      "c": "#0a0a0c"
+      "c": "#0a0a0c",
+      "overlay": true
      },
      "look": {
       "beps": "Ci guarda. Alza una mano. Un saluto? Poi si volta e se ne va.",
@@ -11263,10 +11305,10 @@
      "id": "targa",
      "name": "Targa dell'alluvione",
      "rect": [
-      1150,
-      470,
-      110,
-      64
+      1612,
+      420,
+      70,
+      90
      ],
      "art": {
       "k": "sign",
@@ -11282,10 +11324,10 @@
      "id": "caffe",
      "name": "Caffè delle Logge",
      "rect": [
-      1440,
-      560,
-      170,
-      250
+      1530,
+      320,
+      90,
+      390
      ],
      "art": {
       "k": "door",
