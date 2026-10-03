@@ -13,7 +13,7 @@
     "c1_fine": {
       "music": "tender",
       "shots": [
-        { "scene": "c1_lungarno", "text": "Quella notte Beps non dormì. Guardò la fotografia fino all'alba, e il volto graffiato guardò lui.", "cam": { "from": [50, 45, 1.0], "to": [20, 50, 1.25] }, "fx": ["rain"] },
+        { "img": "assets/backgrounds/c1_studio.webp", "scene": "c1_lungarno", "text": "Quella notte Beps non dormì. Guardò la fotografia fino all'alba, e il volto graffiato guardò lui.", "cam": { "from": [50, 45, 1.0], "to": [20, 50, 1.25] }, "fx": ["rain"] },
         { "img": "assets/cutscenes/cutscene_01_arrivo_in_citta.jpg", "scene": "c2_gare", "title": "Il treno delle 7:12", "sub": "FIRENZE — PARIGI", "cam": { "from": [50, 50, 1.2], "to": [50, 45, 1.0] }, "fx": ["light"], "figures": [ { "id": "kiki", "x": 820, "y": 900 }, { "id": "beps", "x": 1060, "y": 900, "flip": true } ] }
       ]
     },
@@ -122,6 +122,31 @@
         { "img": "assets/reference/cutscenes/orfeo_reveal.webp", "scene": "c6_archivio", "title": "Registro di Orfeo", "sub": "RUOLO XVIII", "cam": { "from": [50, 50, 1.3], "to": [50, 50, 1.0] }, "fx": ["dust"] },
         { "color": "#e9dfc6", "text": "«XVIII · Il Ponte e la Testimone, insieme. Giuseppe e Federica. Giurano il 12 marzo, per primi e per ultimi, in due.»", "dur": 6000 },
         { "img": "assets/reference/cutscenes/anonymous_envelope_old.webp", "scene": "c1_caffe", "text": "Il giovedì dopo, al Caffè delle Logge, Tommaso trova sul piattino di una donna col cappello nero un biglietto: «Ottimo lavoro. Ora tocca a voi.» Nessuno l'ha vista entrare.", "cam": { "from": [60, 45, 1.3], "to": [50, 50, 1.0] } }
+      ]
+    },
+    "incontro": {
+      "music": "tender",
+      "shots": [
+        { "img": "assets/reference/cutscenes/first_meeting.webp", "scene": "c1_archivio", "text": "Tra gli scaffali, una donna con gli occhiali e un fascio di carte sotto il braccio. Mi guardava come si guarda un documento sospetto.", "cam": { "from": [40, 45, 1.25], "to": [55, 50, 1.05] }, "fx": ["dust"], "dur": 5200 }
+      ]
+    },
+    "allarme_roma": {
+      "music": "tension",
+      "shots": [
+        { "img": "assets/cutscenes/cutscene_05_momento_di_crisi.jpg", "scene": "c3_sala_cassetti", "text": "Kiki si lascia scivolare contro gli scaffali. Beps le prende le mani. Sulla porta, un'ombra si ferma ad ascoltare.", "cam": { "from": [50, 50, 1.3], "to": [45, 55, 1.05] }, "fx": ["dust"], "dur": 5200 }
+      ]
+    },
+    "grotta": {
+      "music": "tension",
+      "shots": [
+        { "img": "assets/reference/cutscenes/kiki_rescue.webp", "scene": "c4_grotta", "title": "Grotta del Buontalenti", "sub": "GIARDINO DI BOBOLI", "text": "Una porta di ferro, la pioggia alle spalle. E dietro, seduta al buio, Kiki.", "cam": { "from": [35, 50, 1.3], "to": [55, 50, 1.05] }, "dur": 5000 },
+        { "img": "assets/cutscenes/cutscene_04_incontro_sotterraneo.jpg", "scene": "c4_grotta", "text": "Dall'ombra della grotta, un uomo col cappotto lungo e il bastone. Li stava aspettando.", "cam": { "from": [70, 45, 1.3], "to": [55, 50, 1.0] }, "fx": ["dust"], "dur": 4800 }
+      ]
+    },
+    "varano_parigi": {
+      "music": "mystery",
+      "shots": [
+        { "img": "assets/reference/cutscenes/varano_confrontation.webp", "scene": "c6_ufficio", "title": "Studio del Notaio", "sub": "ÎLE DE LA CITÉ", "text": "Il Notaio li aspettava tra i suoi faldoni, sotto una statua che nessuno spolverava da anni.", "cam": { "from": [65, 45, 1.3], "to": [50, 50, 1.0] }, "fx": ["dust"], "dur": 5200 }
       ]
     }
   }

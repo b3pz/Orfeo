@@ -54,7 +54,7 @@
       });
       const first = O.Data.chapters.start && O.Data.chapters.start.scene;
       if (first) list.push(`assets/backgrounds/${first}.jpg`, `assets/backgrounds/${first}.webp`, `assets/backgrounds/${first}.png`);
-      list.push('assets/gui/title.jpg', 'assets/gui/title.png', 'assets/gui/title.webp', 'assets/backgrounds/piazza_firenze_notte.webp');
+      list.push('assets/gui/title_menu.webp', 'assets/gui/title.jpg', 'assets/gui/title.png', 'assets/gui/title.webp', 'assets/backgrounds/piazza_firenze_notte.webp');
       return list;
     },
 
@@ -99,6 +99,28 @@
       const cont = O.$('#btn-continue');
       cont.disabled = !latest;
       cont.innerHTML = latest ? `Continua <small>Cap. ${O.roman(latest.chapter)} · ${latest.sceneName || ''}</small>` : 'Continua';
+      // painted title screen (assets/gui/title_menu.*): the real buttons sit
+      // on the plates painted in the picture
+      const painted = O.Assets.first('assets/gui/title_menu.webp', 'assets/gui/title_menu.png', 'assets/gui/title_menu.jpg');
+      ts.classList.toggle('painted', !!painted);
+      if (painted) {
+        const stage = O.$('#title-stage');
+        stage.classList.remove('hidden');
+        O.$('.ts-art', stage).src = painted;
+        const menu = O.$('.ts-menu', stage);
+        // painted order: Nuova partita, Continua, Carica, Opzioni, [Esci → Archivio]
+        ['btn-new', 'btn-continue', 'btn-load', 'btn-options', 'btn-archive'].forEach((id, i) => {
+          const b = O.$('#' + id);
+          b.classList.toggle('ts-own-label', id === 'btn-archive');
+          b.style.top = 39.9 + i * 8.13 + '%';
+          menu.appendChild(b);
+        });
+        if (latest) cont.title = `Cap. ${O.roman(latest.chapter)} · ${latest.sceneName || ''}`;
+        cont.textContent = 'Continua';
+        const foot = O.$('.ts-foot', stage);
+        foot.appendChild(O.$('#btn-credits'));
+        foot.appendChild(O.$('#title-endings'));
+      }
       const titleScene = O.Data.scenes.scenes[O.Data.chapters.titleScene || 'c1_lungarno'];
       const img = O.Assets.first('assets/gui/title.jpg', 'assets/gui/title.png', 'assets/gui/title.webp', 'assets/backgrounds/piazza_firenze_notte.webp') || (titleScene && O.Scene.bgPath(titleScene));
       O.$('#title-art').innerHTML = img ? `<img src="${img}" alt="">` : O.Art.background(titleScene || { id: 't', art: { type: 'exterior', time: 'night' } });

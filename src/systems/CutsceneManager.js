@@ -103,9 +103,15 @@
         const from = s.cam && s.cam.from ? s.cam.from : [50, 50, 1.08];
         const to = s.cam && s.cam.to ? s.cam.to : [50, 50, 1.0];
         const dur = s.dur || (s.text ? Math.max(3500, s.text.length * 45) : 3000);
-        const tf = (c) => `translate(${50 - c[0]}%, ${50 - c[1]}%) scale(${c[2]})`;
+        // pan towards the point, but never further than the zoom allows
+        // (otherwise the picture's edge shows)
+        const tf = (c) => {
+          const m = Math.max(0, (c[2] - 1) * 50);
+          const t = (v) => Math.max(-m, Math.min(m, (50 - v) * c[2]));
+          return `translate(${t(c[0])}%, ${t(c[1])}%) scale(${c[2]})`;
+        };
         img.style.transform = tf(from);
-        img.style.transformOrigin = `${from[0]}% ${from[1]}%`;
+        img.style.transformOrigin = '50% 50%';
         requestAnimationFrame(() =>
           requestAnimationFrame(() => {
             layer.classList.add('in');

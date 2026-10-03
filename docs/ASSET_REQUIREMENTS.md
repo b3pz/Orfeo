@@ -1,7 +1,7 @@
 # ASSET REQUIREMENTS — Il Segreto di Orfeo
 
 > File generato da `node tools/asset-list.mjs` a partire da `data/*.json` e `assets/manifest.json`.
-> Stato al momento della generazione: **174 file reali presenti** in `assets/`.
+> Stato al momento della generazione: **181 file reali presenti** in `assets/`.
 
 ## Come funziona la sostituzione
 
@@ -169,7 +169,9 @@ PNG NPC (per ora fallback procedurale; per attivarli aggiungere il blocco `sprit
 | ✅ presente | `assets/sprites/albert/idle.png`, `talk.png` | Monsieur Albert — Bouquiniste sul Quai des Grands-Augustins | idle (6), talk (6) |
 | ✅ presente | `assets/sprites/ilario/idle.png`, `talk.png` | Don Ilario Cesti — Bibliotecario della Teodosiana — Ruolo XIV, il Libraio | idle (6), talk (6) |
 | ✅ presente | `assets/sprites/agente/idle.png`, `talk.png` | Agente di Orfeo — Uomini del Notaio | idle (6), talk (6) |
-| ⬜ manca | `assets/sprites/neri/idle.png`, `talk.png` | Mastro Neri — Orafo sul Ponte Vecchio | idle (6), talk (6) |
+| ✅ presente | `assets/sprites/agente2/idle.png`, `talk.png` | Agente di Orfeo — Uomini del Notaio | idle (6), talk (6) |
+| ✅ presente | `assets/sprites/custode/idle.png`, `talk.png` | Un custode di Orfeo — Ruolo VII di Orfeo, il Cronista | idle (6), talk (6) |
+| ✅ presente | `assets/sprites/neri/idle.png`, `talk.png` | Mastro Neri — Orafo sul Ponte Vecchio | idle (6), talk (6) |
 | ⬜ manca | `assets/sprites/bellandi/idle.png`, `talk.png` | Dott.ssa Bellandi — Responsabile cassette di sicurezza, Banca del Giglio | idle (6), talk (6) |
 | ✅ presente | `assets/sprites/selim/idle.png`, `talk.png` | Selim Aydın — Antiquario al Gran Bazar — Ruolo XVI, il Traduttore | idle (6), talk (6) |
 | ⬜ manca | `assets/sprites/emre/idle.png`, `talk.png` | Emre — Ragazzo del tè | idle (6), talk (6) |
@@ -194,6 +196,8 @@ Espressioni supportate: `neutral`, `smile`, `laugh`, `surprised`, `worried`, `sa
 | Monsieur Albert (`albert`) | bassa | neutral, smile, surprised, sad, worried | 0/5 |
 | Don Ilario Cesti (`ilario`) | media | neutral, smile, surprised, sad, worried | 0/5 |
 | Agente di Orfeo (`agente`) | bassa | neutral, smile, surprised, sad, worried | 0/5 |
+| Agente di Orfeo (`agente2`) | bassa | neutral, smile, surprised, sad, worried | 0/5 |
+| Un custode di Orfeo (`custode`) | bassa | neutral, smile, surprised, sad, worried | 0/5 |
 | Mastro Neri (`neri`) | bassa | neutral, smile, surprised, sad, worried | 0/5 |
 | Dott.ssa Bellandi (`bellandi`) | bassa | neutral, smile, surprised, sad, worried | 0/5 |
 | Selim Aydın (`selim`) | media | neutral, smile, surprised, sad, worried | 0/5 |
@@ -281,6 +285,11 @@ Ogni inquadratura viene animata con pan/zoom/fade; un'immagine leggermente più 
 | ⬜ manca | `assets/cutscenes/post_segreto_1.webp` | post_segreto | 1 | Titolo «Registro di Orfeo» | sfondo c6_archivio |
 | ⬜ manca | `assets/cutscenes/post_segreto_2.webp` | post_segreto | 2 | «XVIII · Il Ponte e la Testimone, insieme. Giuseppe e Federica. Giurano il 12 marzo, per p… | colore |
 | ⬜ manca | `assets/cutscenes/post_segreto_3.webp` | post_segreto | 3 | Il giovedì dopo, al Caffè delle Logge, Tommaso trova sul piattino di una donna col cappell… | sfondo c1_caffe |
+| ⬜ manca | `assets/cutscenes/incontro_1.webp` | incontro | 1 | Tra gli scaffali, una donna con gli occhiali e un fascio di carte sotto il braccio. Mi gua… | sfondo c1_archivio |
+| ⬜ manca | `assets/cutscenes/allarme_roma_1.webp` | allarme_roma | 1 | Kiki si lascia scivolare contro gli scaffali. Beps le prende le mani. Sulla porta, un'ombr… | sfondo c3_sala_cassetti |
+| ⬜ manca | `assets/cutscenes/grotta_1.webp` | grotta | 1 | Titolo «Grotta del Buontalenti» | sfondo c4_grotta |
+| ⬜ manca | `assets/cutscenes/grotta_2.webp` | grotta | 2 | Dall'ombra della grotta, un uomo col cappotto lungo e il bastone. Li stava aspettando. | sfondo c4_grotta |
+| ⬜ manca | `assets/cutscenes/varano_parigi_1.webp` | varano_parigi | 1 | Titolo «Studio del Notaio» | sfondo c6_ufficio |
 
 ---
 
@@ -335,7 +344,7 @@ Se un file manca e l'opzione «Audio sintetico di riserva» è attiva, il gioco 
 |---|---|---|
 | ⬜ manca | `assets/audio/music/firenze.ogg` | c1_studio, c1_lungarno, c1_archivio, c4_ponte, cutscene c3_fine |
 | ⬜ manca | `assets/audio/music/mystery.ogg` | c1_cantiere, c2_camera_oscura, c3_sala_cassetti, c4_banca, c4_corridoio, c5_cisterna, c5_camera_anelli, c6_atelier… |
-| ⬜ manca | `assets/audio/music/tension.ogg` | c1_corridoio, c3_passaggio, c4_studio, c4_grotta, c6_ufficio, c6_catacombe |
+| ⬜ manca | `assets/audio/music/tension.ogg` | c1_corridoio, c3_passaggio, c4_studio, c4_grotta, c6_ufficio, c6_catacombe, cutscene allarme_roma, cutscene grotta |
 | ⬜ manca | `assets/audio/music/tender.ogg` | c1_caffe, c2_appartamento, c3_osteria, c5_tetto, cutscene c1_fine, cutscene bacio, cutscene fine_segreto, cutscene post_luce… |
 | ⬜ manca | `assets/audio/music/paris.ogg` | c2_gare, c2_quai, c2_studio_marchetti, c6_pont_neuf, cutscene c5_fine |
 | ⬜ manca | `assets/audio/music/roma.ogg` | c3_piazza, c3_biblioteca, c3_cortile, cutscene c2_fine |

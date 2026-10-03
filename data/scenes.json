@@ -3980,7 +3980,7 @@
    "npcs": [
     {
      "id": "caricaturista",
-     "char": "agente",
+     "char": "agente2",
      "name": "Peppe il caricaturista",
      "x": 520,
      "y": 860,
@@ -6817,6 +6817,7 @@
     }
    ],
    "firstEnter": [
+    "@cutscene:grotta",
     "beps[surprised]: Kiki!",
     "kiki: Beps! Sto bene. Non ha… non mi ha fatto niente.",
     "varano: Giuseppe. Ha trovato la porta. Ha ricomposto il Sigillo. Sono quasi orgoglioso.",
@@ -9627,6 +9628,19 @@
      },
      "arrow": "l"
     }
+   ],
+   "npcs": [
+    {
+     "id": "custode",
+     "x": 1560,
+     "y": 800,
+     "dir": "l",
+     "talk": "custode",
+     "look": {
+      "beps": "Un uomo anziano con una sciarpa rossa. Sistema i faldoni come se fossero vivi.",
+      "kiki": "Non l'ho mai visto. Ma ha la spilla con la lira, sul bavero. È uno di loro."
+     }
+    }
    ]
   },
   "c6_ufficio": {
@@ -9722,6 +9736,7 @@
     }
    ],
    "firstEnter": [
+    "@cutscene:varano_parigi",
     "varano: Giuseppe. Signorina Morel. Accomodatevi. Vi aspettavo da Firenze.",
     "varano: Prendetevi un momento. Guardatevi intorno. Poi parliamo.",
     "@objective:o6_parla_varano"

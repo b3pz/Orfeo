@@ -1,9 +1,18 @@
 # CHANGELOG
 
+## 1.0.3 — Menu dipinto e animazioni più calme
+
+- Schermata del titolo sul menu dipinto (`assets/gui/title_menu.webp`, da `reference/gui/menu_principale.png`): i pulsanti veri stanno sulle targhe dipinte, «Esci» diventa «Archivio», Crediti e finali scoperti sotto.
+- Da fermi e mentre parlano i personaggi tengono una posa e la cambiano ogni tanto (prima scorrevano tutti i fotogrammi di continuo); le azioni si giocano una volta sola, più lente.
+- Strisce di camminata e corsa ritagliate seguendo la forma delle gambe: niente più punte di scarpe del fotogramma vicino né piedi tagliati.
+
 ## 1.0.2 — Più fondali reali
 
 - Lungarno all'alba (Cap. VII) usa il fondale del Lungarno virato all'alba (`bgFilter`/`bgTint`), con hotspot riposizionati.
 - La schermata del titolo usa la piazza fiorentina notturna.
+- Nuove cutscene con le illustrazioni rimaste: il primo incontro in Archivio, l'allarme alla Teodosiana, la Grotta di Boboli (Kiki ritrovata e il Notaio), lo Studio del Notaio a Parigi; lo studio coi tavoli da disegno apre la fine del Cap. I.
+- Sprite per Mastro Neri, un secondo agente (il caricaturista di Roma) e un nuovo custode di Orfeo nell'Archivio di Parigi, con un breve dialogo.
+- Le panoramiche delle cutscene non mostrano più il bordo dell'immagine.
 - Personaggi più grandi (altezza base 470 → 560) e scala di ogni scena con fondale reale tarata su porte, tavoli e ringhiere.
 - Ufficio della ditta (Cap. I e IV) sul fondale con computer, stampante, macchinetta e bacheca; hotspot riposizionati.
 

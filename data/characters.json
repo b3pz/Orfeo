@@ -42,7 +42,7 @@
         "walk": { "src": "assets/sprites/kiki/walk.png", "frames": 8, "fps": 12, "w": 238, "h": 512 },
         "run": { "src": "assets/sprites/kiki/run.png", "frames": 8, "fps": 16, "w": 286, "h": 512 },
         "talk": { "src": "assets/sprites/kiki/talk.png", "frames": 6, "fps": 8, "w": 380, "h": 512 },
-        "use": { "src": "assets/sprites/kiki/use.png", "frames": 6, "fps": 8, "w": 384, "h": 512 },
+        "use": { "src": "assets/sprites/kiki/use.png", "frames": 6, "fps": 8, "w": 326, "h": 512 },
         "pickup": { "src": "assets/sprites/kiki/pickup.png", "frames": 6, "fps": 10, "w": 266, "h": 512 },
         "inspect": { "src": "assets/sprites/kiki/inspect.png", "frames": 6, "fps": 6, "w": 304, "h": 512 },
         "read": { "src": "assets/sprites/kiki/read.png", "frames": 6, "fps": 5, "w": 356, "h": 512 },
@@ -69,7 +69,7 @@
         "walk": { "src": "assets/sprites/kiki/walk.png", "frames": 8, "fps": 12, "w": 238, "h": 512 },
         "run": { "src": "assets/sprites/kiki/run.png", "frames": 8, "fps": 16, "w": 286, "h": 512 },
         "talk": { "src": "assets/sprites/kiki/talk.png", "frames": 6, "fps": 8, "w": 380, "h": 512 },
-        "use": { "src": "assets/sprites/kiki/use.png", "frames": 6, "fps": 8, "w": 384, "h": 512 },
+        "use": { "src": "assets/sprites/kiki/use.png", "frames": 6, "fps": 8, "w": 326, "h": 512 },
         "pickup": { "src": "assets/sprites/kiki/pickup.png", "frames": 6, "fps": 10, "w": 266, "h": 512 },
         "inspect": { "src": "assets/sprites/kiki/inspect.png", "frames": 6, "fps": 6, "w": 304, "h": 512 },
         "read": { "src": "assets/sprites/kiki/read.png", "frames": 6, "fps": 5, "w": 356, "h": 512 },
@@ -168,10 +168,34 @@
       },
       "journal": [ { "if": "true", "text": "Due uomini in cappotto scuro. Uno biondo, uno che non parla mai. Lavorano per il Notaio, ma non sembrano entusiasti." } ]
     },
+    "agente2": {
+      "name": "Agente di Orfeo",
+      "role": "Uomini del Notaio",
+      "look": { "skin": "#d0a888", "hair": "#2a2018", "hairStyle": "short", "beard": true, "top": "#2a2420", "topStyle": "coat", "bottom": "#1a1a1e", "portraitBg": "#1a1a20" },
+      "sprites": {
+        "idle": { "src": "assets/sprites/agente2/idle.png", "frames": 6, "fps": 4, "w": 274, "h": 512 },
+        "talk": { "src": "assets/sprites/agente2/talk.png", "frames": 6, "fps": 6, "w": 382, "h": 512 }
+      },
+      "journal": [ { "if": "true", "text": "Il secondo uomo del Notaio: barba curata, cappotto lungo, l'aria di chi preferirebbe essere altrove." } ]
+    },
+    "custode": {
+      "name": "Un custode di Orfeo",
+      "role": "Ruolo VII di Orfeo, il Cronista",
+      "height": 0.97,
+      "look": { "skin": "#d8b090", "hair": "#d8d4cc", "hairStyle": "grey", "top": "#2a2018", "topStyle": "coat", "scarf": "#7a2a22", "bottom": "#2a2420", "portraitBg": "#2a2018" },
+      "sprites": {
+        "idle": { "src": "assets/sprites/custode/idle.png", "frames": 6, "fps": 4, "w": 214, "h": 512 },
+        "talk": { "src": "assets/sprites/custode/talk.png", "frames": 6, "fps": 6, "w": 318, "h": 512 }
+      }
+    },
     "neri": {
       "name": "Mastro Neri",
       "role": "Orafo sul Ponte Vecchio",
       "look": { "skin": "#d8a880", "hair": "#8a8478", "hairStyle": "grey", "moustache": true, "glasses": true, "top": "#5a4a3a", "topStyle": "vest", "vest": "#2a2018", "bottom": "#3a3430", "portraitBg": "#3a3020" },
+      "sprites": {
+        "idle": { "src": "assets/sprites/neri/idle.png", "frames": 6, "fps": 4, "w": 200, "h": 512 },
+        "talk": { "src": "assets/sprites/neri/talk.png", "frames": 6, "fps": 6, "w": 348, "h": 512 }
+      },
       "journal": [ { "if": "true", "text": "Orafo sul Ponte Vecchio da tre generazioni. Suo nonno custodiva un frammento del Sigillo. Lui lo ha custodito senza sapere perché." } ]
     },
     "bellandi": {

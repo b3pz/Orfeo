@@ -79,7 +79,9 @@ body.no-glints .hotspot.collectible::after { display: none; }
 .actor.clickable { pointer-events: auto; cursor: pointer; }
 .actor-inner { position: absolute; inset: 0; transform-origin: 50% 100%; }
 .actor-inner > svg, .actor .sprite { width: 100%; height: 100%; display: block; overflow: visible; }
-.actor .sprite { background-repeat: no-repeat; background-position: 0 0; }
+.actor .sprite { background-repeat: no-repeat; background-position: 0 0; transform-origin: 50% 100%; }
+.anim-idle .sprite, .anim-talk .sprite { animation: sprite-breathe 3.8s ease-in-out infinite; }
+@keyframes sprite-breathe { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(1.008); } }
 .actor-label { position: absolute; left: 50%; bottom: 100%; transform: translateX(-50%); font: 600 20px var(--ui); color: #fff3d6; background: rgba(12, 10, 8, 0.82); border: 1px solid var(--gold); padding: 4px 12px; border-radius: 20px; white-space: nowrap; opacity: 0; transition: opacity 0.2s; }
 #world.reveal .actor.clickable .actor-label { opacity: 1; }
 .actor-svg .leg, .actor-svg .arm, .actor-svg .head, .actor-svg .body, .actor-svg .torso { transform-box: view-box; }
@@ -517,6 +519,24 @@ body.reduce-motion .cr-roll { animation-duration: 4s; }
 .title-menu #btn-new { background: #6b1f1a; border-color: #a9644f; }
 .title-menu button:disabled { opacity: 0.35; cursor: default; }
 #title-endings { margin-top: 12px; font: 11px var(--ui); letter-spacing: 2px; color: var(--gold); }
+/* painted title screen: a 16:9 stage that covers the screen like the picture,
+   so the buttons stay on the painted plates at any window size */
+#title-screen.painted .title-card, #title-screen.painted .title-veil, #title-screen.painted #title-art { display: none; }
+#title-stage { position: absolute; left: 50%; top: 50%; width: max(100vw, 177.78vh); aspect-ratio: 16 / 9; transform: translate(-50%, -50%); container-type: inline-size; animation: stagebreath 30s ease-in-out infinite alternate; }
+@keyframes stagebreath { from { transform: translate(-50%, -50%) scale(1); } to { transform: translate(-50%, -50%) scale(1.025); } }
+body.reduce-motion #title-stage { animation: none; }
+#title-stage .ts-art { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+#title-stage .ts-sub { position: absolute; left: 0; right: 0; top: 4.2%; text-align: center; font: 600 1.05cqw var(--ui); letter-spacing: 0.45cqw; color: #e9c98a; text-shadow: 0 0 0.6cqw #000, 0 0 1.4cqw #000; }
+#title-stage .ts-menu button { position: absolute; left: 40.75%; width: 18.5%; height: 6.4%; padding: 0; border: 0; border-radius: 0.4cqw; background: transparent; color: transparent; font: 1.45cqw var(--serif, Georgia, serif); cursor: pointer; transition: background 0.2s, box-shadow 0.2s; }
+#title-stage .ts-menu button:hover:not(:disabled), #title-stage .ts-menu button:focus-visible { background: rgba(255, 200, 120, 0.12); box-shadow: 0 0 1.6cqw rgba(255, 190, 100, 0.45), inset 0 0 0.8cqw rgba(255, 210, 140, 0.35); outline: none; }
+#title-stage .ts-menu button:disabled { background: rgba(5, 8, 12, 0.62); cursor: default; }
+#title-stage .ts-menu button.ts-own-label { color: #efe6d4; font-size: 1.62cqw; }
+#title-stage .ts-menu button.ts-own-label::before { content: ''; position: absolute; inset: 14% 9%; background: linear-gradient(#121925, #0c1118); z-index: -1; border-radius: 0.2cqw; }
+#title-stage .ts-menu button.ts-own-label { z-index: 0; isolation: isolate; }
+#title-stage .ts-foot { position: absolute; left: 0; right: 0; top: 84.5%; display: flex; justify-content: center; align-items: center; gap: 2cqw; }
+#title-stage .ts-foot button { background: rgba(10, 12, 18, 0.7); border: 1px solid #8a6a3a; color: #e9d6ad; font: 0.8cqw var(--ui); letter-spacing: 0.3cqw; text-transform: uppercase; padding: 0.5cqw 1.4cqw; border-radius: 0.3cqw; cursor: pointer; }
+#title-stage .ts-foot button:hover { border-color: #e0b060; }
+#title-stage #title-endings { margin: 0; font-size: 0.8cqw; text-shadow: 0 0 0.6cqw #000; }
 .ornament { color: #8e7449; font-size: 20px; }
 .version { margin-top: 14px; font: 9px var(--ui); letter-spacing: 2px; color: #665b4c; }
 body.at-title #hud, body.at-title #inventory { display: none; }

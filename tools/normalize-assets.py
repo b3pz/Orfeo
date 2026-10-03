@@ -61,6 +61,12 @@ MAP = [
     ('agente', 'talk', f'{NPC}/agente_orfeo_1/agente_orfeo_1_pose_2_6f.png', 6, 6),
     ('albert', 'idle', f'{NPC}/storico_parigi/storico_parigi_pose_2_6f.png', 6, 4),
     ('albert', 'talk', f'{NPC}/storico_parigi/storico_parigi_pose_1_6f.png', 6, 6),
+    ('neri', 'idle', f'{NPC}/membro_consiglio_orfeo_2/membro_consiglio_orfeo_2_pose_2_6f.png', 6, 4),
+    ('neri', 'talk', f'{NPC}/membro_consiglio_orfeo_2/membro_consiglio_orfeo_2_pose_1_6f.png', 6, 6),
+    ('custode', 'idle', f'{NPC}/membro_consiglio_orfeo_1/membro_consiglio_orfeo_1_pose_2_6f.png', 6, 4),
+    ('custode', 'talk', f'{NPC}/membro_consiglio_orfeo_1/membro_consiglio_orfeo_1_pose_1_6f.png', 6, 6),
+    ('agente2', 'idle', f'{NPC}/agente_orfeo_2/agente_orfeo_2_pose_1_6f.png', 6, 4),
+    ('agente2', 'talk', f'{NPC}/agente_orfeo_2/agente_orfeo_2_pose_2_6f.png', 6, 6),
 ]
 
 
@@ -75,6 +81,7 @@ def split(path, n):
     frames = [np.zeros_like(a) for _ in range(n)]
     cx = ndimage.center_of_mass(mask, lab, range(1, k + 1))
     sizes = ndimage.sum(mask, lab, range(1, k + 1))
+    loose = []
     for i in range(k):
         if sizes[i] < 30:
             continue
@@ -83,21 +90,53 @@ def split(path, n):
         # figure che si toccano formano un'unica componente: la si taglia
         # nella colonna più vuota vicino a ogni confine di cella
         centres = [f for f in range(n) if xs.min() <= (f + 0.5) * cell <= xs.max()]
-        if len(centres) <= 1:
-            f = centres[0] if centres else min(n - 1, max(0, int(cx[i][1] // cell)))
-            frames[f][sel] = a[sel]
+        if len(centres) == 1:
+            frames[centres[0]][sel] = a[sel]
             continue
-        colsum = sel.sum(axis=0)
-        cuts = [0]
-        for f in centres[:-1]:
-            lo, hi = int((f + 0.6) * cell), int((f + 1.4) * cell)
-            cuts.append(lo + int(np.argmin(colsum[lo:hi])))
-        cuts.append(W)
+        if not centres:
+            loose.append(i)  # a detached shoe or strand: decided below
+            continue
+        # seed each figure with its torso (the part of the blob near the
+        # centre of its cell, upper body only), then grow the seeds back
+        # inside the shape: every pixel (a foot, a lock of hair) goes to the
+        # figure it is attached to, not to whatever column it falls in
+        ys = np.nonzero(sel.any(axis=1))[0]
+        upper = ys.min() + int((ys.max() - ys.min()) * 0.6)
+        core = ndimage.binary_erosion(sel, iterations=3)
+        core[upper:] = False
+        cores = np.zeros(sel.shape, np.int32)
         for j, f in enumerate(centres):
-            part = sel.copy()
-            part[:, :cuts[j]] = False
-            part[:, cuts[j + 1]:] = False
+            c = (f + 0.5) * cell
+            lo, hi = int(c - cell * 0.22), int(c + cell * 0.22)
+            band = np.zeros_like(core)
+            band[:, max(0, lo):hi] = True
+            cores[core & band] = j + 1
+        grown = cores.copy()
+        while True:
+            dil = ndimage.grey_dilation(grown, size=3)
+            add = sel & (grown == 0) & (dil > 0)
+            if not add.any():
+                break
+            grown[add] = dil[add]
+        for j, f in enumerate(centres):
+            part = grown == j + 1
             frames[f][part] = a[part]
+    # detached pieces go to the figure whose body is nearest, not to the
+    # cell their centre happens to fall in
+    if loose:
+        owner = np.zeros(mask.shape, np.int32)
+        for f, fr in enumerate(frames):
+            owner[fr[:, :, 3] > 16] = f + 1
+        if owner.any():
+            _, (iy, ix) = ndimage.distance_transform_edt(owner == 0, return_indices=True)
+            mass = np.median([(fr[:, :, 3] > 16).sum() for fr in frames])
+            for i in loose:
+                if sizes[i] < mass * 0.03:
+                    continue  # a toe or fingertip of the next figure, cut off in the sheet
+                sel = lab == i + 1
+                y, x = (int(v) for v in cx[i])
+                f = owner[iy[y, x], ix[y, x]] - 1
+                frames[f][sel] = a[sel]
     # offsets relative to the original cell centre
     boxes = []
     for f, fr in enumerate(frames):
