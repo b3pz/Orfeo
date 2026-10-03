@@ -192,6 +192,7 @@
       const st = O.State.d;
       const who = st.active;
       const scene = O.Scene.current;
+      if (!scene) return Promise.resolve(false);
       const p = O.State.partnerId();
       const pc = st.chars[p];
       if (st.together && pc.present && pc.scene === scene.id && scene.follow !== false && !(opts && opts.noFollow)) {

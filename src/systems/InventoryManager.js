@@ -80,6 +80,7 @@
       O.Audio.sfx('click');
       O.Scene.world.dataset.cursor = 'item';
       O.UI.setItemCursor(id);
+      O.UI.toggleInventory(false); // free the view: the cursor now carries the item
       this.render();
       O.Hotspots.setHover(null);
     },

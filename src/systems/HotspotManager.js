@@ -60,7 +60,7 @@
     },
 
     blocked() {
-      return O.Script.running || O.Dialogue.open || O.Puzzles.open || O.Cutscene.playing || O.UI.modalOpen() || O.Scene.busy;
+      return !O.Scene.current || O.inTitle || O.Script.running || O.Dialogue.open || O.Puzzles.open || O.Cutscene.playing || O.UI.modalOpen() || O.Scene.busy;
     },
 
     /* ---------- rendering ---------- */

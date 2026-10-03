@@ -52,3 +52,10 @@ Conclusione: la base è un prototipo di una scena. "Completo ma prototipale" val
 - **Asset finali assenti** → fallback procedurali documentati in `docs/ASSET_REQUIREMENTS.md`; sostituzione = copiare il file al percorso indicato + rigenerare il manifest.
 - **Soft-lock** → nessun oggetto chiave consumabile senza sostituto, puzzle sempre ripristinabili, uscite mai bloccate senza alternativa; il validator verifica che ogni oggetto richiesto sia ottenibile prima del punto d'uso e il playthrough automatico percorre tutti i capitoli.
 - **Reload a metà scena** → autosave solo in stati stabili (fine script), salvataggio del progresso puzzle.
+
+## 6. Esito
+
+- Tutte le fasi completate in questo branch. Contenuti: 7 capitoli, 39 scene, 9 enigmi, 43 collezionabili, 4 finali.
+- Verifica: `node tools/validate.mjs` (0 errori) e `node tests/playthrough.mjs all` (FULL con i 4 finali giocati, MINIMAL senza dead-end → solo Cenere, SAVE/LOAD con migrazione, MOBILE touch): tutti superati, 0 errori in console.
+- Asset: nessun asset finale era presente in repo; tutto funziona con fallback procedurali. Lista completa e percorsi esatti in `docs/ASSET_REQUIREMENTS.md`.
+- Prossime priorità: vedi la sezione finale di `docs/ASSET_REQUIREMENTS.md` e i «Problemi noti» in `docs/CHANGELOG.md`.

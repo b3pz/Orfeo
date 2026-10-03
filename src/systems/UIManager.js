@@ -106,7 +106,7 @@
       O.$('#inv-cancel').onclick = () => O.Inventory.deselect();
       const inv = O.$('#inventory');
       if (!O.isTouch()) {
-        inv.addEventListener('mouseenter', () => inv.classList.add('open'));
+        inv.addEventListener('mouseenter', () => !O.Inventory.selected && inv.classList.add('open'));
         inv.addEventListener('mouseleave', () => !O.Inventory.selected && inv.classList.remove('open'));
       }
     },
