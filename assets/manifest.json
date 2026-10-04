@@ -1,5 +1,5 @@
 {
- "count": 212,
+ "count": 222,
  "files": [
   "assets/backgrounds/bg_archivio_firenze_room_01.jpg",
   "assets/backgrounds/bg_archivio_firenze_room_02.jpg",
@@ -45,6 +45,16 @@
   "assets/beps/beps_scared.png",
   "assets/beps/beps_skeptical.png",
   "assets/beps/beps_tender.png",
+  "assets/collectibles/photo_01.jpg",
+  "assets/collectibles/photo_02.jpg",
+  "assets/collectibles/photo_03.jpg",
+  "assets/collectibles/photo_04.jpg",
+  "assets/collectibles/photo_05.jpg",
+  "assets/collectibles/photo_06.jpg",
+  "assets/collectibles/photo_07.jpg",
+  "assets/collectibles/photo_08.jpg",
+  "assets/collectibles/photo_09.png",
+  "assets/collectibles/photo_10.jpg",
   "assets/cutscenes/bacio_1.webp",
   "assets/cutscenes/cutscene_01_arrivo_in_citta.jpg",
   "assets/cutscenes/cutscene_02_scoperta_in_archivio.jpg",
