@@ -111,7 +111,7 @@
           const c = chars[id];
           const entries = (c.journal || []).filter((j) => O.cond(j.if)).map((j) => `<p>${O.Script.format(j.text)}</p>`).join('');
           const portrait = O.UI.portraitHTML(id, 'neutral');
-          return `<div class="j-person"><div class="j-face">${portrait}</div><div><b>${O.Characters.displayName(id)}</b>${c.role ? `<i>${c.role}</i>` : ''}${entries}</div></div>`;
+          return `<div class="j-person"><div class="j-face">${portrait}</div><div><b>${O.Characters.displayName(id)}</b>${c.role && (!c.portraitRevealIf || O.cond(c.portraitRevealIf)) ? `<i>${c.role}</i>` : ''}${entries}</div></div>`;
         })
         .join('');
     },

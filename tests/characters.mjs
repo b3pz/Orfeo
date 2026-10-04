@@ -52,6 +52,8 @@ try{
    }
    container.append(row);
   }
+  if (O.UI.portraitHTML('varano','neutral').includes('<image')) throw Error('Varano revealed before the grotto');
+  O.State.setFlag('varano_revealed',true);
   const portraits=document.createElement('div');portraits.style.display='flex';
   for(const expr of ['neutral','angry','determined','think','worried','sad','smile']){
    const slot=document.createElement('div');slot.style.cssText='width:140px;text-align:center';slot.innerHTML=O.UI.portraitHTML('varano',expr);

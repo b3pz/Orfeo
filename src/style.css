@@ -661,3 +661,86 @@ body:has(#modal.on) #inventory { pointer-events: none; }
   .panel.journal .j-body { left: 7%; top: 26%; width: 84%; height: 66%; font-size: 16px; }
   .panel.journal .j-person { flex-direction: row; }
 }
+
+/* Menus and dialogue use the same illustrated paper, leather and brass atlas
+   as the inventory. DOM controls remain accessible over the painted surfaces. */
+.actor.unrevealed .actor-inner { filter: brightness(.13) saturate(.2); }
+.portrait-shadow { background: #161b20; }
+.panel-art { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.panel-art svg { display: block; width: 100%; height: 100%; }
+.panel:not(.journal) { position: relative; isolation: isolate; background: none; border: 0; border-radius: 0; box-shadow: none; filter: drop-shadow(0 18px 30px #0008); min-height: 320px; }
+.panel:not(.journal) .panel-head { padding: 60px 58px 10px; border: 0; }
+.panel:not(.journal) .panel-head h2 { color: #503723; font: 26px var(--serif); letter-spacing: 1px; }
+.panel:not(.journal) .panel-body { padding: 6px 58px 0; margin-bottom: 50px; min-height: 0; color: #382719; scrollbar-color: #907049 transparent; }
+.panel:not(.journal) p, .panel:not(.journal) h3, .panel:not(.journal) .meta, .panel:not(.journal) .meta b, .panel:not(.journal) .opt, .panel:not(.journal) .col-text, .panel:not(.journal) .end-card b, .panel:not(.journal) .end-card span { color: #382719; }
+.panel:not(.journal) h4, .panel:not(.journal) .col-meta, .panel:not(.journal) .hint b, .panel:not(.journal) .col-tape, .panel:not(.journal) .col-symbol { color: #795330; }
+.panel-close { border: 0; color: #f7e4bb; background: #342519; box-shadow: inset 0 0 0 2px #b79457; font: 20px var(--serif); flex: none; }
+.menu-btn, .pz-btn, .pz-small, .topic, .choice, .title-btn {
+  background-color: transparent; background-image: url('../assets/interface/orfeo-ui-sheet.png');
+  background-size: 249.18% 1271.62%; background-position: 96.60% 70.36%;
+  border: 0; border-radius: 0; color: #f7e7c4; box-shadow: none;
+  padding: 13px 25px; min-height: 44px; text-shadow: 0 1px 2px #000;
+}
+.menu-btn:hover, .pz-btn:hover, .pz-small:hover, .pz-small.on, .topic:hover, .choice:hover, .title-btn:hover { background-color: transparent; filter: brightness(1.2); }
+.menu-btn:focus-visible, .pz-btn:focus-visible, .pz-small:focus-visible, .topic:focus-visible, .choice:focus-visible { outline: 2px solid #b78036; outline-offset: 2px; }
+.panel.menu { width: min(720px, 96vw); }
+.panel.menu .menu-btn { font: 18px var(--serif); text-align: center; margin-bottom: 7px; }
+.panel:not(.journal) .opt { border-color: #b9a183; }
+.panel:not(.journal) .opt select { background: #ecd9b6; color: #382719; border-color: #a28058; }
+.panel:not(.journal) .opt input { accent-color: #87633d; }
+.panel:not(.journal) .confirm { background: #efe0c5; color: #382719; border: 0; border-top: 1px solid #9a744d; border-bottom: 1px solid #9a744d; border-radius: 0; }
+.slots { display: flex; flex-direction: column; gap: 0; }
+.slot { border: 0; border-bottom: 1px solid #aa8b65; border-radius: 0; background: none; display: grid; grid-template-columns: 130px 1fr; column-gap: 17px; padding: 15px 0; overflow: visible; }
+.slot .thumb { grid-row: 1 / 3; align-self: start; border: 5px solid #f6ecd7; box-shadow: 0 3px 6px #5b422640; transform: rotate(-2deg); }
+.slot:nth-child(even) .thumb { transform: rotate(1.5deg); }
+.slot .meta { padding: 0 0 5px; font: 13px var(--ui); }
+.slot .actions { padding: 0; flex-wrap: wrap; gap: 5px; }
+.slot .actions button { padding: 10px 17px; font-size: 11px; }
+.slot.empty .thumb { background: #d8c5a4; }
+.slot.empty .thumb::after { content: 'ORFEO'; display: grid; place-items: center; height: 100%; font: 12px var(--serif); color: #887154; letter-spacing: 2px; }
+.panel:not(.journal) .end-card, .panel:not(.journal) .hint, .panel:not(.journal) .col-text, .panel:not(.journal) .pick-grid .inv-item { background: none; border-color: #a68660; border-radius: 0; }
+.panel:not(.journal) .pick-grid .inv-item { color: #382719; }
+.panel:not(.journal) .col-photo { box-shadow: 0 5px 12px #513e3240; }
+#say { background: none; border: 0; border-radius: 0; box-shadow: none; filter: drop-shadow(0 8px 14px #0007); }
+.say-body { background: url('../assets/interface/orfeo-ui-sheet.png') 23.96% 18.05% / 296% 588% no-repeat; padding: 25px 35px 27px; }
+.say-name { color: #72502e; }
+.say-text, #say.narr .say-text { color: #382719; }
+.say-text b { color: #744018; }
+.say-more { color: #77552e; }
+.say-portrait { background: #171b20; border: 3px solid #a88345; }
+.say-portrait:not(.show) { border: 0; }
+.topic, .choice { padding-left: 26px; padding-right: 26px; }
+.topic.optional, .topic.special { border: 0; background-color: transparent; }
+.ch-prompt { color: #ead4af; background: #171b20cc; border-radius: 0; }
+#puzzle { background-color: #18110a; background-image: linear-gradient(#1c120bea,#1c120bea), url('../assets/interface/orfeo-ui-sheet.png'); background-size: cover; }
+.toast { border-radius: 0; box-shadow: none; border-color: #ae8950; }
+@media (max-width: 600px) {
+  .panel:not(.journal) { width: 98vw; max-height: 90dvh; }
+  .panel:not(.journal) .panel-head { padding: 45px 30px 8px; }
+  .panel:not(.journal) .panel-head h2 { font-size: 22px; }
+  .panel:not(.journal) .panel-body { padding: 5px 30px 0; margin-bottom: 35px; }
+  .panel.menu .menu-btn { font-size: 16px; }
+  .slot { grid-template-columns: 88px 1fr; gap: 8px; }
+  .slot .actions button { font-size: 10px; padding: 9px 13px; }
+  .slot .meta { font-size: 12px; }
+  .opt { font-size: 13px; gap: 8px; }
+  .say-body { padding: 18px 23px 23px; }
+  .say-text { font-size: 16px; }
+}
+.opt input[type='range'] { appearance: none; background: transparent; height: 24px; }
+.opt input[type='range']::-webkit-slider-runnable-track { height: 3px; background: #9b794f; }
+.opt input[type='range']::-webkit-slider-thumb { appearance: none; width: 15px; height: 15px; background: #cfaa62; border: 2px solid #735432; transform: rotate(45deg); margin-top: -6px; }
+.opt input[type='range']::-moz-range-track { height: 3px; background: #9b794f; }
+.opt input[type='range']::-moz-range-thumb { width: 12px; height: 12px; border-radius: 0; background: #cfaa62; border: 2px solid #735432; transform: rotate(45deg); }
+.opt input[type='checkbox'] { appearance: none; flex: none; width: 17px; height: 17px; background: #e9d6b5; border: 2px solid #8b6a40; transform: rotate(45deg); cursor: pointer; }
+.opt input[type='checkbox']:checked { background: #8c683d; box-shadow: inset 0 0 0 3px #e9d6b5; }
+.toast, .toast.collect, #objective, .pz-close, .pz-hint-btn, .title-menu button, #title-stage .ts-foot button {
+  background: transparent url('../assets/interface/orfeo-ui-sheet.png') 96.60% 70.36% / 249.18% 1271.62% no-repeat;
+  border: 0; border-radius: 0; padding: 13px 25px; color: #f7e7c4; box-shadow: none;
+}
+#objective { padding: 13px 30px; }
+.pz-card, .tl-main, .pz-plaque, #item-card {
+  background-image: url('../assets/interface/orfeo-ui-sheet.png'); background-size: 412.84% 244.42%; background-position: 35.91% 92.63%;
+  border-radius: 0; color: #382719;
+}
+#item-card .item-desc { color: #382719; }

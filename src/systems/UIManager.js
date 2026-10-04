@@ -104,6 +104,9 @@
       const view = kind === 'journal' && window.innerWidth <= 600 ? '455 515 405 385' : '20 445 910 490';
       return `<svg class="book-art" viewBox="${view}" preserveAspectRatio="none" aria-hidden="true"><image href="assets/interface/orfeo-ui-sheet.png" width="1672" height="941"/></svg>`;
     },
+    sheetHTML(rect) {
+      return `<svg viewBox="${rect.join(' ')}" preserveAspectRatio="none" aria-hidden="true"><image href="assets/interface/orfeo-ui-sheet.png" width="1672" height="941"/></svg>`;
+    },
 
     bindHUD() {
       O.$('#btn-menu').onclick = () => this.pauseMenu();
@@ -183,6 +186,9 @@
 
     portraitHTML(id, expr) {
       const pd = O.Characters.def(id);
+      if (pd.portraitRevealIf && !O.cond(pd.portraitRevealIf)) {
+        return '<svg class="portrait-shadow" viewBox="0 0 180 220" role="img" aria-label="Volto nell’ombra"><rect width="180" height="220" fill="#161b20"/><path d="M25 220L40 154 65 137 63 98 55 88 59 68 43 61 47 51 64 48 69 26 113 24 123 48 140 54 138 65 121 70 124 93 115 102 115 138 141 156 158 220Z" fill="#06090b"/><path d="M46 161L78 143 92 174 108 143 139 161" fill="none" stroke="#34323a" stroke-width="4"/></svg>';
+      }
       if (pd.portraitOf && O.Assets.first(`assets/portraits/${pd.portraitOf}/neutral.png`)) id = pd.portraitOf;
       const sheet = O.Characters.def(id).portraitSheet;
       if (sheet && O.Assets.has(sheet.src)) {
@@ -233,11 +239,13 @@
       this.typing = true;
       this._typeFull = () => {
         clearInterval(this._typeT);
+        O.Audio.stopVoice();
         el.innerHTML = html;
         this.typing = false;
       };
       el.innerHTML = '';
       const step = () => {
+        if (this._voiceSpeaker && /[\p{L}\p{N}]/u.test(full.slice(n, n + 2))) O.Audio.voicePulse();
         n += Math.max(1, Math.round(cps / 30));
         if (n >= full.length) return this._typeFull();
         el.innerHTML = `${escapeHTML(full.slice(0, n))}<span class="ghost">${escapeHTML(full.slice(n))}</span>`;
@@ -249,6 +257,9 @@
     },
 
     say(o) {
+      O.Audio.stopVoice();
+      this._voiceSpeaker = o.narr ? null : o.speaker;
+      if (this._voiceSpeaker && SPEEDS[this.settings.textSpeed] !== 0) O.Audio.startVoice(this._voiceSpeaker);
       const box = O.$('#say');
       box.classList.remove('hidden', 'narr');
       const name = O.$('.say-name', box), text = O.$('.say-text', box);
@@ -282,6 +293,7 @@
           window.removeEventListener('keydown', adv, true);
           clearTimeout(this._autoT);
           this._sayAdv = null;
+          O.Audio.stopVoice();
           resolve();
         };
         this._sayAdv = adv;
@@ -298,6 +310,7 @@
     },
 
     hideSay() {
+      O.Audio.stopVoice();
       if (this.inDialogue) return;
       O.$('#say').classList.add('hidden');
       O.$$('.say-portrait').forEach((p) => p.classList.remove('show', 'speaking'));
@@ -495,6 +508,7 @@
 
     /* ---------------- panels (generic modal) ---------------- */
     panel(title, cls) {
+      O.Audio.stopVoice();
       const modal = O.$('#modal');
       modal.innerHTML = '';
       const p = O.el('section.panel.' + (cls || 'generic'), { role: 'dialog', 'aria-label': title });
@@ -502,6 +516,7 @@
       const close = O.el('button.panel-close', { text: '✕', 'aria-label': 'Chiudi' });
       head.appendChild(close);
       const body = O.el('div.panel-body');
+      if (cls !== 'journal') p.appendChild(O.el('div.panel-art', { html: this.sheetHTML([447, 466, 466, 465]), 'aria-hidden': 'true' }));
       p.append(head, body);
       modal.appendChild(p);
       modal.classList.add('on');
@@ -711,8 +726,10 @@
         slider('music', 'Musica'),
         slider('ambience', 'Ambiente'),
         slider('sfx', 'Effetti'),
+        slider('voices', 'Ronzio dei dialoghi'),
+        toggle(A, 'dialogueBuzz', 'Ronzio durante le battute', () => { O.Audio.stopVoice(); O.Audio.save(); }),
         toggle(A, 'muted', 'Silenzia tutto', () => O.Audio.save()),
-        toggle(A, 'synth', 'Audio sintetico di riserva (se mancano i file)', () => {
+        toggle(A, 'synth', 'Suoni ambientali e piccoli effetti', () => {
           O.Audio.save();
           const m = O.Audio.current.music, a = O.Audio.current.ambience;
           O.Audio.current.music = O.Audio.current.ambience = null;

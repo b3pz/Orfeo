@@ -1,0 +1,78 @@
+{
+  "sampleRate": 22050,
+  "channels": 2,
+  "tracks": [
+    {
+      "id": "title",
+      "seconds": 64,
+      "peak": 0.5,
+      "rms": 0.0923,
+      "loopSeam": 0.00348,
+      "bytes": 231571
+    },
+    {
+      "id": "firenze",
+      "seconds": 64,
+      "peak": 0.5,
+      "rms": 0.0943,
+      "loopSeam": 0.00463,
+      "bytes": 225754
+    },
+    {
+      "id": "tension",
+      "seconds": 64,
+      "peak": 0.5,
+      "rms": 0.0946,
+      "loopSeam": 0.00194,
+      "bytes": 218493
+    },
+    {
+      "id": "paris",
+      "seconds": 64,
+      "peak": 0.5,
+      "rms": 0.0859,
+      "loopSeam": 0.00313,
+      "bytes": 236276
+    },
+    {
+      "id": "roma",
+      "seconds": 64,
+      "peak": 0.5,
+      "rms": 0.0911,
+      "loopSeam": 0.00289,
+      "bytes": 223768
+    },
+    {
+      "id": "istanbul",
+      "seconds": 64,
+      "peak": 0.5,
+      "rms": 0.0893,
+      "loopSeam": 0.00376,
+      "bytes": 231316
+    },
+    {
+      "id": "tender",
+      "seconds": 64,
+      "peak": 0.5,
+      "rms": 0.0818,
+      "loopSeam": 0.00212,
+      "bytes": 231528
+    },
+    {
+      "id": "finale",
+      "seconds": 64,
+      "peak": 0.5,
+      "rms": 0.0896,
+      "loopSeam": 0.00238,
+      "bytes": 232444
+    },
+    {
+      "id": "mystery",
+      "seconds": 64,
+      "peak": 0.5,
+      "rms": 0.0923,
+      "loopSeam": 0.00171,
+      "bytes": 223465
+    }
+  ]
+}

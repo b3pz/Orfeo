@@ -209,6 +209,8 @@
       a.el.style.left = x + 'px';
       a.el.style.top = y + 'px';
       a.el.style.zIndex = String(Math.round(y));
+      const reveal = this.def(a.charId).portraitRevealIf;
+      a.el.classList.toggle('unrevealed', !!reveal && !O.cond(reveal));
       a.inner.style.transform = dir < 0 ? 'scaleX(-1)' : '';
     },
     updateAll() {

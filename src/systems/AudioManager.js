@@ -6,7 +6,7 @@
   'use strict';
   const O = window.Orfeo;
 
-  const DEFAULTS = { master: 0.8, music: 0.6, ambience: 0.6, sfx: 0.8, muted: false, synth: true };
+  const DEFAULTS = { master: 0.8, music: 0.6, ambience: 0.6, sfx: 0.8, voices: 0.5, dialogueBuzz: true, muted: false, synth: true };
 
   const MOODS = {
     title: [[220, 277.18, 329.63], [196, 246.94, 293.66]],
@@ -42,9 +42,16 @@
       window.addEventListener('pointerdown', unlock);
       window.addEventListener('keydown', unlock);
       document.addEventListener('visibilitychange', () => {
-        if (!this.ctx) return;
-        if (document.hidden) this.ctx.suspend().catch(() => {});
-        else this.ctx.resume().catch(() => {});
+        if (document.hidden) {
+          this.stopVoice();
+          this._hiddenMedia = Object.values(this.els).filter(el => el && !el.paused);
+          this._hiddenMedia.forEach(el => el.pause());
+          if (this.ctx) this.ctx.suspend().catch(() => {});
+        } else {
+          if (this.ctx) this.ctx.resume().catch(() => {});
+          (this._hiddenMedia || []).filter(el => Object.values(this.els).includes(el)).forEach(el => el.play().catch(() => {}));
+          this._hiddenMedia = [];
+        }
       });
     },
 
@@ -66,7 +73,7 @@
       if (!AC) return null;
       try {
         this.ctx = new AC();
-        ['music', 'ambience', 'sfx'].forEach((b) => {
+        ['music', 'ambience', 'sfx', 'voices'].forEach((b) => {
           const g = this.ctx.createGain();
           g.gain.value = this.vol(b);
           g.connect(this.ctx.destination);
@@ -87,11 +94,15 @@
       ['music', 'ambience'].forEach((b) => {
         if (this.els[b]) this.els[b].volume = this.vol(b);
       });
-      if (this.ctx) ['music', 'ambience', 'sfx'].forEach((b) => this.buses[b] && this.buses[b].gain.setTargetAtTime(this.vol(b), this.ctx.currentTime, 0.1));
+      if (this.s.muted || !this.s.dialogueBuzz || !this.s.voices) this.stopVoice();
+      if (this.ctx) ['music', 'ambience', 'sfx', 'voices'].forEach((b) => this.buses[b] && this.buses[b].gain.setTargetAtTime(this.vol(b), this.ctx.currentTime, 0.1));
     },
 
     file(kind, id) {
-      return O.Assets.first(`assets/audio/${kind}/${id}.ogg`, `assets/audio/${kind}/${id}.mp3`);
+      const ogg = O.Assets.first(`assets/audio/${kind}/${id}.ogg`);
+      const mp3 = O.Assets.first(`assets/audio/${kind}/${id}.mp3`);
+      if (ogg && (!mp3 || new window.Audio().canPlayType('audio/ogg; codecs="vorbis"'))) return ogg;
+      return mp3 || ogg;
     },
 
     /* ---- looping channels (music / ambience) ---- */
@@ -160,6 +171,46 @@
     },
 
     /* ---- procedural fallbacks ---- */
+    startVoice(id) {
+      this.stopVoice();
+      if (O.testMode || !this.s.dialogueBuzz || !this.vol('voices')) return;
+      const ctx = this.ensureCtx();
+      if (!ctx || ctx.state !== 'running') return;
+      const pitches = { beps: 170, kiki: 255, varano: 105, archivista: 215, sandro: 120, tommaso: 155, helene: 235, albert: 145, ilario: 125, neri: 135, bellandi: 225, selim: 140, emre: 205 };
+      const base = pitches[id] || 155;
+      const filter = ctx.createBiquadFilter();
+      filter.type = 'lowpass'; filter.frequency.value = 720; filter.Q.value = 0.5;
+      const gain = ctx.createGain(); gain.gain.value = 0;
+      filter.connect(gain); gain.connect(this.buses.voices);
+      const oscillators = [1, 2.01].map((ratio) => {
+        const osc = ctx.createOscillator(); osc.type = ratio === 1 ? 'triangle' : 'sine';
+        osc.frequency.value = base * ratio; osc.connect(filter); osc.start();
+        return osc;
+      });
+      this.voice = { gain, filter, oscillators, base, syllable: 0 };
+    },
+    voicePulse() {
+      const v = this.voice, ctx = this.ctx;
+      if (!v || !ctx || ctx.state !== 'running' || !this.s.dialogueBuzz) return;
+      const now = ctx.currentTime;
+      v.syllable++;
+      const pitch = v.base * (1 + Math.sin(v.syllable * 1.7) * 0.045);
+      v.oscillators.forEach((osc, i) => osc.frequency.setTargetAtTime(pitch * (i ? 2.01 : 1), now, 0.015));
+      v.gain.gain.cancelScheduledValues(now);
+      v.gain.gain.setValueAtTime(v.gain.gain.value, now);
+      v.gain.gain.linearRampToValueAtTime(0.045, now + 0.008);
+      v.gain.gain.linearRampToValueAtTime(0, now + 0.052);
+    },
+    stopVoice() {
+      const v = this.voice; this.voice = null;
+      if (!v || !this.ctx) return;
+      const now = this.ctx.currentTime;
+      v.gain.gain.cancelScheduledValues(now);
+      v.gain.gain.setTargetAtTime(0, now, 0.008);
+      v.oscillators.forEach(osc => { try { osc.stop(now + 0.05); } catch (e) {} });
+      setTimeout(() => { v.oscillators.forEach(osc => osc.disconnect()); v.filter.disconnect(); v.gain.disconnect(); }, 80);
+    },
+
     synthMusic(id) {
       const ctx = this.ctx;
       const chords = MOODS[id] || MOODS.mystery;

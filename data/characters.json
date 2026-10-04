@@ -986,7 +986,8 @@
             367
           ]
         }
-      }
+      },
+      "portraitRevealIf": "flag.varano_revealed || flag.varano_grotta_via || chapter > 4"
     },
     "helene": {
       "name": "Hélène Marchetti",
