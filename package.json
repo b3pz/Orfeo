@@ -2,7 +2,7 @@
   "name": "orfeo",
   "version": "1.0.0",
   "private": true,
-  "description": "Giuseppe & Kiki — Il Segreto di Orfeo. Avventura grafica punta-e-clicca (vanilla JS, nessun build step).",
+  "description": "Orfeo. Avventura grafica punta-e-clicca (vanilla JS, nessun build step).",
   "scripts": {
     "start": "python3 -m http.server 8000",
     "build": "node tools/scan-assets.mjs && node tools/build-data.mjs",

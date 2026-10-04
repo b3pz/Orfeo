@@ -1,4 +1,4 @@
-# Giuseppe & Kiki — Il Segreto di Orfeo
+# Orfeo
 
 Avventura grafica punta-e-clicca 2D in **sette capitoli** tra Firenze, Parigi, Roma e Istanbul.
 Due protagonisti giocabili (Beps e Kiki), dialoghi a temi, enigmi cooperativi, un archivio di 43 collezionabili e **quattro finali** (La Luce, I Custodi, Cenere e il finale segreto *Il Diciottesimo Nome*).

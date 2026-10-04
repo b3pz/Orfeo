@@ -1,6 +1,6 @@
 {
  "_doc": "Struttura in 7 capitoli (da story.json v0.1), obiettivi con 3 livelli di suggerimento, indizi (evidence = prova utile al finale La Luce), i 17 ruoli di Orfeo. debugStart = stato di partenza per la modalità sviluppatore.",
- "title": "Giuseppe & Kiki — Il Segreto di Orfeo",
+ "title": "Orfeo",
  "titleScene": "c1_lungarno",
  "start": {
   "scene": "c1_studio",
