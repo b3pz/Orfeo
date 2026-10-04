@@ -71,7 +71,11 @@
       this.targets = {};
       const sc = O.Scene.current;
       if (!sc) return;
-      (sc.hotspots || []).forEach((h) => {
+      // Large scene regions (darkness, walls, windows) stay behind precise
+      // targets. DOM order must not make a small object impossible to click.
+      const hotspots = (sc.hotspots || []).slice().sort((a, b) =>
+        b.rect[2] * b.rect[3] - a.rect[2] * a.rect[3]);
+      hotspots.forEach((h, index) => {
         if (!O.cond(h.if)) return;
         if (h.col && O.State.d.collectibles[h.col]) return;
         const t = Object.assign({ kind: 'hotspot' }, h);
@@ -82,7 +86,10 @@
           'data-id': h.id,
           'data-verb': verb,
           'aria-label': this.name(t),
-          style: { left: x + 'px', top: y + 'px', width: w + 'px', height: hh + 'px' }
+          style: { left: x + 'px', top: y + 'px', width: w + 'px', height: hh + 'px',
+            // Compact objects win over overlapping character sprites; broad
+            // scenery remains behind characters so conversations still work.
+            zIndex: String(w * hh <= 120000 ? 1500 + index : 1 + index) }
         });
         if (h.col) b.classList.add('collectible');
         if (verb === 'exit') {
