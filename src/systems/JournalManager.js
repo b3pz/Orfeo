@@ -50,7 +50,9 @@
       const st = O.State.d;
       const tabs = this.tabs();
       if (!tabs.find((t) => t[0] === this.tab)) this.tab = 'obiettivi';
-      container.innerHTML = '';
+      container.innerHTML = O.UI.bookHTML('journal');
+      const left = O.el('div.j-index');
+      left.appendChild(O.el('h3', { text: 'Appunti di viaggio' }));
       const nav = O.el('nav.j-tabs');
       tabs.forEach(([k, label]) => {
         const b = O.el('button', { text: label, class: k === this.tab ? 'on' : null });
@@ -61,7 +63,8 @@
         };
         nav.appendChild(b);
       });
-      container.appendChild(nav);
+      left.appendChild(nav);
+      container.appendChild(left);
       const body = O.el('div.j-body');
       container.appendChild(body);
       const fn = this['tab_' + this.tab];
@@ -107,8 +110,8 @@
         .map((id) => {
           const c = chars[id];
           const entries = (c.journal || []).filter((j) => O.cond(j.if)).map((j) => `<p>${O.Script.format(j.text)}</p>`).join('');
-          const portrait = O.Assets.first(`assets/portraits/${id}/neutral.png`);
-          return `<div class="j-person"><div class="j-face">${portrait ? `<img src="${portrait}" alt="">` : O.Art.portrait(id, c.look, 'neutral')}</div><div><b>${O.Characters.displayName(id)}</b>${c.role ? `<i>${c.role}</i>` : ''}${entries}</div></div>`;
+          const portrait = O.UI.portraitHTML(id, 'neutral');
+          return `<div class="j-person"><div class="j-face">${portrait}</div><div><b>${O.Characters.displayName(id)}</b>${c.role ? `<i>${c.role}</i>` : ''}${entries}</div></div>`;
         })
         .join('');
     },

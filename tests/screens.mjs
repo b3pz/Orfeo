@@ -30,12 +30,14 @@ const page = await browser.newPage({ viewport: { width: W, height: H } });
 const errors = [];
 page.on('pageerror', (e) => errors.push(e.message));
 page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
-await page.goto(url);
-await page.waitForFunction(() => window.Orfeo && window.Orfeo.ready);
+await page.goto(url, { timeout: 60000 });
+await page.waitForFunction(() => window.Orfeo && window.Orfeo.ready, null, { timeout: 60000 });
 await page.screenshot({ path: join(out, '00_title.png') });
 const scenes = await page.evaluate(() => Object.keys(window.Orfeo.Data.scenes.scenes));
 await page.evaluate(() => { window.Orfeo.O = window.Orfeo; window.Orfeo.Game.leaveTitle(); window.Orfeo.State.reset(); });
 const shots = ['00_title.png'];
+if (existsSync(join(out, 'ui_uploaded_characters.png'))) shots.push('ui_uploaded_characters.png');
+const backgrounds = [];
 for (const id of scenes) {
   await page.evaluate(async (id) => {
     const O = window.Orfeo;
@@ -50,13 +52,16 @@ for (const id of scenes) {
     await O.Scene.build(sc);
     O.UI.setLocation(sc);
     O.Scene.world.classList.add('reveal');
+    document.querySelector('#dbg-walk')?.remove();
+    O.Debug.drawWalk();
   }, id);
+  backgrounds.push(await page.evaluate(() => ({ id: Orfeo.Scene.current.id, expected: Orfeo.Scene.current.bg, loaded: Orfeo.Scene.hasRealBg, source: document.querySelector('.bg-img')?.getAttribute('src') })));
   await page.waitForTimeout(150);
   const f = `scene_${id}.png`;
   await page.screenshot({ path: join(out, f) });
   shots.push(f);
 }
-await page.evaluate(() => window.Orfeo.Scene.world.classList.remove('reveal'));
+await page.evaluate(() => { window.Orfeo.Scene.world.classList.remove('reveal'); document.querySelector('#dbg-walk')?.remove(); });
 // dialogue box with topics
 await page.evaluate(() => {
   const O = window.Orfeo;
@@ -72,10 +77,11 @@ await page.evaluate(() => { const O = window.Orfeo; O.UI.cancelTopics(); O.UI.di
 await page.evaluate(() => {
   const O = window.Orfeo;
   const ids = ['beps', 'kiki', 'varano', 'archivista', 'helene', 'ilario', 'selim', 'neri', 'bellandi', 'albert', 'sandro', 'tommaso', 'emre', 'agente', 'donna'];
-  const html = ids.map((id) => `<div style="display:inline-block;width:120px;margin:4px;text-align:center;font:11px sans-serif;color:#ccc">${O.Art.portrait(id, O.Characters.def(id).look || {}, 'neutral').replace('<svg ', '<svg width="120" height="144" ')}<br>${id}</div>`).join('');
+  const html = ids.map((id) => `<div style="display:inline-block;width:120px;margin:4px;text-align:center;font:11px sans-serif;color:#ccc">${O.UI.portraitHTML(id, 'neutral')}<br>${id}</div>`).join('');
   const ex = O.EXPRESSIONS.map((e) => `<div style="display:inline-block;width:100px;margin:4px;text-align:center;font:11px sans-serif;color:#ccc">${O.Art.portrait('kiki', O.Characters.def('kiki').look, e).replace('<svg ', '<svg width="100" height="120" ')}<br>${e}</div>`).join('');
-  const p = O.UI.panel('Ritratti (fallback)', 'generic');
+  const p = O.UI.panel('Ritratti', 'generic');
   p.body.innerHTML = html + '<hr>' + ex;
+  p.body.querySelectorAll('svg, img').forEach(el => { el.style.width = '100%'; el.style.height = '144px'; });
   p.el.style.width = '96vw';
 });
 await page.screenshot({ path: join(out, 'ui_portraits.png') });
@@ -106,7 +112,11 @@ await page.screenshot({ path: join(out, 'ui_inventory.png') });
 shots.push('ui_inventory.png');
 // contact sheet
 writeFileSync(join(out, 'index.html'), `<!doctype html><meta charset="utf-8"><title>Orfeo — screenshot</title><style>body{background:#111;color:#ddd;font:12px sans-serif;margin:0;padding:8px}div{display:inline-block;margin:4px;vertical-align:top}img{width:${Math.round(W / 4)}px;display:block}</style>` + shots.map((s) => `<div><img src="${s}"><span>${s}</span></div>`).join(''));
+writeFileSync(join(out, 'background-audit.json'), JSON.stringify(backgrounds, null, 2));
+const missingBackgrounds = backgrounds.filter(b => b.expected && !b.loaded);
+if (missingBackgrounds.length) errors.push('Fondali non caricati: ' + missingBackgrounds.map(b => b.id).join(', '));
 console.log(`${shots.length} screenshot in tests/screens/ · errori: ${errors.length}`);
 if (errors.length) console.log(errors.slice(0, 10).join('\n'));
 await browser.close();
 srv.close();
+process.exitCode = errors.length ? 1 : 0;

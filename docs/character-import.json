@@ -1,0 +1,86 @@
+[
+  {
+    "source": "nuovi asset/02_personaggi/bellandi/exec-4f6a1c10-d551-4919-98cc-06e433a91be0.png",
+    "destination": "assets/source_sheets/bellandi/base.png"
+  },
+  {
+    "source": "nuovi asset/02_personaggi/bellandi/exec-84693835-6941-46bc-a0e0-65646a5cb32e.png",
+    "destination": "assets/sprites/bellandi/idle.png"
+  },
+  {
+    "source": "nuovi asset/02_personaggi/bellandi/exec-34af68ec-d5bf-40cd-b628-97490e8b6850.png",
+    "destination": "assets/sprites/bellandi/talk.png"
+  },
+  {
+    "source": "nuovi asset/02_personaggi/bellandi/exec-ff081330-1082-48dc-bb68-fe4d858b18b8.png",
+    "destination": "assets/source_sheets/bellandi/talk_alt.png"
+  },
+  {
+    "source": "nuovi asset/02_personaggi/donna/exec-619c96b5-e123-43c2-906e-9fe0b6d29325.png",
+    "destination": "assets/source_sheets/donna/base.png"
+  },
+  {
+    "source": "nuovi asset/02_personaggi/donna/exec-1609fed6-cdb6-45e6-99fc-69bc3effd317.png",
+    "destination": "assets/sprites/donna/idle.png"
+  },
+  {
+    "source": "nuovi asset/02_personaggi/donna/exec-51aa485e-0621-445c-b500-d6bc8f2b3b5f.png",
+    "destination": "assets/sprites/donna/talk.png"
+  },
+  {
+    "source": "nuovi asset/02_personaggi/emre/exec-d0c7e5ac-2b39-4c4a-9b8f-c322eeb88d1b.png",
+    "destination": "assets/source_sheets/emre/base.png"
+  },
+  {
+    "source": "nuovi asset/02_personaggi/emre/exec-c152bc95-0764-4652-a10a-23e925f58b2a.png",
+    "destination": "assets/sprites/emre/idle.png"
+  },
+  {
+    "source": "nuovi asset/02_personaggi/emre/exec-c4fcfff8-0ca6-4797-9447-31df50cb67b6.png",
+    "destination": "assets/sprites/emre/talk.png"
+  },
+  {
+    "source": "nuovi asset/02_personaggi/helene/exec-42fe5268-c850-485c-b037-748d159cd51c.png",
+    "destination": "assets/source_sheets/helene/base.png"
+  },
+  {
+    "source": "nuovi asset/02_personaggi/helene/exec-e5c3e844-ab50-4405-b5c2-5fac8805cc3c.png",
+    "destination": "assets/sprites/helene/idle.png"
+  },
+  {
+    "source": "nuovi asset/02_personaggi/helene/exec-a928e759-bc37-4cb2-b50e-b98692f502d1.png",
+    "destination": "assets/sprites/helene/talk.png"
+  },
+  {
+    "source": "nuovi asset/02_personaggi/sandro/exec-328011f6-fc36-4d4b-b516-fb70a4ca6e11.png",
+    "destination": "assets/source_sheets/sandro/base.png"
+  },
+  {
+    "source": "nuovi asset/02_personaggi/sandro/exec-7353eec5-e80f-47b4-a29d-3f59af6b84ac.png",
+    "destination": "assets/sprites/sandro/idle.png"
+  },
+  {
+    "source": "nuovi asset/02_personaggi/sandro/exec-87a2662c-2e1b-4aa9-b1da-8227c7c03022.png",
+    "destination": "assets/sprites/sandro/talk.png"
+  },
+  {
+    "source": "nuovi asset/02_personaggi/tommaso/exec-da0ee6e9-2fe7-4e03-86fd-2a58c94fdde3.png",
+    "destination": "assets/source_sheets/tommaso/base.png"
+  },
+  {
+    "source": "nuovi asset/02_personaggi/tommaso/exec-d4e66632-4f19-4f95-81dd-007ce82fcc28.png",
+    "destination": "assets/sprites/tommaso/idle.png"
+  },
+  {
+    "source": "nuovi asset/02_personaggi/tommaso/exec-868caabf-c195-4608-adf6-6b9565b62e54.png",
+    "destination": "assets/sprites/tommaso/talk.png"
+  },
+  {
+    "source": "nuovi asset/02_personaggi/kiki/exec-a6d6243f-2eac-4373-86b8-9a2ec47bec64.png",
+    "destination": "assets/sprites/kiki/phone.png"
+  },
+  {
+    "source": "nuovi asset/02_personaggi/varano/exec-cefee4d8-f870-4da4-ab49-4efd1b770e35.png",
+    "destination": "assets/portraits/varano/sheet.png"
+  }
+]

@@ -39,6 +39,8 @@
       inv.forEach((id) => {
         const b = O.el('button.inv-item', { 'data-id': id, title: this.name(id), 'aria-label': this.name(id), html: this.iconHTML(id) });
         b.appendChild(O.el('span.inv-name', { text: this.name(id) }));
+        b.addEventListener('mouseenter', () => this.showDetail(id));
+        b.addEventListener('focus', () => this.showDetail(id));
         if (this.selected === id) b.classList.add('selected');
         b.addEventListener('click', (e) => {
           e.stopPropagation();
@@ -62,6 +64,20 @@
         bar.appendChild(b);
       });
       O.UI.updateItemActions();
+      this.showDetail(this.selected || inv[0]);
+    },
+
+    showDetail(id) {
+      const detail = O.$('#inv-detail');
+      if (!detail) return;
+      detail.innerHTML = '<h3>Inventario</h3>';
+      if (!id) {
+        detail.appendChild(O.el('p', { text: 'Le tasche sono vuote.' }));
+        return;
+      }
+      detail.insertAdjacentHTML('beforeend', `<div class="inv-detail-icon">${this.iconHTML(id)}</div>`);
+      detail.appendChild(O.el('h4', { text: this.name(id) }));
+      detail.appendChild(O.el('p', { text: 'Scegli un oggetto e poi il punto in cui usarlo. Clic destro o pressione lunga per esaminarlo.' }));
     },
 
     click(id) {

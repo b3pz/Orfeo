@@ -62,6 +62,18 @@
         if (!O.cond(n.if)) return;
         this.spawn(n.id, { npc: n });
       });
+      // Small story figures use their supplied idle strips at hotspot scale.
+      // Their existing hitboxes/scripts remain the interaction targets.
+      (scene.hotspots || []).forEach((h) => {
+        if (!h.spriteChar || !O.cond(h.if) || !this.spriteFor(h.spriteChar, 'idle')) return;
+        const [x, y, w, height] = h.rect;
+        const def = this.def(h.spriteChar);
+        const footY = y + height;
+        this.spawn('scenery:' + h.id, { npc: {
+          id: 'scenery:' + h.id, char: h.spriteChar, x: x + w / 2, y: footY,
+          dir: h.face || 'r', scale: height / (BASE_H * O.Movement.scaleAt(scene, footY) * (def.height || 1))
+        } });
+      });
       this.updateAll();
     },
 
@@ -93,22 +105,41 @@
       if (sp) {
         if (!a.sprite || a.sprite.src !== sp.src) {
           a.inner.innerHTML = '';
-          const div = O.el('div.sprite', { style: { backgroundImage: `url("${sp.src}")`, backgroundSize: `${sp.frames * 100}% 100%`, aspectRatio: `${sp.w || 200} / ${sp.h || 420}` } });
-          a.inner.appendChild(div);
-          a.spriteEl = div;
+          if (sp.windows) {
+            const clipId = 'sprite-clip-' + O.uid();
+            a.inner.innerHTML = `<svg class="sprite" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="${clipId}" clipPathUnits="userSpaceOnUse"><path class="frame-clip"/></clipPath></defs><image href="${sp.src}" width="${sp.sheetW}" height="${sp.sheetH}" clip-path="url(#${clipId})"/></svg>`;
+            a.spriteEl = a.inner.firstElementChild;
+          } else {
+            const div = O.el('div.sprite', { style: { backgroundImage: `url("${sp.src}")`, backgroundSize: `${sp.frames * 100}% 100%`, aspectRatio: `${sp.w || 200} / ${sp.h || 420}` } });
+            a.inner.appendChild(div);
+            a.spriteEl = div;
+          }
         }
         const resized = !a.sprite || a.sprite.w !== sp.w || a.sprite.h !== sp.h;
         a.sprite = sp;
         a.frame = 0;
         a.t = 0;
         a.hold = null;
-        a.spriteEl.style.backgroundPosition = '0 0';
+        this.setFrame(a, 0);
         if (resized && O.Scene.current) this.update(a.id);
       } else {
         if (a.sprite || !a.inner.firstChild) {
           a.inner.innerHTML = O.Art.character(a.charId, this.def(a.charId).look || {});
         }
         a.sprite = null;
+      }
+    },
+
+    // Uploaded strips can have uneven spacing and overlapping cell bounds.
+    // SVG windows isolate each figure without rewriting the supplied bitmap.
+    setFrame(a, frame) {
+      const sp = a.sprite;
+      if (sp.windows) {
+        const frameWindow = sp.windows[frame];
+        a.spriteEl.setAttribute('viewBox', frameWindow.viewBox.join(' '));
+        a.spriteEl.querySelector('.frame-clip').setAttribute('d', frameWindow.clip);
+      } else {
+        a.spriteEl.style.backgroundPosition = `${sp.frames > 1 ? (frame / (sp.frames - 1)) * 100 : 0}% 0`;
       }
     },
 
@@ -140,7 +171,7 @@
       }
       if (f !== a.frame) {
         a.frame = f;
-        a.spriteEl.style.backgroundPosition = `${sp.frames > 1 ? (f / (sp.frames - 1)) * 100 : 0}% 0`;
+        this.setFrame(a, f);
       }
     },
 

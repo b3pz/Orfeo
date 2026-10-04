@@ -101,7 +101,7 @@
       if (old) return old.remove();
       const poly = O.Movement.polygon(sc, O.State.d.active);
       if (!poly) return;
-      const svg = `<svg id="dbg-walk" viewBox="0 0 ${O.W} ${O.H}" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:5000"><polygon points="${poly.map((p) => p.join(',')).join(' ')}" fill="rgba(0,255,120,.15)" stroke="#0f8" stroke-width="3"/></svg>`;
+      const svg = `<svg id="dbg-walk" viewBox="0 0 ${O.W} ${O.H}" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:5000"><polygon points="${poly.map((p) => p.join(',')).join(' ')}" fill="rgba(0,255,120,.15)" stroke="#0f8" stroke-width="3"/>${O.Movement.obstacles(sc, O.State.d.active).map((o) => `<polygon points="${o.map((p) => p.join(',')).join(' ')}" fill="rgba(255,60,60,.3)" stroke="#f44" stroke-width="3"/>`).join('')}</svg>`;
       O.Scene.world.insertAdjacentHTML('beforeend', svg);
     },
 

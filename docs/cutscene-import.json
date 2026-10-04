@@ -1,0 +1,149 @@
+[
+  {
+    "source": "nuovi asset/05_cutscene/exec-0933b135-60fc-449d-a0a3-555bb7dcc527.png",
+    "destination": "assets/cutscenes/c3_fine_2.png",
+    "cutscene": "c3_fine",
+    "shot": 2,
+    "sha256": "459e9177c7736810f94f0afcee674789237448c676597020e21dd98c88c10ea8"
+  },
+  {
+    "source": "nuovi asset/05_cutscene/exec-0dd5c244-484b-415e-b3c0-406a63ca6ecb.png",
+    "destination": "assets/cutscenes/c3_fine_1.png",
+    "cutscene": "c3_fine",
+    "shot": 1,
+    "sha256": "67418696633254719e6906b99ac0e2244dc2d5a081127edb1144289955e02141"
+  },
+  {
+    "source": "nuovi asset/05_cutscene/exec-331f395b-db00-48c7-8bd8-d2840a3f9a46.png",
+    "destination": "assets/cutscenes/c7_uscita_1.png",
+    "cutscene": "c7_uscita",
+    "shot": 1,
+    "sha256": "9b37bf885b70150f2f7b5c0dc97c0d6e278b65e5b29b00054e00807f06d24ed9"
+  },
+  {
+    "source": "nuovi asset/05_cutscene/exec-3a14655d-fa2a-45fd-a70d-9c3364880227.png",
+    "destination": "assets/cutscenes/intro_2.png",
+    "cutscene": "intro",
+    "shot": 2,
+    "sha256": "dcc5d7cf1f855bf821af4c6a903fa7dca40654fd0ac080c748c92b5ed5520282"
+  },
+  {
+    "source": "nuovi asset/05_cutscene/exec-4cfd24ca-9054-4b4f-94b2-fc0568194a50.png",
+    "destination": "assets/cutscenes/fine_cenere_1.png",
+    "cutscene": "fine_cenere",
+    "shot": 1,
+    "sha256": "7b3011ec99561fba6c55fdd199bfa498a5aa1583c223ff23f5b7d77dd5406fc3"
+  },
+  {
+    "source": "nuovi asset/05_cutscene/exec-539b8ae9-2af1-482b-a48f-5268cbbfc6f6.png",
+    "destination": "assets/cutscenes/c7_uscita_2.png",
+    "cutscene": "c7_uscita",
+    "shot": 2,
+    "sha256": "e6e910ab741acd2633cb874fbab325c47387bf41be3aa32a72a0d4293e79798b"
+  },
+  {
+    "source": "nuovi asset/05_cutscene/exec-5dba00ff-2281-4fa3-9b05-90501b3fe10b.png",
+    "destination": "assets/cutscenes/bacio_1.png",
+    "cutscene": "bacio",
+    "shot": 1,
+    "sha256": "f96b624d35be2d4c09bef11e4e9d22d60f32554da3a11f9bb811b22c99fe5478"
+  },
+  {
+    "source": "nuovi asset/05_cutscene/exec-6a356146-f6de-437d-ae5a-32cda269fc76.png",
+    "destination": "assets/cutscenes/fine_custodi_2.png",
+    "cutscene": "fine_custodi",
+    "shot": 2,
+    "sha256": "04dc51d05df73eabeb7b18bda37af0e1620bfb9141826ff2ff12df06bccdafe4"
+  },
+  {
+    "source": "nuovi asset/05_cutscene/exec-74c50165-6e46-4731-bddf-ed3ef0728141.png",
+    "destination": "assets/cutscenes/c4_fine_2.png",
+    "cutscene": "c4_fine",
+    "shot": 2,
+    "sha256": "43036e7a6535c4e9b994e8595964ba09f05ed39bf93b5864ca32c008ed81a93b"
+  },
+  {
+    "source": "nuovi asset/05_cutscene/exec-80fcb8ab-2d96-43e1-b972-1ab7198ff07a.png",
+    "destination": "assets/cutscenes/fine_luce_2.png",
+    "cutscene": "fine_luce",
+    "shot": 2,
+    "sha256": "229284a24d550b89669c60eee107094a38b831aeaa936baf12b063d4da23fba8"
+  },
+  {
+    "source": "nuovi asset/05_cutscene/exec-823289d1-f4f4-4dbc-bfca-6464a9a7d416.png",
+    "destination": "assets/cutscenes/c2_fine_2.png",
+    "cutscene": "c2_fine",
+    "shot": 2,
+    "sha256": "a2e14881a1e54e6b0b095ac28ca2dea8a4ae92ef7cd87867e9779139a21d7af8"
+  },
+  {
+    "source": "nuovi asset/05_cutscene/exec-82486343-ab6c-44e6-8cee-6971f13b1225.png",
+    "destination": "assets/cutscenes/c6_fine_1.png",
+    "cutscene": "c6_fine",
+    "shot": 1,
+    "sha256": "ffc79a87527a9f167e99a82bd67fd61a07813fd00ff98506ab4b1ce2581b4066"
+  },
+  {
+    "source": "nuovi asset/05_cutscene/exec-9e841525-7ea3-4b19-ab56-d6e2491c8e0b.png",
+    "destination": "assets/cutscenes/post_segreto_1.png",
+    "cutscene": "post_segreto",
+    "shot": 1,
+    "sha256": "fb788b6a11ee5568d93da07c86b9f705825e8171db8e3b7fcd4dbcdc88500daf"
+  },
+  {
+    "source": "nuovi asset/05_cutscene/exec-a01fe32f-75b2-43a6-bd38-af407d276127.png",
+    "destination": "assets/cutscenes/post_cenere_1.png",
+    "cutscene": "post_cenere",
+    "shot": 1,
+    "sha256": "8b8747e94d8d5af75453f5b3af10aab43bebb37293b261aef23e2d2f58dafd18"
+  },
+  {
+    "source": "nuovi asset/05_cutscene/exec-a84cf944-f541-4093-ae9d-d3fbc68968b3.png",
+    "destination": "assets/cutscenes/fine_segreto_1.png",
+    "cutscene": "fine_segreto",
+    "shot": 1,
+    "sha256": "079090d19ac9912e3805562c2d7b61e0ab136265f21b2f85277fa78005c365e4"
+  },
+  {
+    "source": "nuovi asset/05_cutscene/exec-b7d36847-dd79-42e9-9401-f36b60c359e3.png",
+    "destination": "assets/cutscenes/c2_fine_1.png",
+    "cutscene": "c2_fine",
+    "shot": 1,
+    "sha256": "ce095ac4195b16b9886684f9e08a7bfa8c44c5e1ad6e3f5a0dabec270591d2ce"
+  },
+  {
+    "source": "nuovi asset/05_cutscene/exec-baf63005-1f10-4ee0-9011-deac1320c6ff.png",
+    "destination": "assets/cutscenes/post_luce_1.png",
+    "cutscene": "post_luce",
+    "shot": 1,
+    "sha256": "1fad50922b11107cf64d72b0ad7013543d3f89c03fe7c505534d7a59fe96cd0d"
+  },
+  {
+    "source": "nuovi asset/05_cutscene/exec-c985cfad-1877-460a-b8a1-77cdbc2e2973.png",
+    "destination": "assets/cutscenes/intro_3.png",
+    "cutscene": "intro",
+    "shot": 3,
+    "sha256": "43c6454c2cdba81bdca9b272a4422cd7e9604ac2c764c27841cd2533cdbbb163"
+  },
+  {
+    "source": "nuovi asset/05_cutscene/exec-d2b96594-942f-46b1-83bb-242e71e98d3b.png",
+    "destination": "assets/cutscenes/c5_fine_1.png",
+    "cutscene": "c5_fine",
+    "shot": 1,
+    "sha256": "782965653bc90a073adf05833d0c82504c74d8e723e715e7819169486687f3df"
+  },
+  {
+    "source": "nuovi asset/05_cutscene/exec-e772a55a-9dba-4329-ae1d-ec1470f23982.png",
+    "destination": "assets/cutscenes/post_custodi_1.png",
+    "cutscene": "post_custodi",
+    "shot": 1,
+    "sha256": "85c695faec38a4fc64e7bc97a465b3bce7f9a93099678f8c80300213897d619b"
+  },
+  {
+    "source": "nuovi asset/05_cutscene/exec-fc476f9b-8967-43d7-bc2b-b3bb1c8f1ee7.png",
+    "destination": "assets/cutscenes/c6_fine_2.png",
+    "cutscene": "c6_fine",
+    "shot": 2,
+    "sha256": "6f9d72b456f677631f0859aab9662f9e715b4f8d49c54dfb9ec05ef004056484"
+  }
+]

@@ -24,6 +24,7 @@
     targets: {},
     hover: null,
     pressTimer: null,
+    acting: false,
 
     init() {
       const world = O.Scene.world;
@@ -60,7 +61,7 @@
     },
 
     blocked() {
-      return !O.Scene.current || O.inTitle || O.Script.running || O.Dialogue.open || O.Puzzles.open || O.Cutscene.playing || O.UI.modalOpen() || O.Scene.busy;
+      return !O.Scene.current || this.acting || O.inTitle || O.Script.running || O.Dialogue.open || O.Puzzles.open || O.Cutscene.playing || O.UI.modalOpen() || O.Scene.busy;
     },
 
     /* ---------- rendering ---------- */
@@ -217,16 +218,15 @@
     standPoint(t) {
       const sc = O.Scene.current;
       const who = O.State.d.active;
-      const poly = O.Movement.polygon(sc, who);
-      if (t.at) return O.Movement.clampInto(t.at, poly);
+      if (t.at) return O.Movement.point(sc, who, t.at) || t.at;
       if (t.kind === 'npc' || t.kind === 'partner') {
         const pos = O.Characters.pos(t.kind === 'npc' ? t.npcId : t.charId) || [960, 900];
         const me = O.State.character();
         const side = me.x < pos[0] ? -1 : 1;
-        return O.Movement.clampInto([pos[0] + side * 160, pos[1] + 10], poly);
+        return O.Movement.point(sc, who, [pos[0] + side * 160, pos[1] + 10]) || [pos[0], pos[1]];
       }
       const r = t.rect;
-      return O.Movement.clampInto([r[0] + r[2] / 2, Math.max(r[1] + r[3] + 30, 700)], poly);
+      return O.Movement.point(sc, who, [r[0] + r[2] / 2, Math.max(r[1] + r[3] + 30, 700)]) || [r[0], r[1]];
     },
 
     faceTarget(t) {
@@ -249,6 +249,7 @@
     async interact(t, verb, item, run) {
       if (this.blocked()) return;
       const who = O.State.d.active;
+      const scene = O.Scene.current;
       this.setHover(null);
       // character restriction
       if (t.only && t.only !== who && verb !== 'look') {
@@ -259,25 +260,32 @@
       const needWalk = verb !== 'look' || t.walkToLook;
       if (needWalk) {
         const ok = await O.Movement.moveActive(this.standPoint(t), { run });
-        if (!ok || this.blocked()) return; // interrupted by another click
+        if (!ok || this.blocked() || O.Scene.current !== scene || O.State.d.active !== who) return;
       }
-      this.faceTarget(t);
-      O.emit('interact', { target: t.id, verb, item });
-      switch (verb) {
-        case 'look':
-          return this.doLook(t, who);
-        case 'talk':
-          if (t.talk) return O.Dialogue.start(t.talk, { npc: t.kind === 'npc' ? t.char || t.npcId : t.kind === 'partner' ? t.charId : null });
-          if (t.use) return O.Script.run(t.use);
-          return O.Script.run([O.pick(DEFAULT_LINES.talk[who])]);
-        case 'exit':
-          return this.doExit(t);
-        case 'item':
-          return this.doItem(t, item, who);
-        case 'use':
-        case 'take':
-        default:
-          return this.doUse(t, who);
+      // Walking remains interruptible; pickup/use/exit starts exactly once.
+      this.acting = true;
+      O.Movement.stopAll();
+      try {
+        this.faceTarget(t);
+        O.emit('interact', { target: t.id, verb, item });
+        switch (verb) {
+          case 'look':
+            return await this.doLook(t, who);
+          case 'talk':
+            if (t.talk) return await O.Dialogue.start(t.talk, { npc: t.kind === 'npc' ? t.char || t.npcId : t.kind === 'partner' ? t.charId : null });
+            if (t.use) return await O.Script.run(t.use);
+            return await O.Script.run([O.pick(DEFAULT_LINES.talk[who])]);
+          case 'exit':
+            return await this.doExit(t);
+          case 'item':
+            return await this.doItem(t, item, who);
+          case 'use':
+          case 'take':
+          default:
+            return await this.doUse(t, who);
+        }
+      } finally {
+        this.acting = false;
       }
     },
 

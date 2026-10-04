@@ -11,7 +11,7 @@ const OK = /\.(png|jpe?g|webp|gif|svg|ogg|mp3|m4a|wav|woff2?)$/i;
 const files = [];
 (function walk(dir) {
   for (const name of readdirSync(dir)) {
-    if (name.startsWith('.')) continue;
+    if (name.startsWith('.') || name === 'originals-before-update') continue;
     const p = join(dir, name);
     if (statSync(p).isDirectory()) walk(p);
     else if (OK.test(name)) files.push(relative(root, p).split(sep).join('/'));

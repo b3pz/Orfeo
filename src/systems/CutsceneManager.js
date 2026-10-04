@@ -63,6 +63,9 @@
       skip.onclick = (e) => {
         e.stopPropagation();
         this.skipAll = true;
+        // A normal click first completes the caption; Skip must also advance
+        // immediately, without needing a second click or the shot timeout.
+        if (O.UI.typing) O.UI.finishTyping();
         if (this._next) this._next();
       };
       root.appendChild(skip);

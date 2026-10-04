@@ -1,0 +1,332 @@
+[
+  {
+    "source": "nuovi asset/01_fondali/03_cap3_roma/c3_cortile/ec3275cd-e923-474d-b1a9-8c249aaff3cb.png",
+    "destination": "assets/backgrounds/c3_cortile.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/03_cap3_roma/c3_biblioteca/3068fc12-f850-47d5-80d9-2081b57ca988.png",
+    "destination": "assets/backgrounds/c3_biblioteca.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/03_cap3_roma/c3_passaggio/d1ee3bc2-fd1b-4ded-94a9-3e15770206c8.png",
+    "destination": "assets/backgrounds/c3_passaggio.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/03_cap3_roma/c3_piazza/4b837dd6-6ba0-45d1-ad75-70b2cdd008a8.png",
+    "destination": "assets/backgrounds/c3_piazza.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/03_cap3_roma/c3_osteria/27b8dfed-79eb-439e-85a8-59427241f288.png",
+    "destination": "assets/backgrounds/c3_osteria.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/04_cap4_firenze/c4_corridoio/exec-f6ac89ed-3bb6-4cc1-9db7-da21b760f61b.png",
+    "destination": "assets/backgrounds/c4_corridoio.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/04_cap4_firenze/c4_grotta/f4a22f3d-87de-449f-8aeb-005670383ded.jpg",
+    "destination": "assets/backgrounds/c4_grotta.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/04_cap4_firenze/c4_ponte/22fc9cd9-6853-4f34-aec2-1751f57a23fd.jpg",
+    "destination": "assets/backgrounds/c4_ponte.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/04_cap4_firenze/c4_banca/exec-effea9b3-8f89-481b-8ec4-59809997a5a6.png",
+    "destination": "assets/backgrounds/c4_banca.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/06_cap6_parigi/c6_pont_neuf/1bd185e8-aa50-4dbb-a6b7-11441ddbee8f.jpg",
+    "destination": "assets/backgrounds/c6_pont_neuf.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/06_cap6_parigi/c6_catacombe/5bf36da6-a16f-4e5c-beb7-dbf9831faa3a.jpg",
+    "destination": "assets/backgrounds/c6_catacombe.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/06_cap6_parigi/c6_atelier/a8c2dd2f-1ec9-4db7-a9ef-45904970a25a.jpg",
+    "destination": "assets/backgrounds/c6_atelier.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/06_cap6_parigi/c6_ufficio/ac9508bf-7105-4b6d-b3b3-e5f1dab0bb86.jpg",
+    "destination": "assets/backgrounds/c6_ufficio.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/06_cap6_parigi/c6_archivio/76529b7c-1238-410a-86fa-dc2317608b8e.jpg",
+    "destination": "assets/backgrounds/c6_archivio.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/06_cap6_parigi/c6_sala/c7b349aa-e874-4996-b9de-cb8e3bddc840.jpg",
+    "destination": "assets/backgrounds/c6_sala.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/01_cap1_firenze/c1_caffe/056c410e-0903-4128-b2ca-4ec31a521cd2.png",
+    "destination": "assets/backgrounds/c1_caffe.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/01_cap1_firenze/c1_cantiere/d8ada2d7-476b-4ecc-bc42-d8c244634749.png",
+    "destination": "assets/backgrounds/c1_cantiere.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/02_cap2_parigi/c2_quai/d5141e4a-882a-453b-aebc-c036f8f289b9.png",
+    "destination": "assets/backgrounds/c2_quai.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/02_cap2_parigi/c2_camera_oscura/8350c9ad-9b46-4106-8628-b7cd8c8d2f66.png",
+    "destination": "assets/backgrounds/c2_camera_oscura.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/02_cap2_parigi/c2_studio_marchetti/4995fa56-6139-4684-a3e4-798671d988aa.png",
+    "destination": "assets/backgrounds/c2_studio_marchetti.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/02_cap2_parigi/c2_gare/25c5d2de-1ff3-4950-9b22-123b7de3325f.png",
+    "destination": "assets/backgrounds/c2_gare.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/02_cap2_parigi/c2_appartamento/1c9274d1-2c45-4564-b3bf-e461202f9a8b.png",
+    "destination": "assets/backgrounds/c2_appartamento.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/05_cap5_istanbul/c5_antiquario/a03afcd6-f4a7-4c05-afa5-745117062f28.jpg",
+    "destination": "assets/backgrounds/c5_antiquario.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/05_cap5_istanbul/c5_han/e18d0352-d93f-4cfa-9a58-2c53a0a96c41.jpg",
+    "destination": "assets/backgrounds/c5_han.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/05_cap5_istanbul/c5_tetto/8a4cd75a-d38a-47b9-af65-0ccc1e1950e1.jpg",
+    "destination": "assets/backgrounds/c5_tetto.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/05_cap5_istanbul/c5_galata/4fad9a13-f644-49ce-830d-ce37bd428de6.jpg",
+    "destination": "assets/backgrounds/c5_galata.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/05_cap5_istanbul/c5_cisterna/b90336ba-1bce-4e76-bd52-fac38ae826d4.jpg",
+    "destination": "assets/backgrounds/c5_cisterna.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/05_cap5_istanbul/c5_bazar/714e349c-f961-43be-a0a9-c885e8c15700.jpg",
+    "destination": "assets/backgrounds/c5_bazar.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/07_cap7_firenze/c7_galleria/76a6b592-a89d-4ab7-a6b6-29f36a370630.jpg",
+    "destination": "assets/backgrounds/c7_galleria.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/07_cap7_firenze/c7_cantiere/bbfbbc91-1774-43fb-a2ec-d013bedfad39.jpg",
+    "destination": "assets/backgrounds/c7_cantiere.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/01_fondali/07_cap7_firenze/c7_camera/f199107b-b789-4624-9d2d-29d339210e11.jpg",
+    "destination": "assets/backgrounds/c7_camera.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/04_oggetti/exec-c72b06f4-974a-4af4-a0be-bc228158ac92.png",
+    "destination": "assets/items/registro.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/04_oggetti/exec-c4435b66-73ac-42f7-ae46-3fb699cbee87.png",
+    "destination": "assets/items/piede_porco.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/04_oggetti/exec-dc276f00-7c01-4cbf-a57f-48f1930cb3b3.png",
+    "destination": "assets/items/coltellino.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/04_oggetti/exec-ba199e7d-4a76-4a21-840d-f93a5293f332.png",
+    "destination": "assets/items/libretto.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/04_oggetti/exec-db263958-e773-4232-8f6f-0d0175d3afd4.png",
+    "destination": "assets/items/promemoria.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/04_oggetti/exec-03bc4d19-9a0f-4b65-b192-4e7762730143.png",
+    "destination": "assets/items/sigillo.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/04_oggetti/exec-e641fd31-3e93-4f4b-b9e0-2e27043f26a0.png",
+    "destination": "assets/items/lanterna.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/04_oggetti/exec-9881f7e4-625a-413c-838e-e90c26990f60.png",
+    "destination": "assets/items/sigillo_b.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/04_oggetti/exec-46e77188-d656-484c-96b2-dc72b453ed40.png",
+    "destination": "assets/items/busta_e.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/04_oggetti/exec-1bc622be-5252-4139-8aec-e577a249d60a.png",
+    "destination": "assets/items/sigillo_a.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/04_oggetti/exec-03820744-1803-4862-a98f-fe10fa83ab97.png",
+    "destination": "assets/items/caffe.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/04_oggetti/exec-00a28879-b6f0-4a64-b58b-f00155610bbb.png",
+    "destination": "assets/items/sigillo_d.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/04_oggetti/exec-f017286e-9cbb-461d-a13a-9984ee7331b5.png",
+    "destination": "assets/items/frammenti.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/04_oggetti/exec-698da934-f3a4-46d6-a7e6-ff9cd6a2cb7a.png",
+    "destination": "assets/items/medaglione_k.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/04_oggetti/exec-1e64027f-d195-497c-bdce-8f8ca115b741.png",
+    "destination": "assets/items/negativo.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/04_oggetti/exec-9fedd5bb-ed40-409c-9721-755b5c817c37.png",
+    "destination": "assets/items/foto1967.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/04_oggetti/exec-d969cb97-1e41-4ce1-b27b-8b9f62da69df.png",
+    "destination": "assets/items/sigillo_c.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/04_oggetti/exec-1b3fca2e-10b1-4ce5-91ae-02e33dafe316.png",
+    "destination": "assets/items/moneta.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/04_oggetti/exec-85403875-3a47-4fb1-b785-dc61708cfeda.png",
+    "destination": "assets/items/chiave_ottone.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/04_oggetti/exec-ee08f817-37e0-4c84-99c5-0ca34926c642.png",
+    "destination": "assets/items/lista17.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/06_enigmi/exec-590b5c82-216a-49ff-963a-b46954d0e421.png",
+    "destination": "assets/puzzles/mappa_cifrata.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/06_enigmi/exec-839ff685-4c03-465a-8402-e95c792f91e2.png",
+    "destination": "assets/puzzles/photo1944.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/06_enigmi/exec-9ae4394d-d689-4a9f-b9eb-1eb6cd3e7a83.png",
+    "destination": "assets/puzzles/photo1967.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/07_foto_collezionabili/photo_08.jpg",
+    "destination": "assets/collectibles/photo_08.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/07_foto_collezionabili/photo_07.jpg",
+    "destination": "assets/collectibles/photo_07.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/07_foto_collezionabili/photo_06.jpg",
+    "destination": "assets/collectibles/photo_06.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/07_foto_collezionabili/photo_10.jpg",
+    "destination": "assets/collectibles/photo_10.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/07_foto_collezionabili/photo_04.jpg",
+    "destination": "assets/collectibles/photo_04.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/07_foto_collezionabili/photo_05.jpg",
+    "destination": "assets/collectibles/photo_05.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/07_foto_collezionabili/photo_01.jpg",
+    "destination": "assets/collectibles/photo_01.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/07_foto_collezionabili/photo_02.jpg",
+    "destination": "assets/collectibles/photo_02.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/07_foto_collezionabili/photo_03.jpg",
+    "destination": "assets/collectibles/photo_03.jpg",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/07_foto_collezionabili/bfb55d27-f766-47a7-abf0-e4f391cc20f4.png",
+    "destination": "assets/collectibles/photo_09.png",
+    "note": ""
+  },
+  {
+    "source": "nuovi asset/06_enigmi/exec-c793f7ee-b07e-4063-ac84-d653830f6301.png",
+    "destination": "assets/puzzles/sigillo_quarti.png",
+    "note": "Il puzzle visualizza le quattro celle del foglio con SVG; il bitmap sorgente resta integro."
+  },
+  {
+    "source": "nuovi asset/06_enigmi/exec-590b5c82-216a-49ff-963a-b46954d0e421.png",
+    "destination": "assets/items/mappa.png",
+    "note": "La stessa mappa è usata nel puzzle e nell’inventario."
+  }
+]

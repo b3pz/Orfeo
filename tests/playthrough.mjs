@@ -52,8 +52,14 @@ async function newPage(browser, url, opts = {}) {
   page.on('pageerror', (e) => errors.push('pageerror: ' + e.message));
   page.on('requestfailed', (r) => errors.push('requestfailed: ' + r.url()));
   if (opts.test !== false) await page.addInitScript(() => { window.ORFEO_TEST = true; });
-  await page.goto(url);
-  await page.waitForFunction(() => window.Orfeo && window.Orfeo.ready, null, { timeout: 15000 });
+  try {
+    await page.goto(url, { timeout: 60000 });
+    await page.waitForFunction(() => window.Orfeo && window.Orfeo.ready, null, { timeout: 60000 });
+  } catch (e) {
+    console.error('Avvio:', await page.evaluate(() => ({ loading: document.querySelector('#loading p')?.textContent, data: Object.keys(window.Orfeo?.Data || {}) })));
+    console.error('Errori browser:', errors);
+    throw e;
+  }
   if (opts.test !== false) await installHooks(page);
   return { page, ctx, errors };
 }
@@ -151,7 +157,7 @@ async function testFull(browser, url) {
   if (!r.ok) return page.context().close();
   // final choice via UI path (segreto)
   const counts = await page.evaluate(() => ({ cols: window.Orfeo.Collectibles.count('collectibles'), sym: window.Orfeo.Collectibles.count('symbols'), ev: window.Orfeo.Collectibles.count('evidence') }));
-  counts.cols === 43 ? ok('43/43 collezionabili') : fail('collezionabili raccolti: ' + counts.cols);
+  counts.cols === 43 ? ok('43/43 collezionabili') : fail('collezionabili raccolti: ' + counts.cols + ' · mancanti: ' + Object.keys(await page.evaluate(() => Orfeo.Collectibles.index)).filter(id => !snapshot.collectibles[id]).join(', '));
   log(`    simboli ${counts.sym}/7 · prove ${counts.ev}`);
   // play each ending from the checkpoint
   for (const id of ['luce', 'custodi', 'cenere', 'segreto']) {

@@ -43,6 +43,8 @@
       window.addEventListener('resize', () => this.resize());
       window.addEventListener('orientationchange', () => setTimeout(() => this.resize(), 200));
       this.bindHUD();
+      O.$('#inv-panel').insertAdjacentHTML('afterbegin', this.bookHTML());
+      O.$('#inv-panel').appendChild(O.el('div#inv-detail.inv-detail'));
       this.bindKeys();
       this.bindCursor();
       O.on('toast', (t) => this.toast(t));
@@ -76,6 +78,8 @@
       document.documentElement.style.setProperty('--world-top', oy + 'px');
       document.body.classList.toggle('portrait', vh > vw * 1.1);
       document.body.classList.toggle('compact', vw < 760 || vh < 500);
+      const journalArt = O.$('.journal .book-art');
+      if (journalArt) journalArt.setAttribute('viewBox', window.innerWidth <= 600 ? '455 515 405 385' : '20 445 910 490');
     },
 
     toWorld(cx, cy) {
@@ -95,6 +99,12 @@
     },
 
     /* ---------------- HUD ---------------- */
+    bookHTML(kind) {
+      // ViewBox crops the uploaded UI atlas without changing its bitmap.
+      const view = kind === 'journal' && window.innerWidth <= 600 ? '455 515 405 385' : '20 445 910 490';
+      return `<svg class="book-art" viewBox="${view}" preserveAspectRatio="none" aria-hidden="true"><image href="assets/interface/orfeo-ui-sheet.png" width="1672" height="941"/></svg>`;
+    },
+
     bindHUD() {
       O.$('#btn-menu').onclick = () => this.pauseMenu();
       O.$('#btn-journal').onclick = () => this.openJournal();
@@ -174,6 +184,11 @@
     portraitHTML(id, expr) {
       const pd = O.Characters.def(id);
       if (pd.portraitOf && O.Assets.first(`assets/portraits/${pd.portraitOf}/neutral.png`)) id = pd.portraitOf;
+      const sheet = O.Characters.def(id).portraitSheet;
+      if (sheet && O.Assets.has(sheet.src)) {
+        const rect = sheet.rects[expr] || sheet.rects.neutral;
+        return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${rect.join(' ')}"><rect x="${rect[0]}" y="${rect[1]}" width="${rect[2]}" height="${rect[3]}" fill="#f1e9dd"/><image href="${sheet.src}" width="${sheet.w}" height="${sheet.h}"/></svg>`;
+      }
       const real = O.Assets.first(`assets/portraits/${id}/${expr}.png`, `assets/portraits/${id}/${expr}.webp`, `assets/portraits/${id}/neutral.png`, `assets/portraits/${id}/neutral.webp`);
       if (real) return `<img src="${real}" alt="">`;
       const d = O.Characters.def(id);
@@ -401,8 +416,9 @@
         O.State.d.inventory.forEach((id) => {
           const b = O.el('button.inv-item', { html: O.Inventory.iconHTML(id) + `<span class="inv-name show">${O.Inventory.name(id)}</span>` });
           b.onclick = () => {
-            this.closePanel();
+            // Closing calls onClose (cancel): settle the selection first.
             resolve(id);
+            this.closePanel();
           };
           grid.appendChild(b);
         });
@@ -470,7 +486,7 @@
         const panel = this.panel(`Archivio Orfeo · ${T.single} ${c.n}`, 'collectible');
         let media = '';
         if (c.type === 'photos') media = `<div class="col-photo">${O.Assets.first(`assets/collectibles/${c.id}.jpg`, `assets/collectibles/${c.id}.png`) ? `<img src="${O.Assets.first(`assets/collectibles/${c.id}.jpg`, `assets/collectibles/${c.id}.png`)}" alt="">` : O.Art.photo(c.photo || 'generic', { woman: !!c.woman, marks: false })}</div>`;
-        if (c.type === 'symbols') media = `<div class="col-symbol">${c.glyph || '◈'}</div>`;
+        if (c.type === 'symbols') media = `<div class="col-symbol"><svg viewBox="0 0 100 100" role="img" aria-label="Lira di Orfeo">${O.Art.drawProp('symbol', 100, 100, { c: '#c9a85a', a: 1 })}</svg></div>`;
         if (c.type === 'recordings') media = `<div class="col-tape">${icon('tape')}<span>${c.duration || '00:47'}</span></div>`;
         panel.body.innerHTML = `${media}<h3>${c.title}</h3><div class="col-meta">${c.date || ''}${c.place ? ' · ' + c.place : ''}</div><div class="col-text">${c.text}</div>`;
         panel.onClose = resolve;
@@ -512,6 +528,7 @@
 
     openJournal() {
       if (O.inTitle) return;
+      this.toggleInventory(false);
       const p = this.panel('Taccuino', 'journal');
       O.Audio.sfx('page');
       O.Journal.render(p.body);

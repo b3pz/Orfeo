@@ -4,7 +4,7 @@
 // raggiungibilità delle scene, ottenibilità degli oggetti, collezionabili piazzati,
 // temi che danno statistiche ripetibili, tetto massimo delle statistiche.
 // Uso: node tools/validate.mjs   (exit code 1 se ci sono errori)
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import vm from 'node:vm';
@@ -148,6 +148,15 @@ for (const [id, s] of Object.entries(scenes)) {
   scanScript(s.firstEnter, w + '.firstEnter', id);
   scanScript(s.enter, w + '.enter', id);
   (s.fx || []).forEach((f) => typeof f === 'object' && checkCond(f.if, w + '.fx'));
+  (s.fx || []).filter(f => typeof f === 'object').forEach(f => {
+    if (f.rect && (f.rect.length !== 4 || f.rect.some(n => !Number.isFinite(n)) || f.rect[2] <= 0 || f.rect[3] <= 0)) err(`${w}: rettangolo meteo non valido`);
+    if (f.window && !f.rect) err(`${w}: meteo interno senza finestra`);
+  });
+  (s.bgStates || []).forEach(state => {
+    checkCond(state.if, w + '.bgStates');
+    if (!existsSync(join(root, state.img || 'missing-background'))) err(`${w}: variante del fondale mancante ${state.img}`);
+    if (state.rect && (state.rect.length !== 4 || state.rect.some(n => !Number.isFinite(n)))) err(`${w}: ritaglio variante non valido`);
+  });
   (s.walkIf || []).forEach((x) => checkCond(x.if, w + '.walkIf'));
   const hsIds = new Set();
   let observable = 0;
@@ -158,6 +167,7 @@ for (const [id, s] of Object.entries(scenes)) {
     if (!Array.isArray(h.rect) || h.rect.length !== 4) err(`${hw}: rect non valido`);
     else if (h.rect[0] < -10 || h.rect[1] < -10 || h.rect[0] + h.rect[2] > 1930 || h.rect[1] + h.rect[3] > 1090) warn(`${hw}: rect fuori dal mondo`);
     checkCond(h.if, hw + '.if');
+    if (h.propImg && !existsSync(join(root, h.propImg))) err(`${hw}: immagine oggetto mancante ${h.propImg}`);
     if (h.look) observable++;
     scanScript(h.look, hw + '.look', id);
     scanScript(h.use, hw + '.use', id);

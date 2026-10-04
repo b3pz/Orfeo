@@ -7,8 +7,15 @@
     "start": "python3 -m http.server 8000",
     "build": "node tools/scan-assets.mjs && node tools/build-data.mjs",
     "validate": "node tools/validate.mjs",
-    "test": "node tools/validate.mjs && node tests/playthrough.mjs all",
-    "screens": "node tests/screens.mjs"
+    "test": "node tools/validate.mjs && node tests/navigation.mjs && node tests/movement-runtime.mjs && node tests/characters.mjs && node tests/dialogue-items.mjs && node tests/scene-props.mjs && node tests/movement-browser.mjs && node tests/cutscenes.mjs && node tests/playthrough.mjs all",
+    "screens": "node tests/screens.mjs",
+    "test:navigation": "node tests/navigation.mjs",
+    "test:characters": "node tests/characters.mjs",
+    "test:movement": "node tests/movement-runtime.mjs",
+    "test:movement:browser": "node tests/movement-browser.mjs",
+    "test:dialogue": "node tests/dialogue-items.mjs",
+    "test:cutscenes": "node tests/cutscenes.mjs",
+    "test:props": "node tests/scene-props.mjs"
   },
   "devDependencies": {
     "playwright": "^1.56.0"

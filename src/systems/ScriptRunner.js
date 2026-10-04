@@ -51,6 +51,7 @@
     async run(action) {
       if (action == null) return;
       if (typeof action === 'string') action = [action];
+      if (this.depth === 0) O.Movement.stopAll();
       this.depth++;
       this.running = true;
       try {
@@ -245,7 +246,7 @@
       c.present = true;
       if (a !== st.active) {
         c.scene = me.scene;
-        const pt = O.Movement.clampInto([me.x + (me.dir > 0 ? 170 : -170), me.y - 10], O.Movement.polygon(O.Scene.current, a));
+        const pt = O.Movement.point(O.Scene.current, a, [me.x + (me.dir > 0 ? 170 : -170), me.y - 10]) || [me.x, me.y];
         c.x = pt[0];
         c.y = pt[1];
         c.dir = -me.dir;
@@ -265,8 +266,10 @@
       c.present = true;
       c.scene = p.scene;
       if (p.at) {
-        c.x = p.at[0];
-        c.y = p.at[1];
+        const scene = O.Scene.get(p.scene);
+        const pt = O.Movement.point(scene, who, p.at) || p.at;
+        c.x = pt[0];
+        c.y = pt[1];
         if (p.at[2]) c.dir = p.at[2] === 'l' ? -1 : 1;
       }
       O.Scene.refresh();

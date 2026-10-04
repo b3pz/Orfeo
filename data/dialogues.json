@@ -29,6 +29,7 @@
       "@flag:sandro_ok",
       "sandro[smile]: Ah. Vita. Sei un sant'uomo, Beps.",
       "sandro: Va bene, il telo lo tolgo. Ma io resto qui sulla porta. Se sento l'acqua, scappo.",
+      "@refresh",
       "@objective:o1_stanza"
      ]
     },
@@ -93,6 +94,7 @@
        "@flag:sandro_ok",
        "sandro[smile]: Ah. Vita. Sei un sant'uomo, Beps.",
        "sandro: Va bene, il telo lo tolgo. Ma io resto qui sulla porta.",
+       "@refresh",
        "@objective:o1_stanza"
       ]
      }
