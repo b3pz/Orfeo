@@ -174,48 +174,8 @@
  },
  "credits": [
   [
-   "Un'avventura grafica di",
+   "Sviluppato da",
    "b3pz"
-  ],
-  [
-   "Storia e personaggi",
-   "Giuseppe & Kiki"
-  ],
-  [
-   "Motore, sistemi, enigmi e scrittura",
-   "Claude Code (Anthropic) con b3pz"
-  ],
-  [
-   "Illustrazioni finali",
-   "in produzione — vedi docs/ASSET_REQUIREMENTS.md"
-  ],
-  [
-   "Grafica provvisoria",
-   "generata proceduralmente"
-  ],
-  [
-   "Musica e suoni",
-   "sintesi procedurale provvisoria"
-  ],
-  [
-   "Beps",
-   "Giuseppe"
-  ],
-  [
-   "Kiki",
-   "Federica"
-  ],
-  [
-   "Aurelio Varano",
-   "il Notaio"
-  ],
-  [
-   "Ringraziamenti",
-   "Firenze, Parigi, Roma, Istanbul"
-  ],
-  [
-   "E a",
-   "tutti quelli che non si voltano"
   ]
  ]
 }

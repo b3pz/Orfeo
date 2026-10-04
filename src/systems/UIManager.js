@@ -820,7 +820,7 @@
       return new Promise((resolve) => {
         const el = O.$('#credits');
         const C = O.Data.endings.credits || [];
-        el.innerHTML = `<div class="cr-roll"><h2>Giuseppe &amp; Kiki</h2><h3>Il Segreto di Orfeo</h3><p class="cr-end">${d.title}</p>${C.map((c) => `<div class="cr-row"><span>${c[0]}</span><b>${c[1]}</b></div>`).join('')}<p class="cr-thanks">Grazie per aver giocato.</p></div><button class="cs-skip">Salta ▸▸</button>`;
+        el.innerHTML = `<div class="cr-roll">${C.map((c) => `<div class="cr-row"><span>${c[0]}</span><b>${c[1]}</b></div>`).join('')}</div><button class="cs-skip">Salta ▸▸</button>`;
         el.classList.add('on');
         const end = () => {
           clearTimeout(t);
