@@ -190,7 +190,7 @@
                 "@sfx:phone",
                 "beps[surprised]: Il telefono. Alle nove di sera.",
                 "@anim:phone",
-                "sandro: Beps? Sono Sandro, del cantiere di via de' Bardi. Senta… nella stanza murata c'è dell'altro. Un armadio. E una cosa nel muro.",
+                "sandro: Beps? Sono Rocco, del cantiere di via de' Bardi. Senta… nella stanza murata c'è dell'altro. Un armadio. E una cosa nel muro.",
                 "sandro: Io lì dentro da solo non ci torno. Di notte si sente l'acqua.",
                 "beps: Arrivo. Tienimi il caffè in caldo.",
                 "sandro: Il caffè lo porti tu, Beps. La macchinetta del cantiere è morta con l'ultimo papa.",
@@ -298,7 +298,7 @@
             {
               "if": "flag.sandro_caffe",
               "do": [
-                "Sandro ha già avuto il suo caffè. Uno al giorno è sufficiente, per la salute di tutti."
+                "Rocco ha già avuto il suo caffè. Uno al giorno è sufficiente, per la salute di tutti."
               ]
             },
             {
@@ -312,7 +312,7 @@
               "do": [
                 "@anim:use",
                 "@sfx:mechanism",
-                "Un caffè per Sandro. Bicchierino di carta, coperchio, preghiera.",
+                "Un caffè per Rocco. Bicchierino di carta, coperchio, preghiera.",
                 "@give:caffe"
               ]
             },
@@ -1050,7 +1050,7 @@
           "y": 853,
           "dir": "l",
           "talk": "sandro",
-          "look": "Sandro, il capocantiere. Ha l'aria di uno che vorrebbe essere ovunque tranne che qui."
+          "look": "Rocco, il capocantiere. Ha l'aria di uno che vorrebbe essere ovunque tranne che qui."
         }
       ],
       "firstEnter": [
@@ -1080,7 +1080,7 @@
             "c": "#3a4a5a"
           },
           "if": "!flag.sandro_ok",
-          "look": "Un telo cerato nasconde il tavolo, la fessura nella parete e la breccia. Sandro non lascia toccare niente prima del caffè.",
+          "look": "Un telo cerato nasconde il tavolo, la fessura nella parete e la breccia. Rocco non lascia toccare niente prima del caffè.",
           "use": [
             "sandro: Ehi ehi ehi. Prima il caffè, poi la stanza. È la regola del cantiere."
           ]
@@ -1096,7 +1096,7 @@
           ],
           "if": "flag.sandro_ok",
           "look": [
-            "La breccia aperta da Sandro. Il muro è del '66, malta di calce e mattoni di recupero.",
+            "La breccia aperta da Rocco. Il muro è del '66, malta di calce e mattoni di recupero.",
             "Ma l'intonaco interno è più recente. Qualcuno è entrato e ha richiuso. Più di una volta."
           ]
         },
@@ -1515,7 +1515,7 @@
           "talk": "archivista",
           "look": {
             "beps": "L'archivista. Occhiali sulla punta del naso, cardigan verde, lo sguardo di chi ha visto passare tre generazioni di studenti maleducati.",
-            "kiki": "Ottavia Ricci. Mi ha fatto la tessera di ricerca tre anni fa. Mi chiama ancora «signorina restauratrice»."
+            "kiki": "Alessandra. Mi ha fatto la tessera di ricerca tre anni fa. Mi chiama ancora «signorina restauratrice»."
           }
         },
         {
@@ -1546,7 +1546,7 @@
           },
           "look": {
             "beps": "Il bancone delle richieste. Moduli in triplice copia. Una matita legata con lo spago.",
-            "kiki": "Il regno di Ottavia. Ci ho passato ore."
+            "kiki": "Il regno di Alessandra. Ci ho passato ore."
           }
         },
         {
@@ -1681,8 +1681,8 @@
             "k": "clock"
           },
           "look": {
-            "beps": "Le nove e quaranta. Chiudono alle dieci. Ottavia mi ha fatto un favore a lasciarmi entrare.",
-            "kiki": "È indietro di quattro minuti da sempre. Ottavia dice che è «il tempo dell'archivio»."
+            "beps": "Le nove e quaranta. Chiudono alle dieci. Alessandra mi ha fatto un favore a lasciarmi entrare.",
+            "kiki": "È indietro di quattro minuti da sempre. Alessandra dice che è «il tempo dell'archivio»."
           }
         },
         {
@@ -1748,7 +1748,7 @@
                 "«Solo personale autorizzato.» Io sono autorizzato a malapena a parcheggiare in Oltrarno."
               ],
               "kiki": [
-                "Ho la tessera, ma devo prima dirlo a Ottavia."
+                "Ho la tessera, ma devo prima dirlo a Alessandra."
               ]
             }
           }
@@ -1964,7 +1964,7 @@
         ]
       },
       "firstEnter": [
-        "kiki: Ripiano 17. In fondo a destra. Ottavia ci dà dieci minuti.",
+        "kiki: Ripiano 17. In fondo a destra. Alessandra ci dà dieci minuti.",
         "beps: Dieci minuti. Ho già sentito questa frase stasera."
       ],
       "hotspots": [
@@ -1999,7 +1999,7 @@
                 "@anim:pickup",
                 "@sfx:page",
                 "beps: Il faldone col nastro rosso. Dentro… una busta. E una microcassetta.",
-                "kiki[surprised]: «Studio Marchetti, 12 rue des Archives, Paris.» Una busta del 1967.",
+                "kiki[surprised]: «Studio Saint Taureau, 12 rue des Archives, Paris.» Una busta del 1967.",
                 "@give:busta_e",
                 "@clue:busta_parigi",
                 "@flag:ripiano_aperto",
@@ -2344,13 +2344,13 @@
           "dir": "l",
           "talk": "tommaso",
           "look": {
-            "beps": "Tommaso, il barista. Asciuga lo stesso bicchiere da quando siamo entrati.",
+            "beps": "Ivan, il barista. Asciuga lo stesso bicchiere da quando siamo entrati.",
             "kiki": "Il barista ascolta tutto. Si vede da come asciuga i bicchieri."
           }
         }
       ],
       "firstEnter": [
-        "kiki: Due cappuccini, Tommaso. Lo so che sono le dieci di sera. Non giudicarci.",
+        "kiki: Due cappuccini, Ivan. Lo so che sono le dieci di sera. Non giudicarci.",
         "kiki[skeptical]: Allora, informatico. Adesso mi racconti tutto. E io, forse, racconto qualcosa a te.",
         "@objective:o1_parlare"
       ],
@@ -2503,11 +2503,11 @@
           },
           "look": {
             "beps": [
-              "«Il notaio Aurelio Varano finanzia il restauro del palazzo di via de' Bardi.» Il mio cantiere. Il mio committente, in pratica.",
+              "«Il notaio Cristiano Iuschini finanzia il restauro del palazzo di via de' Bardi.» Il mio cantiere. Il mio committente, in pratica.",
               "@clue:varano_finanzia"
             ],
             "kiki": [
-              "Varano. Notaio. Finanzia proprio il palazzo della stanza murata. Che generoso.",
+              "Iuschini. Notaio. Finanzia proprio il palazzo della stanza murata. Che generoso.",
               "@clue:varano_finanzia"
             ]
           }
@@ -3145,7 +3145,7 @@
           "talk": "albert",
           "look": {
             "beps": "Un bouquiniste con la barba bianca e una sciarpa rossa. Sta leggendo Proust. In piedi.",
-            "kiki": "Monsieur Albert. Nonna comprava i libri da lui. È sempre stato vecchio, credo."
+            "kiki": "Mirko. Nonna comprava i libri da lui. È sempre stato vecchio, credo."
           }
         }
       ],
@@ -3165,11 +3165,11 @@
           },
           "look": {
             "beps": "Le casse verdi dei bouquinistes, appese al parapetto. Libri, stampe, riviste vecchie di un secolo.",
-            "kiki": "Una cassa di libretti d'opera. Cherubini, Rameau, Gluck… Monsieur Albert sa cosa vende."
+            "kiki": "Una cassa di libretti d'opera. Cherubini, Rameau, Gluck… Mirko sa cosa vende."
           },
           "use": {
-            "beps": "Non tocco niente senza il permesso di Albert. Ha l'aria di uno che morde.",
-            "kiki": "Chiedo prima ad Albert. È la regola dei quais."
+            "beps": "Non tocco niente senza il permesso di Mirko. Ha l'aria di uno che morde.",
+            "kiki": "Chiedo prima ad Mirko. È la regola dei quais."
           }
         },
         {
@@ -3285,10 +3285,10 @@
             "if": "flag.helene_met",
             "else": {
               "beps": [
-                "Kiki dice che prima dobbiamo passare da Hélène. Ha lei le chiavi della casa della nonna."
+                "Kiki dice che prima dobbiamo passare da Sylvie. Ha lei le chiavi della casa della nonna."
               ],
               "kiki": [
-                "Le chiavi di casa di nonna le ha Hélène. Prima lo studio."
+                "Le chiavi di casa di nonna le ha Sylvie. Prima lo studio."
               ]
             }
           }
@@ -3342,7 +3342,7 @@
       ]
     },
     "c2_studio_marchetti": {
-      "name": "Studio Marchetti",
+      "name": "Studio Saint Taureau",
       "place": "12, rue des Archives · Parigi",
       "chapter": 2,
       "music": "paris",
@@ -3466,8 +3466,8 @@
           "dir": "l",
           "talk": "helene",
           "look": {
-            "beps": "Capelli d'argento a caschetto, trench color sabbia, occhi che misurano la luce. Hélène Marchetti.",
-            "kiki": "Hélène. L'ultima volta che l'ho vista era al funerale di nonna. Mi aveva tenuto la mano tutto il tempo."
+            "beps": "Capelli d'argento a caschetto, trench color sabbia, occhi che misurano la luce. Sylvie Saint Taureau.",
+            "kiki": "Sylvie. L'ultima volta che l'ho vista era al funerale di nonna. Mi aveva tenuto la mano tutto il tempo."
           }
         }
       ],
@@ -3559,7 +3559,7 @@
           },
           "look": {
             "beps": "Una macchina fotografica a soffietto su un cavalletto di legno. Hardware vero, di quello che non si aggiorna.",
-            "kiki": "Una Deardorff degli anni Cinquanta. Jacques Marchetti ci ha fotografato mezza Parigi."
+            "kiki": "Una Deardorff degli anni Cinquanta. Jacques Saint Taureau ci ha fotografato mezza Parigi."
           }
         },
         {
@@ -3573,7 +3573,7 @@
           ],
           "look": {
             "beps": "Ritratti in bianco e nero. Musicisti, scrittori, un pugile, una bambina con un gatto. Tutti guardano in macchina tranne uno.",
-            "kiki": "Jacques Marchetti aveva il dono di far sembrare tutti più coraggiosi di quanto fossero."
+            "kiki": "Jacques Saint Taureau aveva il dono di far sembrare tutti più coraggiosi di quanto fossero."
           }
         },
         {
@@ -3609,7 +3609,7 @@
           },
           "look": {
             "beps": "Centinaia di cassettini etichettati per anno. 1958, 1959… 1967 è vuoto.",
-            "kiki": "Il cassettino del 1967 è vuoto. Hélène li ha già tirati fuori. O qualcun altro."
+            "kiki": "Il cassettino del 1967 è vuoto. Sylvie li ha già tirati fuori. O qualcun altro."
           }
         },
         {
@@ -3699,7 +3699,7 @@
           "exit": {
             "to": "c2_camera_oscura",
             "if": "item.negativo || flag.helene_met",
-            "else": "Hélène non mi ha ancora invitato nella sua camera oscura. Il che, detto così, suona strano."
+            "else": "Sylvie non mi ha ancora invitato nella sua camera oscura. Il che, detto così, suona strano."
           }
         },
         {
@@ -3769,7 +3769,7 @@
     },
     "c2_camera_oscura": {
       "name": "Camera oscura",
-      "place": "Studio Marchetti · Parigi",
+      "place": "Studio Saint Taureau · Parigi",
       "chapter": 2,
       "music": "mystery",
       "ambience": "room",
@@ -3938,7 +3938,7 @@
           ],
           "look": {
             "beps": "Stampe appese ad asciugare con le mollette. Facce, strade, una bambina con un pallone. Una donna col cappello, sfocata.",
-            "kiki": "Stampe recenti. Hélène sta ristampando tutto il 1967. Perché proprio adesso?"
+            "kiki": "Stampe recenti. Sylvie sta ristampando tutto il 1967. Perché proprio adesso?"
           }
         },
         {
@@ -4684,7 +4684,7 @@
           },
           "look": {
             "beps": "«I custodi della memoria. Mostra sugli archivi salvati durante la guerra.» Siamo nel posto giusto.",
-            "kiki": "Ci sono due foto di Firenze '44. E il nome di Don Ilario Cesti come curatore."
+            "kiki": "Ci sono due foto di Firenze '44. E il nome di Don Tantirige come curatore."
           }
         },
         {
@@ -4910,7 +4910,7 @@
           "if": "!flag.allarme",
           "look": {
             "beps": "Un prete minuscolo e antichissimo, con occhiali spessi come fondi di bottiglia. Sta leggendo Seneca e ascoltando i Pink Floyd con un auricolare.",
-            "kiki": "Don Ilario Cesti. Novantun anni. Ha restaurato più codici di quanti io ne abbia mai visti."
+            "kiki": "Don Tantirige. Novantun anni. Ha restaurato più codici di quanti io ne abbia mai visti."
           }
         }
       ],
@@ -5019,7 +5019,7 @@
             "c": "#4a2a18"
           },
           "look": {
-            "beps": "Il bancone di Don Ilario. Un registro dei prestiti, un vasetto di caramelle alla menta e un iPod del 2005.",
+            "beps": "Il bancone di Don Tantirige. Un registro dei prestiti, un vasetto di caramelle alla menta e un iPod del 2005.",
             "kiki": "Il registro dei prestiti è ancora a mano. Rispetto."
           }
         },
@@ -5057,10 +5057,10 @@
             "if": "flag.cassetti_ok",
             "else": {
               "beps": [
-                "Chiusa a chiave. La chiave ce l'ha Don Ilario, appesa al collo come un crocifisso."
+                "Chiusa a chiave. La chiave ce l'ha Don Tantirige, appesa al collo come un crocifisso."
               ],
               "kiki": [
-                "Chiusa. Dobbiamo convincere Don Ilario."
+                "Chiusa. Dobbiamo convincere Don Tantirige."
               ]
             }
           }
@@ -5388,7 +5388,7 @@
           ],
           "look": {
             "beps": "Un lume a olio vero. In una biblioteca. Il mio assicuratore sta piangendo da qualche parte.",
-            "kiki": "Don Ilario non vuole luci elettriche qui. Dice che i libri dormono meglio."
+            "kiki": "Don Tantirige non vuole luci elettriche qui. Dice che i libri dormono meglio."
           }
         },
         {
@@ -6606,7 +6606,7 @@
         },
         {
           "id": "pacco",
-          "name": "Pacco di Sandro",
+          "name": "Pacco di Rocco",
           "rect": [
             1180,
             900,
@@ -6624,7 +6624,7 @@
             1150,
             1040
           ],
-          "look": "Un pacco con un biglietto: «Beps, l'ho trovato nel muro dopo che sei andato via. Io non lo tocco più. — Sandro».",
+          "look": "Un pacco con un biglietto: «Beps, l'ho trovato nel muro dopo che sei andato via. Io non lo tocco più. — Rocco».",
           "use": [
             "@anim:pickup",
             "Dentro, avvolto in un giornale del '66: un quarto di cerchio di bronzo rosso. Sul bordo: VOL.",
@@ -6878,13 +6878,13 @@
           "y": 869,
           "dir": "r",
           "talk": "neri",
-          "look": "Mastro Neri, orafo. Occhiali da lente, grembiule di pelle, mani da chirurgo."
+          "look": "Mastro Riccardo, orafo. Occhiali da lente, grembiule di pelle, mani da chirurgo."
         }
       ],
       "hotspots": [
         {
           "id": "bottega",
-          "name": "Bottega di Mastro Neri",
+          "name": "Bottega di Mastro Riccardo",
           "rect": [
             115,
             76,
@@ -6895,7 +6895,7 @@
             "k": "stall",
             "c": "#5a2a1a"
           },
-          "look": "La bottega Neri: «Orafi dal 1897». Anelli, spille, un medaglione d'ottone in vetrina identico al nostro, ma intero e falso."
+          "look": "La bottega Riccardo: «Orafi dal 1897». Anelli, spille, un medaglione d'ottone in vetrina identico al nostro, ma intero e falso."
         },
         {
           "id": "banco",
@@ -6911,7 +6911,7 @@
             "c": "#3a2a1a",
             "overlay": true
           },
-          "look": "Il banco di lavoro di Mastro Neri. Bulini, cannello, un tappetino di cuoio con le impronte di centinaia di gioielli.",
+          "look": "Il banco di lavoro di Mastro Riccardo. Bulini, cannello, un tappetino di cuoio con le impronte di centinaia di gioielli.",
           "use": [
             {
               "if": "puzzle.c4_sigillo",
@@ -6935,7 +6935,7 @@
             },
             {
               "do": [
-                "Mi mancano dei frammenti. Ne servono quattro: Roma, la banca, il muro e quello di Neri."
+                "Mi mancano dei frammenti. Ne servono quattro: Roma, la banca, il muro e quello di Riccardo."
               ]
             }
           ]
@@ -7010,7 +7010,7 @@
             "to": "c4_corridoio",
             "if": "flag.neri_chiave",
             "else": [
-              "Una porticina di servizio che sale al Corridoio Vasariano. Chiusa. Mastro Neri dovrebbe saperne qualcosa."
+              "Una porticina di servizio che sale al Corridoio Vasariano. Chiusa. Mastro Riccardo dovrebbe saperne qualcosa."
             ]
           }
         },
@@ -7182,7 +7182,7 @@
           "y": 864,
           "dir": "l",
           "talk": "bellandi",
-          "look": "La dottoressa Bellandi. Tailleur blu, occhiali sottili, un badge plastificato con la foto più seria della storia della fotografia."
+          "look": "La dottoressa Caterina. Tailleur blu, occhiali sottili, un badge plastificato con la foto più seria della storia della fotografia."
         }
       ],
       "hotspots": [
@@ -7196,7 +7196,7 @@
             497
           ],
           "look": "Seicento cassette di sicurezza. Ognuna con un segreto. Alcune, forse, con più segreti della banca stessa.",
-          "use": "Non posso aprire niente senza la dottoressa Bellandi. Ha l'aria di una che ha imparato il regolamento a memoria."
+          "use": "Non posso aprire niente senza la dottoressa Caterina. Ha l'aria di una che ha imparato il regolamento a memoria."
         },
         {
           "id": "cassetta17",
@@ -7221,7 +7221,7 @@
             },
             {
               "do": [
-                "Devo prima parlare con la dottoressa Bellandi."
+                "Devo prima parlare con la dottoressa Caterina."
               ]
             }
           ],
@@ -7235,7 +7235,7 @@
               },
               {
                 "do": [
-                  "La dottoressa Bellandi mi fulmina con lo sguardo. «Prima la procedura, signore.»"
+                  "La dottoressa Caterina mi fulmina con lo sguardo. «Prima la procedura, signore.»"
                 ]
               }
             ]
@@ -8354,7 +8354,7 @@
             {
               "if": "present.kiki",
               "do": [
-                "kiki[worried]: Il cappello di nonna è a Parigi. Hélène non sopporta Istanbul. Chi è, Beps? Chi è?"
+                "kiki[worried]: Il cappello di nonna è a Parigi. Sylvie non sopporta Istanbul. Chi è, Beps? Chi è?"
               ]
             },
             "@flag:woman_4",
@@ -8428,7 +8428,7 @@
       "bgFit": "fill"
     },
     "c5_antiquario": {
-      "name": "Bottega di Selim Aydın",
+      "name": "Bottega di Mimmo",
       "place": "Gran Bazar · Istanbul",
       "chapter": 5,
       "music": "istanbul",
@@ -8557,7 +8557,7 @@
           "talk": "selim",
           "look": {
             "beps": "Un signore elegante sui settanta, gilet viola, baffi bianchi perfetti. Lucida un orologio con la cura di un chirurgo.",
-            "kiki": "Selim Aydın. Nonna lo chiamava «il mio traduttore»."
+            "kiki": "Mimmo. Nonna lo chiamava «il mio traduttore»."
           }
         }
       ],
@@ -8592,7 +8592,7 @@
             "k": "clock"
           },
           "look": {
-            "beps": "Un orologio con le ore in numeri ottomani. Ferma alle sei e dodici. «Il tempo qui si vende, non si usa», dice Selim.",
+            "beps": "Un orologio con le ore in numeri ottomani. Ferma alle sei e dodici. «Il tempo qui si vende, non si usa», dice Mimmo.",
             "kiki": "«Al Bazar, dove vendono il tempo.» Nonna intendeva questo."
           }
         },
@@ -8656,7 +8656,7 @@
                 {
                   "if": "active=='beps'",
                   "do": [
-                    "Lo accarezzo. Starnutisco. Selim ride per un minuto intero."
+                    "Lo accarezzo. Starnutisco. Mimmo ride per un minuto intero."
                   ],
                   "else": [
                     "kiki: Fusa. Bene. Almeno lui si fida."
@@ -8686,7 +8686,7 @@
           },
           "look": {
             "beps": "Un narghilè d'argento. Non fumo. Ma come oggetto di design, ha la mia approvazione.",
-            "kiki": "Selim dice che è del Settecento. Selim dice molte cose."
+            "kiki": "Mimmo dice che è del Settecento. Mimmo dice molte cose."
           }
         },
         {
@@ -8703,7 +8703,7 @@
             "c": "#6a3a5a"
           },
           "look": {
-            "beps": "«È volante», dice Selim. Gli ho chiesto se ha l'omologazione ENAC. Non ha capito. Meglio così.",
+            "beps": "«È volante», dice Mimmo. Gli ho chiesto se ha l'omologazione ENAC. Non ha capito. Meglio così.",
             "kiki": "Nessun tappeto vola. Ma questo, forse, ci pensa."
           }
         },
@@ -8880,7 +8880,7 @@
         ]
       },
       "firstEnter": [
-        "kiki: Il Büyük Valide Han. Un caravanserraglio del Seicento. Mercanti, cammelli, laboratori di tessitori. E, secondo Selim, una porta per il sottosuolo."
+        "kiki: Il Büyük Valide Han. Un caravanserraglio del Seicento. Mercanti, cammelli, laboratori di tessitori. E, secondo Mimmo, una porta per il sottosuolo."
       ],
       "hotspots": [
         {
@@ -8897,7 +8897,7 @@
           },
           "look": {
             "beps": "Una botola di ferro nel pavimento, con un anello arrugginito. Saldata dalla ruggine.",
-            "kiki": "La botola di Selim. Arrugginita."
+            "kiki": "La botola di Mimmo. Arrugginita."
           },
           "use": [
             {
@@ -9313,7 +9313,7 @@
           },
           "look": {
             "beps": "Un gabbiano sul cornicione. Mi guarda. Lo guardo. Nessuno dei due cede.",
-            "kiki": "Ha l'aria di Monsieur Albert."
+            "kiki": "Ha l'aria di Mirko."
           }
         },
         {
@@ -9811,8 +9811,8 @@
             "k": "candle"
           },
           "look": {
-            "beps": "Torce di ferro fissate al muro. Qualcuno le ha accese da poco. Selim, probabilmente. O qualcun altro.",
-            "kiki": "Pece fresca. Qualcuno viene qui spesso. Più spesso di Selim."
+            "beps": "Torce di ferro fissate al muro. Qualcuno le ha accese da poco. Mimmo, probabilmente. O qualcun altro.",
+            "kiki": "Pece fresca. Qualcuno viene qui spesso. Più spesso di Mimmo."
           }
         },
         {
@@ -9985,7 +9985,7 @@
       },
       "firstEnter": [
         "kiki: Parigi sotto la neve. Sembra una cartolina che qualcuno ha dimenticato di spedire.",
-        "beps: Hélène ha detto di passare da lei prima di ogni altra cosa. «Prima di Varano. Prima di tutto.»",
+        "beps: Sylvie ha detto di passare da lei prima di ogni altra cosa. «Prima di Iuschini. Prima di tutto.»",
         "@objective:o6_helene"
       ],
       "hotspots": [
@@ -10065,7 +10065,7 @@
         },
         {
           "id": "verso_atelier",
-          "name": "Verso il Marais (Studio Marchetti)",
+          "name": "Verso il Marais (Studio Saint Taureau)",
           "rect": [
             0,
             918,
@@ -10101,7 +10101,7 @@
                 "Un passaggio coperto pieno di librerie chiuse. Senza sapere quale porta, è inutile."
               ],
               "kiki": [
-                "Prima Hélène."
+                "Prima Sylvie."
               ]
             }
           }
@@ -10124,7 +10124,7 @@
             "if": "puzzle.c6_cronologia && flag.nastro_ascoltato",
             "else": {
               "beps": [
-                "Varano ci aspetta. Ma prima voglio sapere tutto quello che lui sa. Archivio e nastro."
+                "Iuschini ci aspetta. Ma prima voglio sapere tutto quello che lui sa. Archivio e nastro."
               ],
               "kiki": [
                 "Non andiamo da lui a mani vuote. Prima il nastro e l'archivio."
@@ -10137,7 +10137,7 @@
       "bgFit": "fill"
     },
     "c6_atelier": {
-      "name": "Studio Marchetti (notte)",
+      "name": "Studio Saint Taureau (notte)",
       "place": "Rue des Archives · Parigi",
       "chapter": 6,
       "music": "mystery",
@@ -10247,8 +10247,8 @@
           "dir": "l",
           "talk": "helene_c6",
           "look": {
-            "beps": "Hélène, in piedi accanto al banco luminoso. Ha in mano un cappello nero.",
-            "kiki": "Hélène. Con un cappello nero in mano. Oh."
+            "beps": "Sylvie, in piedi accanto al banco luminoso. Ha in mano un cappello nero.",
+            "kiki": "Sylvie. Con un cappello nero in mano. Oh."
           }
         }
       ],
@@ -10305,7 +10305,7 @@
           },
           "look": {
             "beps": "Daguerre. Mi riconosce. Mi odia con la stessa costanza dell'altra volta. È rassicurante.",
-            "kiki": "Daguerre dorme sul trench di Hélène. È il suo modo di dire che le vuole bene."
+            "kiki": "Daguerre dorme sul trench di Sylvie. È il suo modo di dire che le vuole bene."
           }
         },
         {
@@ -10324,7 +10324,7 @@
           "exit": {
             "to": "c6_sala",
             "if": "flag.helene_euridice",
-            "else": "Prima ascoltiamo Hélène."
+            "else": "Prima ascoltiamo Sylvie."
           }
         },
         {
@@ -10380,7 +10380,7 @@
     },
     "c6_sala": {
       "name": "Sala di proiezione",
-      "place": "Sotto lo Studio Marchetti",
+      "place": "Sotto lo Studio Saint Taureau",
       "chapter": 6,
       "music": "mystery",
       "ambience": "room",
@@ -10533,7 +10533,7 @@
           },
           "look": {
             "beps": "Un Revox A77. Due bobine, VU-meter con le lancette. Bellissimo come un'auto d'epoca.",
-            "kiki": "Il Revox di Jacques. Hélène lo ha fatto revisionare la settimana scorsa. Sapeva che saremmo venuti."
+            "kiki": "Il Revox di Jacques. Sylvie lo ha fatto revisionare la settimana scorsa. Sapeva che saremmo venuti."
           },
           "use": [
             {
@@ -10607,7 +10607,7 @@
           },
           "look": {
             "beps": "Un proiettore 16 millimetri. Fa un rumore da macchina da cucire quando gira.",
-            "kiki": "Hélène dice che una volta ha proiettato «Orfeo» di Cocteau per nonna. Nonna ha pianto tutto il tempo e poi ha detto: «Ha sbagliato tutto»."
+            "kiki": "Sylvie dice che una volta ha proiettato «Orfeo» di Cocteau per nonna. Nonna ha pianto tutto il tempo e poi ha detto: «Ha sbagliato tutto»."
           }
         },
         {
@@ -10882,7 +10882,7 @@
           ],
           "look": {
             "beps": "Candele accese. Qualcuno è passato poco fa. O le candele qui non si spengono mai.",
-            "kiki": "Hélène. Le ha accese per noi."
+            "kiki": "Sylvie. Le ha accese per noi."
           }
         },
         {
@@ -11045,7 +11045,7 @@
           "dir": "l",
           "talk": "varano_c6",
           "look": {
-            "beps": "Varano. Capelli brizzolati, barba grigia e l'aria di uno che non dorme da anni.",
+            "beps": "Iuschini. Capelli brizzolati, barba grigia e l'aria di uno che non dorme da anni.",
             "kiki": "Senza cappello sembra più vecchio. E più stanco."
           }
         }
@@ -11105,7 +11105,7 @@
             "seed": "ettore"
           },
           "look": {
-            "beps": "Un uomo con gli stessi occhi di Varano, più duri. «Ettore Varano, notaio, 1919–1999».",
+            "beps": "Un uomo con gli stessi occhi di Iuschini, più duri. «Ettore Iuschini, notaio, 1919–1999».",
             "kiki": "Il padre. Quello che ha falsificato il verbale. Lo guarda ogni giorno, da qui."
           }
         },
@@ -11122,7 +11122,7 @@
             "k": "safe"
           },
           "look": {
-            "beps": "Una cassaforte a muro, aperta. Vuota. Quello che c'era, Varano lo porta addosso.",
+            "beps": "Una cassaforte a muro, aperta. Vuota. Quello che c'era, Iuschini lo porta addosso.",
             "kiki": "Aperta. Vuole che lo sappiamo."
           }
         },
@@ -11159,7 +11159,7 @@
             "time": "night"
           },
           "look": {
-            "beps": "Notre-Dame sotto la neve, a duecento metri. Varano guarda una cattedrale bruciata e ricostruita tutti i giorni.",
+            "beps": "Notre-Dame sotto la neve, a duecento metri. Iuschini guarda una cattedrale bruciata e ricostruita tutti i giorni.",
             "kiki": "Ha visto bruciare Notre-Dame da questa finestra. Chissà cosa ha pensato."
           }
         },
@@ -11313,7 +11313,7 @@
         ]
       },
       "firstEnter": [
-        "kiki: Varano ha detto che il treno per Firenze si prende meglio da qui. Le catacombe portano fino a Denfert. E nessuno ci segue, qui sotto.",
+        "kiki: Iuschini ha detto che il treno per Firenze si prende meglio da qui. Le catacombe portano fino a Denfert. E nessuno ci segue, qui sotto.",
         "beps: Non ho mai capito il concetto di «meglio» applicato a un ossario."
       ],
       "hotspots": [
@@ -11532,7 +11532,7 @@
         "kiki: Eccoci. Dove è cominciato tutto.",
         "beps: Il computer non c'è più. L'armadio è vuoto. Ma l'acqua…",
         "narr: Plic. Plic. Sotto il pavimento.",
-        "beps[think]: Sandro aveva ragione. Si sente l'acqua.",
+        "beps[think]: Rocco aveva ragione. Si sente l'acqua.",
         "@objective:o7_scendi"
       ],
       "hotspots": [
@@ -11639,7 +11639,7 @@
             464
           ],
           "look": {
-            "beps": "La breccia che ha aperto Sandro. Dall'altra parte, il cantiere e il ponteggio della ditta. Il mondo normale.",
+            "beps": "La breccia che ha aperto Rocco. Dall'altra parte, il cantiere e il ponteggio della ditta. Il mondo normale.",
             "kiki": "Il mondo normale. Sembra così lontano."
           }
         },
@@ -12369,7 +12369,7 @@
         "@place:kiki=c7_camera@1400,900,l",
         "narr: Kiki attraversa la trave. Arrivata dall'altra parte, la trave scricchiola e si spezza, cadendo nell'acqua.",
         "kiki[worried]: Bene. Adesso siamo divisi.",
-        "beps: Come aveva detto Varano. «Si apre solo in due.»",
+        "beps: Come aveva detto Iuschini. «Si apre solo in due.»",
         "@objective:o7_meccanismo"
       ],
       "hotspots": [
@@ -12896,7 +12896,7 @@
           "dir": "l",
           "talk": "varano_finale",
           "look": {
-            "beps": "Varano, all'alba, sotto il lampione spento. Una scatola di fiammiferi in mano.",
+            "beps": "Iuschini, all'alba, sotto il lampione spento. Una scatola di fiammiferi in mano.",
             "kiki": "Ha l'aria di non aver dormito da quarant'anni. Forse da stanotte potrà."
           }
         }
@@ -12940,7 +12940,7 @@
           ],
           "look": {
             "beps": "Il ponte che non cadde. Sopra, sulla spalletta, c'è una figura in nero. Col cappello.",
-            "kiki": "Lassù. Sul ponte. La donna col cappello. Hélène è a Parigi."
+            "kiki": "Lassù. Sul ponte. La donna col cappello. Sylvie è a Parigi."
           }
         },
         {
@@ -13003,7 +13003,7 @@
             "c": "#4a1f1a"
           },
           "look": {
-            "beps": "Chiuso. Apre alle sette. Tommaso arriverà, aprirà, asciugherà lo stesso bicchiere.",
+            "beps": "Chiuso. Apre alle sette. Ivan arriverà, aprirà, asciugherà lo stesso bicchiere.",
             "kiki": "Dopo. Prima decidiamo. Poi cappuccino. Con la cannella."
           }
         }

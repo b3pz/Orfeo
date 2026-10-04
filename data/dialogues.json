@@ -78,7 +78,7 @@
           "optional": true,
           "do": [
             "sandro[scared]: Di notte. Un gocciolio, sotto il pavimento. Plic. Plic.",
-            "beps: Sotto il pavimento c'è la terra, Sandro.",
+            "beps: Sotto il pavimento c'è la terra, Rocco.",
             "sandro: Appunto, Beps. Appunto.",
             "@flag:sandro_acqua"
           ]
@@ -317,7 +317,7 @@
           "if": "clue.uomo_grigio || clue.voce_buio",
           "once": true,
           "do": [
-            "tommaso: Il notaio Varano? Viene a volte. Lascia mance enormi e non sorride mai.",
+            "tommaso: Il notaio Iuschini? Viene a volte. Lascia mance enormi e non sorride mai.",
             "tommaso: Una volta gli è caduto un mazzo di chiavi. Sul portachiavi c'era una lira. Tipo quella dei musicisti.",
             "@flag:varano_named",
             "@clue:varano_lira",
@@ -442,7 +442,7 @@
         "@flag:helene_met",
         "@person:helene",
         "helene[surprised]: Federica! Mon Dieu, comme tu ressembles à Ada.",
-        "kiki[tender]: Ciao, Hélène.",
+        "kiki[tender]: Ciao, Sylvie.",
         "helene: E lui?",
         "kiki: Lui è Beps. Ha trovato l'altra metà.",
         "helene[think]: …L'altra metà. Allora è cominciato.",
@@ -462,7 +462,7 @@
           ]
         }
       ],
-      "byeLabel": "Merci, Hélène",
+      "byeLabel": "Merci, Sylvie",
       "topics": [
         {
           "id": "foto1967",
@@ -481,7 +481,7 @@
         },
         {
           "id": "studio",
-          "label": "Lo Studio Marchetti",
+          "label": "Lo Studio Saint Taureau",
           "icon": "city",
           "do": [
             "helene: Mio padre Jacques l'ha aperto nel 1955. Ritratti, matrimoni, qualche reportage.",
@@ -496,7 +496,7 @@
           "do": [
             "helene[sad]: Ada mi ha insegnato a guardare. Diceva che la verità sta sempre un passo fuori dall'inquadratura.",
             "kiki[sad]: Lo diceva anche a me.",
-            "helene: Comprava i libri da Monsieur Albert, sul Quai des Grands-Augustins. Ogni settimana, per cinquant'anni. Se c'è qualcuno che conosce i suoi segreti di carta, è lui.",
+            "helene: Comprava i libri da Mirko, sul Quai des Grands-Augustins. Ogni settimana, per cinquant'anni. Se c'è qualcuno che conosce i suoi segreti di carta, è lui.",
             "@stat:legame+1",
             "@flag:albert_hint"
           ]
@@ -681,7 +681,7 @@
                   "do": [
                     "kiki[skeptical]: Un tutorial. Va bene, genio.",
                     "narr: Trenta secondi dopo.",
-                    "kiki[laugh]: Sovraesposto. Nero come il caffè di Sandro. Rifaccio io."
+                    "kiki[laugh]: Sovraesposto. Nero come il caffè di Rocco. Rifaccio io."
                   ]
                 }
               ]
@@ -884,8 +884,8 @@
           "if": "flag.ilario_libraio",
           "once": true,
           "do": [
-            "ilario[worried]: Varano. Il figlio di Ettore. Ha ereditato il ruolo XI, la bilancia.",
-            "ilario: Ettore era un uomo pauroso. Aurelio è peggio: è un uomo ferito. I paurosi scappano. I feriti bruciano.",
+            "ilario[worried]: Iuschini. Il figlio di Ettore. Ha ereditato il ruolo XI, la bilancia.",
+            "ilario: Ettore era un uomo pauroso. Cristiano è peggio: è un uomo ferito. I paurosi scappano. I feriti bruciano.",
             "@flag:varano_named",
             "@stat:conoscenza+1"
           ]
@@ -930,7 +930,7 @@
         "@sfx:door",
         "@flag:allarme",
         "@refresh",
-        "narr: Dal salone arrivano voci. Passi pesanti. La voce di Don Ilario, altissima: «La biblioteca è chiusa, signori! CHIUSA!»",
+        "narr: Dal salone arrivano voci. Passi pesanti. La voce di Don Tantirige, altissima: «La biblioteca è chiusa, signori! CHIUSA!»",
         "kiki[scared]: Gli uomini del Notaio.",
         "@cutscene:allarme_roma",
         "beps[worried]: La porta del salone è fuori discussione. C'è un cancello di servizio… chiuso dall'altra parte.",
@@ -958,9 +958,9 @@
         "@flag:lista_full",
         "@flag:lista_seen",
         "kiki: Diciassette ruoli. Per ognuno, chi lo ha custodito dal 1944 a oggi.",
-        "beps: Orfeo, Euridice, il Cartografo, l'Archivista, il Tipografo, il Barcaiolo… Renzo Ricci, il padre di Ottavia.",
+        "beps: Orfeo, Euridice, il Cartografo, l'Archivista, il Tipografo, il Barcaiolo… Renzo Ricci, il padre di Alessandra.",
         "kiki: Euridice: Lucia Morel, 1944. Ada Morel, 1967. Poi una riga coperta d'inchiostro. Mia bisnonna e mia nonna, Beps.",
-        "beps: XI, il Notaio: Ettore Varano, poi Aurelio Varano.",
+        "beps: XI, il Notaio: Ettore Iuschini, poi Cristiano Iuschini.",
         "kiki: E il XVII: raschiato. Ma qui, sul margine, c'è un'annotazione minuscola.",
         "narr: «Il Sigillo è diviso in quattro. Uno resti a Roma. Uno nella cassetta 17 della Banca del Giglio. Uno nel muro dove l'acqua si fermò. Uno sul ponte che non cadde, presso chi custodisce le chiavi.»",
         "beps[think]: Roma l'abbiamo. La Banca del Giglio: la chiave d'ottone, «B.d.G.». Il muro dove l'acqua si fermò: la stanza murata. E il ponte che non cadde…",
@@ -975,7 +975,7 @@
               ]
             },
             {
-              "label": "«Dobbiamo stare attenti: Varano sa dove andremo.»",
+              "label": "«Dobbiamo stare attenti: Iuschini sa dove andremo.»",
               "do": [
                 "kiki: Allora non ci separiamo. Mai.",
                 "beps: Mai.",
@@ -1106,7 +1106,7 @@
             "if": "!flag.neri_fiducia",
             "do": [
               "neri[surprised]: …",
-              "neri: XV. Il Custode delle Chiavi. Oreste Neri, 1944. Tommaso Neri, 1967. E poi… Stefano Neri. Io.",
+              "neri: XV. Il Custode delle Chiavi. Oreste Neri, 1944. Tommaso Neri, 1967. E poi… Riccardo. Io.",
               "neri: Mio padre mi ha lasciato un pezzo di bronzo e un ordine: «Darlo solo a chi porta la lista». Non ci avevo mai creduto.",
               "neri: Eccolo. TARTI, c'è scritto sul bordo.",
               "@give:sigillo_d",
@@ -1188,10 +1188,10 @@
                       ]
                     },
                     {
-                      "label": "«Varano»",
+                      "label": "«Iuschini»",
                       "do": [
                         "@sfx:fail",
-                        "bellandi[skeptical]: Decisamente no. Il signor Varano ha la cassetta 11."
+                        "bellandi[skeptical]: Decisamente no. Il signor Iuschini ha la cassetta 11."
                       ]
                     }
                   ]
@@ -1203,7 +1203,7 @@
         },
         {
           "id": "varano",
-          "label": "Il notaio Varano viene spesso?",
+          "label": "Il notaio Iuschini viene spesso?",
           "icon": "person",
           "once": true,
           "do": [
@@ -1239,7 +1239,7 @@
       "first": [
         "@flag:varano_named",
         "@person:varano",
-        "varano: Mi chiamo Aurelio Varano. Notaio. Ruolo XI di Orfeo, la Bilancia.",
+        "varano: Mi chiamo Cristiano Iuschini. Notaio. Ruolo XI di Orfeo, la Bilancia.",
         "varano: La signorina Morel è libera di andare quando vuole. Lo è sempre stata.",
         "kiki[angry]: Mi ha presa sotto casa e mi ha detto: «Venga, o lo troveranno prima gli altri.» Non era una domanda.",
         "varano: Era un consiglio. Ho la brutta abitudine di dare consigli che sembrano minacce. È il mestiere."
@@ -1299,7 +1299,7 @@
         },
         {
           "id": "nome",
-          "label": "«Varano.» Ho già sentito questo nome.",
+          "label": "«Iuschini.» Ho già sentito questo nome.",
           "icon": "person",
           "if": "clue.varano_finanzia || clue.varano_lira",
           "once": true,
@@ -1360,7 +1360,7 @@
             }
           ]
         },
-        "kiki: Il nastro. L'hai preso, vero? Varano ha detto una cosa: che la metà orientale del Registro è a Istanbul. Dal Traduttore.",
+        "kiki: Il nastro. L'hai preso, vero? Iuschini ha detto una cosa: che la metà orientale del Registro è a Istanbul. Dal Traduttore.",
         "beps: Istanbul.",
         "kiki: Nonna ci andava ogni anno, a dicembre. Diceva che andava a «comprare tappeti». Non abbiamo mai avuto un tappeto.",
         "@clue:istanbul",
@@ -1402,7 +1402,7 @@
           "icon": "question",
           "once": true,
           "do": [
-            "emre: Selim Bey! Orologi, mappe, cose vecchie. In fondo a destra. Ditegli che vi manda Emre, mi dà un lira di mancia."
+            "emre: Mimmo Bey! Orologi, mappe, cose vecchie. In fondo a destra. Ditegli che vi manda Boris, mi dà un lira di mancia."
           ]
         },
         {
@@ -1412,7 +1412,7 @@
           "if": "flag.selim_camera && !item.piede_porco && !flag.botola_aperta",
           "do": [
             "emre: Per la botola del Valide Han? Tutti la vogliono aprire, nessuno ci riesce.",
-            "emre: Prendete questo. Me lo riportate. Se non me lo riportate, lo dico a Selim Bey.",
+            "emre: Prendete questo. Me lo riportate. Se non me lo riportate, lo dico a Mimmo Bey.",
             "@give:piede_porco"
           ]
         },
@@ -1450,7 +1450,7 @@
       "intro": [
         "selim: Prego, prego. Sedetevi. Il tè arriva."
       ],
-      "byeLabel": "A dopo, Selim Bey",
+      "byeLabel": "A dopo, Mimmo Bey",
       "topics": [
         {
           "id": "traduttore",
@@ -1498,7 +1498,7 @@
           "if": "flag.selim_camera",
           "once": true,
           "do": [
-            "selim: Nel cortile del Valide Han c'è una botola. Arrugginita da quarant'anni. Emre, il ragazzo del tè, ha un piede di porco per ogni occasione."
+            "selim: Nel cortile del Valide Han c'è una botola. Arrugginita da quarant'anni. Boris, il ragazzo del tè, ha un piede di porco per ogni occasione."
           ]
         },
         {
@@ -1522,7 +1522,7 @@
           "once": true,
           "do": [
             "selim[think]: La Testimone? Qui, a dicembre?",
-            "selim: Non era Hélène. Hélène odia Istanbul: dice che ci sono troppi gatti.",
+            "selim: Non era Sylvie. Sylvie odia Istanbul: dice che ci sono troppi gatti.",
             "beps: Allora chi era?",
             "selim: Euridice è un ruolo, signor Beps. A volte ha più di una persona, come un vestito che passa di mano. A volte nessuno sa chi lo indossa.",
             "@flag:helene_doubt",
@@ -1538,7 +1538,7 @@
           "@clue:retro_medaglione"
         ],
         "lista17": [
-          "selim: XVI, Selim Aydın. Mi hanno scritto con la y senza puntino. Cinquant'anni che glielo dico."
+          "selim: XVI, Mimmo. Mi hanno scritto con la y senza puntino. Cinquant'anni che glielo dico."
         ],
         "foto1967": [
           "selim: Ada a trentun anni. Bella come una giornata di scirocco."
@@ -1633,7 +1633,7 @@
       "npc": "helene",
       "first": [
         "helene: Entrate. Chiudete la porta. Daguerre odia gli spifferi.",
-        "helene[sad]: Vi devo una verità. Prima che la sappiate da Varano.",
+        "helene[sad]: Vi devo una verità. Prima che la sappiate da Iuschini.",
         "helene: Il cappello. Questo. Era di Ada fino al 2019. Ora è mio.",
         "helene: Sono io, Euridice. La Testimone. Ada mi ha passato il ruolo prima di morire.",
         "kiki[surprised]: Tu? Eri tu sul Lungarno?",
@@ -1651,7 +1651,7 @@
       "intro": [
         "helene: Sì?"
       ],
-      "byeLabel": "Grazie, Hélène",
+      "byeLabel": "Grazie, Sylvie",
       "topics": [
         {
           "id": "istanbul",
@@ -1682,7 +1682,7 @@
           "once": true,
           "do": [
             "helene: Passage des Libraires, la porta verde con la lira sul batacchio. Parola d'ordine: «Eurydice». Con la y.",
-            "helene: Ci troverete tutto. In disordine: Varano ci è passato prima di voi. Ha mischiato le carte. Letteralmente.",
+            "helene: Ci troverete tutto. In disordine: Iuschini ci è passato prima di voi. Ha mischiato le carte. Letteralmente.",
             "@flag:archivio_ok"
           ]
         },
@@ -1703,7 +1703,7 @@
       ],
       "items": {
         "nastro": [
-          "helene: Quel nastro. Mio padre lo ha registrato di nascosto. Ettore Varano non lo ha mai saputo. Ascoltatelo giù."
+          "helene: Quel nastro. Mio padre lo ha registrato di nascosto. Ettore Iuschini non lo ha mai saputo. Ascoltatelo giù."
         ],
         "foto1967": [
           "helene[sad]: Ada nel '67. Io ero dietro, con la macchina di papà al collo. Dodici anni."
@@ -1722,13 +1722,13 @@
         "narr: Voce di uomo: «Seduta straordinaria di Orfeo. Parigi, 12 marzo 1967. Ordine del giorno: abolizione del Ruolo XVII, il Ponte.»",
         "narr: «Il Registro non sarà mai reso pubblico. I nomi dei delatori resteranno nel Registro, e il Registro resterà nell'ombra. Votiamo.»",
         "narr: Voci. «Favorevole.» «Favorevole.» «Favorevole.» Quindici volte.",
-        "narr: Poi una voce di donna, ferma: «Contraria. Euridice vota contro. E il Ponte, Guido Sarti, vota contro. Siamo due.»",
+        "narr: Poi una voce di donna, ferma: «Contraria. Euridice vota contro. E il Ponte, Mario Abbate, vota contro. Siamo due.»",
         "narr: Silenzio. Poi l'uomo: «Il notaio verbalizza: approvato all'unanimità dei presenti. Euridice risulta assente. Il Ponte risulta assente.»",
         "narr: Voce di donna: «Ettore, io sono qui.» L'uomo: «Non nel verbale, Ada.»",
         "narr: Il nastro finisce in un fruscio.",
         "kiki[angry]: Nonna c'era. Ha votato contro. E lui l'ha cancellata dal verbale.",
-        "beps[angry]: Ettore Varano. Il padre di Aurelio. Ha falsificato l'unanimità.",
-        "beps[think]: E il Ponte aveva un nome: Guido Sarti. Il volto graffiato nella foto del '44.",
+        "beps[angry]: Ettore Iuschini. Il padre di Cristiano. Ha falsificato l'unanimità.",
+        "beps[think]: E il Ponte aveva un nome: Mario Abbate. Il volto graffiato nella foto del '44.",
         "@clue:verbale_falso",
         "@clue:guido_sarti",
         "@flag:erased_role_known",
@@ -1791,7 +1791,7 @@
       "first": [
         "varano: Avete ascoltato il nastro. Lo vedo dalle vostre facce.",
         "varano[sad]: Mio padre ha falsificato quel verbale. Io l'ho scoperto nel 1999, il giorno del suo funerale. Ho trovato una copia del nastro nella sua cassaforte. Quella, laggiù.",
-        "varano: L'ho distrutta. Non sapevo che Jacques Marchetti ne avesse un'altra."
+        "varano: L'ho distrutta. Non sapevo che Jacques Saint Taureau ne avesse un'altra."
       ],
       "intro": [
         {
@@ -1806,7 +1806,7 @@
           ]
         }
       ],
-      "byeLabel": "«Ci vediamo nella Camera, Varano.»",
+      "byeLabel": "«Ci vediamo nella Camera, Iuschini.»",
       "topics": [
         {
           "id": "bruno",
@@ -1814,7 +1814,7 @@
           "icon": "person",
           "once": true,
           "do": [
-            "varano: Bruno Varano. Nel 1944 vendeva nomi ai tedeschi. Tre famiglie del Ghetto, un tipografo, due partigiani dell'Oltrarno.",
+            "varano: Bruno Iuschini. Nel 1944 vendeva nomi ai tedeschi. Tre famiglie del Ghetto, un tipografo, due partigiani dell'Oltrarno.",
             "varano: È nel Registro. In una colonna a parte. La colonna dei delatori.",
             "varano[sad]: Mio padre ha cancellato il Ponte perché il Registro non uscisse mai. Per proteggere il nome di suo padre. Il mio nome.",
             "@flag:varano_past",
@@ -1830,7 +1830,7 @@
           "once": true,
           "do": [
             "varano[surprised]: Avete letto la lettera.",
-            "varano: Lina Varano. La moglie di Bruno. Nello stesso anno, nella stessa casa, nascondeva in cantina quelli che lui denunciava. Ne ha salvati trenta.",
+            "varano: Lina Iuschini. La moglie di Bruno. Nello stesso anno, nella stessa casa, nascondeva in cantina quelli che lui denunciava. Ne ha salvati trenta.",
             "varano: È nel Registro anche lei. Nella colonna dei Barcaioli.",
             "beps: Allora il Registro non accusa solo. Salva anche.",
             "varano[sad]: …Il Registro dice la verità, Giuseppe. E la verità sulla mia famiglia è che siamo stati entrambe le cose.",
@@ -1848,7 +1848,7 @@
           "once": true,
           "do": [
             "varano: Quindici favorevoli, due contrari. Mio padre scrisse «unanimità». Euridice e il Ponte, «assenti».",
-            "varano: Guido Sarti morì l'anno dopo, in un incidente stradale. Nessuno ha mai indagato.",
+            "varano: Mario Abbate morì l'anno dopo, in un incidente stradale. Nessuno ha mai indagato.",
             "kiki[angry]: Sta dicendo che…",
             "varano: Sto dicendo che non lo so. E che non voglio saperlo. È questo il problema della mia famiglia: non vogliamo sapere.",
             "@stat:conoscenza+1"
@@ -1885,10 +1885,10 @@
       ],
       "items": {
         "lista17": [
-          "varano: XI. Bruno, Ettore, Aurelio. Una riga sola per tre uomini e due bugie."
+          "varano: XI. Bruno, Ettore, Cristiano. Una riga sola per tre uomini e due bugie."
         ],
         "foto1944": [
-          "varano[sad]: Il volto graffiato è Guido Sarti, il primo Ponte. Mio padre lo graffiò nel '67 con un ago da cucito. Me l'ha raccontato quando avevo sei anni, come una favola."
+          "varano[sad]: Il volto graffiato è Mario Abbate, il primo Ponte. Mio padre lo graffiò nel '67 con un ago da cucito. Me l'ha raccontato quando avevo sei anni, come una favola."
         ],
         "sigillo": [
           "varano: Lo tenga. È più al sicuro con lei che con me."
@@ -1979,7 +1979,7 @@
             {
               "if": "flag.varano_doubt",
               "do": [
-                "varano: …Sapete una cosa? Se lo fate, testimonierò. Racconterò del verbale. Di mio padre. È l'unico modo di essere un Varano diverso."
+                "varano: …Sapete una cosa? Se lo fate, testimonierò. Racconterò del verbale. Di mio padre. È l'unico modo di essere un Iuschini diverso."
               ],
               "else": [
                 "varano: Se lo fate, non potrò impedirvelo. Ma non mi chiedete di esserne felice."
@@ -2005,7 +2005,7 @@
           "once": true,
           "do": [
             "varano: Cenere. Nessuno accusato, nessuno ricordato. La ferita si chiude.",
-            "kiki[sad]: Chiusa sopra trenta persone salvate da sua nonna. Sopra mia bisnonna. Sopra Guido Sarti.",
+            "kiki[sad]: Chiusa sopra trenta persone salvate da sua nonna. Sopra mia bisnonna. Sopra Mario Abbate.",
             "varano[sad]: Sì. Anche sopra di loro. È questo il prezzo della cenere."
           ]
         },
@@ -2017,7 +2017,7 @@
           "if": "flag.knows_18",
           "once": true,
           "do": [
-            "kiki[tender]: Varano. Sul retro della lista c'è un numero. XVIII. Uno spazio largo il doppio.",
+            "kiki[tender]: Iuschini. Sul retro della lista c'è un numero. XVIII. Uno spazio largo il doppio.",
             "varano[surprised]: Il diciottesimo. Ada ne parlava come di una favola. «Un giorno, un ruolo per due.»",
             "varano: Se è lì… allora qualcuno ha previsto che il Registro non dovesse più scegliere tra luce e cenere. Ma tra soli e insieme.",
             "@flag:diciottesimo_parlato"
@@ -2180,7 +2180,7 @@
           "if": "chapter==1 && flag.pdf_open && item.medaglione",
           "do": [
             "beps: Quattro nomi, una busta per Parigi, un medaglione intero e un uomo col cappotto grigio che sa come ci chiamiamo.",
-            "kiki: Lo Studio Marchetti esiste ancora. Rue des Archives. La figlia del fotografo era un'amica di nonna.",
+            "kiki: Lo Studio Saint Taureau esiste ancora. Rue des Archives. La figlia del fotografo era un'amica di nonna.",
             {
               "choice": [
                 {
@@ -2251,7 +2251,7 @@
         },
         {
           "id": "c2_helene",
-          "label": "Hélène Marchetti",
+          "label": "Sylvie Saint Taureau",
           "icon": "person",
           "if": "chapter==2 && flag.helene_met",
           "once": true,
@@ -2333,7 +2333,7 @@
         },
         {
           "id": "c6_helene",
-          "label": "Hélène è Euridice",
+          "label": "Sylvie è Euridice",
           "icon": "person",
           "if": "chapter==6 && flag.helene_euridice",
           "once": true,
@@ -2345,7 +2345,7 @@
         },
         {
           "id": "c6_varano",
-          "label": "Che pensi di Varano?",
+          "label": "Che pensi di Iuschini?",
           "icon": "warning",
           "if": "chapter==6 && flag.varano_c6_fine",
           "once": true,
@@ -2663,10 +2663,10 @@
       "linear": true,
       "intro": [
         "@sfx:phone",
-        "kiki: È Hélène.",
+        "kiki: È Sylvie.",
         "@anim:phone",
-        "helene: Federica. Varano è a Parigi. Vuole vedervi. E io… io devo dirvi una cosa che avrei dovuto dirvi a novembre.",
-        "kiki[worried]: Hélène?",
+        "helene: Federica. Iuschini è a Parigi. Vuole vedervi. E io… io devo dirvi una cosa che avrei dovuto dirvi a novembre.",
+        "kiki[worried]: Sylvie?",
         "helene: Venite a Parigi. Portate il nastro.",
         "selim: Andate. Il traghetto per l'aeroporto parte tra un'ora. E ricordatevi: chi entra in due, esce in due.",
         "@cutscene:c5_fine",

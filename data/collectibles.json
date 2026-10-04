@@ -15,7 +15,7 @@
       "title": "Registro di consultazione del deposito",
       "date": "1967–2026",
       "place": "Archivio Storico",
-      "text": "Ripiano 17 consultato: 1967 (J. Marchetti), 1978 (I. Cesti), 1989 (A. Morel), 1998 (A. Morel), 2019 (H. Marchetti), 2025 (A. Varano). L'ultima riga è stata cancellata con la gomma, ma la penna ha lasciato il solco: «A. Varano». Era qui un anno prima di noi."
+      "text": "Ripiano 17 consultato: 1967 (J. Saint Taureau), 1978 (Don Tantirige), 1989 (A. Morel), 1998 (A. Morel), 2019 (S. Saint Taureau), 2025 (C. Iuschini). L'ultima riga è stata cancellata con la gomma, ma la penna ha lasciato il solco: «C. Iuschini». Era qui un anno prima di noi."
     },
     {
       "id": "doc_03",
@@ -23,7 +23,7 @@
       "title": "Provino a contatto",
       "date": "12 marzo 1967",
       "place": "Parigi",
-      "text": "Trentasei fotogrammi della seduta del 12 marzo. Sul margine, a matita grassa, Jacques Marchetti ha cerchiato due figure e scritto: «presenti». Accanto: «E.» e «G.S.». In un fotogramma Ettore Varano guarda in macchina. È l'unico che sembra sapere di essere fotografato.",
+      "text": "Trentasei fotogrammi della seduta del 12 marzo. Sul margine, a matita grassa, Jacques Saint Taureau ha cerchiato due figure e scritto: «presenti». Accanto: «E.» e «M.A.». In un fotogramma Ettore Iuschini guarda in macchina. È l'unico che sembra sapere di essere fotografato.",
       "stat": "conoscenza+1"
     },
     {
@@ -32,13 +32,13 @@
       "title": "Lettera mai spedita",
       "date": "1967",
       "place": "Gare de Lyon, consigne n. 67",
-      "text": "«Guido, se leggi queste righe hanno fatto quello che temevamo: ti hanno cancellato. Io ho detto di no, ad alta voce. Non risulterà da nessuna parte. Ma io lo so, e un giorno lo saprà qualcun altro. — A.» La busta è affrancata e mai imbucata.",
+      "text": "«Mario, se leggi queste righe hanno fatto quello che temevamo: ti hanno cancellato. Io ho detto di no, ad alta voce. Non risulterà da nessuna parte. Ma io lo so, e un giorno lo saprà qualcun altro. — A.» La busta è affrancata e mai imbucata.",
       "stat": "conoscenza+1"
     },
     {
       "id": "doc_05",
       "chapter": 2,
-      "title": "Ricevuta dello Studio Marchetti",
+      "title": "Ricevuta dello Studio Saint Taureau",
       "date": "15 marzo 1967",
       "place": "Parigi",
       "text": "«Stampa di n. 2 copie, formato 18×24, soggetto: gruppo. Una copia spedita a Firenze. Una copia consegnata a mano alla sig.ra Morel.» Prezzo: «gratuito — per Euridice»."
@@ -55,10 +55,10 @@
     {
       "id": "doc_07",
       "chapter": 3,
-      "title": "Lettera di Don Ilario",
+      "title": "Lettera di Don Tantirige",
       "date": "1978",
       "place": "Roma",
-      "text": "«Cara Ada, ho votato male nel '67 e voterei peggio oggi, perché sono più vecchio e più vile. Ma conservo la chiave. Quando arriverà qualcuno col medaglione intero, glielo darò senza chiedere niente. È l'unica penitenza che mi riesce. — Ilario»",
+      "text": "«Cara Ada, ho votato male nel '67 e voterei peggio oggi, perché sono più vecchio e più vile. Ma conservo la chiave. Quando arriverà qualcuno col medaglione intero, glielo darò senza chiedere niente. È l'unica penitenza che mi riesce. — Tantirige»",
       "stat": "conoscenza+1"
     },
     {
@@ -67,7 +67,7 @@
       "title": "Verbale romano",
       "date": "1945",
       "place": "Biblioteca Teodosiana",
-      "text": "Elenco dei diciassette ruoli con la data del giuramento. Accanto al XVII, il Ponte: «Guido Sarti, tipografo dell'Oltrarno. Giura per ultimo, 2 settembre 1944. Compito: decidere quando il Registro uscirà alla luce.»",
+      "text": "Elenco dei diciassette ruoli con la data del giuramento. Accanto al XVII, il Ponte: «Mario Abbate, tipografo dell'Oltrarno. Giura per ultimo, 2 settembre 1944. Compito: decidere quando il Registro uscirà alla luce.»",
       "stat": "conoscenza+1"
     },
     {
@@ -76,7 +76,7 @@
       "title": "Biglietto sul muretto",
       "date": "senza data",
       "place": "Trastevere",
-      "text": "Un foglio piegato in quattro, fermato da una moneta da 500 lire: «Bravi. Non voltatevi. — E.» La calligrafia non è quella di Ada. Né quella di Hélène."
+      "text": "Un foglio piegato in quattro, fermato da una moneta da 500 lire: «Bravi. Non voltatevi. — E.» La calligrafia non è quella di Ada. Né quella di Sylvie."
     },
     {
       "id": "doc_10",
@@ -84,7 +84,7 @@
       "title": "Biglietto sulla scrivania",
       "date": "dicembre 2026",
       "place": "Ufficio di Beps",
-      "text": "Su carta intestata «Studio notarile Varano»: «Non cercate quello che brucia. Il computer era nostro. Ve lo restituisco: avete già preso quello che contava. — A.V.» Sul retro, a matita, cancellato: «mi dispiace per il plastico»."
+      "text": "Su carta intestata «Studio notarile Iuschini»: «Non cercate quello che brucia. Il computer era nostro. Ve lo restituisco: avete già preso quello che contava. — A.V.» Sul retro, a matita, cancellato: «mi dispiace per il plastico»."
     },
     {
       "id": "doc_11",
@@ -118,16 +118,16 @@
       "title": "Lasciapassare",
       "date": "settembre 1944",
       "place": "Büyük Valide Han",
-      "text": "Un lasciapassare falso, perfetto, firmato «il Tipografo». Intestato a Guido Sarti. Non è mai stato usato: Guido decise di restare a Firenze, «perché qualcuno deve fare da ponte».",
+      "text": "Un lasciapassare falso, perfetto, firmato «il Tipografo». Intestato a Mario Abbate. Non è mai stato usato: Mario decise di restare a Firenze, «perché qualcuno deve fare da ponte».",
       "stat": "conoscenza+1"
     },
     {
       "id": "doc_15",
       "chapter": 5,
-      "title": "Lettera di Ada a Selim",
+      "title": "Lettera di Ada a Mimmo",
       "date": "dicembre 1989",
       "place": "Istanbul",
-      "text": "«Selim, ho scelto una seconda Testimone, nel caso mi succeda qualcosa. Non te ne dico il nome: è più sicura se non la conosce nessuno, nemmeno tu. Si siederà al Caffè delle Logge il giovedì e lascerà 500 lire, come facevo io. Se mai la vedrai, offrile un tè. — Ada»",
+      "text": "«Mimmo, ho scelto una seconda Testimone, nel caso mi succeda qualcosa. Non te ne dico il nome: è più sicura se non la conosce nessuno, nemmeno tu. Si siederà al Caffè delle Logge il giovedì e lascerà 500 lire, come facevo io. Se mai la vedrai, offrile un tè. — Ada»",
       "stat": "legame+1"
     },
     {
@@ -136,16 +136,16 @@
       "title": "Atto di cancellazione del Ruolo XVII",
       "date": "12 marzo 1967",
       "place": "Parigi",
-      "text": "Atto notarile su carta bollata: «Il Ruolo XVII è abolito. Il suo titolare è rimosso da ogni documento, fotografia e registro di Orfeo.» Firmato: Ettore Varano. In calce, a mano, una seconda firma, tremante: «Euridice — contraria».",
+      "text": "Atto notarile su carta bollata: «Il Ruolo XVII è abolito. Il suo titolare è rimosso da ogni documento, fotografia e registro di Orfeo.» Firmato: Ettore Iuschini. In calce, a mano, una seconda firma, tremante: «Euridice — contraria».",
       "stat": "conoscenza+1"
     },
     {
       "id": "doc_17",
       "chapter": 6,
-      "title": "Lettera di Lina Varano",
+      "title": "Lettera di Lina Iuschini",
       "date": "1946",
       "place": "Firenze",
-      "text": "«Caro Aurelio, non ti conoscerò mai, ma un giorno avrai il cognome di tuo nonno e io voglio che tu abbia anche il mio. Bruno ha venduto sei persone. Io ne ho nascoste trenta nella cantina sotto i suoi piedi. Siamo stati entrambi Varano. Scegli tu quale essere. — Nonna Lina»",
+      "text": "«Caro Cristiano, non ti conoscerò mai, ma un giorno avrai il cognome di tuo nonno e io voglio che tu abbia anche il mio. Bruno ha venduto sei persone. Io ne ho nascoste trenta nella cantina sotto i suoi piedi. Siamo stati entrambi Iuschini. Scegli tu quale essere. — Nonna Lina»",
       "stat": "conoscenza+1",
       "after": [
         "@clue:lina"
@@ -170,7 +170,7 @@
       "date": "novembre 1966",
       "place": "Archivio Storico",
       "photo": "generic",
-      "text": "Volontari in fila che si passano faldoni fradici di mano in mano. Gli angeli del fango. Tra loro, una bambina con gli occhiali: Ottavia Ricci, otto anni.",
+      "text": "Volontari in fila che si passano faldoni fradici di mano in mano. Gli angeli del fango. Tra loro, una bambina con gli occhiali: Alessandra, otto anni.",
       "stat": "legame+1"
     },
     {
@@ -188,9 +188,9 @@
       "chapter": 2,
       "title": "Jacques e Ada",
       "date": "1966",
-      "place": "Studio Marchetti",
+      "place": "Studio Saint Taureau",
       "photo": "generic",
-      "text": "Jacques Marchetti e Ada Morel ridono davanti al banco luminoso. È l'unica foto in cui Ada non porta il cappello.",
+      "text": "Jacques Saint Taureau e Ada Morel ridono davanti al banco luminoso. È l'unica foto in cui Ada non porta il cappello.",
       "stat": "legame+1"
     },
     {
@@ -238,9 +238,9 @@
       "chapter": 5,
       "title": "Istanbul 1989",
       "date": "dicembre 1989",
-      "place": "Bottega di Selim",
+      "place": "Bottega di Mimmo",
       "photo": "generic",
-      "text": "Ada e Selim davanti alla bottega. Dietro di loro, sfocata, una giovane donna col cappello nero. Ada la guarda con orgoglio. Il volto della ragazza è tagliato dalla cornice.",
+      "text": "Ada e Mimmo davanti alla bottega. Dietro di loro, sfocata, una giovane donna col cappello nero. Ada la guarda con orgoglio. Il volto della ragazza è tagliato dalla cornice.",
       "woman": true,
       "stat": "conoscenza+1"
     },
@@ -258,9 +258,9 @@
       "chapter": 6,
       "title": "Il passaggio del cappello",
       "date": "2019",
-      "place": "Studio Marchetti",
+      "place": "Studio Saint Taureau",
       "photo": "generic",
-      "text": "Ada, molto anziana, in poltrona. Hélène in piedi accanto a lei, col cappello nero in mano. Nessuna delle due sorride. Entrambe sembrano in pace."
+      "text": "Ada, molto anziana, in poltrona. Sylvie in piedi accanto a lei, col cappello nero in mano. Nessuna delle due sorride. Entrambe sembrano in pace."
     },
     {
       "id": "photo_12",
@@ -272,7 +272,7 @@
       "photoOpts": {
         "half": false
       },
-      "text": "La stampa originale, intatta. Il volto che nelle copie è graffiato qui si vede bene: un giovane con gli occhiali e la giacca macchiata d'inchiostro. Sotto, a matita: «Guido Sarti, il Ponte».",
+      "text": "La stampa originale, intatta. Il volto che nelle copie è graffiato qui si vede bene: un giovane con gli occhiali e la giacca macchiata d'inchiostro. Sotto, a matita: «Mario Abbate, il Ponte».",
       "woman": true,
       "stat": "conoscenza+1"
     }
@@ -301,7 +301,7 @@
     {
       "id": "rec_03",
       "chapter": 3,
-      "title": "Dittafono di Don Ilario",
+      "title": "Dittafono di Don Tantirige",
       "date": "1999",
       "place": "Passaggio di servizio",
       "duration": "00:58",
@@ -311,7 +311,7 @@
     {
       "id": "rec_04",
       "chapter": 4,
-      "title": "Dettatura di Aurelio Varano",
+      "title": "Dettatura di Cristiano Iuschini",
       "date": "2025",
       "place": "Grotta del Buontalenti",
       "duration": "01:40",
@@ -323,9 +323,9 @@
       "chapter": 5,
       "title": "Disco di Nermin",
       "date": "1951",
-      "place": "Bottega di Selim",
+      "place": "Bottega di Mimmo",
       "duration": "02:31",
-      "text": "Una canzone in ladino e turco, cantata da una donna. Selim traduce: «Siete arrivati di notte con nomi falsi. Ve ne andrete di giorno con i vostri.» È la ninna nanna che Nermin cantava ai bambini delle casse di libri.",
+      "text": "Una canzone in ladino e turco, cantata da una donna. Mimmo traduce: «Siete arrivati di notte con nomi falsi. Ve ne andrete di giorno con i vostri.» È la ninna nanna che Nermin cantava ai bambini delle casse di libri.",
       "stat": "legame+1"
     },
     {
@@ -335,7 +335,7 @@
       "date": "1967",
       "place": "Sala di proiezione",
       "duration": "00:45",
-      "text": "L'audio di un film di famiglia: Jacques Marchetti che dirige una foto di gruppo. «Più a destra, Ettore. Ada, tu resta lì, in disparte, come sempre. Guido, togliti gli occhiali. Guido? Dov'è Guido?»",
+      "text": "L'audio di un film di famiglia: Jacques Saint Taureau che dirige una foto di gruppo. «Più a destra, Ettore. Ada, tu resta lì, in disparte, come sempre. Mario, togliti gli occhiali. Mario? Dov'è Mario?»",
       "stat": "conoscenza+1"
     },
     {
@@ -345,7 +345,7 @@
       "date": "2019",
       "place": "Galleria sotto l'Arno",
       "duration": "01:58",
-      "text": "«Se sentite questo, siete arrivati fin qui in due. Bene. Io non ci sono riuscita: avevo Guido, poi non l'ho avuto più. Il Registro non va né salvato né bruciato da soli. Decidetelo insieme. E se c'è uno spazio vuoto dopo il diciassettesimo… scriveteci quello che volete. Vi voglio bene. Anche a te, testardo.»",
+      "text": "«Se sentite questo, siete arrivati fin qui in due. Bene. Io non ci sono riuscita: avevo Mario, poi non l'ho avuto più. Il Registro non va né salvato né bruciato da soli. Decidetelo insieme. E se c'è uno spazio vuoto dopo il diciassettesimo… scriveteci quello che volete. Vi voglio bene. Anche a te, testardo.»",
       "stat": "legame+1"
     }
   ],

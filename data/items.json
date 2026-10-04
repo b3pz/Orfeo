@@ -52,7 +52,7 @@
     },
     "busta_e": {
       "name": "Busta di Euridice", "kind": "Dal ripiano 17", "icon": { "k": "envelope" },
-      "examine": { "beps": "Una busta del 1967 con un timbro: «Studio Marchetti — 12, rue des Archives, Paris». Vuota, a parte una lira disegnata a matita.", "kiki": "Rue des Archives. Nonna abitava a due strade da lì. Questo non è un caso." }
+      "examine": { "beps": "Una busta del 1967 con un timbro: «Studio Saint Taureau — 12, rue des Archives, Paris». Vuota, a parte una lira disegnata a matita.", "kiki": "Rue des Archives. Nonna abitava a due strade da lì. Questo non è un caso." }
     },
     "moneta": {
       "name": "500 lire", "kind": "Il portafortuna di Beps", "icon": { "k": "coin" },
@@ -65,7 +65,7 @@
       "wrong": { "beps": "Il coltellino non risolve tutto. Quasi tutto.", "kiki": "Metti via quel coltellino, MacGyver." }
     },
     "libretto": {
-      "name": "Libretto «Orphée et Eurydice»", "kind": "Dal banco di Monsieur Albert", "icon": { "k": "book" },
+      "name": "Libretto «Orphée et Eurydice»", "kind": "Dal banco di Mirko", "icon": { "k": "book" },
       "examine": ["Il libretto dell'opera di Gluck, Parigi 1774. Edizione del 1960. Tra le pagine c'è una carta ripiegata…", "@take:libretto", "@give:mappa", "@clue:mappa_cifrata"]
     },
     "mappa": {
@@ -73,7 +73,7 @@
       "examine": { "beps": "Una carta d'Italia del 1960 piena di lettere minuscole stampate in cerchio, come un rosone. Una stella rossa a nord-est del centro. Il cerchio ha la misura esatta del medaglione.", "kiki": "Le lettere sono disposte attorno a un punto. Se ci appoggi sopra qualcosa con dei fori… sì. È una griglia di Cardano, più o meno." }
     },
     "foto1967": {
-      "name": "Foto 1967", "kind": "Stampa dai negativi Marchetti", "icon": { "k": "photo", "c": "#5d6668" },
+      "name": "Foto 1967", "kind": "Stampa dai negativi Saint Taureau", "icon": { "k": "photo", "c": "#5d6668" },
       "examine": {
         "beps": ["Parigi, 1967. Tre uomini, un'auto, una facciata. E lei: la donna col cappello. Nello stesso identico punto della foto del '44.", "Anche qui, quattro crocette rosse negli angoli."],
         "kiki": ["Questa è nonna. Ada, a trentun anni. Ha il cappello di quella del '44. E il medaglione.", "Crocini di registro agli angoli. Le due foto sono fatte per essere sovrapposte."]
@@ -105,23 +105,23 @@
     },
     "sigillo_a": { "name": "Frammento del Sigillo (Roma)", "kind": "Un quarto di sigillo in ceralacca e bronzo", "icon": { "k": "seal_piece" }, "examine": { "beps": "Un quarto di cerchio di bronzo rosso. Sul bordo, inciso: ORFEO.", "kiki": "Un quarto di sigillo. Sul bordo leggo «ORFEO». Mancano tre pezzi." } },
     "sigillo_b": { "name": "Frammento del Sigillo (Banca)", "kind": "Dalla cassetta 17", "icon": { "k": "seal_piece" }, "examine": { "beps": "Un altro quarto. Sul bordo: NON.", "kiki": "«NON». Un quarto che dice di no." } },
-    "sigillo_c": { "name": "Frammento del Sigillo (Cantiere)", "kind": "Recuperato da Sandro", "icon": { "k": "seal_piece" }, "examine": { "beps": "Questo era nel muro della stanza murata. Sul bordo: VOL.", "kiki": "«VOL». Volare? Voltare?" } },
-    "sigillo_d": { "name": "Frammento del Sigillo (Ponte Vecchio)", "kind": "Custodito da Mastro Neri", "icon": { "k": "seal_piece" }, "examine": { "beps": "L'ultimo quarto. Sul bordo: TARTI.", "kiki": "«TARTI». Non voltarti. Ovvio." } },
+    "sigillo_c": { "name": "Frammento del Sigillo (Cantiere)", "kind": "Recuperato da Rocco", "icon": { "k": "seal_piece" }, "examine": { "beps": "Questo era nel muro della stanza murata. Sul bordo: VOL.", "kiki": "«VOL». Volare? Voltare?" } },
+    "sigillo_d": { "name": "Frammento del Sigillo (Ponte Vecchio)", "kind": "Custodito da Mastro Riccardo", "icon": { "k": "seal_piece" }, "examine": { "beps": "L'ultimo quarto. Sul bordo: TARTI.", "kiki": "«TARTI». Non voltarti. Ovvio." } },
     "sigillo": {
-      "name": "Sigillo di Orfeo", "kind": "Ricomposto sul banco di Mastro Neri", "icon": { "k": "seal" },
+      "name": "Sigillo di Orfeo", "kind": "Ricomposto sul banco di Mastro Riccardo", "icon": { "k": "seal" },
       "examine": { "beps": "Il Sigillo intero. Sul bordo: ORFEO · NON · VOLTARTI. Al centro la lira. Pesa più di quanto dovrebbe.", "kiki": "«Orfeo, non voltarti.» Il patto del mito. Se ti volti a guardare, perdi chi ami." }
     },
     "nastro": {
       "name": "Nastro ORFEO", "kind": "Bobina magnetica, 1967", "icon": { "k": "tape" },
-      "examine": { "beps": "Una bobina da registratore a nastro. Sull'etichetta: «ORFEO — Parigi, 12.III.1967 — Seduta straordinaria».", "kiki": "Nastro da un quarto di pollice. Serve un Revox o un Nagra. A Parigi, nello studio di Hélène, ce n'era uno." }
+      "examine": { "beps": "Una bobina da registratore a nastro. Sull'etichetta: «ORFEO — Parigi, 12.III.1967 — Seduta straordinaria».", "kiki": "Nastro da un quarto di pollice. Serve un Revox o un Nagra. A Parigi, nello studio di Sylvie, ce n'era uno." }
     },
     "lanterna": {
-      "name": "Lanterna", "kind": "Prestata da Selim", "icon": { "k": "torch" },
-      "examine": { "beps": "Una lanterna a olio vecchia di un secolo. Selim dice che «vede meglio delle torce elettriche». Non ho capito se è una metafora.", "kiki": "Fa una luce calda. Mi piace di più dei telefoni." }
+      "name": "Lanterna", "kind": "Prestata da Mimmo", "icon": { "k": "torch" },
+      "examine": { "beps": "Una lanterna a olio vecchia di un secolo. Mimmo dice che «vede meglio delle torce elettriche». Non ho capito se è una metafora.", "kiki": "Fa una luce calda. Mi piace di più dei telefoni." }
     },
     "piede_porco": {
-      "name": "Piede di porco", "kind": "Prestato da Emre", "icon": { "k": "crowbar" },
-      "examine": { "beps": "Un piede di porco. Lo strumento di supporto tecnico più antico del mondo.", "kiki": "Emre ce l'ha prestato senza fare domande. Questo dovrebbe preoccuparmi." }
+      "name": "Piede di porco", "kind": "Prestato da Boris", "icon": { "k": "crowbar" },
+      "examine": { "beps": "Un piede di porco. Lo strumento di supporto tecnico più antico del mondo.", "kiki": "Boris ce l'ha prestato senza fare domande. Questo dovrebbe preoccuparmi." }
     },
     "registro": {
       "name": "Il Registro di Orfeo", "kind": "1944–2026", "icon": { "k": "book", "c": "#2a1a12" },
@@ -131,7 +131,7 @@
   "combos": [
     { "a": "medaglione_b", "b": "medaglione_k", "do": ["@take:medaglione_b,medaglione_k", "@give:medaglione", "@sfx:success", "beps[surprised]: Combaciano. Perfettamente.", { "if": "present.kiki", "do": ["kiki[tender]: Nonna diceva che l'altra metà era con qualcuno di testardo.", "beps[smile]: Testardo è una parola grossa. Diciamo perseverante.", "@stat:legame+1"] }, "@clue:medaglione_intero"] },
     { "a": "mappa", "b": "medaglione", "do": ["@puzzle:c2_mappa"] },
-    { "a": "foto1944", "b": "foto1967", "if": "scene=='c2_studio_marchetti'", "do": ["@puzzle:c2_sovrapposizione"], "notYet": { "beps": "Per sovrapporle mi servirebbe un piano luminoso.", "kiki": "Serve un tavolo luminoso. Da Hélène ce n'è uno." } },
+    { "a": "foto1944", "b": "foto1967", "if": "scene=='c2_studio_marchetti'", "do": ["@puzzle:c2_sovrapposizione"], "notYet": { "beps": "Per sovrapporle mi servirebbe un piano luminoso.", "kiki": "Serve un tavolo luminoso. Da Sylvie ce n'è uno." } },
     { "a": "sigillo_a", "b": "sigillo_b", "if": "false", "do": [], "notYet": { "beps": "Per ricomporlo servono tutti e quattro i frammenti e un banco da orafo.", "kiki": "Servono tutti i pezzi. E mani da orafo." } },
     { "a": "sigillo_a", "b": "sigillo_c", "if": "false", "do": [], "notYet": "Servono tutti e quattro i frammenti e un banco da orafo." },
     { "a": "sigillo_a", "b": "sigillo_d", "if": "false", "do": [], "notYet": "Servono tutti e quattro i frammenti e un banco da orafo." },

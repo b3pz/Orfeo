@@ -28,21 +28,21 @@
       "title": "La catena O-17",
       "cards": {
         "O-1": { "title": "Registro dei passaggi sull'Arno", "author": "R. Ricci", "year": "1944", "red": "O-6" },
-        "O-2": { "title": "Inventario delle chiavi", "author": "O. Neri", "year": "1944", "red": "O-8" },
-        "O-3": { "title": "Corrispondenza con Roma", "author": "I. Cesti", "year": "1952", "red": "O-12" },
-        "O-4": { "title": "Rubrica dei custodi", "author": "J. Marchetti", "year": "1967", "red": "O-15" },
+        "O-2": { "title": "Inventario delle chiavi", "author": "O. Riccardo", "year": "1944", "red": "O-8" },
+        "O-3": { "title": "Corrispondenza con Roma", "author": "Don Tantirige", "year": "1952", "red": "O-12" },
+        "O-4": { "title": "Rubrica dei custodi", "author": "J. Saint Taureau", "year": "1967", "red": "O-15" },
         "O-5": { "title": "Lasciapassare falsificati", "author": "Il Tipografo", "year": "1944", "red": "O-9" },
-        "O-6": { "title": "Fotografie del Lungarno", "author": "J. Marchetti", "year": "1944", "red": "O-11" },
+        "O-6": { "title": "Fotografie del Lungarno", "author": "J. Saint Taureau", "year": "1944", "red": "O-11" },
         "O-7": { "title": "Note mediche", "author": "Il Medico", "year": "1944", "red": "O-13" },
-        "O-8": { "title": "Chiavi del Corridoio", "author": "O. Neri", "year": "1945", "red": "O-2" },
+        "O-8": { "title": "Chiavi del Corridoio", "author": "O. Riccardo", "year": "1945", "red": "O-2" },
         "O-9": { "title": "Timbri e matrici", "author": "Il Tipografo", "year": "1945", "red": "O-5" },
         "O-10": { "title": "Orari dei treni per Livorno", "author": "Il Ferroviere", "year": "1944", "red": "O-14" },
-        "O-11": { "title": "Carteggio Parigi", "author": "J. Marchetti", "year": "1967", "smudged": true, "redText": "Vedi anche → O-?", "note": "Il rimando in rosso è stato lavato via dall'acqua. Sotto, a matita: «vedi la scheda dello stesso autore, anno 1967»." },
-        "O-12": { "title": "Lettere da Roma", "author": "I. Cesti", "year": "1958", "red": "O-3" },
+        "O-11": { "title": "Carteggio Parigi", "author": "J. Saint Taureau", "year": "1967", "smudged": true, "redText": "Vedi anche → O-?", "note": "Il rimando in rosso è stato lavato via dall'acqua. Sotto, a matita: «vedi la scheda dello stesso autore, anno 1967»." },
+        "O-12": { "title": "Lettere da Roma", "author": "Don Tantirige", "year": "1958", "red": "O-3" },
         "O-13": { "title": "Registro dei ricoveri", "author": "Il Medico", "year": "1945", "red": "O-7" },
         "O-14": { "title": "Itinerario Livorno–Istanbul", "author": "Il Ferroviere", "year": "1944", "red": "O-10" },
         "O-15": { "title": "Inventario dei sigilli", "author": "Anonimo", "year": "1967", "smudged": true, "redText": "Vedi anche → O-1?", "note": "Il secondo numero è macchiato. Sotto, a matita: «quanti erano i custodi»." },
-        "O-16": { "title": "Verbali delle riunioni", "author": "E. Varano", "year": "1967", "red": "O-4", "note": "Firma del notaio Ettore Varano." },
+        "O-16": { "title": "Verbali delle riunioni", "author": "E. Iuschini", "year": "1967", "red": "O-4", "note": "Firma del notaio Ettore Iuschini." },
         "O-17": { "title": "Fondo Orfeo — Provenienza Parigi 1967", "author": "E.", "year": "1967", "note": "Collocazione: deposito, ripiano 17." }
       },
       "solution": ["O-1", "O-6", "O-11", "O-4", "O-15", "O-17"],
@@ -50,7 +50,7 @@
       "hints": [
         "Il promemoria dice: si parte da O-1 e si segue sempre il rimando in rosso. Alcune schede però sono state danneggiate dall'alluvione.",
         "Dove il rosso è illeggibile c'è una nota a matita: su O-11 si cerca un'altra scheda dello stesso autore dello stesso anno; su O-15 il numero dei custodi.",
-        "O-1 → O-6 → O-11 → O-4 (J. Marchetti, 1967) → O-15 → O-17 (i custodi erano diciassette)."
+        "O-1 → O-6 → O-11 → O-4 (J. Saint Taureau, 1967) → O-15 → O-17 (i custodi erano diciassette)."
       ],
       "onSolve": ["@give:scheda_o17", "@clue:scheda_o17", "@stat:conoscenza+1", "@dialogue:incontro_kiki"]
     },
@@ -187,8 +187,8 @@
         { "id": "t3", "title": "Lettera di Orfeo", "text": "«Il Ponte Vecchio è crollato all'alba: l'archivio passerà dal ponte Santa Trinita, ancora intatto.» Firenze, 5 agosto 1944. Firmata «Orfeo», autenticata dal Notaio." },
         { "id": "t4", "title": "Verbale dell'alluvione", "text": "«L'Arno è entrato nella stanza alle 7 del mattino. L'acqua si è fermata al terzo gradino.» Firenze, 4 novembre 1966." },
         { "id": "t5", "title": "Promemoria di E.", "text": "«Murate la stanza e portate le copie a Parigi.» Firenze, cinque giorni dopo l'alluvione." },
-        { "id": "t6", "title": "Verbale della seduta straordinaria", "text": "«Ruolo XVII abolito all'unanimità dei presenti. Euridice e il Ponte assenti.» Parigi, 12 marzo 1967. Redatto dal Notaio E. Varano." },
-        { "id": "t7", "title": "Lettera di Ada a Selim", "text": "«Ho digitalizzato il Registro e l'ho murato con il resto. Se un giorno lo troveranno, che siano in due.» Istanbul, dicembre 1998." }
+        { "id": "t6", "title": "Verbale della seduta straordinaria", "text": "«Ruolo XVII abolito all'unanimità dei presenti. Euridice e il Ponte assenti.» Parigi, 12 marzo 1967. Redatto dal Notaio E. Iuschini." },
+        { "id": "t7", "title": "Lettera di Ada a Mimmo", "text": "«Ho digitalizzato il Registro e l'ho murato con il resto. Se un giorno lo troveranno, che siano in due.» Istanbul, dicembre 1998." }
       ],
       "initial": ["t5", "t3", "t7", "t1", "t6", "t2", "t4"],
       "solution": ["t1", "t2", "t3", "t4", "t5", "t6", "t7"],
@@ -201,7 +201,7 @@
       ],
       "onSolve": [
         "kiki: Due falsi. La lettera del '44 dice che il Ponte Vecchio crollò: ma il Ponte Vecchio è l'unico che non cadde. E il verbale del '67 cancella nonna dalla votazione.",
-        "beps: Entrambi autenticati dal Notaio. Bruno Varano nel '44, Ettore Varano nel '67. Padre e figlio.",
+        "beps: Entrambi autenticati dal Notaio. Bruno Iuschini nel '44, Ettore Iuschini nel '67. Padre e figlio.",
         "kiki[angry]: Un'intera famiglia che riscrive la storia.",
         "@clue:falso_1944", "@stat:conoscenza+2",
         { "if": "flag.nastro_ascoltato", "do": ["@objective:o6_varano"], "else": ["@objective:o6_nastro"] }
@@ -222,8 +222,8 @@
       "successText": "Il XVII ha di nuovo il suo emblema. I Nomi rispondono.",
       "successText18": "Il XVII ha di nuovo il suo emblema. E il XVIII, per la prima volta, ha due nomi.",
       "hints": [
-        "Il ruolo raschiato è il diciassettesimo: quello abolito nel 1967. Don Ilario e il nastro dicono come si chiamava.",
-        "Il XVII era il Ponte (Guido Sarti): il ponte tra Orfeo e il mondo. Il suo emblema è quello che somiglia a un ponte.",
+        "Il ruolo raschiato è il diciassettesimo: quello abolito nel 1967. Don Tantirige e il nastro dicono come si chiamava.",
+        "Il XVII era il Ponte (Mario Abbate): il ponte tra Orfeo e il mondo. Il suo emblema è quello che somiglia a un ponte.",
         "Scegli l'arco ⌒."
       ],
       "onSolve": ["@flag:m_registro", "kiki: I Nomi rispondono.", "narr: Un terzo scatto, più profondo. Dall'altra parte, la serratura di Beps si illumina.", "@objective:o7_leva"]

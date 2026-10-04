@@ -1,61 +1,25 @@
-# Nomi e ruoli da personalizzare
+# Personaggi e ruoli aggiornati
 
-Contiene spoiler: le importanze indicano il peso nella trama, non una classifica delle amicizie. Nessun nome è stato cambiato.
+Contiene spoiler. I due gruppi di nomi seguono l’ordine dei ruoli nell’elenco originale.
 
-## Personaggi incontrati nel gioco
+| Nome originale | Nome nel gioco | Ruolo |
+|---|---|---|
+| Giuseppe / Beps | Giuseppe / Beps | Protagonista giocabile |
+| Federica / Kiki | Federica / Kiki | Coprotagonista giocabile |
+| Aurelio Varano | Cristiano Iuschini | Notaio, antagonista ambiguo; volto nascosto fino alla grotta |
+| Hélène Marchetti | Sylvie Saint Taureau | Fotografa ed Euridice |
+| Ada Morel | Ada Morel | Nonna di Kiki, voce dei nastri |
+| Guido Sarti | Mario Abbate | Il Ponte, nome cancellato |
+| Ottavia Ricci | Alessandra | Archivista a Firenze |
+| Don Ilario Cesti | Don Tantirige | Bibliotecario a Roma, il Libraio |
+| Stefano Neri / Mastro Neri | Riccardo / Mastro Riccardo | Orafo, Custode delle Chiavi |
+| Selim Aydın | Mimmo | Antiquario a Istanbul, Traduttore |
+| Sandro | Rocco | Capocantiere |
+| Tommaso (barista) | Ivan | Barista al Caffè delle Logge |
+| Monsieur Albert | Mirko | Bouquiniste a Parigi |
+| Dott.ssa Bellandi | Dott.ssa Caterina | Responsabile della banca |
+| Emre | Boris | Ragazzo del tè a Istanbul |
 
-| Nome attuale | Ruolo | Importanza | Nuovo nome |
-|---|---|---|---|
-| Giuseppe / Beps | Protagonista giocabile: informatico, investigazione e finale | Massima | |
-| Federica / Kiki | Coprotagonista giocabile: restauratrice, discendente di Ada; legame e finale | Massima | |
-| Aurelio Varano | Notaio, antagonista ambiguo; Ruolo XI, Bilancia/Notaio; segue tutta la storia | Molto alta | |
-| Hélène Marchetti | Fotografa a Parigi; attuale Euridice, grande rivelazione nel capitolo 6 | Alta | |
-| Ottavia Ricci | Capo archivista a Firenze; apre il catalogo, figlia del Barcaiolo | Media | |
-| Don Ilario Cesti | Bibliotecario a Roma; Ruolo XIV, Libraio; guida nella biblioteca | Media | |
-| Stefano Neri / Mastro Neri | Orafo al Ponte Vecchio; Ruolo XV, Custode delle Chiavi; aiuta col Sigillo | Media | |
-| Selim Aydın | Antiquario a Istanbul; Ruolo XVI, Traduttore; memoria di Orfeo | Media | |
-| Sandro | Capocantiere: apre la stanza murata dopo il caffè | Secondaria | |
-| Tommaso (barista) | Barista al Caffè delle Logge; offre indizi e la fotografia | Secondaria | |
-| Monsieur Albert | Bouquiniste a Parigi; consegna libretto e mappa | Secondaria | |
-| Dott.ssa Bellandi | Responsabile della banca a Firenze; accesso alla cassetta | Secondaria | |
-| Emre | Ragazzo del tè a Istanbul; aiuta a trovare antiquario e leva | Secondaria | |
-| La donna in nero | Figura ricorrente nelle foto e incontri; legata alla successione di Euridice | Misteriosa | |
-| Agenti di Orfeo (2) | Uomini del Notaio; inseguimento a Roma | Breve | |
-| Custode di Orfeo | Ruolo VII, Cronista; incontro secondario | Breve | |
+Bruno, Ettore e Lina ora hanno il cognome Iuschini, per conservare la famiglia di Cristiano. Jacques Saint Taureau è il padre di Sylvie e lo studio fotografico prende lo stesso cognome. Renzo Ricci resta il padre di Alessandra, Nermin Aydın la madre di Mimmo; Oreste Neri e Tommaso Neri restano i predecessori storici di Riccardo. Il barista Ivan è distinto da Tommaso Neri.
 
-## Familiari, figure storiche e altri nomi
-
-| Nome attuale | Ruolo | Importanza | Nuovo nome |
-|---|---|---|---|
-| Ada Morel | Nonna di Kiki, Euridice del 1967; voce dei nastri e diario | Molto alta | |
-| Lucia Morel | Euridice del 1944; figura nella prima fotografia | Alta | |
-| Guido Sarti | Ruolo XVII, Ponte; nome cancellato, centro degli enigmi finali | Molto alta | |
-| Ettore Varano | Padre di Aurelio; Notaio nel 1967, falsifica il verbale | Alta | |
-| Bruno Varano | Nonno di Aurelio; Notaio nel 1944, delatore | Alta | |
-| Lina Varano | Nonna di Aurelio; salva trenta persone e ne cambia il giudizio | Alta | |
-| Jacques Marchetti | Padre di Hélène, fotografo della foto del 1967 | Media | |
-| Renzo Ricci | Padre di Ottavia; Barcaiolo nel 1944 | Media | |
-| Nermin Aydın | Madre di Selim; Traduttore nel 1944 | Media | |
-| Nonno Gigi | Nonno di Beps nella fotografia dello studio | Breve | |
-| Pietro Lanzoni | Orfeo nel 1944 | Lista dei 17 | |
-| Marco Testi | Orfeo nel 1967 | Lista dei 17 | |
-| Ernesto Valli | Cartografo nel 1944 | Lista dei 17 | |
-| Sandra Valli | Cartografa dal 1972 | Lista dei 17 | |
-| Bice Ferroni | Archivista nel 1944 | Lista dei 17 | |
-| Ines Bardi | Sarta nel 1944 | Lista dei 17 | |
-| Dott. Aldo Segre | Medico nel 1944 | Lista dei 17 | |
-| Fra’ Teodoro | Campanaro nel 1944 | Lista dei 17 | |
-| Maria Pace | Maestra nel 1944 | Lista dei 17 | |
-| Gino Fabbri | Ferroviere nel 1944 | Lista dei 17 | |
-| Oreste Neri | Custode delle Chiavi nel 1944 | Lista dei 17 | |
-| Tommaso Neri | Custode delle Chiavi nel 1967: diverso dal barista Tommaso | Lista dei 17 | |
-| Tipografo anonimo | Nome non rivelato; Tipografo nel 1944 | Lista dei 17 | |
-| Daguerre | Gatto dello Studio Marchetti; compare anche un gatto a Istanbul | Animale | |
-
-## Legami da conservare
-
-Varano: Bruno → Ettore → Aurelio; Lina è la moglie di Bruno. Morel: Lucia/Ada e la famiglia di Kiki; Ada è sua nonna. Marchetti: Jacques è il padre di Hélène. Ricci: Renzo è il padre di Ottavia. Aydın: Nermin è la madre di Selim. Neri: Oreste, Tommaso e Stefano sono i successori del Ruolo XV.
-
-Orfeo, Euridice e i titoli dei 17 ruoli sono nomi simbolici. Gluck, Monteverdi e Daguerre come riferimento fotografico sono nomi culturali; non sono amici da rinominare automaticamente. La “sconosciuta” è Kiki prima della presentazione, non un personaggio aggiuntivo.
-
-Puoi rispondere con `Nome attuale → Nome dell’amico` e, per Beps/Kiki, indicare anche il soprannome. I nomi verranno aggiornati in dialoghi, documenti, diario, inventario, finali e guida.
+Le altre figure storiche e i nomi simbolici Orfeo ed Euridice sono invariati. Le iniziali del Ponte sono ora M.A.; la firma del Notaio attuale è C. Iuschini. Gli identificativi tecnici restano stabili per conservare i salvataggi e i riferimenti agli sprite.

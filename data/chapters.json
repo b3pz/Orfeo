@@ -42,7 +42,7 @@
    "date": "Novembre 2026",
    "relationship": "Alleati",
    "core": "Una fotografia del 1967 contiene la stessa figura presente nel 1944.",
-   "summary": "Allo Studio Marchetti, Beps e Kiki sovrappongono le foto del 1944 e del 1967: la donna col cappello è nello stesso punto, ma non è la stessa persona. Il medaglione, appoggiato su una mappa cifrata, indica Roma.",
+   "summary": "Allo Studio Saint Taureau, Beps e Kiki sovrappongono le foto del 1944 e del 1967: la donna col cappello è nello stesso punto, ma non è la stessa persona. Il medaglione, appoggiato su una mappa cifrata, indica Roma.",
    "epigraph": "«La verità sta sempre un passo fuori dall'inquadratura.» — Ada Morel",
    "debugStart": {
     "scene": "c2_gare",
@@ -81,7 +81,7 @@
    "date": "Novembre 2026",
    "relationship": "Amici",
    "core": "La LISTA_17 collega Orfeo a eventi del 1944.",
-   "summary": "Nella Biblioteca Teodosiana, Don Ilario — il Libraio — apre la Sala dei Cassetti. Diciassette emblemi, una targa in latino, e la Lista completa. Poi gli uomini del Notaio, e una fuga che si può fare solo in due.",
+   "summary": "Nella Biblioteca Teodosiana, Don Tantirige — il Libraio — apre la Sala dei Cassetti. Diciassette emblemi, una targa in latino, e la Lista completa. Poi gli uomini del Notaio, e una fuga che si può fare solo in due.",
    "epigraph": "«Primus ducit, secunda meminit, tertius traicit, ultimus verba custodit.»",
    "debugStart": {
     "scene": "c3_piazza",
@@ -172,7 +172,7 @@
    "date": "Dicembre 2026",
    "relationship": "Primo bacio",
    "core": "La ricerca conduce al vero scopo dell'organizzazione.",
-   "summary": "Selim, il Traduttore, rivela che il Registro non è mai stato diviso: le metà erano chiavi. Sotto un caravanserraglio, quattro anelli di bronzo indicano la strada di casa. Sul tetto dell'Han, Istanbul accende le sue luci.",
+   "summary": "Mimmo, il Traduttore, rivela che il Registro non è mai stato diviso: le metà erano chiavi. Sotto un caravanserraglio, quattro anelli di bronzo indicano la strada di casa. Sul tetto dell'Han, Istanbul accende le sue luci.",
    "epigraph": "«Chi entra in due, esce in due.»",
    "debugStart": {
     "scene": "c5_galata",
@@ -223,8 +223,8 @@
    "date": "Gennaio 2027",
    "relationship": "Coppia",
    "core": "Identità e struttura della società segreta vengono finalmente rivelate.",
-   "summary": "Hélène confessa di essere Euridice. Il nastro del 1967 rivela un voto falsificato. Nell'archivio parigino, due falsi portano la firma della stessa famiglia. E nel suo studio, il Notaio racconta di un nonno delatore e di una nonna che salvò trenta persone.",
-   "epigraph": "«La cenere è l'unica cosa che non accusa nessuno.» — Aurelio Varano",
+   "summary": "Sylvie confessa di essere Euridice. Il nastro del 1967 rivela un voto falsificato. Nell'archivio parigino, due falsi portano la firma della stessa famiglia. E nel suo studio, il Notaio racconta di un nonno delatore e di una nonna che salvò trenta persone.",
+   "epigraph": "«La cenere è l'unica cosa che non accusa nessuno.» — Cristiano Iuschini",
    "debugStart": {
     "scene": "c6_pont_neuf",
     "items": [
@@ -356,20 +356,20 @@
   },
   "o1_cantiere": {
    "chapter": 1,
-   "text": "Raggiungi Sandro al cantiere di via de' Bardi. Con un caffè.",
+   "text": "Raggiungi Rocco al cantiere di via de' Bardi. Con un caffè.",
    "hints": [
-    "Sandro ha chiesto esplicitamente un caffè.",
+    "Rocco ha chiesto esplicitamente un caffè.",
     "La macchinetta del caffè dell'ufficio funziona. Poi esci dalla porta, verso il Lungarno e il cantiere (a destra).",
-    "Usa la macchinetta del caffè, esci, attraversa il Lungarno verso destra fino al cantiere e dai il caffè a Sandro."
+    "Usa la macchinetta del caffè, esci, attraversa il Lungarno verso destra fino al cantiere e dai il caffè a Rocco."
    ]
   },
   "o1_caffe_sandro": {
    "chapter": 1,
-   "text": "Porta un caffè a Sandro.",
+   "text": "Porta un caffè a Rocco.",
    "hints": [
-    "Sandro non apre la stanza senza caffè.",
+    "Rocco non apre la stanza senza caffè.",
     "L'ufficio ha una macchinetta. È a due passi.",
-    "Torna in ufficio (a sinistra del Lungarno), usa la macchinetta, poi dai il caffè a Sandro (trascinalo su di lui o usa «Mostra un oggetto»)."
+    "Torna in ufficio (a sinistra del Lungarno), usa la macchinetta, poi dai il caffè a Rocco (trascinalo su di lui o usa «Mostra un oggetto»)."
    ]
   },
   "o1_stanza": {
@@ -455,7 +455,7 @@
   },
   "o2_marchetti": {
    "chapter": 2,
-   "text": "Trova lo Studio Marchetti, in rue des Archives.",
+   "text": "Trova lo Studio Saint Taureau, in rue des Archives.",
    "hints": [
     "La busta del ripiano 17 aveva un indirizzo.",
     "Dalla stazione prendi il taxi verso la Senna, poi prosegui verso il Marais.",
@@ -464,11 +464,11 @@
   },
   "o2_foto1967": {
    "chapter": 2,
-   "text": "Chiedi a Hélène della fotografia del 1967.",
+   "text": "Chiedi a Sylvie della fotografia del 1967.",
    "hints": [
-    "Hélène è nello studio.",
-    "Parla con Hélène: il tema «La fotografia del 1967».",
-    "Scegli «La fotografia del 1967» nel dialogo con Hélène."
+    "Sylvie è nello studio.",
+    "Parla con Sylvie: il tema «La fotografia del 1967».",
+    "Scegli «La fotografia del 1967» nel dialogo con Sylvie."
    ]
   },
   "o2_sovrapponi": {
@@ -484,14 +484,14 @@
    "chapter": 2,
    "text": "Trova una mappa su cui appoggiare il medaglione.",
    "hints": [
-    "Ada comprava libri da un bouquiniste sul quai. Hélène lo conosce.",
-    "Monsieur Albert, sul Quai des Grands-Augustins, vende un libretto speciale a chi sa rispondere.",
-    "Chiedi ad Albert di Orfeo e rispondi «Gluck». Esamina il libretto: dentro c'è la mappa."
+    "Ada comprava libri da un bouquiniste sul quai. Sylvie lo conosce.",
+    "Mirko, sul Quai des Grands-Augustins, vende un libretto speciale a chi sa rispondere.",
+    "Chiedi ad Mirko di Orfeo e rispondi «Gluck». Esamina il libretto: dentro c'è la mappa."
    ]
   },
   "o2_libretto": {
    "chapter": 2,
-   "text": "Esamina il libretto di Monsieur Albert.",
+   "text": "Esamina il libretto di Mirko.",
    "hints": [
     "Tra le pagine c'è qualcosa.",
     "Esamina il libretto nell'inventario (clic destro / pressione lunga).",
@@ -529,7 +529,7 @@
    "chapter": 3,
    "text": "Entra nella Sala dei Cassetti.",
    "hints": [
-    "Don Ilario ha la chiave. Ora te l'ha data.",
+    "Don Tantirige ha la chiave. Ora te l'ha data.",
     "La porta SALA XVII è in fondo a destra.",
     "Usa la porta della Sala dei Cassetti."
    ]
@@ -621,7 +621,7 @@
    "hints": [
     "Guarda bene l'ufficio devastato.",
     "C'è un pacco che non era lì prima, e un biglietto sulla scrivania.",
-    "Prendi il pacco di Sandro vicino al plastico del palazzo."
+    "Prendi il pacco di Rocco vicino al plastico del palazzo."
    ]
   },
   "o4_ponte": {
@@ -630,12 +630,12 @@
    "hints": [
     "La lista diceva dove sono i quattro frammenti: Roma, il muro, la Banca del Giglio, il ponte che non cadde.",
     "Sul Ponte Vecchio c'è la bottega di chi custodisce le chiavi. La Banca del Giglio è oltre il ponte; ti serve la chiave d'ottone.",
-    "Mostra la Lista dei 17 a Mastro Neri. In banca chiedi la cassetta 17: il titolare è «Euridice». Poi chiedi a Neri il banco e la porticina."
+    "Mostra la Lista dei 17 a Mastro Riccardo. In banca chiedi la cassetta 17: il titolare è «Euridice». Poi chiedi a Riccardo il banco e la porticina."
    ]
   },
   "o4_sigillo": {
    "chapter": 4,
-   "text": "Ricomponi il Sigillo sul banco di Mastro Neri.",
+   "text": "Ricomponi il Sigillo sul banco di Mastro Riccardo.",
    "hints": [
     "Servono tutti e quattro i frammenti.",
     "Usa il banco da orafo.",
@@ -644,11 +644,11 @@
   },
   "o4_chiave_corridoio": {
    "chapter": 4,
-   "text": "Chiedi a Mastro Neri della porticina del Corridoio.",
+   "text": "Chiedi a Mastro Riccardo della porticina del Corridoio.",
    "hints": [
     "La porticina è sul ponte, a destra.",
-    "Mastro Neri ha la chiave.",
-    "Parla con Neri: «La porta del Corridoio»."
+    "Mastro Riccardo ha la chiave.",
+    "Parla con Riccardo: «La porta del Corridoio»."
    ]
   },
   "o4_corridoio": {
@@ -675,7 +675,7 @@
    "hints": [
     "Il Bazar è a destra del molo.",
     "Nel Bazar, la bottega dell'antiquario è a destra.",
-    "Molo → Bazar → bottega di Selim."
+    "Molo → Bazar → bottega di Mimmo."
    ]
   },
   "o5_camera": {
@@ -683,8 +683,8 @@
    "text": "Scendete nella Camera degli Anelli, sotto il Büyük Valide Han.",
    "hints": [
     "Servono luce e una leva.",
-    "Selim presta la lanterna; Emre, il ragazzo del tè, ha un piede di porco.",
-    "Chiedi la lanterna a Selim e il piede di porco a Emre. Al Han, Beps usa il piede di porco sulla botola."
+    "Mimmo presta la lanterna; Boris, il ragazzo del tè, ha un piede di porco.",
+    "Chiedi la lanterna a Mimmo e il piede di porco a Boris. Al Han, Beps usa il piede di porco sulla botola."
    ]
   },
   "o5_botola_beps": {
@@ -725,7 +725,7 @@
   },
   "o6_helene": {
    "chapter": 6,
-   "text": "Andate da Hélène, allo Studio Marchetti.",
+   "text": "Andate da Sylvie, allo Studio Saint Taureau.",
    "hints": [
     "È a sinistra del Pont Neuf.",
     "Prendi l'uscita verso il Marais.",
@@ -862,18 +862,18 @@
    "chapter": 7,
    "text": "Decidete cosa fare del Registro.",
    "hints": [
-    "Varano vi aspetta sotto il lampione.",
-    "Parla con Varano: puoi chiedere di ogni possibilità prima di scegliere.",
-    "Parla con Varano e scegli «Abbiamo deciso»."
+    "Iuschini vi aspetta sotto il lampione.",
+    "Parla con Iuschini: puoi chiedere di ogni possibilità prima di scegliere.",
+    "Parla con Iuschini e scegli «Abbiamo deciso»."
    ]
   },
   "o6_parla_varano": {
    "chapter": 6,
    "text": "Parla con il Notaio.",
    "hints": [
-    "Varano è dietro la scrivania. Ma guardati intorno: sulla scrivania c'è una lettera.",
-    "Prendi la lettera sulla scrivania, poi parla con Varano di sua nonna.",
-    "Raccogli la lettera di Lina, poi parla con Varano di tutti i temi e salutalo."
+    "Iuschini è dietro la scrivania. Ma guardati intorno: sulla scrivania c'è una lettera.",
+    "Prendi la lettera sulla scrivania, poi parla con Iuschini di sua nonna.",
+    "Raccogli la lettera di Lina, poi parla con Iuschini di tutti i temi e salutalo."
    ]
   }
  },
@@ -936,8 +936,8 @@
   },
   "busta_parigi": {
    "chapter": 1,
-   "title": "Studio Marchetti",
-   "text": "Busta del 1967: Studio Marchetti, 12 rue des Archives, Parigi."
+   "title": "Studio Saint Taureau",
+   "text": "Busta del 1967: Studio Saint Taureau, 12 rue des Archives, Parigi."
   },
   "voce_buio": {
    "chapter": 1,
@@ -953,7 +953,7 @@
    "chapter": 1,
    "evidence": true,
    "title": "Il finanziatore",
-   "text": "Il notaio Aurelio Varano finanzia il restauro del palazzo della stanza murata."
+   "text": "Il notaio Cristiano Iuschini finanzia il restauro del palazzo della stanza murata."
   },
   "cinquecento_lire": {
    "chapter": 1,
@@ -963,7 +963,7 @@
   "varano_lira": {
    "chapter": 1,
    "title": "Il portachiavi",
-   "text": "Varano ha una lira sul portachiavi."
+   "text": "Iuschini ha una lira sul portachiavi."
   },
   "lista_parziale": {
    "chapter": 1,
@@ -1041,7 +1041,7 @@
   "libraio": {
    "chapter": 3,
    "title": "Il Libraio",
-   "text": "Don Ilario Cesti è il Ruolo XIV."
+   "text": "Don Tantirige è il Ruolo XIV."
   },
   "euridice_ruolo": {
    "chapter": 3,
@@ -1073,7 +1073,7 @@
   "frammento_cantiere": {
    "chapter": 4,
    "title": "Il frammento del muro",
-   "text": "Sandro ha trovato il terzo frammento del Sigillo nella stanza murata."
+   "text": "Rocco ha trovato il terzo frammento del Sigillo nella stanza murata."
   },
   "sms_federica": {
    "chapter": 4,
@@ -1083,7 +1083,7 @@
   "corridoio": {
    "chapter": 4,
    "title": "Il Corridoio",
-   "text": "Mastro Neri custodiva la chiave della porticina del Corridoio Vasariano."
+   "text": "Mastro Riccardo custodiva la chiave della porticina del Corridoio Vasariano."
   },
   "nastro_orfeo": {
    "chapter": 4,
@@ -1118,7 +1118,7 @@
   "traduttore": {
    "chapter": 5,
    "title": "Il Traduttore",
-   "text": "Selim Aydın, Ruolo XVI. Sua madre accoglieva i fuggiaschi del 1944."
+   "text": "Mimmo, Ruolo XVI. Sua madre accoglieva i fuggiaschi del 1944."
   },
   "tetto": {
    "chapter": 5,
@@ -1133,18 +1133,18 @@
   },
   "helene_euridice": {
    "chapter": 6,
-   "title": "Hélène è Euridice",
+   "title": "Sylvie è Euridice",
    "text": "Ha ereditato il ruolo da Ada nel 2019. Ma non era lei a Istanbul."
   },
   "verbale_falso": {
    "chapter": 6,
    "evidence": true,
    "title": "Il voto falsificato",
-   "text": "Nel 1967 Euridice e il Ponte votarono contro. Ettore Varano li verbalizzò come «assenti»."
+   "text": "Nel 1967 Euridice e il Ponte votarono contro. Ettore Iuschini li verbalizzò come «assenti»."
   },
   "guido_sarti": {
    "chapter": 6,
-   "title": "Guido Sarti",
+   "title": "Mario Abbate",
    "text": "Il Ponte. Il volto graffiato nella foto del 1944."
   },
   "falso_1944": {
@@ -1156,19 +1156,19 @@
   "bruno_varano": {
    "chapter": 6,
    "evidence": true,
-   "title": "Bruno Varano",
-   "text": "Il nonno di Aurelio: delatore nel 1944."
+   "title": "Bruno Iuschini",
+   "text": "Il nonno di Cristiano: delatore nel 1944."
   },
   "lina_varano": {
    "chapter": 6,
    "evidence": true,
-   "title": "Lina Varano",
-   "text": "La nonna di Aurelio: nascose trenta persone. Nel Registro, tra i Barcaioli."
+   "title": "Lina Iuschini",
+   "text": "La nonna di Cristiano: nascose trenta persone. Nel Registro, tra i Barcaioli."
   },
   "lina": {
    "chapter": 6,
    "title": "La lettera di Lina",
-   "text": "«Siamo stati entrambi Varano. Scegli tu quale essere.»"
+   "text": "«Siamo stati entrambi Iuschini. Scegli tu quale essere.»"
   },
   "camera_due": {
    "chapter": 6,
@@ -1204,7 +1204,7 @@
    "emblem": "☾",
    "desc": "la Testimone, che ricorda. Emblema: la luna.",
    "early": true,
-   "holders": "Lucia Morel (1944) · Ada Morel (1967) · █████ · Hélène Marchetti (2019)"
+   "holders": "Lucia Morel (1944) · Ada Morel (1967) · █████ · Sylvie Saint Taureau (2019)"
   },
   {
    "name": "Il Cartografo",
@@ -1229,7 +1229,7 @@
    "emblem": "⚓",
    "desc": "colui che traghetta. Emblema: l'àncora.",
    "early": true,
-   "holders": "Renzo Ricci (1944) · Lina Varano, «barcaiola di cantina» (1944)"
+   "holders": "Renzo Ricci (1944) · Lina Iuschini, «barcaiola di cantina» (1944)"
   },
   {
    "name": "La Sarta",
@@ -1247,7 +1247,7 @@
    "name": "Il Fotografo",
    "emblem": "◉",
    "desc": "vede e ricorda. Emblema: l'occhio.",
-   "holders": "Jacques Marchetti (1955)"
+   "holders": "Jacques Saint Taureau (1955)"
   },
   {
    "name": "Il Campanaro",
@@ -1259,7 +1259,7 @@
    "name": "Il Notaio",
    "emblem": "⚖",
    "desc": "autentica. Emblema: la bilancia.",
-   "holders": "Bruno Varano (1944) · Ettore Varano (1967) · Aurelio Varano (1999)"
+   "holders": "Bruno Iuschini (1944) · Ettore Iuschini (1967) · Cristiano Iuschini (1999)"
   },
   {
    "name": "La Maestra",
@@ -1278,26 +1278,26 @@
    "emblem": "❧",
    "desc": "custodisce le parole. Emblema: la foglia.",
    "early": true,
-   "holders": "Ilario Cesti (1952)"
+   "holders": "Don Tantirige (1952)"
   },
   {
    "name": "Il Custode delle Chiavi",
    "emblem": "⚷",
    "desc": "apre e chiude. Emblema: la chiave.",
-   "holders": "Oreste Neri (1944) · Tommaso Neri (1967) · Stefano Neri"
+   "holders": "Oreste Neri (1944) · Tommaso Neri (1967) · Riccardo"
   },
   {
    "name": "Il Traduttore",
    "emblem": "⇄",
    "desc": "fa passare le parole. Emblema: le due frecce.",
-   "holders": "Nermin Aydın (1944) · Selim Aydın (1989)"
+   "holders": "Nermin Aydın (1944) · Mimmo (1989)"
   },
   {
    "name": "Il Ponte",
    "emblem": "⌒",
    "desc": "decide quando il Registro uscirà alla luce. Emblema: l'arco.",
    "erased": true,
-   "holders": "Guido Sarti (1944) — abolito nel 1967"
+   "holders": "Mario Abbate (1944) — abolito nel 1967"
   }
  ]
 }

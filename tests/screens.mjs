@@ -66,7 +66,7 @@ await page.evaluate(() => { window.Orfeo.Scene.world.classList.remove('reveal');
 await page.evaluate(() => {
   const O = window.Orfeo;
   O.UI.dialogueMode(true, 'archivista');
-  O.UI.say({ speaker: 'archivista', name: 'Ottavia Ricci', text: 'Non esiste un catalogo O. Esiste un cassetto O, chiuso perché la chiave l\'ho persa nel 1994.', expr: 'skeptical', side: 'right' });
+  O.UI.say({ speaker: 'archivista', name: 'Alessandra', text: 'Non esiste un catalogo O. Esiste un cassetto O, chiuso perché la chiave l\'ho persa nel 1994.', expr: 'skeptical', side: 'right' });
   O.UI.topics([{ id: 'a', label: 'Il catalogo O', icon: 'doc', isNew: true }, { id: 'b', label: "L'alluvione del '66", icon: 'city' }, { id: 'c', label: 'La donna col cappello', icon: 'photo', optional: true }, { id: 'd', label: 'Noi due', icon: 'us', special: true }], { canShow: true, byeLabel: 'Arrivederci' });
 });
 await page.waitForTimeout(1200);

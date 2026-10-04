@@ -482,7 +482,7 @@
       "portraitOf": "kiki"
     },
     "archivista": {
-      "name": "Ottavia Ricci",
+      "name": "Alessandra",
       "nameIf": [
         {
           "if": "!flag.met_archivista",
@@ -542,7 +542,7 @@
       }
     },
     "sandro": {
-      "name": "Sandro",
+      "name": "Rocco",
       "role": "Capocantiere",
       "height": 1.02,
       "look": {
@@ -709,7 +709,7 @@
       }
     },
     "tommaso": {
-      "name": "Tommaso",
+      "name": "Ivan",
       "role": "Barista del Caffè delle Logge",
       "look": {
         "skin": "#d8a880",
@@ -874,7 +874,7 @@
       }
     },
     "varano": {
-      "name": "Aurelio Varano",
+      "name": "Cristiano Iuschini",
       "nameIf": [
         {
           "if": "!flag.varano_named",
@@ -927,11 +927,11 @@
         },
         {
           "if": "flag.varano_named",
-          "text": "Aurelio Varano, notaio fiorentino. Custodisce il Ruolo XI di Orfeo, quello del Notaio, ereditato dal padre Ettore."
+          "text": "Cristiano Iuschini, notaio fiorentino. Custodisce il Ruolo XI di Orfeo, quello del Notaio, ereditato dal padre Ettore."
         },
         {
           "if": "flag.varano_past",
-          "text": "Suo nonno Bruno, nel 1944, fu un delatore. Sua nonna Lina, nello stesso anno, salvò trenta persone. Nel Registro ci sono entrambi. Aurelio non sa quale dei due essere."
+          "text": "Suo nonno Bruno, nel 1944, fu un delatore. Sua nonna Lina, nello stesso anno, salvò trenta persone. Nel Registro ci sono entrambi. Cristiano non sa quale dei due essere."
         },
         {
           "if": "flag.varano_doubt",
@@ -990,8 +990,8 @@
       "portraitRevealIf": "flag.varano_revealed || flag.varano_grotta_via || chapter > 4"
     },
     "helene": {
-      "name": "Hélène Marchetti",
-      "role": "Fotografa, Studio Marchetti — Parigi",
+      "name": "Sylvie Saint Taureau",
+      "role": "Fotografa, Studio Saint Taureau — Parigi",
       "height": 0.96,
       "look": {
         "skin": "#e8c4a8",
@@ -1008,7 +1008,7 @@
       "journal": [
         {
           "if": "true",
-          "text": "Figlia del fotografo che scattò la foto del 1967. Gestisce lo Studio Marchetti nel Marais, tra negativi e un gatto di nome Daguerre."
+          "text": "Figlia del fotografo che scattò la foto del 1967. Gestisce lo Studio Saint Taureau nel Marais, tra negativi e un gatto di nome Daguerre."
         },
         {
           "if": "flag.helene_euridice",
@@ -1166,7 +1166,7 @@
       }
     },
     "albert": {
-      "name": "Monsieur Albert",
+      "name": "Mirko",
       "role": "Bouquiniste sul Quai des Grands-Augustins",
       "look": {
         "skin": "#e0b090",
@@ -1204,7 +1204,7 @@
       ]
     },
     "ilario": {
-      "name": "Don Ilario Cesti",
+      "name": "Don Tantirige",
       "role": "Bibliotecario della Teodosiana — Ruolo XIV, il Libraio",
       "height": 0.9,
       "look": {
@@ -1349,7 +1349,7 @@
       }
     },
     "neri": {
-      "name": "Mastro Neri",
+      "name": "Mastro Riccardo",
       "role": "Orafo sul Ponte Vecchio",
       "look": {
         "skin": "#d8a880",
@@ -1387,7 +1387,7 @@
       ]
     },
     "bellandi": {
-      "name": "Dott.ssa Bellandi",
+      "name": "Dott.ssa Caterina",
       "role": "Responsabile cassette di sicurezza, Banca del Giglio",
       "look": {
         "skin": "#e8c0a0",
@@ -1553,7 +1553,7 @@
       }
     },
     "selim": {
-      "name": "Selim Aydın",
+      "name": "Mimmo",
       "role": "Antiquario al Gran Bazar — Ruolo XVI, il Traduttore",
       "height": 0.97,
       "look": {
@@ -1596,7 +1596,7 @@
       ]
     },
     "emre": {
-      "name": "Emre",
+      "name": "Boris",
       "role": "Ragazzo del tè",
       "height": 0.8,
       "look": {
@@ -1786,7 +1786,7 @@
         },
         {
           "if": "flag.helene_doubt",
-          "text": "Eppure qualcuno, a Istanbul, indossava quel cappello. E non era Hélène."
+          "text": "Eppure qualcuno, a Istanbul, indossava quel cappello. E non era Sylvie."
         }
       ],
       "portraitSheet": {

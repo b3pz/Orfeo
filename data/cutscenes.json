@@ -347,7 +347,7 @@
       "shots": [
         {
           "scene": "c5_galata",
-          "text": "Selim li accompagnò al molo. Disse addio in sei lingue e in nessuna riuscì a finire la frase.",
+          "text": "Mimmo li accompagnò al molo. Disse addio in sei lingue e in nessuna riuscì a finire la frase.",
           "cam": {
             "from": [
               50,
@@ -502,7 +502,7 @@
           "photoOpts": {
             "half": false
           },
-          "text": "Il volto di Guido Sarti, ricostruito graffio per graffio, torna nella fotografia. Dopo cinquantanove anni, il Ponte è di nuovo al suo posto.",
+          "text": "Il volto di Mario Abbate, ricostruito graffio per graffio, torna nella fotografia. Dopo cinquantanove anni, il Ponte è di nuovo al suo posto.",
           "cam": {
             "from": [
               65,
@@ -720,7 +720,7 @@
         {
           "scene": "c1_archivio",
           "title": "Un anno dopo",
-          "text": "Il catalogo O, all'Archivio Storico, ha un cassetto nuovo. Ottavia lo chiama «il cassetto dei due».",
+          "text": "Il catalogo O, all'Archivio Storico, ha un cassetto nuovo. Alessandra lo chiama «il cassetto dei due».",
           "cam": {
             "from": [
               20,
@@ -853,7 +853,7 @@
         {
           "img": "assets/reference/cutscenes/anonymous_envelope_old.webp",
           "scene": "c1_caffe",
-          "text": "Il giovedì dopo, al Caffè delle Logge, Tommaso trova sul piattino di una donna col cappello nero un biglietto: «Ottimo lavoro. Ora tocca a voi.» Nessuno l'ha vista entrare.",
+          "text": "Il giovedì dopo, al Caffè delle Logge, Ivan trova sul piattino di una donna col cappello nero un biglietto: «Ottimo lavoro. Ora tocca a voi.» Nessuno l'ha vista entrare.",
           "cam": {
             "from": [
               60,

@@ -16,12 +16,12 @@
    "lockedHint": "Per difendere la verità davanti al mondo vi servirebbero più prove e una conoscenza più profonda di Orfeo.",
    "req": "stat.conoscenza>=30 && evidence>=9 && item.registro",
    "script": [
-    "beps: La Luce. Guido Sarti voleva questo. Il Ponte.",
+    "beps: La Luce. Mario Abbate voleva questo. Il Ponte.",
     "kiki: Tutti i nomi. Anche quelli che fanno male.",
     {
      "if": "flag.varano_doubt",
      "do": [
-      "varano[sad]: Allora testimonierò. Racconterò di mio padre, del verbale. E di mia nonna Lina. È l'unico modo di essere un Varano diverso.",
+      "varano[sad]: Allora testimonierò. Racconterò di mio padre, del verbale. E di mia nonna Lina. È l'unico modo di essere un Iuschini diverso.",
       "@flag:varano_testimonia"
      ],
      "else": [
@@ -35,18 +35,18 @@
      "id": "luce_amore",
      "if": "stat.legame>=20",
      "text": [
-      "Tre mesi dopo, il Registro di Orfeo viene esposto all'Archivio Storico di Firenze. Ottavia Ricci cura la mostra e, per la prima volta in trent'anni, sorride in pubblico davanti alla foto di suo padre.",
-      "Trecentoquattordici persone salvate. Diciannove delatori. Il nome di Guido Sarti torna nella foto del 1944: un restauratore di carta lo ricostruisce graffio per graffio. Il restauratore è Kiki.",
+      "Tre mesi dopo, il Registro di Orfeo viene esposto all'Archivio Storico di Firenze. Alessandra cura la mostra e, per la prima volta in trent'anni, sorride in pubblico davanti alla foto di suo padre.",
+      "Trecentoquattordici persone salvate. Diciannove delatori. Il nome di Mario Abbate torna nella foto del 1944: un restauratore di carta lo ricostruisce graffio per graffio. Il restauratore è Kiki.",
       "{varano}",
-      "Beps e Kiki non smettono di litigare su dove appendere la foto. Alla fine la appendono in due posti. Nella loro casa nuova, in Oltrarno, c'è un tavolino del Caffè delle Logge che Tommaso ha giurato di non aver mai venduto."
+      "Beps e Kiki non smettono di litigare su dove appendere la foto. Alla fine la appendono in due posti. Nella loro casa nuova, in Oltrarno, c'è un tavolino del Caffè delle Logge che Ivan ha giurato di non aver mai venduto."
      ]
     },
     {
      "id": "luce",
      "if": "true",
      "text": [
-      "Tre mesi dopo, il Registro di Orfeo viene esposto all'Archivio Storico di Firenze. Ottavia Ricci cura la mostra.",
-      "Trecentoquattordici persone salvate. Diciannove delatori. Il nome di Guido Sarti torna nella foto del 1944.",
+      "Tre mesi dopo, il Registro di Orfeo viene esposto all'Archivio Storico di Firenze. Alessandra cura la mostra.",
+      "Trecentoquattordici persone salvate. Diciannove delatori. Il nome di Mario Abbate torna nella foto del 1944.",
       "{varano}",
       "Beps torna ai suoi computer. Kiki torna a Parigi. Si scrivono ogni settimana. Lettere, non messaggi. Ada ne sarebbe fiera."
      ]
@@ -64,7 +64,7 @@
    "lockedHint": "Per custodire insieme un segreto così, la fiducia e il legame tra voi dovrebbero essere più forti, e costruiti agendo insieme.",
    "req": "stat.fiducia>=12 && stat.legame>=20 && flag.coop>=5",
    "script": [
-    "kiki: Lo custodiamo noi. Io sarò Euridice, come nonna. Hélène sarà felice di restituirmi il cappello.",
+    "kiki: Lo custodiamo noi. Io sarò Euridice, come nonna. Sylvie sarà felice di restituirmi il cappello.",
     "beps: E io sarò il Ponte. Il ruolo che hanno cancellato. Deciderò io quando il Registro uscirà. Con te.",
     "varano[sad]: Il Ponte e la Testimone. Mio padre si rivolterebbe nella tomba.",
     {
@@ -85,7 +85,7 @@
      "if": "true",
      "text": [
       "Orfeo si riunisce di nuovo, il 12 marzo, a Parigi. Diciassette sedie, diciassette custodi. Per la prima volta dal 1967, nessuna è vuota.",
-      "Kiki porta il cappello nero di Ada. Le sta un po' largo. Hélène dice che è giusto così: «Il cappello cresce con te».",
+      "Kiki porta il cappello nero di Ada. Le sta un po' largo. Sylvie dice che è giusto così: «Il cappello cresce con te».",
       "{varano}",
       "Il Registro torna nella Camera, sotto Firenze. Ma adesso ci sono due chiavi, e nessuno dei due può aprirla da solo. Beps dice che è il sistema di sicurezza di cui va più fiero. Kiki dice che è solo una scusa per vedersi."
      ]
@@ -103,7 +103,7 @@
    "lockedHint": "",
    "req": "true",
    "script": [
-    "beps: …Va bene, Varano.",
+    "beps: …Va bene, Iuschini.",
     "kiki[sad]: Beps.",
     "beps: Nessuno di noi ha il diritto di decidere per trecento persone. Nemmeno lui. Ma almeno così nessuno pagherà per i nonni.",
     "varano[sad]: Grazie.",
@@ -116,8 +116,8 @@
      "if": "stat.legame>=18",
      "text": [
       "La cenere del Registro finisce nell'Arno, all'alba, davanti alla targa del '66.",
-      "Varano lascia Firenze una settimana dopo. Nessuno sa dove sia andato. Alla Banca del Giglio, la cassetta 11 viene chiusa.",
-      "Beps e Kiki non ne parlano più. Ma ogni 12 marzo comprano un libretto di Gluck da Monsieur Albert e lo leggono ad alta voce, i nomi che ricordano, quelli che non sono bruciati perché li hanno imparati a memoria.",
+      "Iuschini lascia Firenze una settimana dopo. Nessuno sa dove sia andato. Alla Banca del Giglio, la cassetta 11 viene chiusa.",
+      "Beps e Kiki non ne parlano più. Ma ogni 12 marzo comprano un libretto di Gluck da Mirko e lo leggono ad alta voce, i nomi che ricordano, quelli che non sono bruciati perché li hanno imparati a memoria.",
       "Restano insieme. La cenere, dice Kiki, è anche concime."
      ]
     },
@@ -127,7 +127,7 @@
      "text": [
       "La cenere del Registro finisce nell'Arno, all'alba, davanti alla targa del '66.",
       "Kiki torna a Parigi il giorno stesso. Non litigano. Semplicemente, qualcosa si è spezzato insieme alla carta.",
-      "Varano lascia Firenze. Beps torna ai suoi computer, che almeno non mentono.",
+      "Iuschini lascia Firenze. Beps torna ai suoi computer, che almeno non mentono.",
       "Passano cinque anni. Poi una sera di pioggia, sul Lungarno, una donna col cappotto rosso si siede su una panchina bagnata."
      ]
     }
@@ -145,11 +145,11 @@
    "lockedHint": "",
    "req": "stat.fiducia>=14 && stat.legame>=24 && stat.conoscenza>=36 && count.symbols>=7 && count.collectibles>=36 && flag.knows_18 && flag.eighteenth_written && flag.final_perfect",
    "script": [
-    "kiki[tender]: Varano. Abbiamo già scelto, nella Camera. Lo spazio dopo il diciassettesimo. Ci abbiamo scritto due nomi.",
+    "kiki[tender]: Iuschini. Abbiamo già scelto, nella Camera. Lo spazio dopo il diciassettesimo. Ci abbiamo scritto due nomi.",
     "beps: Il Diciottesimo non è un custode. Sono due. Nessuno deciderà più da solo cosa fare del Registro: né Orfeo, né il Ponte, né un notaio con i fiammiferi.",
     "beps: Lo apriremo. Non tutto, non subito. Prima i nomi dei salvati, uno alla volta, con le loro famiglie. Poi, insieme a loro, gli altri.",
     "varano[surprised]: …E mia nonna?",
-    "kiki[tender]: Sua nonna sarà il primo nome che leggeremo, notaio. Accanto a quello di suo nonno. Perché è la verità, e la verità è che erano tutti e due Varano.",
+    "kiki[tender]: Sua nonna sarà il primo nome che leggeremo, notaio. Accanto a quello di suo nonno. Perché è la verità, e la verità è che erano tutti e due Iuschini.",
     "narr: Il Notaio guarda la scatola di fiammiferi per un lungo momento. Poi la lancia nell'Arno.",
     "varano[sad]: Quarant'anni. Bastava che qualcuno me lo dicesse in due.",
     "@flag:varano_redento",
@@ -161,9 +161,9 @@
      "if": "true",
      "text": [
       "Il 12 marzo, a Parigi, Orfeo si riunisce per la prima volta con diciotto sedie. L'ultima è una panca: c'è posto per due.",
-      "Il Registro viene aperto nome per nome, in tre anni, insieme alle famiglie. Il primo nome letto in pubblico è «Lina Varano». Aurelio legge il secondo: «Bruno Varano». Gli trema la voce solo alla fine.",
-      "Guido Sarti torna nella fotografia del 1944. Ottavia Ricci mette la foto di suo padre all'ingresso dell'Archivio. Hélène restituisce il cappello nero, che però resta appeso all'attaccapanni di Ada: nessuno, dicono tutti, è più Euridice da solo.",
-      "Beps e Kiki si sposano a giugno, al Caffè delle Logge. Tommaso fa i cappuccini con la cannella e lascia sul piattino di ognuno 500 lire, dal suo barattolo."
+      "Il Registro viene aperto nome per nome, in tre anni, insieme alle famiglie. Il primo nome letto in pubblico è «Lina Iuschini». Cristiano legge il secondo: «Bruno Iuschini». Gli trema la voce solo alla fine.",
+      "Mario Abbate torna nella fotografia del 1944. Alessandra mette la foto di suo padre all'ingresso dell'Archivio. Sylvie restituisce il cappello nero, che però resta appeso all'attaccapanni di Ada: nessuno, dicono tutti, è più Euridice da solo.",
+      "Beps e Kiki si sposano a giugno, al Caffè delle Logge. Ivan fa i cappuccini con la cannella e lascia sul piattino di ognuno 500 lire, dal suo barattolo."
      ]
     }
    ],

@@ -25,11 +25,11 @@
 
     varanoLine() {
       const f = O.State.d.flags;
-      if (f.varano_redento) return 'Aurelio Varano legge in pubblico i nomi della sua famiglia, uno accanto all\'altro. Poi chiude lo studio notarile e apre una piccola libreria in via de\' Bardi. Si chiama «Lina».';
-      if (f.varano_testimonia) return 'Aurelio Varano testimonia davanti al Tribunale di Firenze sul verbale falsificato del 1967. Esce dall\'aula senza cappello.';
-      if (f.varano_custode) return 'Aurelio Varano resta il Notaio. Il primo verbale che redige comincia con: «Presenti: tutti».';
-      if (f.varano_doubt) return 'Varano scrive una lettera a sua nonna Lina e la lascia sulla sua tomba, a Trespiano. È la prima che riesce a finire.';
-      return 'Varano lascia Firenze. Il suo studio notarile chiude a primavera. Nessuno sa dove sia andato.';
+      if (f.varano_redento) return 'Cristiano Iuschini legge in pubblico i nomi della sua famiglia, uno accanto all\'altro. Poi chiude lo studio notarile e apre una piccola libreria in via de\' Bardi. Si chiama «Lina».';
+      if (f.varano_testimonia) return 'Cristiano Iuschini testimonia davanti al Tribunale di Firenze sul verbale falsificato del 1967. Esce dall\'aula senza cappello.';
+      if (f.varano_custode) return 'Cristiano Iuschini resta il Notaio. Il primo verbale che redige comincia con: «Presenti: tutti».';
+      if (f.varano_doubt) return 'Iuschini scrive una lettera a sua nonna Lina e la lascia sulla sua tomba, a Trespiano. È la prima che riesce a finire.';
+      return 'Iuschini lascia Firenze. Il suo studio notarile chiude a primavera. Nessuno sa dove sia andato.';
     },
 
     async choose() {
