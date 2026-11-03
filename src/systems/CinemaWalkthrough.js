@@ -278,7 +278,8 @@ const FULL = [
       this.originals = {
         topics: O.UI.topics.bind(O.UI),
         choose: O.UI.choose.bind(O.UI),
-        pickItem: O.UI.pickItem.bind(O.UI)
+        pickItem: O.UI.pickItem.bind(O.UI),
+        showCollectible: O.UI.showCollectible.bind(O.UI)
       };
 
       O.UI.topics = function(menu, opts) {
@@ -320,10 +321,18 @@ const FULL = [
         self.plan.item = null;
         setTimeout(() => {
           if (self.stopped) return O.UI.closePanel();
-          const buttons = O.$$('#modal .pick-grid .inv-item');
+          const buttons = O.$('#modal .pick-grid .inv-item');
           const idx = O.State.d.inventory.findIndex((id) => id === want);
           (buttons[idx] || buttons[0])?.click();
         }, 850);
+        return p;
+      };
+
+      O.UI.showCollectible = function(col) {
+        const p = self.originals.showCollectible(col);
+        setTimeout(() => {
+          if (O.$('#modal .panel.collectible')) O.UI.closePanel();
+        }, 1800);
         return p;
       };
 
@@ -338,6 +347,7 @@ const FULL = [
       O.UI.topics = this.originals.topics;
       O.UI.choose = this.originals.choose;
       O.UI.pickItem = this.originals.pickItem;
+      O.UI.showCollectible = this.originals.showCollectible;
       if (this.puzzleHook) O.off('puzzle:open', this.puzzleHook);
       this.originals = null;
       this.puzzleHook = null;
