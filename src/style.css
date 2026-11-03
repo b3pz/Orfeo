@@ -744,3 +744,111 @@ body:has(#modal.on) #inventory { pointer-events: none; }
   border-radius: 0; color: #382719;
 }
 #item-card .item-desc { color: #382719; }
+
+
+/* ---------------- Cinema Mode ---------------- */
+.title-menu #btn-cinema { grid-column: span 2; border-color: #9f7b42; background: rgba(64, 45, 26, .86); }
+.title-menu #btn-cinema:hover { background: #7a4d23; }
+#title-stage .ts-foot #btn-cinema { border-color: #c79a50; }
+
+body.cinema-active #hud,
+body.cinema-active #inventory,
+body.cinema-active #hover-label,
+body.cinema-active #debug,
+body.cinema-active #rotate-hint { display: none !important; }
+
+#cinema-controls {
+  position: fixed;
+  top: max(14px, env(safe-area-inset-top));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6500;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 10px;
+  background: rgba(8, 6, 4, .72);
+  border: 1px solid rgba(201, 168, 90, .55);
+  backdrop-filter: blur(8px);
+  font: 10px var(--ui);
+  letter-spacing: 2px;
+  color: #d8c59f;
+}
+#cinema-controls span { margin-right: 6px; }
+#cinema-controls button {
+  border: 1px solid #80643a;
+  background: rgba(40, 28, 17, .88);
+  color: #f0dfbd;
+  padding: 7px 10px;
+  font: 10px var(--ui);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#cinema-controls button:hover { background: #6b3e20; border-color: #c79a50; }
+
+#cinema-card {
+  position: fixed;
+  inset: 0;
+  z-index: 6400;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: opacity .45s ease, background .45s ease;
+}
+#cinema-card.show { opacity: 1; background: rgba(0, 0, 0, .76); }
+.cinema-card-inner {
+  text-align: center;
+  padding: 34px 44px;
+  min-width: min(540px, 86vw);
+  border-top: 1px solid rgba(201,168,90,.65);
+  border-bottom: 1px solid rgba(201,168,90,.65);
+  background: linear-gradient(90deg, transparent, rgba(30,22,14,.7), transparent);
+  transform: translateY(12px);
+  transition: transform .45s ease;
+}
+#cinema-card.show .cinema-card-inner { transform: translateY(0); }
+.cinema-card-inner small {
+  display: block;
+  font: 10px var(--ui);
+  letter-spacing: 5px;
+  color: #b5945d;
+  margin-bottom: 10px;
+}
+.cinema-card-inner h2 {
+  margin: 0;
+  font: 400 clamp(28px, 5vw, 58px) var(--serif);
+  letter-spacing: 2px;
+  color: #f1e6d2;
+}
+.cinema-card-inner p {
+  margin: 10px 0 0;
+  font: 12px var(--ui);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #a99b82;
+}
+.cinema-card-inner.end h2 { letter-spacing: 10px; }
+
+body.cinema-active #say {
+  bottom: max(36px, env(safe-area-inset-bottom));
+  width: min(980px, 92vw);
+}
+body.cinema-active #say.narr .say-body {
+  background: rgba(15, 11, 8, .86);
+  border: 1px solid rgba(201,168,90,.4);
+  padding: 18px 28px 22px;
+}
+body.cinema-active #say.narr .say-text {
+  color: #efe3cf;
+  text-align: center;
+  font-size: clamp(17px, 2vw, 23px);
+  line-height: 1.55;
+}
+
+@media (max-width: 700px) {
+  #cinema-controls { width: calc(100vw - 16px); justify-content: center; }
+  #cinema-controls span { display: none; }
+  .cinema-card-inner { padding: 24px 20px; }
+}
