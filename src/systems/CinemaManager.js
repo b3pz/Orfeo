@@ -96,42 +96,11 @@
     async start() {
       if (this.playing) return;
       this.playing = true;
-      this.stopRequested = false;
-      O.Movement.stopAll();
-      O.Dialogue.close();
-      if (O.Puzzles.open) O.Puzzles.close();
-      O.Game.leaveTitle();
-      document.body.classList.add('cinema-active');
-      this.mountControls();
-
-      try {
-        for (const chapter of this.chapters) {
-          if (this.stopRequested) break;
-          await this.chapterCard(chapter);
-          if (chapter.cutscene) await O.Cutscene.play(chapter.cutscene);
-          if (this.stopRequested) break;
-          for (const line of chapter.narration) {
-            if (this.stopRequested) break;
-            await this.narrate(line);
-          }
-          if (this.stopRequested) break;
-          if (chapter.feature) await O.Cutscene.play(chapter.feature);
-          if (this.stopRequested) break;
-          if (chapter.outro) await O.Cutscene.play(chapter.outro);
-        }
-
-        if (!this.stopRequested) {
-          await this.chapterCard({ n: '∞', title: 'Il Diciottesimo Nome', place: 'Il finale canonico' });
-          await O.Cutscene.play('fine_segreto');
-          await this.narrate('Il Registro verrà aperto nome per nome, insieme alle famiglie. Nessuno deciderà più da solo.');
-          await this.narrate('Orfeo si riunisce con diciotto sedie. L’ultima è una panca: c’è posto per due.');
-          await this.narrate('Qualche mese dopo, Giuseppe e Kiki si sposano a Firenze. L’indagine è finita. La loro storia, no.');
-          await O.Cutscene.play('post_segreto');
-          await this.endCard();
-        }
-      } finally {
-        this.cleanup();
+      if (!O.CinemaDirector) {
+        this.playing = false;
+        throw new Error('CinemaDirector non caricato');
       }
+      return O.CinemaDirector.play();
     },
 
     async chapterCard(ch) {
@@ -187,13 +156,8 @@
     },
 
     stop() {
+      if (O.CinemaDirector) return O.CinemaDirector.stop();
       this.stopRequested = true;
-      if (O.UI.typing) O.UI.finishTyping();
-      if (O.UI._sayAdv) O.UI._sayAdv();
-      if (O.Cutscene.playing) {
-        O.Cutscene.skipAll = true;
-        if (O.Cutscene._next) O.Cutscene._next();
-      }
     },
 
     cleanup() {
