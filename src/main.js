@@ -59,7 +59,7 @@
     },
 
     bind() {
-      O.$('#btn-new').onclick = () => this.newGame();
+      O.$('#btn-new').onclick = () => this.newGame();\n      O.$('#btn-cinema').onclick = () => O.Cinema.start();
       O.$('#btn-continue').onclick = () => this.continueGame();
       O.$('#btn-load').onclick = () => O.UI.saveLoad('load');
       O.$('#btn-options').onclick = () => O.UI.options();
@@ -118,7 +118,7 @@
         if (latest) cont.title = `Cap. ${O.roman(latest.chapter)} · ${latest.sceneName || ''}`;
         cont.textContent = 'Continua';
         const foot = O.$('.ts-foot', stage);
-        foot.appendChild(O.$('#btn-credits'));
+        foot.appendChild(O.$('#btn-cinema'));\n        foot.appendChild(O.$('#btn-credits'));
         foot.appendChild(O.$('#title-endings'));
       }
       const titleScene = O.Data.scenes.scenes[O.Data.chapters.titleScene || 'c1_lungarno'];
